@@ -1,0 +1,23 @@
+<!-- From: file:/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/AndroidManifest.xml -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="es.claucookie.recarga">
+
+	<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="19"/>
+	
+	<uses-permission android:name="android.permission.INTERNET"/>
+
+	<application android:icon="@drawable/icon" android:label="@string/app_name" android:name="es.claucookie.recarga.App" android:theme="@style/AppTheme">
+		<activity android:label="@string/app_name" android:name="es.claucookie.recarga.MainActivity_">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		<meta-data android:name="com.crashlytics.ApiKey" android:value="b2ec1eaae77c91b5cf4ec2cd6144edd73b23e413"/>
+        <!-- From: file:/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/build/exploded-aar/com.mobivery.android/library/1.0.4-SNAPSHOT/AndroidManifest.xml -->
+        <activity android:label="Library Activity" android:name="com.mobivery.android.LibraryActivity">
+        </activity>
+        <!-- From: file:/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/AndroidManifest.xml -->
+        
+	</application>
+
+</manifest>

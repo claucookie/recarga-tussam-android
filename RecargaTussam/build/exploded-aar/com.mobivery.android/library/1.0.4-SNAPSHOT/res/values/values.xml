@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- From: file:/data/jenkins/slave/workspace/mobivery-lib-android-snapshot/library/res/values/attrs.xml -->
+    <attr name="fontName" format="string" />
+
+    <declare-styleable name="ExButton">
+        <attr name="fontName" />
+    </declare-styleable>
+    <declare-styleable name="ExLabel">
+        <attr name="fontName" />
+    </declare-styleable>
+    <declare-styleable name="ExText">
+        <attr name="fontName" />
+    </declare-styleable>
+    <!-- From: file:/data/jenkins/slave/workspace/mobivery-lib-android-snapshot/library/res/values/strings.xml -->
+    <string name="com.mobivery.android.name">example</string>
+
+</resources>

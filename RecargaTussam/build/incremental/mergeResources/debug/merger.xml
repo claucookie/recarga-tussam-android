@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger>
+
+    <dataSet config="1.0.4-SNAPSHOT" >
+        <source path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/build/exploded-aar/com.mobivery.android/library/1.0.4-SNAPSHOT/res" >
+            <file
+                name="main"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/build/exploded-aar/com.mobivery.android/library/1.0.4-SNAPSHOT/res/layout/main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/build/exploded-aar/com.mobivery.android/library/1.0.4-SNAPSHOT/res/values/values.xml"
+                qualifiers="" >
+                <declare-styleable name="ExButton" >
+                    <attr name="fontName" />
+                </declare-styleable>
+
+                <attr
+                    name="fontName"
+                    format="string" />
+
+                <string name="com.mobivery.android.name" >example
+                </string>
+
+                <declare-styleable name="ExText" >
+                    <attr name="fontName" />
+                </declare-styleable>
+                <declare-styleable name="ExLabel" >
+                    <attr name="fontName" />
+                </declare-styleable>
+            </file>
+        </source>
+    </dataSet>
+    <dataSet config="main" >
+        <source path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res" >
+            <file
+                name="ic_launcher"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/ic_launcher.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="icon"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/icon.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="activity_main"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/layout/activity_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values/com_crashlytics_export_strings.xml"
+                qualifiers="" >
+                <string
+                    name="com.crashlytics.android.build_id"
+                    translatable="false" >98f147cf-334a-42c3-86ae-98bc33281eb7
+                </string>
+            </file>
+            <file
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values/strings.xml"
+                qualifiers="" >
+                <string name="app_name" >RecargaTussam
+                </string>
+                <string name="hello_world" >Hello world!
+                </string>
+            </file>
+            <file
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values/styles.xml"
+                qualifiers="" >
+
+                <style
+                    name="AppTheme"
+                    parent="android:Theme.Holo.Light.DarkActionBar" />
+            </file>
+        </source>
+        <source path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/build/res/rs/debug" />
+        <source path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/build/res/generated/debug" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/debug/res" />
+    </dataSet>
+
+</merger>

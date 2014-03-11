@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- From: file:/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/build/exploded-aar/com.mobivery.android/library/1.0.4-SNAPSHOT/res/values/values.xml -->
+    <eat-comment />
+
+    <attr name="fontName" format="string" />
+
+    <declare-styleable name="ExButton">
+        <attr name="fontName" />
+    </declare-styleable>
+    <declare-styleable name="ExLabel">
+        <attr name="fontName" />
+    </declare-styleable>
+    <declare-styleable name="ExText">
+        <attr name="fontName" />
+    </declare-styleable>
+    <!-- From: file:/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values/strings.xml -->
+    <eat-comment />
+
+    <string name="app_name">RecargaTussam</string>
+    <!-- From: file:/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values/com_crashlytics_export_strings.xml -->
+    <eat-comment />
+
+    <string name="com.crashlytics.android.build_id" translatable="false">98f147cf-334a-42c3-86ae-98bc33281eb7</string>
+    <!-- From: file:/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/build/exploded-aar/com.mobivery.android/library/1.0.4-SNAPSHOT/res/values/values.xml -->
+    <eat-comment />
+
+    <string name="com.mobivery.android.name">example</string>
+    <!-- From: file:/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values/strings.xml -->
+    <eat-comment />
+
+    <string name="hello_world">Hello world!</string>
+    <!-- From: file:/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values/styles.xml -->
+    <eat-comment />
+
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar" />
+
+</resources>

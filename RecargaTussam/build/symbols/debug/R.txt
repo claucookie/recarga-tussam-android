@@ -1,0 +1,17 @@
+int attr fontName 0x7f010000
+int drawable ic_launcher 0x7f020000
+int drawable icon 0x7f020001
+int id hello 0x7f060000
+int layout activity_main 0x7f030000
+int layout main 0x7f030001
+int string app_name 0x7f040000
+int string com_crashlytics_android_build_id 0x7f040001
+int string com_mobivery_android_name 0x7f040002
+int string hello_world 0x7f040003
+int style AppTheme 0x7f050000
+int[] styleable ExButton { 0x7f010000 }
+int styleable ExButton_fontName 0
+int[] styleable ExLabel { 0x7f010000 }
+int styleable ExLabel_fontName 0
+int[] styleable ExText { 0x7f010000 }
+int styleable ExText_fontName 0

@@ -1,0 +1,5 @@
+certificate:
+  key_store: "recargatussam_certificate.jks"
+  key_store_password: "070dcdcae5571d33ec396681c0202223"
+  alias: "recargatussam"
+  alias_password: "070dcdcae5571d33ec396681c0202223"

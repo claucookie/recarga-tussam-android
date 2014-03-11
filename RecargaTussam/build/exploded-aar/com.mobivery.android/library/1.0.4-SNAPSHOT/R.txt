@@ -1,0 +1,9 @@
+int attr fontName 0x7f010000
+int layout main 0x7f020000
+int string com_mobivery_android_name 0x7f030000
+int[] styleable ExButton { 0x7f010000 }
+int styleable ExButton_fontName 0
+int[] styleable ExLabel { 0x7f010000 }
+int styleable ExLabel_fontName 0
+int[] styleable ExText { 0x7f010000 }
+int styleable ExText_fontName 0

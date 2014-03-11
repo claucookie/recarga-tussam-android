@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger>
+
+    <dataSet config="1.0.4-SNAPSHOT" >
+        <source path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/build/exploded-aar/com.mobivery.android/library/1.0.4-SNAPSHOT/assets" />
+    </dataSet>
+    <dataSet config="main" >
+        <source path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/assets" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/debug/assets" />
+    </dataSet>
+
+</merger>
