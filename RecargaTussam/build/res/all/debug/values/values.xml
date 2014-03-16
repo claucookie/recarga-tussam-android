@@ -18,11 +18,15 @@
     <!-- From: file:/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values/strings.xml -->
     <eat-comment />
 
-    <string name="app_name">RecargaTussam</string>
+    <string name="app_name">Tarjeta Tussam</string>
+    <string name="card_credit">Saldo última consulta: </string>
+    <string name="card_number">Nº tarjeta: </string>
+    <string name="card_status">Caducidad: </string>
+    <string name="card_type">Tipo de recarga: </string>
     <!-- From: file:/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values/com_crashlytics_export_strings.xml -->
     <eat-comment />
 
-    <string name="com.crashlytics.android.build_id" translatable="false">98f147cf-334a-42c3-86ae-98bc33281eb7</string>
+    <string name="com.crashlytics.android.build_id" translatable="false">71e8b8d9-48ac-4f80-b258-da171134c663</string>
     <!-- From: file:/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/build/exploded-aar/com.mobivery.android/library/1.0.4-SNAPSHOT/res/values/values.xml -->
     <eat-comment />
 
@@ -31,6 +35,8 @@
     <eat-comment />
 
     <string name="hello_world">Hello world!</string>
+    <string name="loading_text">Cargando...</string>
+    <string name="parse_error">Ha ocurrido un error con el servidor de Tussam</string>
     <!-- From: file:/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values/styles.xml -->
     <eat-comment />
 

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="library-1.0.4-SNAPSHOT">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/RecargaTussam/build/exploded-aar/com.mobivery.android/library/1.0.4-SNAPSHOT/res" />
+      <root url="jar://$PROJECT_DIR$/RecargaTussam/build/exploded-aar/com.mobivery.android/library/1.0.4-SNAPSHOT/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/RecargaTussam/RecargaTussam.iml" filepath="$PROJECT_DIR$/RecargaTussam/RecargaTussam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/recarga-tussam-android.iml" filepath="$PROJECT_DIR$/recarga-tussam-android.iml" />
+    </modules>
+  </component>
+</project>
+

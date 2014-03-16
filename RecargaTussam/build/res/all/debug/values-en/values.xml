@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- From: file:/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values-en/strings.xml -->
+    <eat-comment />
+
+    <string name="app_name">Tussam Card</string>
+    <string name="card_credit">Last update credit: </string>
+    <string name="card_number">Card number: </string>
+    <string name="card_status">Expiration: </string>
+    <string name="card_type">Credit type: </string>
+    <string name="hello_world">Hello world!</string>
+    <string name="loading_text">Loading...</string>
+    <string name="parse_error">Something wrong happened on Tussam server =(</string>
+
+</resources>

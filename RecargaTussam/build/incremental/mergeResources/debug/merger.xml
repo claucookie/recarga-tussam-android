@@ -53,15 +53,27 @@
                 qualifiers="" >
                 <string
                     name="com.crashlytics.android.build_id"
-                    translatable="false" >98f147cf-334a-42c3-86ae-98bc33281eb7
+                    translatable="false" >71e8b8d9-48ac-4f80-b258-da171134c663
                 </string>
             </file>
             <file
                 path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values/strings.xml"
                 qualifiers="" >
-                <string name="app_name" >RecargaTussam
+                <string name="loading_text" >Cargando...
+                </string>
+                <string name="card_status" >Caducidad: 
+                </string>
+                <string name="app_name" >Tarjeta Tussam
+                </string>
+                <string name="card_number" >Nº tarjeta: 
                 </string>
                 <string name="hello_world" >Hello world!
+                </string>
+                <string name="parse_error" >Ha ocurrido un error con el servidor de Tussam
+                </string>
+                <string name="card_credit" >Saldo última consulta: 
+                </string>
+                <string name="card_type" >Tipo de recarga: 
                 </string>
             </file>
             <file
@@ -71,6 +83,26 @@
                 <style
                     name="AppTheme"
                     parent="android:Theme.Holo.Light.DarkActionBar" />
+            </file>
+            <file
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values-en/strings.xml"
+                qualifiers="en" >
+                <string name="hello_world" >Hello world!
+                </string>
+                <string name="card_type" >Credit type: 
+                </string>
+                <string name="card_credit" >Last update credit: 
+                </string>
+                <string name="card_status" >Expiration: 
+                </string>
+                <string name="loading_text" >Loading...
+                </string>
+                <string name="parse_error" >Something wrong happened on Tussam server =(
+                </string>
+                <string name="card_number" >Card number: 
+                </string>
+                <string name="app_name" >Tussam Card
+                </string>
             </file>
         </source>
         <source path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/build/res/rs/debug" />

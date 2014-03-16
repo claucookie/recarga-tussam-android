@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
+import android.widget.Spinner;
 import android.widget.TextView;
 import es.claucookie.recarga.R.id;
 import es.claucookie.recarga.R.layout;
@@ -36,6 +37,7 @@ public final class MainActivity_
 
     private void init_(Bundle savedInstanceState) {
         OnViewChangedNotifier.registerOnViewChangedListener(this);
+        restoreSavedInstanceState_(savedInstanceState);
     }
 
     @Override
@@ -70,8 +72,33 @@ public final class MainActivity_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        hello = ((TextView) hasViews.findViewById(id.hello));
+        cardsSpinner = ((Spinner) hasViews.findViewById(id.cards_spinner));
+        cardStatusText = ((TextView) hasViews.findViewById(id.card_status_text));
+        cardTypeText = ((TextView) hasViews.findViewById(id.card_type_text));
+        cardNumberText = ((TextView) hasViews.findViewById(id.card_number_text));
+        cardCreditText = ((TextView) hasViews.findViewById(id.card_credit_text));
         initViews();
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle bundle) {
+        super.onSaveInstanceState(bundle);
+        bundle.putString("cardType", cardType);
+        bundle.putStringArrayList("savedCards", savedCards);
+        bundle.putString("cardStatus", cardStatus);
+        bundle.putString("cardNumber", cardNumber);
+        bundle.putString("cardCredit", cardCredit);
+    }
+
+    private void restoreSavedInstanceState_(Bundle savedInstanceState) {
+        if (savedInstanceState == null) {
+            return ;
+        }
+        cardType = savedInstanceState.getString("cardType");
+        savedCards = savedInstanceState.getStringArrayList("savedCards");
+        cardStatus = savedInstanceState.getString("cardStatus");
+        cardNumber = savedInstanceState.getString("cardNumber");
+        cardCredit = savedInstanceState.getString("cardCredit");
     }
 
     public static class IntentBuilder_ {

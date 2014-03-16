@@ -23,7 +23,11 @@ containing a value of this type.
         public static final int icon=0x7f020001;
     }
     public static final class id {
-        public static final int hello=0x7f060000;
+        public static final int card_credit_text=0x7f060004;
+        public static final int card_number_text=0x7f060001;
+        public static final int card_status_text=0x7f060002;
+        public static final int card_type_text=0x7f060003;
+        public static final int cards_spinner=0x7f060000;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -31,9 +35,15 @@ containing a value of this type.
     }
     public static final class string {
         public static final int app_name=0x7f040000;
-        public static final int com_crashlytics_android_build_id=0x7f040001;
-        public static final int com_mobivery_android_name=0x7f040002;
-        public static final int hello_world=0x7f040003;
+        public static final int card_credit=0x7f040001;
+        public static final int card_number=0x7f040002;
+        public static final int card_status=0x7f040003;
+        public static final int card_type=0x7f040004;
+        public static final int com_crashlytics_android_build_id=0x7f040005;
+        public static final int com_mobivery_android_name=0x7f040006;
+        public static final int hello_world=0x7f040007;
+        public static final int loading_text=0x7f040008;
+        public static final int parse_error=0x7f040009;
     }
     public static final class style {
         public static final int AppTheme=0x7f050000;

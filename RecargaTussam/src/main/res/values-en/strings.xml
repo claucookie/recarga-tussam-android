@@ -1,0 +1,12 @@
+<resources>
+
+	<string name="app_name">Tussam Card</string>
+	<string name="hello_world">Hello world!</string>
+    <string name="loading_text">Loading...</string>
+    <string name="parse_error">Something wrong happened on Tussam server =(</string>
+    <string name="card_number">Card number: </string>
+    <string name="card_status">Expiration: </string>
+    <string name="card_type">Credit type: </string>
+    <string name="card_credit">Last update credit: </string>
+
+</resources>

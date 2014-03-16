@@ -1,14 +1,37 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:tools="http://schemas.android.com/tools"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent"
-    android:padding="20dp">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:orientation="vertical">
 
-		<TextView
-		android:id="@+id/hello"
-		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:layout_centerInParent="true"
-		android:text="@string/hello_world" />
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cards_spinner"
+        android:layout_gravity="center_horizontal"/>
 
-</RelativeLayout>
+    <com.mobivery.android.widgets.ExLabel
+        android:id="@+id/card_number_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/loading_text"/>
+
+    <com.mobivery.android.widgets.ExLabel
+        android:id="@+id/card_status_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/card_status" />
+
+    <com.mobivery.android.widgets.ExLabel
+        android:id="@+id/card_type_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/card_type" />
+
+    <com.mobivery.android.widgets.ExLabel
+        android:id="@+id/card_credit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/card_credit" />
+
+</LinearLayout>

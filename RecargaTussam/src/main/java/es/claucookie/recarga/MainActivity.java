@@ -1,10 +1,14 @@
 package es.claucookie.recarga;
 
-import android.os.Bundle;
-import android.text.Html;
-import android.text.TextUtils;
-import android.widget.TextView;
 import android.app.Activity;
+import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -17,23 +21,53 @@ import com.crashlytics.android.Crashlytics;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.InstanceState;
 import org.androidannotations.annotations.ViewById;
-import org.androidannotations.api.view.OnViewChangedNotifier;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
-import es.claucookie.recarga.helpers.ApplicationController;
+import java.util.ArrayList;
 
 @EActivity(R.layout.activity_main)
-public class MainActivity extends Activity
-{
+public class MainActivity extends Activity {
     public static final String URL = "http://recargas.tussam.es/TPW/Common/cardStatus.do?swNumber=";
-
-    @ViewById
-    TextView hello;
 
     /**
      * Log or request TAG
      */
     public static final String TAG = "VolleyPatterns";
+
+    @ViewById
+    TextView cardNumberText;
+    @ViewById
+    TextView cardStatusText;
+    @ViewById
+    TextView cardTypeText;
+    @ViewById
+    TextView cardCreditText;
+    @ViewById
+    Spinner cardsSpinner;
+
+
+    @InstanceState
+    String cardNumber;
+
+    @InstanceState
+    String cardStatus;
+
+    @InstanceState
+    String cardType;
+
+    @InstanceState
+    String cardCredit;
+
+    @InstanceState
+    ArrayList<String> savedCards = new ArrayList<String>();
+
+    private ArrayAdapter<String> spinnerAdapter;
+
 
     /**
      * Global request queue for Volley
@@ -42,7 +76,46 @@ public class MainActivity extends Activity
 
     @AfterViews
     void initViews() {
-        consultaTarjeta("31161031261");
+        initSpinner();
+        loadSavedCards();
+    }
+
+    private void initSpinner() {
+        if (spinnerAdapter == null) {
+            spinnerAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item);
+        }
+        // Specify the layout to use when the list of choices appears
+        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Apply the adapter to the spinner
+        cardsSpinner.setAdapter(spinnerAdapter);
+        cardsSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                requestCardInfo((String) parent.getItemAtPosition(position));
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        cardsSpinner.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                // Delete item
+
+                return false;
+            }
+        });
+    }
+
+    private void loadSavedCards() {
+        // Get saved cards from preferences
+        savedCards.add("31161031261");
+        savedCards.add("31161031260");
+        spinnerAdapter.clear();
+        spinnerAdapter.addAll(savedCards);
+        spinnerAdapter.notifyDataSetChanged();
     }
 
     @Override
@@ -52,21 +125,83 @@ public class MainActivity extends Activity
 
     }
 
-    private void consultaTarjeta(String cardNumber) {
-        StringRequest req = new StringRequest(URL+cardNumber, new Response.Listener<String>() {
+    private void requestCardInfo(String cardNumber) {
+        StringRequest req = new StringRequest(URL + cardNumber, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                hello.setText(Html.fromHtml(response));
+                parseHtml(response);
+                reloadData();
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                VolleyLog.e("Error: ", error.getMessage());
+                Toast.makeText(MainActivity.this, getString(R.string.parse_error), Toast.LENGTH_LONG).show();
+                clearData();
             }
         });
 
         // add the request object to the queue to be executed
         addToRequestQueue(req);
+    }
+
+    private void parseHtml(String response) {
+
+        boolean errorFound = false;
+        Document responseDoc = Jsoup.parse(response);
+        Element mainDiv = responseDoc.getElementById("cardStatus");
+        if (mainDiv != null) {
+            Elements cardInfo = mainDiv.select("span");
+            // CardNumber
+            if (cardInfo.size() > 0 && cardInfo.get(0) != null) {
+                cardNumber = cardInfo.get(0).text();
+            } else errorFound = true;
+
+            // CardStatus
+            if (cardInfo.size() > 1 && cardInfo.get(1) != null) {
+                cardStatus = cardInfo.get(1).text();
+            } else errorFound = true;
+
+            // CardType
+            if (cardInfo.size() > 2 && cardInfo.get(2) != null) {
+                cardType = cardInfo.get(2).text();
+            } else errorFound = true;
+
+            // CardCredit
+            if (cardInfo.size() > 3 && cardInfo.get(3) != null) {
+                cardCredit = cardInfo.get(3).text();
+            } else errorFound = true;
+
+        } else {
+            errorFound = true;
+        }
+
+        if (errorFound) {
+            Toast.makeText(this, getString(R.string.parse_error), Toast.LENGTH_LONG).show();
+        }
+
+    }
+
+    private void reloadData() {
+        if (cardNumber != null) {
+            cardNumberText.setText(getString(R.string.card_number) + cardNumber);
+        }
+        if (cardStatus != null) {
+            cardStatusText.setText(getString(R.string.card_status) + cardStatus);
+        }
+        if (cardType != null) {
+            cardTypeText.setText(getString(R.string.card_type) + cardType);
+        }
+        if (cardCredit != null) {
+            cardCreditText.setText(getString(R.string.card_credit) + cardCredit);
+        }
+    }
+
+    private void clearData() {
+        cardNumberText.setText(getString(R.string.card_number));
+        cardStatusText.setText(getString(R.string.card_status));
+        cardTypeText.setText(getString(R.string.card_type));
+        cardCreditText.setText(getString(R.string.card_credit));
+
     }
 
 

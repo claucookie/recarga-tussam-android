@@ -1,6 +1,11 @@
 <resources>
-
-	<string name="app_name">RecargaTussam</string>
-	<string name="hello_world">Hello world!</string>
+    <string name="app_name">Tarjeta Tussam</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="loading_text">Cargando...</string>
+    <string name="parse_error">Ha ocurrido un error con el servidor de Tussam</string>
+    <string name="card_number">Nº tarjeta: </string>
+    <string name="card_status">Caducidad: </string>
+    <string name="card_type">Tipo de recarga: </string>
+    <string name="card_credit">Saldo última consulta: </string>
 
 </resources>
