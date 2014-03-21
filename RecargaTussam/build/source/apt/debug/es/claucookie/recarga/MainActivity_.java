@@ -11,8 +11,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
+import com.mobivery.android.widgets.ExLabel;
 import es.claucookie.recarga.R.id;
 import es.claucookie.recarga.R.layout;
 import org.androidannotations.api.view.HasViews;
@@ -72,33 +74,35 @@ public final class MainActivity_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        cardsSpinner = ((Spinner) hasViews.findViewById(id.cards_spinner));
-        cardStatusText = ((TextView) hasViews.findViewById(id.card_status_text));
-        cardTypeText = ((TextView) hasViews.findViewById(id.card_type_text));
-        cardNumberText = ((TextView) hasViews.findViewById(id.card_number_text));
+        cardNameText = ((ExLabel) hasViews.findViewById(id.card_name_text));
         cardCreditText = ((TextView) hasViews.findViewById(id.card_credit_text));
+        cardStatusText = ((TextView) hasViews.findViewById(id.card_status_text));
+        progressBar = ((ProgressBar) hasViews.findViewById(id.progress_bar));
+        cardNumberText = ((TextView) hasViews.findViewById(id.card_number_text));
+        cardTypeText = ((TextView) hasViews.findViewById(id.card_type_text));
+        cardsSpinner = ((Spinner) hasViews.findViewById(id.cards_spinner));
         initViews();
     }
 
     @Override
     public void onSaveInstanceState(Bundle bundle) {
         super.onSaveInstanceState(bundle);
-        bundle.putString("cardType", cardType);
         bundle.putStringArrayList("savedCards", savedCards);
-        bundle.putString("cardStatus", cardStatus);
+        bundle.putString("cardType", cardType);
         bundle.putString("cardNumber", cardNumber);
         bundle.putString("cardCredit", cardCredit);
+        bundle.putString("cardStatus", cardStatus);
     }
 
     private void restoreSavedInstanceState_(Bundle savedInstanceState) {
         if (savedInstanceState == null) {
             return ;
         }
-        cardType = savedInstanceState.getString("cardType");
         savedCards = savedInstanceState.getStringArrayList("savedCards");
-        cardStatus = savedInstanceState.getString("cardStatus");
+        cardType = savedInstanceState.getString("cardType");
         cardNumber = savedInstanceState.getString("cardNumber");
         cardCredit = savedInstanceState.getString("cardCredit");
+        cardStatus = savedInstanceState.getString("cardStatus");
     }
 
     public static class IntentBuilder_ {

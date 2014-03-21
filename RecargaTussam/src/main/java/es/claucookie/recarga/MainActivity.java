@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,6 +19,7 @@ import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.crashlytics.android.Crashlytics;
+import com.mobivery.android.widgets.ExLabel;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
@@ -65,6 +67,10 @@ public class MainActivity extends Activity {
 
     @InstanceState
     ArrayList<String> savedCards = new ArrayList<String>();
+    @ViewById
+    ProgressBar progressBar;
+    @ViewById
+    ExLabel cardNameText;
 
     private ArrayAdapter<String> spinnerAdapter;
 
@@ -126,6 +132,7 @@ public class MainActivity extends Activity {
     }
 
     private void requestCardInfo(String cardNumber) {
+        progressBar.setVisibility(View.VISIBLE);
         StringRequest req = new StringRequest(URL + cardNumber, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -182,26 +189,27 @@ public class MainActivity extends Activity {
     }
 
     private void reloadData() {
+        progressBar.setVisibility(View.GONE);
         if (cardNumber != null) {
-            cardNumberText.setText(getString(R.string.card_number) + cardNumber);
+            cardNumberText.setText(cardNumber);
         }
         if (cardStatus != null) {
-            cardStatusText.setText(getString(R.string.card_status) + cardStatus);
+            cardStatusText.setText("  " + cardStatus);
         }
         if (cardType != null) {
-            cardTypeText.setText(getString(R.string.card_type) + cardType);
+            cardTypeText.setText(cardType);
         }
         if (cardCredit != null) {
-            cardCreditText.setText(getString(R.string.card_credit) + cardCredit);
+            cardCreditText.setText(cardCredit);
         }
     }
 
     private void clearData() {
+        progressBar.setVisibility(View.GONE);
         cardNumberText.setText(getString(R.string.card_number));
         cardStatusText.setText(getString(R.string.card_status));
         cardTypeText.setText(getString(R.string.card_type));
         cardCreditText.setText(getString(R.string.card_credit));
-
     }
 
 

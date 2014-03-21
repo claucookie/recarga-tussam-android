@@ -53,7 +53,7 @@
                 qualifiers="" >
                 <string
                     name="com.crashlytics.android.build_id"
-                    translatable="false" >71e8b8d9-48ac-4f80-b258-da171134c663
+                    translatable="false" >a2d35980-79c1-403f-b151-932be59bfc77
                 </string>
             </file>
             <file
@@ -61,49 +61,438 @@
                 qualifiers="" >
                 <string name="loading_text" >Cargando...
                 </string>
-                <string name="card_status" >Caducidad: 
+                <string name="card_status" >Caducidad
                 </string>
                 <string name="app_name" >Tarjeta Tussam
                 </string>
-                <string name="card_number" >Nº tarjeta: 
+                <string name="card_number" >Nº
                 </string>
                 <string name="hello_world" >Hello world!
                 </string>
-                <string name="parse_error" >Ha ocurrido un error con el servidor de Tussam
+                <string name="parse_error" >Ha ocurrido un error en el servidor de Tussam =(
                 </string>
-                <string name="card_credit" >Saldo última consulta: 
+                <string name="card_credit" >Saldo
                 </string>
-                <string name="card_type" >Tipo de recarga: 
+                <string name="card_type" > Recarga
                 </string>
-            </file>
-            <file
-                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values/styles.xml"
-                qualifiers="" >
-
-                <style
-                    name="AppTheme"
-                    parent="android:Theme.Holo.Light.DarkActionBar" />
             </file>
             <file
                 path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values-en/strings.xml"
                 qualifiers="en" >
                 <string name="hello_world" >Hello world!
                 </string>
-                <string name="card_type" >Credit type: 
+                <string name="card_type" > Credit type
                 </string>
-                <string name="card_credit" >Last update credit: 
+                <string name="card_credit" >Credit
                 </string>
-                <string name="card_status" >Expiration: 
+                <string name="card_status" >Expiration
                 </string>
                 <string name="loading_text" >Loading...
                 </string>
                 <string name="parse_error" >Something wrong happened on Tussam server =(
                 </string>
-                <string name="card_number" >Card number: 
+                <string name="card_number" >Card number
                 </string>
                 <string name="app_name" >Tussam Card
                 </string>
             </file>
+            <file
+                name="tussam_ic_launcher"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/tussam_ic_launcher.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="btn_cab_done_default_tussam"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/btn_cab_done_default_tussam.9.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="cab_background_top_tussam"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/cab_background_top_tussam.9.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="spinner_ab_focused_tussam"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/spinner_ab_focused_tussam.9.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="btn_cab_done_tussam"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable/btn_cab_done_tussam.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="cab_background_bottom_tussam"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/cab_background_bottom_tussam.9.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="tab_unselected_focused_tussam"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/tab_unselected_focused_tussam.9.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="tab_selected_tussam"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/tab_selected_tussam.9.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="logo"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/logo.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="tab_selected_pressed_tussam"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/tab_selected_pressed_tussam.9.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="btn_cab_done_pressed_tussam"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/btn_cab_done_pressed_tussam.9.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="spinner_ab_default_tussam"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/spinner_ab_default_tussam.9.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="tab_unselected_tussam"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/tab_unselected_tussam.9.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="list_pressed_tussam"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/list_pressed_tussam.9.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="selectable_background_tussam"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable/selectable_background_tussam.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="tab_selected_focused_tussam"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/tab_selected_focused_tussam.9.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="progress_horizontal_tussam"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable/progress_horizontal_tussam.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="btn_cab_done_focused_tussam"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/btn_cab_done_focused_tussam.9.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="ab_solid_tussam"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/ab_solid_tussam.9.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="ab_background_textured_tussam"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable/ab_background_textured_tussam.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="ab_texture_tile_tussam"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/ab_texture_tile_tussam.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="progress_bg_tussam"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/progress_bg_tussam.9.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="ab_transparent_tussam"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/ab_transparent_tussam.9.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="list_focused_tussam"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/list_focused_tussam.9.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="tab_indicator_ab_tussam"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable/tab_indicator_ab_tussam.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="ab_stacked_solid_tussam"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/ab_stacked_solid_tussam.9.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="spinner_ab_pressed_tussam"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/spinner_ab_pressed_tussam.9.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="menu_dropdown_panel_tussam"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/menu_dropdown_panel_tussam.9.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="ab_bottom_solid_tussam"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/ab_bottom_solid_tussam.9.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="spinner_background_ab_tussam"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable/spinner_background_ab_tussam.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="progress_primary_tussam"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/progress_primary_tussam.9.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="tab_unselected_pressed_tussam"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/tab_unselected_pressed_tussam.9.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values/colors.xml"
+                qualifiers="" >
+                <color name="common_background" >#00579b
+                </color>
+                <color name="common_text_color" >#ffffff
+                </color>
+            </file>
+            <file
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values/styles_tussam.xml"
+                qualifiers="" >
+
+                <style
+                    name="ActionBar.Solid.Tussam"
+                    parent="@android:style/Widget.Holo.ActionBar.Solid" >
+                    <item name="android:background">
+@drawable/ab_solid_tussam
+                    </item>
+                    <item name="android:backgroundStacked">
+@drawable/ab_stacked_solid_tussam
+                    </item>
+                    <item name="android:backgroundSplit">
+@drawable/ab_bottom_solid_tussam
+                    </item>
+                    <item name="android:progressBarStyle">
+@style/ProgressBar.Tussam
+                    </item>
+                </style>
+
+                <style
+                    name="Theme.Tussam"
+                    parent="@android:style/Theme.Holo" >
+                    <item name="android:actionBarItemBackground">
+@drawable/selectable_background_tussam
+                    </item>
+                    <item name="android:popupMenuStyle">
+@style/PopupMenu.Tussam
+                    </item>
+                    <item name="android:dropDownListViewStyle">
+@style/DropDownListView.Tussam
+                    </item>
+                    <item name="android:actionBarTabStyle">
+@style/ActionBarTabStyle.Tussam
+                    </item>
+                    <item name="android:actionDropDownStyle">
+@style/DropDownNav.Tussam
+                    </item>
+                    <item name="android:actionBarStyle">
+@style/ActionBar.Solid.Tussam
+                    </item>
+                    <item name="android:actionModeBackground">
+@drawable/cab_background_top_tussam
+                    </item>
+                    <item name="android:actionModeSplitBackground">
+@drawable/cab_background_bottom_tussam
+                    </item>
+                    <item name="android:actionModeCloseButtonStyle">
+@style/ActionButton.CloseMode.Tussam
+                    </item>
+                    <item name="android:progressBarStyle">
+@style/ProgressBar.Tussam
+                    </item>
+                </style>
+
+                <style
+                    name="Theme.Tussam.Widget"
+                    parent="@android:style/Theme.Holo" >
+                    <item name="android:popupMenuStyle">
+@style/PopupMenu.Tussam
+                    </item>
+                    <item name="android:dropDownListViewStyle">
+@style/DropDownListView.Tussam
+                    </item>
+                </style>
+
+                <style
+                    name="PopupMenu.Tussam"
+                    parent="@android:style/Widget.Holo.ListPopupWindow" >
+                    <item name="android:popupBackground">
+@drawable/menu_dropdown_panel_tussam
+                    </item>
+                </style>
+
+                <style
+                    name="ActionBar.Transparent.Tussam"
+                    parent="@android:style/Widget.Holo.ActionBar" >
+                    <item name="android:background">
+@drawable/ab_transparent_tussam
+                    </item>
+                    <item name="android:progressBarStyle">
+@style/ProgressBar.Tussam
+                    </item>
+                </style>
+
+                <style
+                    name="DropDownListView.Tussam"
+                    parent="@android:style/Widget.Holo.ListView.DropDown" >
+                    <item name="android:listSelector">
+@drawable/selectable_background_tussam
+                    </item>
+                </style>
+
+                <style
+                    name="DropDownNav.Tussam"
+                    parent="@android:style/Widget.Holo.Spinner" >
+                    <item name="android:background">
+@drawable/spinner_background_ab_tussam
+                    </item>
+                    <item name="android:popupBackground">
+@drawable/menu_dropdown_panel_tussam
+                    </item>
+                    <item name="android:dropDownSelector">
+@drawable/selectable_background_tussam
+                    </item>
+                </style>
+
+                <style
+                    name="ActionBarTabStyle.Tussam"
+                    parent="@android:style/Widget.Holo.ActionBar.TabView" >
+                    <item name="android:background">
+@drawable/tab_indicator_ab_tussam
+                    </item>
+                </style>
+
+                <style
+                    name="CommonText.Tussam"
+                    parent="android:Widget.TextView" >
+                    <item name="android:textColor">
+@color/common_text_color
+                    </item>
+                </style>
+
+                <style
+                    name="ActionButton.CloseMode.Tussam"
+                    parent="@android:style/Widget.Holo.ActionButton.CloseMode" >
+                    <item name="android:background">
+@drawable/btn_cab_done_tussam
+                    </item>
+                </style>
+
+                <style
+                    name="ProgressBar.Tussam"
+                    parent="android:Widget.ProgressBar.Horizontal" >
+                    <item name="android:progressDrawable">
+@drawable/tussam_progress_horizontal_holo_dark
+                    </item>
+                    <item name="android:indeterminateDrawable">
+@drawable/tussam_progress_indeterminate_horizontal_holo_dark
+                    </item>
+                    <item name="android:minHeight">
+16dip
+                    </item>
+                    <item name="android:maxHeight">
+16dip
+                    </item>
+                </style>
+            </file>
+            <file
+                name="progress_secondary_tussam"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/progress_secondary_tussam.9.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="spinner_ab_disabled_tussam"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/spinner_ab_disabled_tussam.9.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="tussam_logo_shape"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable/tussam_logo_shape.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="tussam_progressbar_indeterminate_holo8"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/tussam_progressbar_indeterminate_holo8.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="tussam_progressbar_indeterminate_holo7"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/tussam_progressbar_indeterminate_holo7.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="tussam_progressbar_indeterminate_holo1"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/tussam_progressbar_indeterminate_holo1.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="tussam_progressbar_indeterminate_holo4"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/tussam_progressbar_indeterminate_holo4.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="tussam_progressbar_indeterminate_holo2"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/tussam_progressbar_indeterminate_holo2.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="tussam_progress_indeterminate_horizontal_holo_dark"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable/tussam_progress_indeterminate_horizontal_holo_dark.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="tussam_progressbar_indeterminate_holo3"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/tussam_progressbar_indeterminate_holo3.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="tussam_progress_secondary_holo_dark"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/tussam_progress_secondary_holo_dark.9.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="tussam_progress_primary_holo_dark"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/tussam_progress_primary_holo_dark.9.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="tussam_progressbar_indeterminate_holo6"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/tussam_progressbar_indeterminate_holo6.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="tussam_progress_horizontal_holo_dark"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable/tussam_progress_horizontal_holo_dark.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="tussam_progress_bg_holo_dark"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/tussam_progress_bg_holo_dark.9.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="tussam_progressbar_indeterminate_holo5"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/tussam_progressbar_indeterminate_holo5.png"
+                qualifiers="xhdpi"
+                type="drawable" />
         </source>
         <source path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/build/res/rs/debug" />
         <source path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/build/res/generated/debug" />
