@@ -10,9 +10,7 @@
   </component>
   <component name="AndroidLayoutPreviewToolWindow">
     <option name="state">
-      <GlobalState>
-        <option name="visible" value="false" />
-      </GlobalState>
+      <GlobalState />
     </option>
   </component>
   <component name="AndroidLayouts">
@@ -22,7 +20,7 @@
     <layouts>
       <layout url="file://$PROJECT_DIR$/RecargaTussam/src/main/res/layout/activity_main.xml">
         <config>
-          <device>Nexus 4</device>
+          <device>4in WVGA (Nexus S)</device>
           <theme>@style/Theme.Tussam</theme>
         </config>
       </layout>
@@ -33,33 +31,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adf1f0e6-e11a-45e9-a1a2-b35b80c70d54" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-xhdpi/tussam_ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-xhdpi/tussam_progress_bg_holo_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-xhdpi/tussam_progress_primary_holo_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-xhdpi/tussam_progress_secondary_holo_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-xhdpi/tussam_progressbar_indeterminate_holo1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-xhdpi/tussam_progressbar_indeterminate_holo2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-xhdpi/tussam_progressbar_indeterminate_holo3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-xhdpi/tussam_progressbar_indeterminate_holo4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-xhdpi/tussam_progressbar_indeterminate_holo5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-xhdpi/tussam_progressbar_indeterminate_holo6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-xhdpi/tussam_progressbar_indeterminate_holo7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-xhdpi/tussam_progressbar_indeterminate_holo8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/values/colors.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable/tussam_logo_shape.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable/tussam_progress_horizontal_holo_dark.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable/tussam_progress_indeterminate_horizontal_holo_dark.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/res/values/styles.xml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/helpers/SharedPrefsHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/menu/menu_add_edit.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/menu/menu_done.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/menu/menu_save_delete.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/build/pre-dexed/debug/androidannotations-api-3.0.1-b376f2cd1bb1960f6931da953f23e61b966e1505.jar" afterPath="$PROJECT_DIR$/RecargaTussam/build/pre-dexed/debug/androidannotations-api-3.0.1-b376f2cd1bb1960f6931da953f23e61b966e1505.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/build/pre-dexed/debug/classes-c1cc685152c2f417747e0118468ae74b1ae7371c.jar" afterPath="$PROJECT_DIR$/RecargaTussam/build/pre-dexed/debug/classes-c1cc685152c2f417747e0118468ae74b1ae7371c.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/build/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/RecargaTussam/build/dex/debug/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/build/pre-dexed/debug/crashlytics-1.1.10-199636d9bbb7855f52ffc99e6bd8a4ef931a229e.jar" afterPath="$PROJECT_DIR$/RecargaTussam/build/pre-dexed/debug/crashlytics-1.1.10-199636d9bbb7855f52ffc99e6bd8a4ef931a229e.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/build/pre-dexed/debug/jsoup-1.7.3-3c5bfeaad4f8de1690227e900f111728a0cb306f.jar" afterPath="$PROJECT_DIR$/RecargaTussam/build/pre-dexed/debug/jsoup-1.7.3-3c5bfeaad4f8de1690227e900f111728a0cb306f.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/build/pre-dexed/debug/support-v4-19.0.1-0e08de69b29a30a09abbd2a2748ae88542ec3f12.jar" afterPath="$PROJECT_DIR$/RecargaTussam/build/pre-dexed/debug/support-v4-19.0.1-0e08de69b29a30a09abbd2a2748ae88542ec3f12.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/build/pre-dexed/debug/universal-image-loader-1.9.1-75f79eb6b3c3beb370452e2cbfdc85e9c745821e.jar" afterPath="$PROJECT_DIR$/RecargaTussam/build/pre-dexed/debug/universal-image-loader-1.9.1-75f79eb6b3c3beb370452e2cbfdc85e9c745821e.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/build/source/buildConfig/debug/es/claucookie/recarga/BuildConfig.java" afterPath="$PROJECT_DIR$/RecargaTussam/build/source/buildConfig/debug/es/claucookie/recarga/BuildConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/build/source/apt/debug/es/claucookie/recarga/MainActivity_.java" afterPath="$PROJECT_DIR$/RecargaTussam/build/source/apt/debug/es/claucookie/recarga/MainActivity_.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/build/source/r/debug/com/mobivery/android/R.java" afterPath="$PROJECT_DIR$/RecargaTussam/build/source/r/debug/com/mobivery/android/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/build/source/r/debug/es/claucookie/recarga/R.java" afterPath="$PROJECT_DIR$/RecargaTussam/build/source/r/debug/es/claucookie/recarga/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/layout/activity_main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/build/source/apt/androidannotations.log" afterPath="$PROJECT_DIR$/RecargaTussam/build/source/apt/androidannotations.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generate.yml" afterPath="$PROJECT_DIR$/generate.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/res/values-en/strings.xml" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/values-en/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/res/values/styles_tussam.xml" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/values/styles_tussam.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="recarga-tussam-android.iws" />
@@ -78,7 +71,83 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java" line="156" class="es.claucookie.recarga.MainActivity$1" package="es.claucookie.recarga">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java" line="240" class="es.claucookie.recarga.MainActivity" package="es.claucookie.recarga">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java" line="239" class="es.claucookie.recarga.MainActivity" package="es.claucookie.recarga">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java" line="249" class="es.claucookie.recarga.MainActivity" package="es.claucookie.recarga">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java" line="238" class="es.claucookie.recarga.MainActivity" package="es.claucookie.recarga">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -127,47 +196,22 @@
     <leaf>
       <file leaf-file-name="activity_main.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/layout/activity_main.xml">
-          <provider selected="true" editor-type-id="android-designer">
+          <provider editor-type-id="android-designer">
             <state />
           </provider>
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.230769" vertical-offset="595" max-vertical-offset="1410">
-              <caret line="47" column="50" selection-start="1859" selection-end="1874" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.7735848" vertical-offset="363" max-vertical-offset="2430">
+              <caret line="34" column="25" selection-start="1278" selection-end="1278" />
               <folding>
-                <element signature="e#2175#2196#0" expanded="true" />
-                <element signature="e#2654#2673#0" expanded="true" />
-                <element signature="e#3140#3161#0" expanded="true" />
+                <element signature="e#1319#1343#0" expanded="true" />
+                <element signature="e#1785#1811#0" expanded="true" />
+                <element signature="e#2320#2341#0" expanded="true" />
+                <element signature="e#3034#3053#0" expanded="true" />
+                <element signature="e#3497#3518#0" expanded="true" />
+                <element signature="e#4525#4549#0" expanded="true" />
+                <element signature="e#5057#5083#0" expanded="true" />
+                <element signature="e#5717#5738#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tussam_logo_shape.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/drawable/tussam_logo_shape.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
-              <caret line="7" column="36" selection-start="271" selection-end="271" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="colors.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/values/colors.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
-              <caret line="3" column="43" selection-start="146" selection-end="146" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/values-en/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-              <caret line="8" column="41" selection-start="390" selection-end="390" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -175,8 +219,8 @@
       <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
-              <caret line="7" column="29" selection-start="381" selection-end="381" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+              <caret line="13" column="38" selection-start="954" selection-end="954" />
               <folding />
             </state>
           </provider>
@@ -185,32 +229,76 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.375" vertical-offset="1995" max-vertical-offset="3675">
-              <caret line="196" column="38" selection-start="5967" selection-end="5967" />
+            <state vertical-scroll-proportion="0.37724552" vertical-offset="2799" max-vertical-offset="5790">
+              <caret line="241" column="29" selection-start="7336" selection-end="7336" />
               <folding>
-                <element signature="e#1809#1817#0" expanded="true" />
-                <element signature="e#3052#3305#0" expanded="true" />
-                <element signature="e#3294#3295#0" expanded="true" />
-                <element signature="e#3922#4122#0" expanded="true" />
-                <element signature="e#4111#4112#0" expanded="true" />
-                <element signature="e#4124#4400#0" expanded="true" />
-                <element signature="e#4288#4319#0" expanded="true" />
-                <element signature="e#4389#4390#0" expanded="true" />
-                <element signature="e#5647#5678#0" expanded="true" />
-                <element signature="e#6287#6318#0" expanded="true" />
-                <element signature="e#6352#6383#0" expanded="true" />
-                <element signature="e#6415#6444#0" expanded="true" />
-                <element signature="e#6478#6509#0" expanded="true" />
+                <element signature="e#2875#2891#0" expanded="true" />
+                <element signature="e#3462#3463#0" expanded="true" />
+                <element signature="e#3495#3496#0" expanded="true" />
+                <element signature="e#3533#3534#0" expanded="true" />
+                <element signature="e#3588#3589#0" expanded="true" />
+                <element signature="e#3626#3627#0" expanded="true" />
+                <element signature="e#3678#3679#0" expanded="true" />
+                <element signature="e#4753#5006#0" expanded="true" />
+                <element signature="e#4995#4996#0" expanded="true" />
+                <element signature="e#7530#7764#0" expanded="true" />
+                <element signature="e#7753#7754#0" expanded="true" />
+                <element signature="e#7766#8042#0" expanded="true" />
+                <element signature="e#7930#7961#0" expanded="true" />
+                <element signature="e#8031#8032#0" expanded="true" />
+                <element signature="e#9289#9320#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/AndroidManifest.xml">
+      <file leaf-file-name="SharedPrefsHelper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/helpers/SharedPrefsHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="540">
-              <caret line="12" column="49" selection-start="361" selection-end="361" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+              <caret line="13" column="0" selection-start="270" selection-end="270" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="375">
+              <caret line="0" column="0" selection-start="0" selection-end="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="generate.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/generate.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="150">
+              <caret line="0" column="27" selection-start="27" selection-end="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu_done.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/menu/menu_done.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+              <caret line="4" column="31" selection-start="147" selection-end="147" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu_save_delete.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/menu/menu_save_delete.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+              <caret line="8" column="48" selection-start="336" selection-end="336" />
               <folding />
             </state>
           </provider>
@@ -219,8 +307,8 @@
       <file leaf-file-name="styles_tussam.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/values/styles_tussam.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="975" max-vertical-offset="1365">
-              <caret line="83" column="12" selection-start="4519" selection-end="4519" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="1470">
+              <caret line="47" column="0" selection-start="2629" selection-end="2629" />
               <folding />
             </state>
           </provider>
@@ -886,10 +974,16 @@
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/values/strings-en.xml" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable/tussam_logo_shape.xml" />
-        <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/values-en/strings.xml" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/menu/menu_cards.xml" />
+        <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/values-en/strings.xml" />
+        <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/menu/menu_add_edit.xml" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/values/styles_tussam.xml" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/generate.yml" />
+        <option value="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/helpers/SharedPrefsHelper.java" />
+        <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/menu/menu_save_delete.xml" />
+        <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/menu/menu_done.xml" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java" />
       </list>
@@ -1069,6 +1163,36 @@
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="menu" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="recarga-tussam-android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="recarga-tussam-android" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecargaTussam" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1127,104 +1251,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="drawable" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recarga-tussam-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recarga-tussam-android" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecargaTussam" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recarga" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recarga-tussam-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recarga-tussam-android" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecargaTussam" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recarga" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recarga-tussam-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recarga-tussam-android" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecargaTussam" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recarga" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="helpers" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1442,6 +1468,11 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SliceManager">
+    <option name="analysisUIOptions">
+      <AnalysisUIOptions />
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -1463,21 +1494,21 @@
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928804" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943144" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32943144" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943144" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32943144" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943144" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32956383" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23021002" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943144" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1506,9 +1537,14 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
           <caret line="10" column="50" selection-start="410" selection-end="410" />
           <folding>
-            <element signature="e#2175#2196#0" expanded="true" />
-            <element signature="e#2654#2673#0" expanded="true" />
-            <element signature="e#3140#3161#0" expanded="true" />
+            <element signature="e#1319#1343#0" expanded="true" />
+            <element signature="e#1785#1811#0" expanded="true" />
+            <element signature="e#2320#2341#0" expanded="true" />
+            <element signature="e#3034#3053#0" expanded="true" />
+            <element signature="e#3497#3518#0" expanded="true" />
+            <element signature="e#4525#4549#0" expanded="true" />
+            <element signature="e#5057#5083#0" expanded="true" />
+            <element signature="e#5717#5738#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1534,19 +1570,21 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1620" max-vertical-offset="3585">
           <caret line="136" column="60" selection-start="4025" selection-end="4025" />
           <folding>
-            <element signature="e#1809#1817#0" expanded="true" />
-            <element signature="e#3052#3305#0" expanded="true" />
-            <element signature="e#3294#3295#0" expanded="true" />
-            <element signature="e#3922#4122#0" expanded="true" />
-            <element signature="e#4111#4112#0" expanded="true" />
-            <element signature="e#4124#4400#0" expanded="true" />
-            <element signature="e#4288#4319#0" expanded="true" />
-            <element signature="e#4389#4390#0" expanded="true" />
-            <element signature="e#5647#5678#0" expanded="true" />
-            <element signature="e#6287#6318#0" expanded="true" />
-            <element signature="e#6352#6383#0" expanded="true" />
-            <element signature="e#6415#6444#0" expanded="true" />
-            <element signature="e#6478#6509#0" expanded="true" />
+            <element signature="e#2875#2891#0" expanded="true" />
+            <element signature="e#3462#3463#0" expanded="true" />
+            <element signature="e#3495#3496#0" expanded="true" />
+            <element signature="e#3533#3534#0" expanded="true" />
+            <element signature="e#3588#3589#0" expanded="true" />
+            <element signature="e#3626#3627#0" expanded="true" />
+            <element signature="e#3678#3679#0" expanded="true" />
+            <element signature="e#4753#5006#0" expanded="true" />
+            <element signature="e#4995#4996#0" expanded="true" />
+            <element signature="e#7530#7764#0" expanded="true" />
+            <element signature="e#7753#7754#0" expanded="true" />
+            <element signature="e#7766#8042#0" expanded="true" />
+            <element signature="e#7930#7961#0" expanded="true" />
+            <element signature="e#8031#8032#0" expanded="true" />
+            <element signature="e#9289#9320#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1564,13 +1602,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="525">
           <caret line="19" column="47" selection-start="576" selection-end="576" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../sdks/adt-bundle-mac-x86_64/sdk/sources/android-19/com/android/internal/os/ZygoteInit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="11535">
-          <caret line="0" column="0" selection-start="0" selection-end="0" />
         </state>
       </provider>
     </entry>
@@ -1655,58 +1686,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
-          <caret line="3" column="43" selection-start="146" selection-end="146" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/drawable/tussam_logo_shape.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
           <caret line="7" column="36" selection-start="271" selection-end="271" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/values/styles_tussam.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="975" max-vertical-offset="1365">
-          <caret line="83" column="12" selection-start="4519" selection-end="4519" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/values-en/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <caret line="8" column="41" selection-start="390" selection-end="390" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
-          <caret line="7" column="29" selection-start="381" selection-end="381" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.230769" vertical-offset="595" max-vertical-offset="1410">
-          <caret line="47" column="50" selection-start="1859" selection-end="1874" />
-          <folding>
-            <element signature="e#2175#2196#0" expanded="true" />
-            <element signature="e#2654#2673#0" expanded="true" />
-            <element signature="e#3140#3161#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1718,24 +1702,143 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/values-en/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
+          <caret line="10" column="85" selection-start="531" selection-end="531" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+          <caret line="3" column="34" selection-start="120" selection-end="137" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/values/styles_tussam.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="1470">
+          <caret line="47" column="0" selection-start="2629" selection-end="2629" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <caret line="13" column="38" selection-start="954" selection-end="954" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
+          <caret line="0" column="0" selection-start="0" selection-end="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generate.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="150">
+          <caret line="0" column="27" selection-start="27" selection-end="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/helpers/SharedPrefsHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <caret line="13" column="0" selection-start="270" selection-end="270" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/menu/menu_add_edit.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45833334" vertical-offset="0" max-vertical-offset="360">
+          <caret line="11" column="0" selection-start="0" selection-end="381" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/menu/menu_save_delete.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <caret line="8" column="48" selection-start="336" selection-end="336" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/menu/menu_done.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+          <caret line="4" column="31" selection-start="147" selection-end="147" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-xhdpi/ic_action_accept.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.7735848" vertical-offset="363" max-vertical-offset="2430">
+          <caret line="34" column="25" selection-start="1278" selection-end="1278" />
+          <folding>
+            <element signature="e#1319#1343#0" expanded="true" />
+            <element signature="e#1785#1811#0" expanded="true" />
+            <element signature="e#2320#2341#0" expanded="true" />
+            <element signature="e#3034#3053#0" expanded="true" />
+            <element signature="e#3497#3518#0" expanded="true" />
+            <element signature="e#4525#4549#0" expanded="true" />
+            <element signature="e#5057#5083#0" expanded="true" />
+            <element signature="e#5717#5738#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../sdks/adt-bundle-mac-x86_64/sdk/sources/android-19/com/android/internal/os/ZygoteInit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="11535">
+          <caret line="0" column="0" selection-start="0" selection-end="0" />
+          <folding>
+            <element signature="e#0#27389#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.375" vertical-offset="1995" max-vertical-offset="3675">
-          <caret line="196" column="38" selection-start="5967" selection-end="5967" />
+        <state vertical-scroll-proportion="0.37724552" vertical-offset="2799" max-vertical-offset="5790">
+          <caret line="241" column="29" selection-start="7336" selection-end="7336" />
           <folding>
-            <element signature="e#1809#1817#0" expanded="true" />
-            <element signature="e#3052#3305#0" expanded="true" />
-            <element signature="e#3294#3295#0" expanded="true" />
-            <element signature="e#3922#4122#0" expanded="true" />
-            <element signature="e#4111#4112#0" expanded="true" />
-            <element signature="e#4124#4400#0" expanded="true" />
-            <element signature="e#4288#4319#0" expanded="true" />
-            <element signature="e#4389#4390#0" expanded="true" />
-            <element signature="e#5647#5678#0" expanded="true" />
-            <element signature="e#6287#6318#0" expanded="true" />
-            <element signature="e#6352#6383#0" expanded="true" />
-            <element signature="e#6415#6444#0" expanded="true" />
-            <element signature="e#6478#6509#0" expanded="true" />
+            <element signature="e#2875#2891#0" expanded="true" />
+            <element signature="e#3462#3463#0" expanded="true" />
+            <element signature="e#3495#3496#0" expanded="true" />
+            <element signature="e#3533#3534#0" expanded="true" />
+            <element signature="e#3588#3589#0" expanded="true" />
+            <element signature="e#3626#3627#0" expanded="true" />
+            <element signature="e#3678#3679#0" expanded="true" />
+            <element signature="e#4753#5006#0" expanded="true" />
+            <element signature="e#4995#4996#0" expanded="true" />
+            <element signature="e#7530#7764#0" expanded="true" />
+            <element signature="e#7753#7754#0" expanded="true" />
+            <element signature="e#7766#8042#0" expanded="true" />
+            <element signature="e#7930#7961#0" expanded="true" />
+            <element signature="e#8031#8032#0" expanded="true" />
+            <element signature="e#9289#9320#0" expanded="true" />
           </folding>
         </state>
       </provider>

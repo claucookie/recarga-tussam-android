@@ -1,12 +1,18 @@
 package es.claucookie.recarga;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,18 +26,29 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.crashlytics.android.Crashlytics;
 import com.mobivery.android.widgets.ExLabel;
+import com.mobivery.android.widgets.ExText;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.InstanceState;
+import org.androidannotations.annotations.OptionsItem;
+import org.androidannotations.annotations.OptionsMenu;
+import org.androidannotations.annotations.OptionsMenuItem;
 import org.androidannotations.annotations.ViewById;
+import org.androidannotations.annotations.sharedpreferences.Pref;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 
+import es.claucookie.recarga.helpers.SharedPrefsHelper;
+import es.claucookie.recarga.helpers.SharedPrefsHelper_;
+
+@OptionsMenu(R.menu.menu_add_edit)
 @EActivity(R.layout.activity_main)
 public class MainActivity extends Activity {
     public static final String URL = "http://recargas.tussam.es/TPW/Common/cardStatus.do?swNumber=";
@@ -51,7 +68,23 @@ public class MainActivity extends Activity {
     TextView cardCreditText;
     @ViewById
     Spinner cardsSpinner;
+    @ViewById
+    ProgressBar progressBar;
+    @ViewById
+    ExLabel cardNameText;
+    @ViewById
+    ExText cardEditNameText;
+    @ViewById
+    ExText cardEditNumberText;
+    @ViewById
+    RelativeLayout cardsEditData;
+    @ViewById
+    RelativeLayout cardsData;
+    @ViewById
+    LinearLayout tussamInfo;
 
+    @InstanceState
+    String cardName;
 
     @InstanceState
     String cardNumber;
@@ -66,11 +99,14 @@ public class MainActivity extends Activity {
     String cardCredit;
 
     @InstanceState
-    ArrayList<String> savedCards = new ArrayList<String>();
-    @ViewById
-    ProgressBar progressBar;
-    @ViewById
-    ExLabel cardNameText;
+    LinkedHashMap<String, String> savedCards = new LinkedHashMap<String, String>();
+
+    @InstanceState
+    boolean isDetailView = false, isAddView = false, isEditView = false;
+
+    @Pref
+    SharedPrefsHelper_ prefsHelper;
+
 
     private ArrayAdapter<String> spinnerAdapter;
 
@@ -82,8 +118,26 @@ public class MainActivity extends Activity {
 
     @AfterViews
     void initViews() {
+        initProgressBar();
         initSpinner();
         loadSavedCards();
+        if (savedCards.size() > 0) {
+            showDetailView();
+        } else {
+            showAddView();
+        }
+    }
+
+    private void initProgressBar() {
+        hideProgressBar();
+    }
+
+    private void showProgressBar() {
+        progressBar.setVisibility(View.VISIBLE);
+    }
+
+    private void hideProgressBar() {
+        progressBar.setVisibility(View.GONE);
     }
 
     private void initSpinner() {
@@ -97,7 +151,10 @@ public class MainActivity extends Activity {
         cardsSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                requestCardInfo((String) parent.getItemAtPosition(position));
+                String key = (new ArrayList<String>(savedCards.keySet())).get(position);
+                cardName = cardsSpinner.getSelectedItem().toString();
+                cardNumber = key.trim();
+                requestCardInfo(cardNumber);
             }
 
             @Override
@@ -117,10 +174,8 @@ public class MainActivity extends Activity {
 
     private void loadSavedCards() {
         // Get saved cards from preferences
-        savedCards.add("31161031261");
-        savedCards.add("31161031260");
         spinnerAdapter.clear();
-        spinnerAdapter.addAll(savedCards);
+        spinnerAdapter.addAll(savedCards.values());
         spinnerAdapter.notifyDataSetChanged();
     }
 
@@ -131,13 +186,73 @@ public class MainActivity extends Activity {
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        if (isDetailView) {
+            menu.clear();
+            getMenuInflater().inflate(R.menu.menu_add_edit, menu);
+        } else if (isEditView) {
+            menu.clear();
+            getMenuInflater().inflate(R.menu.menu_save_delete, menu);
+        } else if (isAddView) {
+            menu.clear();
+            getMenuInflater().inflate(R.menu.menu_done, menu);
+        }
+        return super.onCreateOptionsMenu(menu);
+    }
+
+
+    @OptionsItem(R.id.edit_card)
+    void editCardClicked() {
+
+        showEditView();
+        invalidateOptionsMenu();
+    }
+
+    @OptionsItem(R.id.add_card)
+    void addCardClicked() {
+
+        showAddView();
+        invalidateOptionsMenu();
+    }
+
+    @OptionsItem(R.id.create_card)
+    void createCardClicked() {
+
+        String newCardNumber = cardEditNumberText.getText() != null ? cardEditNumberText.getText().toString().replace(" ", "") : "";
+        String newCardName = cardEditNameText.getText() != null ? cardEditNameText.getText().toString() : "";
+        if (!newCardNumber.equals("")) {
+            newCardNumber = newCardNumber.replaceFirst("^0+(?!$)", "");
+            savedCards.put(newCardNumber, newCardName);
+            loadSavedCards();
+            if (spinnerAdapter.getCount() > 0) {
+                cardsSpinner.setSelection(spinnerAdapter.getCount() - 1);
+            }
+            showDetailView();
+        }
+    }
+
+    @OptionsItem(R.id.save_card)
+    void saveCardClicked() {
+        String newCardNumber = cardEditNumberText.getText() != null ? cardEditNumberText.getText().toString().replace(" ", "") : "";
+        String newCardName = cardEditNameText.getText() != null ? cardEditNameText.getText().toString() : "";
+        if (!newCardNumber.equals("")) {
+            newCardNumber = newCardNumber.replaceFirst("^0+(?!$)", "");
+            savedCards.put(newCardNumber, newCardName);
+            loadSavedCards();
+            showDetailView();
+        }
+    }
+
+
     private void requestCardInfo(String cardNumber) {
-        progressBar.setVisibility(View.VISIBLE);
+        showProgressBar();
         StringRequest req = new StringRequest(URL + cardNumber, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 parseHtml(response);
                 reloadData();
+                showDetailView();
             }
         }, new Response.ErrorListener() {
             @Override
@@ -189,12 +304,17 @@ public class MainActivity extends Activity {
     }
 
     private void reloadData() {
-        progressBar.setVisibility(View.GONE);
+        hideProgressBar();
+        if (cardName != null) {
+            cardNameText.setText(cardName);
+            cardEditNameText.setText(cardName);
+        }
         if (cardNumber != null) {
             cardNumberText.setText(cardNumber);
+            cardEditNumberText.setText(cardNumber);
         }
         if (cardStatus != null) {
-            cardStatusText.setText("  " + cardStatus);
+            cardStatusText.setText(cardStatus);
         }
         if (cardType != null) {
             cardTypeText.setText(cardType);
@@ -206,12 +326,49 @@ public class MainActivity extends Activity {
 
     private void clearData() {
         progressBar.setVisibility(View.GONE);
-        cardNumberText.setText(getString(R.string.card_number));
-        cardStatusText.setText(getString(R.string.card_status));
-        cardTypeText.setText(getString(R.string.card_type));
-        cardCreditText.setText(getString(R.string.card_credit));
+        cardNameText.setText(cardName);
+        cardNumberText.setText(cardNumber);
+        cardStatusText.setText("");
+        cardTypeText.setText("");
+        cardCreditText.setText("");
     }
 
+    private void showDetailView() {
+        isDetailView = true;
+        isEditView = false;
+        isAddView = false;
+        cardsSpinner.setVisibility(View.VISIBLE);
+        cardsData.setVisibility(View.VISIBLE);
+        cardsEditData.setVisibility(View.GONE);
+        invalidateOptionsMenu();
+        // remove soft keyboard
+        InputMethodManager imm =  (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(cardNumberText.getWindowToken(), 0);
+    }
+
+    private void showAddView() {
+        isDetailView = false;
+        isEditView = false;
+        isAddView = true;
+        cardEditNumberText.setText("");
+        cardEditNameText.setText("");
+        cardsSpinner.setVisibility(View.GONE);
+        cardsData.setVisibility(View.GONE);
+        cardsEditData.setVisibility(View.VISIBLE);
+        invalidateOptionsMenu();
+    }
+
+    private void showEditView() {
+        isDetailView = false;
+        isEditView = true;
+        isAddView = false;
+        cardEditNumberText.setText(cardNumber);
+        cardEditNameText.setText(cardName);
+        cardsSpinner.setVisibility(View.VISIBLE);
+        cardsData.setVisibility(View.GONE);
+        cardsEditData.setVisibility(View.VISIBLE);
+        invalidateOptionsMenu();
+    }
 
     /**
      * @return The Volley Request queue, the queue will be created if it is null

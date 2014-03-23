@@ -35,69 +35,92 @@ containing a value of this type.
         public static final int btn_cab_done_tussam=0x7f020009;
         public static final int cab_background_bottom_tussam=0x7f02000a;
         public static final int cab_background_top_tussam=0x7f02000b;
-        public static final int ic_launcher=0x7f02000c;
-        public static final int icon=0x7f02000d;
-        public static final int list_focused_tussam=0x7f02000e;
-        public static final int list_pressed_tussam=0x7f02000f;
-        public static final int logo=0x7f020010;
-        public static final int menu_dropdown_panel_tussam=0x7f020011;
-        public static final int progress_bg_tussam=0x7f020012;
-        public static final int progress_horizontal_tussam=0x7f020013;
-        public static final int progress_primary_tussam=0x7f020014;
-        public static final int progress_secondary_tussam=0x7f020015;
-        public static final int selectable_background_tussam=0x7f020016;
-        public static final int spinner_ab_default_tussam=0x7f020017;
-        public static final int spinner_ab_disabled_tussam=0x7f020018;
-        public static final int spinner_ab_focused_tussam=0x7f020019;
-        public static final int spinner_ab_pressed_tussam=0x7f02001a;
-        public static final int spinner_background_ab_tussam=0x7f02001b;
-        public static final int tab_indicator_ab_tussam=0x7f02001c;
-        public static final int tab_selected_focused_tussam=0x7f02001d;
-        public static final int tab_selected_pressed_tussam=0x7f02001e;
-        public static final int tab_selected_tussam=0x7f02001f;
-        public static final int tab_unselected_focused_tussam=0x7f020020;
-        public static final int tab_unselected_pressed_tussam=0x7f020021;
-        public static final int tab_unselected_tussam=0x7f020022;
-        public static final int tussam_ic_launcher=0x7f020023;
-        public static final int tussam_logo_shape=0x7f020024;
-        public static final int tussam_progress_bg_holo_dark=0x7f020025;
-        public static final int tussam_progress_horizontal_holo_dark=0x7f020026;
-        public static final int tussam_progress_indeterminate_horizontal_holo_dark=0x7f020027;
-        public static final int tussam_progress_primary_holo_dark=0x7f020028;
-        public static final int tussam_progress_secondary_holo_dark=0x7f020029;
-        public static final int tussam_progressbar_indeterminate_holo1=0x7f02002a;
-        public static final int tussam_progressbar_indeterminate_holo2=0x7f02002b;
-        public static final int tussam_progressbar_indeterminate_holo3=0x7f02002c;
-        public static final int tussam_progressbar_indeterminate_holo4=0x7f02002d;
-        public static final int tussam_progressbar_indeterminate_holo5=0x7f02002e;
-        public static final int tussam_progressbar_indeterminate_holo6=0x7f02002f;
-        public static final int tussam_progressbar_indeterminate_holo7=0x7f020030;
-        public static final int tussam_progressbar_indeterminate_holo8=0x7f020031;
+        public static final int ic_action_accept=0x7f02000c;
+        public static final int ic_action_edit=0x7f02000d;
+        public static final int ic_action_new=0x7f02000e;
+        public static final int ic_action_remove=0x7f02000f;
+        public static final int ic_action_save=0x7f020010;
+        public static final int ic_launcher=0x7f020011;
+        public static final int icon=0x7f020012;
+        public static final int list_focused_tussam=0x7f020013;
+        public static final int list_pressed_tussam=0x7f020014;
+        public static final int logo=0x7f020015;
+        public static final int menu_dropdown_panel_tussam=0x7f020016;
+        public static final int progress_bg_tussam=0x7f020017;
+        public static final int progress_horizontal_tussam=0x7f020018;
+        public static final int progress_primary_tussam=0x7f020019;
+        public static final int progress_secondary_tussam=0x7f02001a;
+        public static final int selectable_background_tussam=0x7f02001b;
+        public static final int spinner_ab_default_tussam=0x7f02001c;
+        public static final int spinner_ab_disabled_tussam=0x7f02001d;
+        public static final int spinner_ab_focused_tussam=0x7f02001e;
+        public static final int spinner_ab_pressed_tussam=0x7f02001f;
+        public static final int spinner_background_ab_tussam=0x7f020020;
+        public static final int tab_indicator_ab_tussam=0x7f020021;
+        public static final int tab_selected_focused_tussam=0x7f020022;
+        public static final int tab_selected_pressed_tussam=0x7f020023;
+        public static final int tab_selected_tussam=0x7f020024;
+        public static final int tab_unselected_focused_tussam=0x7f020025;
+        public static final int tab_unselected_pressed_tussam=0x7f020026;
+        public static final int tab_unselected_tussam=0x7f020027;
+        public static final int tussam_ic_launcher=0x7f020028;
+        public static final int tussam_logo_shape=0x7f020029;
+        public static final int tussam_progress_bg_holo_dark=0x7f02002a;
+        public static final int tussam_progress_horizontal_holo_dark=0x7f02002b;
+        public static final int tussam_progress_indeterminate_horizontal_holo_dark=0x7f02002c;
+        public static final int tussam_progress_primary_holo_dark=0x7f02002d;
+        public static final int tussam_progress_secondary_holo_dark=0x7f02002e;
+        public static final int tussam_progressbar_indeterminate_holo1=0x7f02002f;
+        public static final int tussam_progressbar_indeterminate_holo2=0x7f020030;
+        public static final int tussam_progressbar_indeterminate_holo3=0x7f020031;
+        public static final int tussam_progressbar_indeterminate_holo4=0x7f020032;
+        public static final int tussam_progressbar_indeterminate_holo5=0x7f020033;
+        public static final int tussam_progressbar_indeterminate_holo6=0x7f020034;
+        public static final int tussam_progressbar_indeterminate_holo7=0x7f020035;
+        public static final int tussam_progressbar_indeterminate_holo8=0x7f020036;
     }
     public static final class id {
-        public static final int card_credit_text=0x7f070005;
-        public static final int card_name_text=0x7f070002;
-        public static final int card_number_text=0x7f070003;
-        public static final int card_status_text=0x7f070004;
-        public static final int card_type_text=0x7f070006;
-        public static final int cards_spinner=0x7f070001;
-        public static final int progress_bar=0x7f070000;
+        public static final int add_card=0x7f08000d;
+        public static final int card_credit_text=0x7f080006;
+        public static final int card_edit_name_text=0x7f080009;
+        public static final int card_edit_number_text=0x7f08000a;
+        public static final int card_name_text=0x7f080003;
+        public static final int card_number_text=0x7f080004;
+        public static final int card_status_text=0x7f080005;
+        public static final int card_type_text=0x7f080007;
+        public static final int cards_data=0x7f080002;
+        public static final int cards_edit_data=0x7f080008;
+        public static final int cards_spinner=0x7f080001;
+        public static final int create_card=0x7f08000e;
+        public static final int delete_card=0x7f080010;
+        public static final int edit_card=0x7f08000c;
+        public static final int progress_bar=0x7f080000;
+        public static final int save_card=0x7f08000f;
+        public static final int tussam_info=0x7f08000b;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int main=0x7f030001;
     }
+    public static final class menu {
+        public static final int menu_add_edit=0x7f070000;
+        public static final int menu_done=0x7f070001;
+        public static final int menu_save_delete=0x7f070002;
+    }
     public static final class string {
         public static final int app_name=0x7f050000;
         public static final int card_credit=0x7f050001;
-        public static final int card_number=0x7f050002;
-        public static final int card_status=0x7f050003;
-        public static final int card_type=0x7f050004;
-        public static final int com_crashlytics_android_build_id=0x7f050005;
-        public static final int com_mobivery_android_name=0x7f050006;
-        public static final int hello_world=0x7f050007;
-        public static final int loading_text=0x7f050008;
-        public static final int parse_error=0x7f050009;
+        public static final int card_name_hint=0x7f050002;
+        public static final int card_number=0x7f050003;
+        public static final int card_number_hint=0x7f050004;
+        public static final int card_status=0x7f050005;
+        public static final int card_type=0x7f050006;
+        public static final int com_crashlytics_android_build_id=0x7f050007;
+        public static final int com_mobivery_android_name=0x7f050008;
+        public static final int hello_world=0x7f050009;
+        public static final int loading_text=0x7f05000a;
+        public static final int parse_error=0x7f05000b;
+        public static final int tussam_info=0x7f05000c;
     }
     public static final class style {
         public static final int ActionBar_Solid_Tussam=0x7f060000;
@@ -109,8 +132,9 @@ containing a value of this type.
         public static final int DropDownNav_Tussam=0x7f060006;
         public static final int PopupMenu_Tussam=0x7f060007;
         public static final int ProgressBar_Tussam=0x7f060008;
-        public static final int Theme_Tussam=0x7f060009;
-        public static final int Theme_Tussam_Widget=0x7f06000a;
+        public static final int Spinner_Tussam=0x7f060009;
+        public static final int Theme_Tussam=0x7f06000a;
+        public static final int Theme_Tussam_Widget=0x7f06000b;
     }
     public static final class styleable {
         /** Attributes that can be used with a ExButton.

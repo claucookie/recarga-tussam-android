@@ -5,18 +5,26 @@
 
 package es.claucookie.recarga;
 
+import java.util.LinkedHashMap;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import com.mobivery.android.widgets.ExLabel;
+import com.mobivery.android.widgets.ExText;
 import es.claucookie.recarga.R.id;
 import es.claucookie.recarga.R.layout;
+import es.claucookie.recarga.helpers.SharedPrefsHelper_;
 import org.androidannotations.api.view.HasViews;
 import org.androidannotations.api.view.OnViewChangedListener;
 import org.androidannotations.api.view.OnViewChangedNotifier;
@@ -38,6 +46,7 @@ public final class MainActivity_
     }
 
     private void init_(Bundle savedInstanceState) {
+        prefsHelper = new SharedPrefsHelper_(this);
         OnViewChangedNotifier.registerOnViewChangedListener(this);
         restoreSavedInstanceState_(savedInstanceState);
     }
@@ -74,35 +83,82 @@ public final class MainActivity_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        cardNameText = ((ExLabel) hasViews.findViewById(id.card_name_text));
-        cardCreditText = ((TextView) hasViews.findViewById(id.card_credit_text));
-        cardStatusText = ((TextView) hasViews.findViewById(id.card_status_text));
+        cardsSpinner = ((Spinner) hasViews.findViewById(id.cards_spinner));
+        cardEditNameText = ((ExText) hasViews.findViewById(id.card_edit_name_text));
+        tussamInfo = ((LinearLayout) hasViews.findViewById(id.tussam_info));
         progressBar = ((ProgressBar) hasViews.findViewById(id.progress_bar));
         cardNumberText = ((TextView) hasViews.findViewById(id.card_number_text));
+        cardsData = ((RelativeLayout) hasViews.findViewById(id.cards_data));
+        cardCreditText = ((TextView) hasViews.findViewById(id.card_credit_text));
+        cardEditNumberText = ((ExText) hasViews.findViewById(id.card_edit_number_text));
         cardTypeText = ((TextView) hasViews.findViewById(id.card_type_text));
-        cardsSpinner = ((Spinner) hasViews.findViewById(id.cards_spinner));
+        cardsEditData = ((RelativeLayout) hasViews.findViewById(id.cards_edit_data));
+        cardNameText = ((ExLabel) hasViews.findViewById(id.card_name_text));
+        cardStatusText = ((TextView) hasViews.findViewById(id.card_status_text));
         initViews();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(es.claucookie.recarga.R.menu.menu_add_edit, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        boolean handled = super.onOptionsItemSelected(item);
+        if (handled) {
+            return true;
+        }
+        int itemId_ = item.getItemId();
+        if (itemId_ == id.add_card) {
+            addCardClicked();
+            return true;
+        }
+        if (itemId_ == id.save_card) {
+            saveCardClicked();
+            return true;
+        }
+        if (itemId_ == id.edit_card) {
+            editCardClicked();
+            return true;
+        }
+        if (itemId_ == id.create_card) {
+            createCardClicked();
+            return true;
+        }
+        return false;
     }
 
     @Override
     public void onSaveInstanceState(Bundle bundle) {
         super.onSaveInstanceState(bundle);
-        bundle.putStringArrayList("savedCards", savedCards);
-        bundle.putString("cardType", cardType);
-        bundle.putString("cardNumber", cardNumber);
+        bundle.putBoolean("isDetailView", isDetailView);
+        bundle.putSerializable("savedCards", savedCards);
         bundle.putString("cardCredit", cardCredit);
+        bundle.putBoolean("isAddView", isAddView);
+        bundle.putString("cardType", cardType);
         bundle.putString("cardStatus", cardStatus);
+        bundle.putString("cardNumber", cardNumber);
+        bundle.putBoolean("isEditView", isEditView);
+        bundle.putString("cardName", cardName);
     }
 
+    @SuppressWarnings("unchecked")
     private void restoreSavedInstanceState_(Bundle savedInstanceState) {
         if (savedInstanceState == null) {
             return ;
         }
-        savedCards = savedInstanceState.getStringArrayList("savedCards");
-        cardType = savedInstanceState.getString("cardType");
-        cardNumber = savedInstanceState.getString("cardNumber");
+        isDetailView = savedInstanceState.getBoolean("isDetailView");
+        savedCards = ((LinkedHashMap<String, String> ) savedInstanceState.getSerializable("savedCards"));
         cardCredit = savedInstanceState.getString("cardCredit");
+        isAddView = savedInstanceState.getBoolean("isAddView");
+        cardType = savedInstanceState.getString("cardType");
         cardStatus = savedInstanceState.getString("cardStatus");
+        cardNumber = savedInstanceState.getString("cardNumber");
+        isEditView = savedInstanceState.getBoolean("isEditView");
+        cardName = savedInstanceState.getString("cardName");
     }
 
     public static class IntentBuilder_ {

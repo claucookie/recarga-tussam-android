@@ -1,4 +1,4 @@
 project_file_name: "RecargaTussam"
-ws_definitions_file_name: ""
+ws_definitions_file_name: "tussam"
 ws_template_version: "4.0"
 package: "es.claucookie.recarga"

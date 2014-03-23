@@ -1,9 +1,8 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/common_background">
 
     <ProgressBar
@@ -22,15 +21,19 @@
         android:layout_margin="10dp"/>
 
     <RelativeLayout
+        android:id="@+id/cards_data"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="20dp">
+        android:padding="20dp"
+        android:layout_below="@+id/cards_spinner"
+        android:visibility="gone"
+        tools:visibility="visible">
 
         <com.mobivery.android.widgets.ExLabel
             android:id="@+id/card_name_text"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="..."
+            android:layout_height="40dp"
+            android:hint="@string/card_name_hint"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:gravity="left|center_vertical"
@@ -40,8 +43,8 @@
         <com.mobivery.android.widgets.ExLabel
             android:id="@+id/card_number_text"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="..."
+            android:layout_height="40dp"
+            android:hint="@string/card_number_hint"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
             android:layout_toRightOf="@+id/card_name_text"
@@ -53,37 +56,102 @@
             android:id="@+id/card_status_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/card_status"
+            tools:text="@string/card_status"
             android:layout_below="@+id/card_name_text"
-            android:gravity="left|bottom"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:ellipsize="end"
             android:layout_toLeftOf="@+id/card_credit_text"
+            android:layout_alignTop="@id/card_credit_text"
+            android:layout_alignBottom="@id/card_credit_text"
             style="@style/CommonText.Tussam"
-            app:fontName="Roboto-Bold"/>
+            app:fontName="Roboto-Bold"
+            android:layout_marginTop="5dp"/>
 
         <com.mobivery.android.widgets.ExLabel
             android:id="@+id/card_type_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/card_type"
+            tools:text="@string/card_type"
             android:layout_below="@+id/card_status_text"
-            android:gravity="left|bottom"
-            android:layout_toLeftOf="@+id/card_credit_text"
+            android:gravity="center_horizontal"
             style="@style/CommonText.Tussam"
-            android:layout_marginLeft="5dp"/>
+            android:layout_marginLeft="5dp"
+            android:maxLines="2"/>
 
         <com.mobivery.android.widgets.ExLabel
             android:id="@+id/card_credit_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/card_credit"
+            tools:text="@string/card_credit"
             android:layout_below="@+id/card_number_text"
-            android:layout_alignBottom="@id/card_type_text"
             android:layout_alignParentRight="true"
             android:gravity="right|bottom"
-            android:textSize="24sp"
+            android:textSize="26sp"
             style="@style/CommonText.Tussam"/>
 
     </RelativeLayout>
 
+    <RelativeLayout
+        android:id="@+id/cards_edit_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:visibility="gone"
+        android:layout_below="@+id/cards_spinner">
 
-</LinearLayout>
+        <com.mobivery.android.widgets.ExText
+            android:id="@+id/card_edit_name_text"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            tools:text="Tarjeta normal"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:gravity="left|center_vertical"
+            android:textSize="17sp"
+            style="@style/CommonText.Tussam"
+            android:hint="@string/card_name_hint"
+            android:maxLength="25"/>
+
+        <com.mobivery.android.widgets.ExText
+            android:id="@+id/card_edit_number_text"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            tools:text="02139579729"
+            android:maxLength="15"
+            android:layout_below="@id/card_edit_name_text"
+            android:gravity="center_vertical"
+            android:textSize="17sp"
+            style="@style/CommonText.Tussam"
+            android:hint="@string/card_number_hint"
+            android:inputType="number"/>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/tussam_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="@color/common_text_color"/>
+
+        <com.mobivery.android.widgets.ExLabel
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tussam_info"
+            android:textSize="14sp"
+            style="@style/CommonText.Tussam"
+            android:padding="20dp"/>
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

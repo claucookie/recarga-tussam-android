@@ -14,7 +14,7 @@ public final class R {
 		public static final int main = 0x7f030001;
 	}
 	public static final class string {
-		public static final int com_mobivery_android_name = 0x7f050006;
+		public static final int com_mobivery_android_name = 0x7f050008;
 	}
 	public static final class styleable {
 		public static final int[] ExButton = { 0x7f010000 };
