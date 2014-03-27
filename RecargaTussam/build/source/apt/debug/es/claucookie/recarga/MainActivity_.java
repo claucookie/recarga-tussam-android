@@ -5,7 +5,6 @@
 
 package es.claucookie.recarga;
 
-import java.util.LinkedHashMap;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -24,7 +23,6 @@ import com.mobivery.android.widgets.ExLabel;
 import com.mobivery.android.widgets.ExText;
 import es.claucookie.recarga.R.id;
 import es.claucookie.recarga.R.layout;
-import es.claucookie.recarga.helpers.SharedPrefsHelper_;
 import org.androidannotations.api.view.HasViews;
 import org.androidannotations.api.view.OnViewChangedListener;
 import org.androidannotations.api.view.OnViewChangedNotifier;
@@ -46,7 +44,6 @@ public final class MainActivity_
     }
 
     private void init_(Bundle savedInstanceState) {
-        prefsHelper = new SharedPrefsHelper_(this);
         OnViewChangedNotifier.registerOnViewChangedListener(this);
         restoreSavedInstanceState_(savedInstanceState);
     }
@@ -83,18 +80,18 @@ public final class MainActivity_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        cardsSpinner = ((Spinner) hasViews.findViewById(id.cards_spinner));
-        cardEditNameText = ((ExText) hasViews.findViewById(id.card_edit_name_text));
-        tussamInfo = ((LinearLayout) hasViews.findViewById(id.tussam_info));
-        progressBar = ((ProgressBar) hasViews.findViewById(id.progress_bar));
-        cardNumberText = ((TextView) hasViews.findViewById(id.card_number_text));
-        cardsData = ((RelativeLayout) hasViews.findViewById(id.cards_data));
-        cardCreditText = ((TextView) hasViews.findViewById(id.card_credit_text));
-        cardEditNumberText = ((ExText) hasViews.findViewById(id.card_edit_number_text));
-        cardTypeText = ((TextView) hasViews.findViewById(id.card_type_text));
-        cardsEditData = ((RelativeLayout) hasViews.findViewById(id.cards_edit_data));
         cardNameText = ((ExLabel) hasViews.findViewById(id.card_name_text));
+        progressBar = ((ProgressBar) hasViews.findViewById(id.progress_bar));
+        cardsEditData = ((RelativeLayout) hasViews.findViewById(id.cards_edit_data));
+        cardsData = ((RelativeLayout) hasViews.findViewById(id.cards_data));
+        tussamInfo = ((LinearLayout) hasViews.findViewById(id.tussam_info));
+        cardEditNumberText = ((ExText) hasViews.findViewById(id.card_edit_number_text));
+        cardCreditText = ((TextView) hasViews.findViewById(id.card_credit_text));
+        cardTypeText = ((TextView) hasViews.findViewById(id.card_type_text));
+        cardEditNameText = ((ExText) hasViews.findViewById(id.card_edit_name_text));
+        cardNumberText = ((TextView) hasViews.findViewById(id.card_number_text));
         cardStatusText = ((TextView) hasViews.findViewById(id.card_status_text));
+        cardsSpinner = ((Spinner) hasViews.findViewById(id.cards_spinner));
         initViews();
     }
 
@@ -112,20 +109,24 @@ public final class MainActivity_
             return true;
         }
         int itemId_ = item.getItemId();
+        if (itemId_ == id.save_card) {
+            saveCardClicked();
+            return true;
+        }
         if (itemId_ == id.add_card) {
             addCardClicked();
             return true;
         }
-        if (itemId_ == id.save_card) {
-            saveCardClicked();
+        if (itemId_ == id.create_card) {
+            createCardClicked();
             return true;
         }
         if (itemId_ == id.edit_card) {
             editCardClicked();
             return true;
         }
-        if (itemId_ == id.create_card) {
-            createCardClicked();
+        if (itemId_ == id.discard_card) {
+            cancelClicked();
             return true;
         }
         return false;
@@ -134,31 +135,22 @@ public final class MainActivity_
     @Override
     public void onSaveInstanceState(Bundle bundle) {
         super.onSaveInstanceState(bundle);
-        bundle.putBoolean("isDetailView", isDetailView);
-        bundle.putSerializable("savedCards", savedCards);
-        bundle.putString("cardCredit", cardCredit);
-        bundle.putBoolean("isAddView", isAddView);
-        bundle.putString("cardType", cardType);
-        bundle.putString("cardStatus", cardStatus);
-        bundle.putString("cardNumber", cardNumber);
+        bundle.putParcelable("selectedCardDTO", selectedCardDTO);
+        bundle.putParcelable("tussamCardsDTO", tussamCardsDTO);
         bundle.putBoolean("isEditView", isEditView);
-        bundle.putString("cardName", cardName);
+        bundle.putBoolean("isAddView", isAddView);
+        bundle.putBoolean("isDetailView", isDetailView);
     }
 
-    @SuppressWarnings("unchecked")
     private void restoreSavedInstanceState_(Bundle savedInstanceState) {
         if (savedInstanceState == null) {
             return ;
         }
-        isDetailView = savedInstanceState.getBoolean("isDetailView");
-        savedCards = ((LinkedHashMap<String, String> ) savedInstanceState.getSerializable("savedCards"));
-        cardCredit = savedInstanceState.getString("cardCredit");
-        isAddView = savedInstanceState.getBoolean("isAddView");
-        cardType = savedInstanceState.getString("cardType");
-        cardStatus = savedInstanceState.getString("cardStatus");
-        cardNumber = savedInstanceState.getString("cardNumber");
+        selectedCardDTO = savedInstanceState.getParcelable("selectedCardDTO");
+        tussamCardsDTO = savedInstanceState.getParcelable("tussamCardsDTO");
         isEditView = savedInstanceState.getBoolean("isEditView");
-        cardName = savedInstanceState.getString("cardName");
+        isAddView = savedInstanceState.getBoolean("isAddView");
+        isDetailView = savedInstanceState.getBoolean("isDetailView");
     }
 
     public static class IntentBuilder_ {

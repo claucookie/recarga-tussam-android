@@ -1,37 +1,23 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <?xml-stylesheet type="text/xsl" href="services.xslt"?>
 <protocol>
-    <description>
-<br/>    
-    Web services for <b>EMT-REST</b> <i>(JSON)</i> Access.<br/>
-    All service Requests are called as POST, so all parameters should be added into body request.<br/>
-    Responses are JSON formatted text.<br/>
-<br/>
-    All method requests require an <i>idClient</i> and <i>passKey</i>, those values are provided by EMT upon request.<br/>
-<br/>
-    This document is divied into <a href="#messages">Message definitions</a> and <a href="#types">Type definitions</a><br/>    
-<br/>        
+    <description>      
     </description>
-	
-	
 	<!-- 
 	#################################################################
 	TYPES
 	#################################################################
 	 -->
 	<types>
-		
-        <type name=“TussamCardsDTO”>
-        	<field name="imageName" type=“TussamCardDTO*" description=“cards”/>
+        <type name="TussamCardsDTO">
+        	<field name="cards" type="TussamCardDTO*" description="cards"/>
         </type>
-        <type name=“TussamCardDTO”>
-        	<field name=“cardName” type="string" description=“name”/>
-        	<field name=“cardNumber” type=“string” description=“number”/>
+        <type name="TussamCardDTO">
+        	<field name="cardName" type="string" description="name"/>
+        	<field name="cardNumber" type="string" description="number"/>
+			<field name="cardType" type="string" description="type"/>
+			<field name="cardStatus" type="string" description="type"/>
+			<field name="cardCredit" type="string" description="type"/>			
         </type>
-        
 	</types>
-	
-	
-	
-
 </protocol>

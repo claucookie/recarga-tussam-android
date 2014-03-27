@@ -5,7 +5,6 @@ import android.content.Context;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
@@ -33,20 +32,19 @@ import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.InstanceState;
 import org.androidannotations.annotations.OptionsItem;
 import org.androidannotations.annotations.OptionsMenu;
-import org.androidannotations.annotations.OptionsMenuItem;
 import org.androidannotations.annotations.ViewById;
-import org.androidannotations.annotations.sharedpreferences.Pref;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
 
-import es.claucookie.recarga.helpers.SharedPrefsHelper;
-import es.claucookie.recarga.helpers.SharedPrefsHelper_;
+import es.claucookie.recarga.helpers.PreferencesHelper;
+import es.claucookie.recarga.model.dto.TussamCardDTO;
+import es.claucookie.recarga.model.dto.TussamCardsDTO;
 
 @OptionsMenu(R.menu.menu_add_edit)
 @EActivity(R.layout.activity_main)
@@ -84,29 +82,13 @@ public class MainActivity extends Activity {
     LinearLayout tussamInfo;
 
     @InstanceState
-    String cardName;
+    TussamCardsDTO tussamCardsDTO = new TussamCardsDTO();
 
     @InstanceState
-    String cardNumber;
-
-    @InstanceState
-    String cardStatus;
-
-    @InstanceState
-    String cardType;
-
-    @InstanceState
-    String cardCredit;
-
-    @InstanceState
-    LinkedHashMap<String, String> savedCards = new LinkedHashMap<String, String>();
+    TussamCardDTO selectedCardDTO = new TussamCardDTO();
 
     @InstanceState
     boolean isDetailView = false, isAddView = false, isEditView = false;
-
-    @Pref
-    SharedPrefsHelper_ prefsHelper;
-
 
     private ArrayAdapter<String> spinnerAdapter;
 
@@ -121,7 +103,13 @@ public class MainActivity extends Activity {
         initProgressBar();
         initSpinner();
         loadSavedCards();
-        if (savedCards.size() > 0) {
+        loadDetailView();
+    }
+
+    private void loadDetailView() {
+        if (tussamCardsDTO != null
+                && tussamCardsDTO.getCards() != null
+                && tussamCardsDTO.getCards().size() > 0) {
             showDetailView();
         } else {
             showAddView();
@@ -151,10 +139,13 @@ public class MainActivity extends Activity {
         cardsSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String key = (new ArrayList<String>(savedCards.keySet())).get(position);
-                cardName = cardsSpinner.getSelectedItem().toString();
-                cardNumber = key.trim();
-                requestCardInfo(cardNumber);
+                if (tussamCardsDTO != null && tussamCardsDTO.getCards() != null
+                        && tussamCardsDTO.getCards().size() > 0) {
+                    selectedCardDTO = tussamCardsDTO.getCards().get(position);
+                    if (selectedCardDTO != null) {
+                        requestCardInfo(selectedCardDTO.getCardNumber());
+                    }
+                }
             }
 
             @Override
@@ -175,7 +166,12 @@ public class MainActivity extends Activity {
     private void loadSavedCards() {
         // Get saved cards from preferences
         spinnerAdapter.clear();
-        spinnerAdapter.addAll(savedCards.values());
+        tussamCardsDTO = PreferencesHelper.getInstance().getCards(this);
+        if (tussamCardsDTO != null && tussamCardsDTO.getCards() != null) {
+            for (TussamCardDTO card : tussamCardsDTO.getCards()) {
+                spinnerAdapter.add(card.getCardName());
+            }
+        }
         spinnerAdapter.notifyDataSetChanged();
     }
 
@@ -187,7 +183,7 @@ public class MainActivity extends Activity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu){
+    public boolean onCreateOptionsMenu(Menu menu) {
         if (isDetailView) {
             menu.clear();
             getMenuInflater().inflate(R.menu.menu_add_edit, menu);
@@ -221,32 +217,46 @@ public class MainActivity extends Activity {
 
         String newCardNumber = cardEditNumberText.getText() != null ? cardEditNumberText.getText().toString().replace(" ", "") : "";
         String newCardName = cardEditNameText.getText() != null ? cardEditNameText.getText().toString() : "";
+        newCardNumber = newCardNumber.replaceFirst("^0+(?!$)", "");
         if (!newCardNumber.equals("")) {
-            newCardNumber = newCardNumber.replaceFirst("^0+(?!$)", "");
-            savedCards.put(newCardNumber, newCardName);
+            TussamCardDTO newCard = new TussamCardDTO();
+            newCard.setCardName(newCardName);
+            newCard.setCardNumber(newCardNumber);
+            saveNewCard(newCard);
             loadSavedCards();
-            if (spinnerAdapter.getCount() > 0) {
-                cardsSpinner.setSelection(spinnerAdapter.getCount() - 1);
-            }
             showDetailView();
+            reloadData();
         }
     }
+
+
 
     @OptionsItem(R.id.save_card)
     void saveCardClicked() {
         String newCardNumber = cardEditNumberText.getText() != null ? cardEditNumberText.getText().toString().replace(" ", "") : "";
         String newCardName = cardEditNameText.getText() != null ? cardEditNameText.getText().toString() : "";
+        newCardNumber = newCardNumber.replaceFirst("^0+(?!$)", "");
         if (!newCardNumber.equals("")) {
-            newCardNumber = newCardNumber.replaceFirst("^0+(?!$)", "");
-            savedCards.put(newCardNumber, newCardName);
+            selectedCardDTO.setCardName(newCardName);
+            selectedCardDTO.setCardNumber(newCardNumber);
+            tussamCardsDTO.getCards().set(cardsSpinner.getSelectedItemPosition(), selectedCardDTO);
+            PreferencesHelper.getInstance().saveCards(this, tussamCardsDTO);
             loadSavedCards();
             showDetailView();
+            reloadData();
         }
+    }
+
+    @OptionsItem(R.id.discard_card)
+    void cancelClicked() {
+        showDetailView();
     }
 
 
     private void requestCardInfo(String cardNumber) {
         showProgressBar();
+        reloadData();
+        cardNumber = trim(cardNumber, 0, cardNumber.length());
         StringRequest req = new StringRequest(URL + cardNumber, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -266,31 +276,63 @@ public class MainActivity extends Activity {
         addToRequestQueue(req);
     }
 
+    private void saveNewCard(TussamCardDTO card) {
+
+        selectedCardDTO = card;
+        if (tussamCardsDTO != null && tussamCardsDTO.getCards() != null) {
+            tussamCardsDTO.getCards().add(card);
+        } else {
+            tussamCardsDTO = new TussamCardsDTO();
+            tussamCardsDTO.setCards(new ArrayList<TussamCardDTO>());
+            tussamCardsDTO.getCards().add(card);
+        }
+        PreferencesHelper.getInstance().saveCards(this, tussamCardsDTO);
+    }
+
+    public String trim(CharSequence s, int start, int end) {
+        while (start < end && Character.isWhitespace(s.charAt(start))) {
+            start++;
+        }
+
+        while (end > start && Character.isWhitespace(s.charAt(end - 1))) {
+            end--;
+        }
+
+        return s.subSequence(start, end).toString();
+    }
+
     private void parseHtml(String response) {
 
         boolean errorFound = false;
+        if (selectedCardDTO == null) {
+            selectedCardDTO = new TussamCardDTO();
+        }
         Document responseDoc = Jsoup.parse(response);
         Element mainDiv = responseDoc.getElementById("cardStatus");
         if (mainDiv != null) {
             Elements cardInfo = mainDiv.select("span");
             // CardNumber
             if (cardInfo.size() > 0 && cardInfo.get(0) != null) {
-                cardNumber = cardInfo.get(0).text();
+                try {
+                    selectedCardDTO.setCardNumber(URLDecoder.decode(cardInfo.get(0).text(), "UTF-8").trim());
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
             } else errorFound = true;
 
             // CardStatus
             if (cardInfo.size() > 1 && cardInfo.get(1) != null) {
-                cardStatus = cardInfo.get(1).text();
+                selectedCardDTO.setCardStatus(cardInfo.get(1).text());
             } else errorFound = true;
 
             // CardType
             if (cardInfo.size() > 2 && cardInfo.get(2) != null) {
-                cardType = cardInfo.get(2).text();
+                selectedCardDTO.setCardType(cardInfo.get(2).text());
             } else errorFound = true;
 
             // CardCredit
             if (cardInfo.size() > 3 && cardInfo.get(3) != null) {
-                cardCredit = cardInfo.get(3).text();
+                selectedCardDTO.setCardCredit(cardInfo.get(3).text());
             } else errorFound = true;
 
         } else {
@@ -305,29 +347,23 @@ public class MainActivity extends Activity {
 
     private void reloadData() {
         hideProgressBar();
-        if (cardName != null) {
-            cardNameText.setText(cardName);
-            cardEditNameText.setText(cardName);
-        }
-        if (cardNumber != null) {
-            cardNumberText.setText(cardNumber);
-            cardEditNumberText.setText(cardNumber);
-        }
-        if (cardStatus != null) {
-            cardStatusText.setText(cardStatus);
-        }
-        if (cardType != null) {
-            cardTypeText.setText(cardType);
-        }
-        if (cardCredit != null) {
-            cardCreditText.setText(cardCredit);
+        if (selectedCardDTO != null) {
+            cardNameText.setText(selectedCardDTO.getCardName());
+            cardEditNameText.setText(selectedCardDTO.getCardName());
+            cardNumberText.setText(selectedCardDTO.getCardNumber());
+            cardEditNumberText.setText(selectedCardDTO.getCardNumber());
+            cardStatusText.setText(selectedCardDTO.getCardStatus());
+            cardTypeText.setText(selectedCardDTO.getCardType());
+            cardCreditText.setText(selectedCardDTO.getCardCredit());
         }
     }
 
     private void clearData() {
         progressBar.setVisibility(View.GONE);
-        cardNameText.setText(cardName);
-        cardNumberText.setText(cardNumber);
+        if (selectedCardDTO != null) {
+            cardNameText.setText(selectedCardDTO.getCardName());
+            cardNumberText.setText(selectedCardDTO.getCardNumber());
+        }
         cardStatusText.setText("");
         cardTypeText.setText("");
         cardCreditText.setText("");
@@ -342,7 +378,7 @@ public class MainActivity extends Activity {
         cardsEditData.setVisibility(View.GONE);
         invalidateOptionsMenu();
         // remove soft keyboard
-        InputMethodManager imm =  (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(cardNumberText.getWindowToken(), 0);
     }
 
@@ -362,8 +398,10 @@ public class MainActivity extends Activity {
         isDetailView = false;
         isEditView = true;
         isAddView = false;
-        cardEditNumberText.setText(cardNumber);
-        cardEditNameText.setText(cardName);
+        if (selectedCardDTO != null) {
+            cardEditNumberText.setText(selectedCardDTO.getCardNumber());
+            cardEditNameText.setText(selectedCardDTO.getCardName());
+        }
         cardsSpinner.setVisibility(View.VISIBLE);
         cardsData.setVisibility(View.GONE);
         cardsEditData.setVisibility(View.VISIBLE);
@@ -422,5 +460,4 @@ public class MainActivity extends Activity {
             mRequestQueue.cancelAll(tag);
         }
     }
-
 }
