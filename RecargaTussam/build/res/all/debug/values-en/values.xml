@@ -4,7 +4,8 @@
     <!-- From: file:/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values-en/strings.xml -->
     <eat-comment />
 
-    <string name="app_name">Tussam Card</string>
+    <string name="add_card_help_text">Add your tussam card to loop-up what\'s your credit! =) Turn back your card and introduce the 12-digit number found there, then type a name to help you identify your cards.</string>
+    <string name="app_name">Consult Tussam Credit</string>
     <string name="card_credit">Credit</string>
     <string name="card_name_hint">Give it a name!</string>
     <string name="card_number">Card number</string>
@@ -14,7 +15,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="loading_text">Loading...</string>
     <string name="parse_error">Something wrong happened on Tussam server =(</string>
-    <string name="tussam_info">This app consumes a public service provided by Tussam\'s web. That service is updated during the night, when buses get home and send cards info to the server.
+    <string name="tussam_info">This app is not official, but it consumes a public service provided by Tussam\'s web. That service is updated during the night, when buses get home and send cards info to the server.
         Updated info for your card can be queried in the morning. However, we are not responsible if at sometime data is not properly updated.</string>
     <string name="wrong_card_number_error">This card number is not valid</string>
 

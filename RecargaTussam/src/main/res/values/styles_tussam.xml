@@ -101,6 +101,10 @@
         <item name="fontName">Roboto-Light</item>
     </style>
 
+    <style name="HelpText.Tussam" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/color_palette_1</item>
+        <item name="fontName">Roboto-Light</item>
+    </style>
 
     <style name="CardText.Tussam" parent="android:Widget.TextView">
         <item name="android:textColor">@color/card_detail_text_color</item>

@@ -95,6 +95,8 @@ public class MainActivity extends Activity {
     LinearLayout tussamInfo;
     @ViewById
     LinearLayout progressView;
+    @ViewById
+    LinearLayout newCardHelpView;
 
     @InstanceState
     TussamCardsDTO tussamCardsDTO = new TussamCardsDTO();
@@ -130,7 +132,11 @@ public class MainActivity extends Activity {
     @Override
     public void onBackPressed() {
         if (isAddView || isEditView) {
-            showDetailView();
+            if (tussamCardsDTO.getCards().size() > 0) {
+                showDetailView();
+            } else {
+                showAddView();
+            }
         } else {
             finish();
         }
@@ -284,7 +290,7 @@ public class MainActivity extends Activity {
                                 error.networkResponse.statusCode == 500 &&
                                 selectedCardDTO != null &&
                                 selectedCardDTO.getCardCredit() == null) {
-                            
+
                             cardTypeText.setText(getString(R.string.wrong_card_number_error));
                         }
                         Toast.makeText(MainActivity.this, getString(R.string.parse_error), Toast.LENGTH_LONG).show();
@@ -388,6 +394,7 @@ public class MainActivity extends Activity {
     }
 
     private void showDetailView() {
+        newCardHelpView.setVisibility(View.GONE);
         progressView.setVisibility(View.GONE);
         isDetailView = true;
         isEditView = false;
@@ -404,6 +411,9 @@ public class MainActivity extends Activity {
     }
 
     private void showAddView() {
+        newCardHelpView.setVisibility(View.VISIBLE);
+        cancelPendingRequests(TAG);
+        progressView.setVisibility(View.GONE);
         isDetailView = false;
         isEditView = false;
         isAddView = true;
@@ -418,6 +428,8 @@ public class MainActivity extends Activity {
     }
 
     private void showEditView() {
+        newCardHelpView.setVisibility(View.GONE);
+        cancelPendingRequests(TAG);
         isDetailView = false;
         isEditView = true;
         isAddView = false;

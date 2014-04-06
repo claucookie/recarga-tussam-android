@@ -1,5 +1,5 @@
 <!-- From: file:/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/AndroidManifest.xml -->
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="6" android:versionName="1.1" package="es.claucookie.recarga">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="7" android:versionName="1.2" package="es.claucookie.recarga">
 
 	<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="19"/>
 	

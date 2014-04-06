@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Tarjeta Tussam</string>
+    <string name="app_name">Consulta Tarjeta Tussam</string>
     <string name="hello_world">Hello world!</string>
     <string name="loading_text">Cargando...</string>
     <string name="parse_error">Ha ocurrido un error en el servidor de Tussam =(</string>
@@ -7,12 +7,13 @@
     <string name="card_status">Caducidad</string>
     <string name="card_type">Recarga</string>
     <string name="card_credit">Saldo</string>
-    <string name="tussam_info">Esta aplicación utiliza un servicio público de la web de Tussam. Dicho servicio acualiza los datos de las tarjetas al final del día cuando los autobuses llegan a la central y envían los datos al servidor.
+    <string name="tussam_info">Esta aplicación no es oficial, pero utiliza un servicio público de la web de Tussam. Dicho servicio actualiza los datos de las tarjetas al final del día cuando los autobuses llegan a la central y envían los datos al servidor.
         La información actualizada correctamente puede verse por la mañana. Sin embarno, no nos responsabilizamos si alguna vez esta información
         no es correcta.</string>
     <string name="card_name_hint">Dale un nombre!</string>
     <string name="card_number_hint">0123 4567 8901</string>
     <string name="wrong_card_number_error">El número de tarjeta no es válido</string>
+    <string name="add_card_help_text">Añade una tarjeta de tussam y consula su saldo! =) Introduce el número de 12 cifras que hay en el dorso y dale un nombre para identificarla.</string>
 
 
 </resources>

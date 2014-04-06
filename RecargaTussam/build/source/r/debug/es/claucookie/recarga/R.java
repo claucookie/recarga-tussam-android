@@ -92,31 +92,32 @@ containing a value of this type.
         public static final int tussam_progressbar_indeterminate_holo8=0x7f02003a;
     }
     public static final class id {
-        public static final int add_card=0x7f090016;
-        public static final int card_actions=0x7f09000d;
+        public static final int add_card=0x7f090017;
+        public static final int card_actions=0x7f09000e;
         public static final int card_credit_text=0x7f090006;
-        public static final int card_edit_actions=0x7f090010;
+        public static final int card_edit_actions=0x7f090011;
         public static final int card_edit_name_text=0x7f090009;
         public static final int card_edit_number_text=0x7f09000a;
         public static final int card_name_text=0x7f090004;
-        public static final int card_new_actions=0x7f090013;
+        public static final int card_new_actions=0x7f090014;
         public static final int card_number_text=0x7f090005;
         public static final int card_status_text=0x7f090007;
         public static final int card_type_text=0x7f090003;
         public static final int cards_data=0x7f090002;
         public static final int cards_edit_data=0x7f090008;
         public static final int cards_spinner=0x7f090000;
-        public static final int create_card=0x7f090017;
-        public static final int discard_card=0x7f090018;
-        public static final int discard_card_image=0x7f090011;
-        public static final int done_card_image=0x7f090014;
-        public static final int edit_card_image=0x7f09000e;
+        public static final int create_card=0x7f090018;
+        public static final int discard_card=0x7f090019;
+        public static final int discard_card_image=0x7f090012;
+        public static final int done_card_image=0x7f090015;
+        public static final int edit_card_image=0x7f09000f;
+        public static final int new_card_help_view=0x7f09000c;
         public static final int progressBar=0x7f090001;
-        public static final int progress_view=0x7f09000c;
-        public static final int refresh_card_image=0x7f09000f;
-        public static final int remove_card_image=0x7f090015;
-        public static final int save_card=0x7f090019;
-        public static final int save_card_image=0x7f090012;
+        public static final int progress_view=0x7f09000d;
+        public static final int refresh_card_image=0x7f090010;
+        public static final int remove_card_image=0x7f090016;
+        public static final int save_card=0x7f09001a;
+        public static final int save_card_image=0x7f090013;
         public static final int tussam_info=0x7f09000b;
     }
     public static final class layout {
@@ -130,20 +131,21 @@ containing a value of this type.
         public static final int menu_save_delete=0x7f080002;
     }
     public static final class string {
-        public static final int app_name=0x7f060000;
-        public static final int card_credit=0x7f060001;
-        public static final int card_name_hint=0x7f060002;
-        public static final int card_number=0x7f060003;
-        public static final int card_number_hint=0x7f060004;
-        public static final int card_status=0x7f060005;
-        public static final int card_type=0x7f060006;
-        public static final int com_crashlytics_android_build_id=0x7f060007;
-        public static final int com_mobivery_android_name=0x7f060008;
-        public static final int hello_world=0x7f060009;
-        public static final int loading_text=0x7f06000a;
-        public static final int parse_error=0x7f06000b;
-        public static final int tussam_info=0x7f06000c;
-        public static final int wrong_card_number_error=0x7f06000d;
+        public static final int add_card_help_text=0x7f060000;
+        public static final int app_name=0x7f060001;
+        public static final int card_credit=0x7f060002;
+        public static final int card_name_hint=0x7f060003;
+        public static final int card_number=0x7f060004;
+        public static final int card_number_hint=0x7f060005;
+        public static final int card_status=0x7f060006;
+        public static final int card_type=0x7f060007;
+        public static final int com_crashlytics_android_build_id=0x7f060008;
+        public static final int com_mobivery_android_name=0x7f060009;
+        public static final int hello_world=0x7f06000a;
+        public static final int loading_text=0x7f06000b;
+        public static final int parse_error=0x7f06000c;
+        public static final int tussam_info=0x7f06000d;
+        public static final int wrong_card_number_error=0x7f06000e;
     }
     public static final class style {
         public static final int ActionBar_Solid_Tussam=0x7f070000;
@@ -156,11 +158,12 @@ containing a value of this type.
         public static final int CommonText_Tussam=0x7f070007;
         public static final int DropDownListView_Tussam=0x7f070008;
         public static final int DropDownNav_Tussam=0x7f070009;
-        public static final int PopupMenu_Tussam=0x7f07000a;
-        public static final int ProgressBar_Tussam=0x7f07000b;
-        public static final int Spinner_Tussam=0x7f07000c;
-        public static final int Theme_Tussam=0x7f07000d;
-        public static final int Theme_Tussam_Widget=0x7f07000e;
+        public static final int HelpText_Tussam=0x7f07000a;
+        public static final int PopupMenu_Tussam=0x7f07000b;
+        public static final int ProgressBar_Tussam=0x7f07000c;
+        public static final int Spinner_Tussam=0x7f07000d;
+        public static final int Theme_Tussam=0x7f07000e;
+        public static final int Theme_Tussam_Widget=0x7f07000f;
     }
     public static final class styleable {
         /** Attributes that can be used with a ExButton.
