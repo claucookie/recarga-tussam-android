@@ -15,7 +15,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -80,18 +79,17 @@ public final class MainActivity_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        cardNameText = ((ExLabel) hasViews.findViewById(id.card_name_text));
-        progressBar = ((ProgressBar) hasViews.findViewById(id.progress_bar));
-        cardsEditData = ((RelativeLayout) hasViews.findViewById(id.cards_edit_data));
-        cardsData = ((RelativeLayout) hasViews.findViewById(id.cards_data));
         tussamInfo = ((LinearLayout) hasViews.findViewById(id.tussam_info));
-        cardEditNumberText = ((ExText) hasViews.findViewById(id.card_edit_number_text));
+        cardNumberText = ((TextView) hasViews.findViewById(id.card_number_text));
+        cardsData = ((RelativeLayout) hasViews.findViewById(id.cards_data));
+        cardsSpinner = ((Spinner) hasViews.findViewById(id.cards_spinner));
+        cardEditNameText = ((ExText) hasViews.findViewById(id.card_edit_name_text));
         cardCreditText = ((TextView) hasViews.findViewById(id.card_credit_text));
         cardTypeText = ((TextView) hasViews.findViewById(id.card_type_text));
-        cardEditNameText = ((ExText) hasViews.findViewById(id.card_edit_name_text));
-        cardNumberText = ((TextView) hasViews.findViewById(id.card_number_text));
+        cardEditNumberText = ((ExText) hasViews.findViewById(id.card_edit_number_text));
+        cardNameText = ((ExLabel) hasViews.findViewById(id.card_name_text));
+        cardsEditData = ((RelativeLayout) hasViews.findViewById(id.cards_edit_data));
         cardStatusText = ((TextView) hasViews.findViewById(id.card_status_text));
-        cardsSpinner = ((Spinner) hasViews.findViewById(id.cards_spinner));
         initViews();
     }
 
@@ -109,24 +107,28 @@ public final class MainActivity_
             return true;
         }
         int itemId_ = item.getItemId();
-        if (itemId_ == id.save_card) {
-            saveCardClicked();
-            return true;
-        }
         if (itemId_ == id.add_card) {
             addCardClicked();
+            return true;
+        }
+        if (itemId_ == id.discard_card) {
+            cancelClicked();
+            return true;
+        }
+        if (itemId_ == id.save_card) {
+            saveCardClicked();
             return true;
         }
         if (itemId_ == id.create_card) {
             createCardClicked();
             return true;
         }
-        if (itemId_ == id.edit_card) {
-            editCardClicked();
+        if (itemId_ == id.refresh_card) {
+            refreshClicked();
             return true;
         }
-        if (itemId_ == id.discard_card) {
-            cancelClicked();
+        if (itemId_ == id.edit_card) {
+            editCardClicked();
             return true;
         }
         return false;
@@ -135,22 +137,22 @@ public final class MainActivity_
     @Override
     public void onSaveInstanceState(Bundle bundle) {
         super.onSaveInstanceState(bundle);
-        bundle.putParcelable("selectedCardDTO", selectedCardDTO);
-        bundle.putParcelable("tussamCardsDTO", tussamCardsDTO);
         bundle.putBoolean("isEditView", isEditView);
-        bundle.putBoolean("isAddView", isAddView);
+        bundle.putParcelable("selectedCardDTO", selectedCardDTO);
         bundle.putBoolean("isDetailView", isDetailView);
+        bundle.putParcelable("tussamCardsDTO", tussamCardsDTO);
+        bundle.putBoolean("isAddView", isAddView);
     }
 
     private void restoreSavedInstanceState_(Bundle savedInstanceState) {
         if (savedInstanceState == null) {
             return ;
         }
-        selectedCardDTO = savedInstanceState.getParcelable("selectedCardDTO");
-        tussamCardsDTO = savedInstanceState.getParcelable("tussamCardsDTO");
         isEditView = savedInstanceState.getBoolean("isEditView");
-        isAddView = savedInstanceState.getBoolean("isAddView");
+        selectedCardDTO = savedInstanceState.getParcelable("selectedCardDTO");
         isDetailView = savedInstanceState.getBoolean("isDetailView");
+        tussamCardsDTO = savedInstanceState.getParcelable("tussamCardsDTO");
+        isAddView = savedInstanceState.getBoolean("isAddView");
     }
 
     public static class IntentBuilder_ {

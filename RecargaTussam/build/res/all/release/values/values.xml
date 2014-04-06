@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- From: file:/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/build/exploded-aar/com.mobivery.android/library/1.0.4-SNAPSHOT/res/values/values.xml -->
+    <eat-comment />
+
+    <attr name="fontName" format="string" />
+    <!-- From: file:/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values/colors.xml -->
+    <eat-comment />
+
+    <color name="common_background">#00579b</color>
+    <color name="common_text_color">#ffffff</color>
+    <!-- From: file:/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/build/exploded-aar/com.mobivery.android/library/1.0.4-SNAPSHOT/res/values/values.xml -->
+    <eat-comment />
+
+    <declare-styleable name="ExButton">
+        <attr name="fontName" />
+    </declare-styleable>
+    <declare-styleable name="ExLabel">
+        <attr name="fontName" />
+    </declare-styleable>
+    <declare-styleable name="ExText">
+        <attr name="fontName" />
+    </declare-styleable>
+    <!-- From: file:/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values/strings.xml -->
+    <eat-comment />
+
+    <string name="app_name">Tarjeta Tussam</string>
+    <string name="card_credit">Saldo</string>
+    <string name="card_name_hint">Nombre tarjeta</string>
+    <string name="card_number">Nº</string>
+    <string name="card_number_hint">Nº tarjeta</string>
+    <string name="card_status">Caducidad</string>
+    <string name="card_type">Recarga</string>
+    <!-- From: file:/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values/com_crashlytics_export_strings.xml -->
+    <eat-comment />
+
+    <string name="com.crashlytics.android.build_id" translatable="false">68e0b5ba-3a75-4637-b3c1-481f1c6af5e6</string>
+    <!-- From: file:/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/build/exploded-aar/com.mobivery.android/library/1.0.4-SNAPSHOT/res/values/values.xml -->
+    <eat-comment />
+
+    <string name="com.mobivery.android.name">example</string>
+    <!-- From: file:/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values/strings.xml -->
+    <eat-comment />
+
+    <string name="hello_world">Hello world!</string>
+    <string name="loading_text">Cargando...</string>
+    <string name="parse_error">Ha ocurrido un error en el servidor de Tussam =(</string>
+    <string name="tussam_info">Esta aplicación utiliza un servicio público de la web de Tussam. Dicho servicio acualiza los datos de las tarjetas al final del día cuando los autobuses llegan a la central y envían los datos al servidor.
+        La información actualizada correctamente puede verse por la mañana. Sin embarno, no nos responsabilizamos si alguna vez esta información
+        no es correcta.</string>
+    <!-- From: file:/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values/styles_tussam.xml -->
+    <eat-comment />
+
+    <style name="ActionBar.Solid.Tussam" parent="@android:style/Widget.Holo.ActionBar.Solid">
+        <item name="android:background">@drawable/ab_solid_tussam</item>
+        <item name="android:backgroundStacked">@drawable/ab_stacked_solid_tussam</item>
+        <item name="android:backgroundSplit">@drawable/ab_bottom_solid_tussam</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Tussam</item>
+    </style>
+
+    <style name="ActionBar.Transparent.Tussam" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@drawable/ab_transparent_tussam</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Tussam</item>
+    </style>
+
+    <style name="ActionBarTabStyle.Tussam" parent="@android:style/Widget.Holo.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_tussam</item>
+    </style>
+
+    <style name="ActionButton.CloseMode.Tussam" parent="@android:style/Widget.Holo.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_tussam</item>
+    </style>
+
+    <style name="CommonText.Tussam" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/common_text_color</item>
+    </style>
+
+    <style name="DropDownListView.Tussam" parent="@android:style/Widget.Holo.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_tussam</item>
+    </style>
+
+    <style name="DropDownNav.Tussam" parent="@android:style/Widget.Holo.Spinner">
+        <item name="android:background">@drawable/spinner_background_ab_tussam</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_tussam</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_tussam</item>
+    </style>
+
+    <style name="PopupMenu.Tussam" parent="@android:style/Widget.Holo.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_tussam</item>
+    </style>
+
+    <style name="ProgressBar.Tussam" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/tussam_progress_horizontal_holo_dark</item>
+        <item name="android:indeterminateDrawable">@drawable/tussam_progress_indeterminate_horizontal_holo_dark</item>
+        <item name="android:minHeight">16dip</item>
+        <item name="android:maxHeight">16dip</item>
+    </style>
+
+    <style name="Spinner.Tussam" parent="@android:style/Widget.Holo.Spinner">
+        <item name="android:background">@color/common_background</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="Theme.Tussam" parent="@android:style/Theme.Holo">
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_tussam</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Tussam</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Tussam</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Tussam</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Tussam</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.Tussam</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_tussam</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_tussam</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Tussam</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Tussam</item>
+        <!-- <item name="android:spinnerDropDownItemStyle">@style/Spinner.Tussam</item> -->
+        <item name="android:windowBackground">@color/common_background</item>
+    </style>
+
+    <style name="Theme.Tussam.Widget" parent="@android:style/Theme.Holo">
+        <item name="android:popupMenuStyle">@style/PopupMenu.Tussam</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Tussam</item>
+    </style>
+
+</resources>

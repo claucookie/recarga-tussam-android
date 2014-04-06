@@ -5,4 +5,9 @@
         android:id="@+id/create_card"
         android:icon="@drawable/ic_action_accept"
         android:showAsAction="always" />
+
+    <item
+        android:id="@+id/discard_card"
+        android:icon="@drawable/ic_action_remove"
+        android:showAsAction="always" />
 </menu>

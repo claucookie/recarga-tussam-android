@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="4" by="lint 22.6">
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead"
+        category="Correctness"
+        priority="6"
+        summary="Finds calls to locale-ambiguous `String` manipulation methods"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.
+
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="        return String.format(&quot;LruCache[maxSize=%d,hits=%d,misses=%d,hitRate=%d%%]&quot;,"
+        errorLine2="                      ~~~~~~">
+        <location
+            file="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/java/com/mobivery/utils/LruCache.java"
+            line="253"
+            column="23"/>
+    </issue>
+
+    <issue
+        id="GradleOverrides"
+        severity="Warning"
+        message="This minSdkVersion value (14) is not used; it is always overridden by the value specified in the Gradle build script (14)"
+        category="Correctness"
+        priority="4"
+        summary="Looks for values specified in the manifest file which are overridden by values in Gradle"
+        explanation="The value of (for example) `minSdkVersion` is only used if it is not specified in the `build.gradle` build scripts. When specified in the Gradle build scripts, the manifest value is ignored and can be misleading, so should be removed to avoid ambiguity."
+        errorLine1=" &lt;uses-sdk android:minSdkVersion=&apos;14&apos; android:targetSdkVersion=&apos;19&apos;/>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/AndroidManifest.xml"
+            line="3"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="GradleOverrides"
+        severity="Warning"
+        message="This targetSdkVersion value (19) is not used; it is always overridden by the value specified in the Gradle build script (19)"
+        category="Correctness"
+        priority="4"
+        summary="Looks for values specified in the manifest file which are overridden by values in Gradle"
+        explanation="The value of (for example) `minSdkVersion` is only used if it is not specified in the `build.gradle` build scripts. When specified in the Gradle build scripts, the manifest value is ignored and can be misleading, so should be removed to avoid ambiguity."
+        errorLine1=" &lt;uses-sdk android:minSdkVersion=&apos;14&apos; android:targetSdkVersion=&apos;19&apos;/>"
+        errorLine2="                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/AndroidManifest.xml"
+            line="3"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        severity="Fatal"
+        message="&quot;card_name_hint&quot; is not translated in en"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Checks for incomplete translations where not all strings are translated"
+        explanation="If an application has more than one locale, then all the strings declared in one language should also be translated in all other languages.
+
+If the string should *not* be translated, you can add the attribute `translatable=&quot;false&quot;` on the `&lt;string>` element, or you can define all your non-translatable strings in a resource file called `donottranslate.xml`. Or, you can ignore the issue with a `tools:ignore=&quot;MissingTranslation&quot;` attribute.
+
+By default this detector allows regions of a language to just provide a subset of the strings and fall back to the standard language strings. You can require all regions to provide a full translation by setting the environment variable `ANDROID_LINT_COMPLETE_REGIONS`.
+
+You can tell lint (and other tools) which language is the default language in your `res/values/` folder by specifying `tools:locale=&quot;languageCode&quot;` for the root `&lt;resources>` element in your resource file. (The `tools` prefix refers to the namespace declaration `http://schemas.android.com/tools`.)"
+        errorLine1="    &lt;string name=&quot;card_name_hint&quot;>Nombre tarjeta&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values/strings.xml"
+            line="13"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        severity="Fatal"
+        message="&quot;card_number_hint&quot; is not translated in en"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Checks for incomplete translations where not all strings are translated"
+        explanation="If an application has more than one locale, then all the strings declared in one language should also be translated in all other languages.
+
+If the string should *not* be translated, you can add the attribute `translatable=&quot;false&quot;` on the `&lt;string>` element, or you can define all your non-translatable strings in a resource file called `donottranslate.xml`. Or, you can ignore the issue with a `tools:ignore=&quot;MissingTranslation&quot;` attribute.
+
+By default this detector allows regions of a language to just provide a subset of the strings and fall back to the standard language strings. You can require all regions to provide a full translation by setting the environment variable `ANDROID_LINT_COMPLETE_REGIONS`.
+
+You can tell lint (and other tools) which language is the default language in your `res/values/` folder by specifying `tools:locale=&quot;languageCode&quot;` for the root `&lt;resources>` element in your resource file. (The `tools` prefix refers to the namespace declaration `http://schemas.android.com/tools`.)"
+        errorLine1="    &lt;string name=&quot;card_number_hint&quot;>Nº tarjeta&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values/strings.xml"
+            line="14"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="AllowBackup"
+        severity="Warning"
+        message="Should explicitly set android:allowBackup to true or false (it&apos;s true by default, and that can have some security implications for the application&apos;s data)"
+        category="Security"
+        priority="3"
+        summary="Ensure that allowBackup is explicitly set in the application&apos;s manifest"
+        explanation="The allowBackup attribute determines if an application&apos;s data can be backed up and restored. It is documented at http://developer.android.com/reference/android/R.attr.html#allowBackup
+
+By default, this flag is set to `true`. When this flag is set to `true`, application data can be backed up and restored by the user using `adb backup` and `adb restore`.
+
+This may have security consequences for an application. `adb backup` allows users who have enabled USB debugging to copy application data off of the device. Once backed up, all application data can be read by the user. `adb restore` allows creation of application data from a source specified by the user. Following a restore, applications should not assume that the data, file permissions, and directory permissions were created by the application itself.
+
+Setting `allowBackup=&quot;false&quot;` opts an application out of both backup and restore.
+
+To fix this warning, decide whether your application should support backup, and explicitly set `android:allowBackup=(true|false)&quot;`"
+        url="http://developer.android.com/reference/android/R.attr.html#allowBackup"
+        urls="http://developer.android.com/reference/android/R.attr.html#allowBackup"
+        errorLine1=" &lt;application android:icon=&apos;@drawable/tussam_ic_launcher&apos; android:label=&apos;@string/app_name&apos; android:logo=&apos;@drawable/tussam_logo_shape&apos; android:name=&apos;.App&apos; android:theme=&apos;@style/Theme.Tussam&apos;>"
+        errorLine2=" ^"
+        quickfix="adt">
+        <location
+            file="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/AndroidManifest.xml"
+            line="7"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        severity="Warning"
+        message="Possible overdraw: Root element paints background @color/common_background with a theme that also paints a background (inferred theme is @style/Theme.Tussam)"
+        category="Performance"
+        priority="3"
+        summary="Looks for overdraw issues (where a view is painted only to be fully painted over)"
+        explanation="If you set a background drawable on a root view, then you should use a custom theme where the theme background is null. Otherwise, the theme background will be painted first, only to have your custom background completely cover it; this is called &quot;overdraw&quot;.
+
+NOTE: This detector relies on figuring out which layouts are associated with which activities based on scanning the Java code, and it&apos;s currently doing that using an inexact pattern matching algorithm. Therefore, it can incorrectly conclude which activity the layout is associated with and then wrongly complain that a background-theme is hidden.
+
+If you want your custom background on multiple pages, then you should consider making a custom theme with your custom background and just using that theme instead of a root element background.
+
+Of course it&apos;s possible that your custom drawable is translucent and you want it to be mixed with the background. However, you will get better performance if you pre-mix the background with your drawable and use that resulting image or color as a custom theme background instead.
+"
+        errorLine1="    android:background=&quot;@color/common_background&quot;>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/layout/activity_main.xml"
+            line="6"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.drawable.ab_background_textured_tussam appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable/ab_background_textured_tussam.xml"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.drawable.progress_horizontal_tussam appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable/progress_horizontal_tussam.xml"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.string.hello_world appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;hello_world&quot;>Hello world!&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values/strings.xml"
+            line="3"
+            column="13"/>
+        <location
+            file="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values-en/strings.xml"
+            line="4"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.string.loading_text appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;loading_text&quot;>Cargando...&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values/strings.xml"
+            line="4"
+            column="13"/>
+        <location
+            file="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values-en/strings.xml"
+            line="5"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.string.card_number appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;card_number&quot;>Nº&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values/strings.xml"
+            line="6"
+            column="13"/>
+        <location
+            file="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values-en/strings.xml"
+            line="7"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        severity="Warning"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        category="Usability:Typography"
+        priority="5"
+        summary="Looks for ellipsis strings (...) which can be replaced with an ellipsis character"
+        explanation="You can replace the string &quot;...&quot; with a dedicated ellipsis character, ellipsis character (…, &amp;#8230;). This can help make the text more readable."
+        url="http://en.wikipedia.org/wiki/Ellipsis"
+        urls="http://en.wikipedia.org/wiki/Ellipsis"
+        errorLine1="    &lt;string name=&quot;loading_text&quot;>Cargando...&lt;/string>"
+        errorLine2="                                ^"
+        quickfix="adt">
+        <location
+            file="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values/strings.xml"
+            line="4"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        severity="Warning"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        category="Usability:Typography"
+        priority="5"
+        summary="Looks for ellipsis strings (...) which can be replaced with an ellipsis character"
+        explanation="You can replace the string &quot;...&quot; with a dedicated ellipsis character, ellipsis character (…, &amp;#8230;). This can help make the text more readable."
+        url="http://en.wikipedia.org/wiki/Ellipsis"
+        urls="http://en.wikipedia.org/wiki/Ellipsis"
+        errorLine1="    &lt;string name=&quot;loading_text&quot;>Loading...&lt;/string>"
+        errorLine2="                                ^"
+        quickfix="adt">
+        <location
+            file="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values-en/strings.xml"
+            line="5"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        severity="Warning"
+        message="The following unrelated icon files have identical contents: ic_launcher.png, icon.png"
+        category="Usability:Icons"
+        priority="3"
+        summary="Finds duplicated icons under different names"
+        explanation="If an icon is repeated under different names, you can consolidate and just use one of the icons and delete the others to make your application smaller. However, duplicated icons usually are not intentional and can sometimes point to icons that were accidentally overwritten or accidentally not updated.">
+        <location
+            file="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/icon.png"/>
+        <location
+            file="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconMissingDensityFolder"
+        severity="Warning"
+        message="Missing density variation folders in src/main/res: drawable-mdpi, drawable-hdpi"
+        category="Usability:Icons"
+        priority="3"
+        summary="Ensures that all the density folders are present"
+        explanation="Icons will look best if a custom version is provided for each of the major screen density classes (low, medium, high, extra high). This lint check identifies folders which are missing, such as `drawable-hdpi`.
+Low density is not really used much anymore, so this check ignores the ldpi density. To force lint to include it, set the environment variable `ANDROID_LINT_INCLUDE_LDPI=true`. For more information on current density usage, see http://developer.android.com/resources/dashboard/screens.html"
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res"/>
+    </issue>
+
+    <issue
+        id="MenuTitle"
+        severity="Warning"
+        message="Menu items should specify a title"
+        category="Usability"
+        priority="5"
+        summary="Ensures that all menu items supply a title"
+        explanation="From the action bar documentation:
+&quot;It&apos;s important that you always define android:title for each menu item — even if you don&apos;t declare that the title appear with the action item — for three reasons:
+
+* If there&apos;s not enough room in the action bar for the action item, the menu item appears in the overflow menu and only the title appears.
+* Screen readers for sight-impaired users read the menu item&apos;s title.
+* If the action item appears with only the icon, a user can long-press the item to reveal a tool-tip that displays the action item&apos;s title.
+The android:icon is always optional, but recommended."
+        url="http://developer.android.com/guide/topics/ui/actionbar.html"
+        urls="http://developer.android.com/guide/topics/ui/actionbar.html"
+        errorLine1="    &lt;item"
+        errorLine2="    ^">
+        <location
+            file="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/menu/menu_add_edit.xml"
+            line="3"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="MenuTitle"
+        severity="Warning"
+        message="Menu items should specify a title"
+        category="Usability"
+        priority="5"
+        summary="Ensures that all menu items supply a title"
+        explanation="From the action bar documentation:
+&quot;It&apos;s important that you always define android:title for each menu item — even if you don&apos;t declare that the title appear with the action item — for three reasons:
+
+* If there&apos;s not enough room in the action bar for the action item, the menu item appears in the overflow menu and only the title appears.
+* Screen readers for sight-impaired users read the menu item&apos;s title.
+* If the action item appears with only the icon, a user can long-press the item to reveal a tool-tip that displays the action item&apos;s title.
+The android:icon is always optional, but recommended."
+        url="http://developer.android.com/guide/topics/ui/actionbar.html"
+        urls="http://developer.android.com/guide/topics/ui/actionbar.html"
+        errorLine1="    &lt;item"
+        errorLine2="    ^">
+        <location
+            file="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/menu/menu_add_edit.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="MenuTitle"
+        severity="Warning"
+        message="Menu items should specify a title"
+        category="Usability"
+        priority="5"
+        summary="Ensures that all menu items supply a title"
+        explanation="From the action bar documentation:
+&quot;It&apos;s important that you always define android:title for each menu item — even if you don&apos;t declare that the title appear with the action item — for three reasons:
+
+* If there&apos;s not enough room in the action bar for the action item, the menu item appears in the overflow menu and only the title appears.
+* Screen readers for sight-impaired users read the menu item&apos;s title.
+* If the action item appears with only the icon, a user can long-press the item to reveal a tool-tip that displays the action item&apos;s title.
+The android:icon is always optional, but recommended."
+        url="http://developer.android.com/guide/topics/ui/actionbar.html"
+        urls="http://developer.android.com/guide/topics/ui/actionbar.html"
+        errorLine1="    &lt;item"
+        errorLine2="    ^">
+        <location
+            file="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/menu/menu_add_edit.xml"
+            line="11"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="MenuTitle"
+        severity="Warning"
+        message="Menu items should specify a title"
+        category="Usability"
+        priority="5"
+        summary="Ensures that all menu items supply a title"
+        explanation="From the action bar documentation:
+&quot;It&apos;s important that you always define android:title for each menu item — even if you don&apos;t declare that the title appear with the action item — for three reasons:
+
+* If there&apos;s not enough room in the action bar for the action item, the menu item appears in the overflow menu and only the title appears.
+* Screen readers for sight-impaired users read the menu item&apos;s title.
+* If the action item appears with only the icon, a user can long-press the item to reveal a tool-tip that displays the action item&apos;s title.
+The android:icon is always optional, but recommended."
+        url="http://developer.android.com/guide/topics/ui/actionbar.html"
+        urls="http://developer.android.com/guide/topics/ui/actionbar.html"
+        errorLine1="    &lt;item"
+        errorLine2="    ^">
+        <location
+            file="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/menu/menu_done.xml"
+            line="4"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="MenuTitle"
+        severity="Warning"
+        message="Menu items should specify a title"
+        category="Usability"
+        priority="5"
+        summary="Ensures that all menu items supply a title"
+        explanation="From the action bar documentation:
+&quot;It&apos;s important that you always define android:title for each menu item — even if you don&apos;t declare that the title appear with the action item — for three reasons:
+
+* If there&apos;s not enough room in the action bar for the action item, the menu item appears in the overflow menu and only the title appears.
+* Screen readers for sight-impaired users read the menu item&apos;s title.
+* If the action item appears with only the icon, a user can long-press the item to reveal a tool-tip that displays the action item&apos;s title.
+The android:icon is always optional, but recommended."
+        url="http://developer.android.com/guide/topics/ui/actionbar.html"
+        urls="http://developer.android.com/guide/topics/ui/actionbar.html"
+        errorLine1="    &lt;item"
+        errorLine2="    ^">
+        <location
+            file="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/menu/menu_done.xml"
+            line="9"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="MenuTitle"
+        severity="Warning"
+        message="Menu items should specify a title"
+        category="Usability"
+        priority="5"
+        summary="Ensures that all menu items supply a title"
+        explanation="From the action bar documentation:
+&quot;It&apos;s important that you always define android:title for each menu item — even if you don&apos;t declare that the title appear with the action item — for three reasons:
+
+* If there&apos;s not enough room in the action bar for the action item, the menu item appears in the overflow menu and only the title appears.
+* Screen readers for sight-impaired users read the menu item&apos;s title.
+* If the action item appears with only the icon, a user can long-press the item to reveal a tool-tip that displays the action item&apos;s title.
+The android:icon is always optional, but recommended."
+        url="http://developer.android.com/guide/topics/ui/actionbar.html"
+        urls="http://developer.android.com/guide/topics/ui/actionbar.html"
+        errorLine1="    &lt;item"
+        errorLine2="    ^">
+        <location
+            file="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/menu/menu_save_delete.xml"
+            line="3"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="MenuTitle"
+        severity="Warning"
+        message="Menu items should specify a title"
+        category="Usability"
+        priority="5"
+        summary="Ensures that all menu items supply a title"
+        explanation="From the action bar documentation:
+&quot;It&apos;s important that you always define android:title for each menu item — even if you don&apos;t declare that the title appear with the action item — for three reasons:
+
+* If there&apos;s not enough room in the action bar for the action item, the menu item appears in the overflow menu and only the title appears.
+* Screen readers for sight-impaired users read the menu item&apos;s title.
+* If the action item appears with only the icon, a user can long-press the item to reveal a tool-tip that displays the action item&apos;s title.
+The android:icon is always optional, but recommended."
+        url="http://developer.android.com/guide/topics/ui/actionbar.html"
+        urls="http://developer.android.com/guide/topics/ui/actionbar.html"
+        errorLine1="    &lt;item"
+        errorLine2="    ^">
+        <location
+            file="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/menu/menu_save_delete.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="AlwaysShowAction"
+        severity="Warning"
+        message="Prefer &quot;ifRoom&quot; instead of &quot;always&quot;"
+        category="Usability"
+        priority="3"
+        summary="Checks for uses of `showAsAction=&quot;always&quot;` and suggests `showAsAction=&quot;ifRoom&quot;` instead"
+        explanation="Using `showAsAction=&quot;always&quot;` in menu XML, or `MenuItem.SHOW_AS_ACTION_ALWAYS` in Java code is usually a deviation from the user interface style guide.Use `ifRoom` or the corresponding `MenuItem.SHOW_AS_ACTION_IF_ROOM` instead.
+
+If `always` is used sparingly there are usually no problems and behavior is roughly equivalent to `ifRoom` but with preference over other `ifRoom` items. Using it more than twice in the same menu is a bad idea.
+
+This check looks for menu XML files that contain more than two `always` actions, or some `always` actions and no `ifRoom` actions. In Java code, it looks for projects that contain references to `MenuItem.SHOW_AS_ACTION_ALWAYS` and no references to `MenuItem.SHOW_AS_ACTION_IF_ROOM`."
+        url="http://developer.android.com/design/patterns/actionbar.html"
+        urls="http://developer.android.com/design/patterns/actionbar.html"
+        errorLine1="        android:showAsAction=&quot;always&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/menu/menu_add_edit.xml"
+            line="6"
+            column="9"/>
+        <location
+            file="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/menu/menu_add_edit.xml"
+            line="10"
+            column="9"/>
+        <location
+            file="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/menu/menu_add_edit.xml"
+            line="14"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="AlwaysShowAction"
+        severity="Warning"
+        message="Prefer &quot;ifRoom&quot; instead of &quot;always&quot;"
+        category="Usability"
+        priority="3"
+        summary="Checks for uses of `showAsAction=&quot;always&quot;` and suggests `showAsAction=&quot;ifRoom&quot;` instead"
+        explanation="Using `showAsAction=&quot;always&quot;` in menu XML, or `MenuItem.SHOW_AS_ACTION_ALWAYS` in Java code is usually a deviation from the user interface style guide.Use `ifRoom` or the corresponding `MenuItem.SHOW_AS_ACTION_IF_ROOM` instead.
+
+If `always` is used sparingly there are usually no problems and behavior is roughly equivalent to `ifRoom` but with preference over other `ifRoom` items. Using it more than twice in the same menu is a bad idea.
+
+This check looks for menu XML files that contain more than two `always` actions, or some `always` actions and no `ifRoom` actions. In Java code, it looks for projects that contain references to `MenuItem.SHOW_AS_ACTION_ALWAYS` and no references to `MenuItem.SHOW_AS_ACTION_IF_ROOM`."
+        url="http://developer.android.com/design/patterns/actionbar.html"
+        urls="http://developer.android.com/design/patterns/actionbar.html"
+        errorLine1="        android:showAsAction=&quot;always&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/menu/menu_done.xml"
+            line="7"
+            column="9"/>
+        <location
+            file="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/menu/menu_done.xml"
+            line="12"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="AlwaysShowAction"
+        severity="Warning"
+        message="Prefer &quot;ifRoom&quot; instead of &quot;always&quot;"
+        category="Usability"
+        priority="3"
+        summary="Checks for uses of `showAsAction=&quot;always&quot;` and suggests `showAsAction=&quot;ifRoom&quot;` instead"
+        explanation="Using `showAsAction=&quot;always&quot;` in menu XML, or `MenuItem.SHOW_AS_ACTION_ALWAYS` in Java code is usually a deviation from the user interface style guide.Use `ifRoom` or the corresponding `MenuItem.SHOW_AS_ACTION_IF_ROOM` instead.
+
+If `always` is used sparingly there are usually no problems and behavior is roughly equivalent to `ifRoom` but with preference over other `ifRoom` items. Using it more than twice in the same menu is a bad idea.
+
+This check looks for menu XML files that contain more than two `always` actions, or some `always` actions and no `ifRoom` actions. In Java code, it looks for projects that contain references to `MenuItem.SHOW_AS_ACTION_ALWAYS` and no references to `MenuItem.SHOW_AS_ACTION_IF_ROOM`."
+        url="http://developer.android.com/design/patterns/actionbar.html"
+        urls="http://developer.android.com/design/patterns/actionbar.html"
+        errorLine1="        android:showAsAction=&quot;always&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/menu/menu_save_delete.xml"
+            line="6"
+            column="9"/>
+        <location
+            file="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/menu/menu_save_delete.xml"
+            line="10"
+            column="9"/>
+    </issue>
+
+</issues>

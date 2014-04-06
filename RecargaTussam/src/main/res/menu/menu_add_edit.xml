@@ -8,4 +8,8 @@
         android:id="@+id/add_card"
         android:icon="@drawable/ic_action_new"
         android:showAsAction="always" />
+    <item
+        android:id="@+id/refresh_card"
+        android:icon="@drawable/ic_action_refresh"
+        android:showAsAction="always" />
 </menu>

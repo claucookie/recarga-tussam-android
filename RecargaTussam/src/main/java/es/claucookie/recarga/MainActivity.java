@@ -38,8 +38,6 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
 import java.util.ArrayList;
 
 import es.claucookie.recarga.helpers.PreferencesHelper;
@@ -66,8 +64,6 @@ public class MainActivity extends Activity {
     TextView cardCreditText;
     @ViewById
     Spinner cardsSpinner;
-    @ViewById
-    ProgressBar progressBar;
     @ViewById
     ExLabel cardNameText;
     @ViewById
@@ -100,7 +96,6 @@ public class MainActivity extends Activity {
 
     @AfterViews
     void initViews() {
-        initProgressBar();
         initSpinner();
         loadSavedCards();
         loadDetailView();
@@ -114,18 +109,6 @@ public class MainActivity extends Activity {
         } else {
             showAddView();
         }
-    }
-
-    private void initProgressBar() {
-        hideProgressBar();
-    }
-
-    private void showProgressBar() {
-        progressBar.setVisibility(View.VISIBLE);
-    }
-
-    private void hideProgressBar() {
-        progressBar.setVisibility(View.GONE);
     }
 
     private void initSpinner() {
@@ -230,7 +213,6 @@ public class MainActivity extends Activity {
     }
 
 
-
     @OptionsItem(R.id.save_card)
     void saveCardClicked() {
         String newCardNumber = cardEditNumberText.getText() != null ? cardEditNumberText.getText().toString().replace(" ", "") : "";
@@ -252,10 +234,15 @@ public class MainActivity extends Activity {
         showDetailView();
     }
 
+    @OptionsItem(R.id.refresh_card)
+    void refreshClicked() {
+        if (selectedCardDTO != null) {
+            requestCardInfo(selectedCardDTO.getCardNumber());
+        }
+    }
 
     private void requestCardInfo(String cardNumber) {
-        showProgressBar();
-        reloadData();
+        hideData();
         cardNumber = trim(cardNumber, 0, cardNumber.length());
         StringRequest req = new StringRequest(URL + cardNumber, new Response.Listener<String>() {
             @Override
@@ -274,6 +261,15 @@ public class MainActivity extends Activity {
 
         // add the request object to the queue to be executed
         addToRequestQueue(req);
+    }
+
+    private void hideData() {
+        cardsSpinner.setVisibility(View.VISIBLE);
+        cardsData.setVisibility(View.INVISIBLE);
+        cardsEditData.setVisibility(View.INVISIBLE);
+        // remove soft keyboard
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(cardNumberText.getWindowToken(), 0);
     }
 
     private void saveNewCard(TussamCardDTO card) {
@@ -311,15 +307,6 @@ public class MainActivity extends Activity {
         Element mainDiv = responseDoc.getElementById("cardStatus");
         if (mainDiv != null) {
             Elements cardInfo = mainDiv.select("span");
-            // CardNumber
-            if (cardInfo.size() > 0 && cardInfo.get(0) != null) {
-                try {
-                    selectedCardDTO.setCardNumber(URLDecoder.decode(cardInfo.get(0).text(), "UTF-8").trim());
-                } catch (UnsupportedEncodingException e) {
-                    e.printStackTrace();
-                }
-            } else errorFound = true;
-
             // CardStatus
             if (cardInfo.size() > 1 && cardInfo.get(1) != null) {
                 selectedCardDTO.setCardStatus(cardInfo.get(1).text());
@@ -346,7 +333,6 @@ public class MainActivity extends Activity {
     }
 
     private void reloadData() {
-        hideProgressBar();
         if (selectedCardDTO != null) {
             cardNameText.setText(selectedCardDTO.getCardName());
             cardEditNameText.setText(selectedCardDTO.getCardName());
@@ -359,11 +345,8 @@ public class MainActivity extends Activity {
     }
 
     private void clearData() {
-        progressBar.setVisibility(View.GONE);
-        if (selectedCardDTO != null) {
-            cardNameText.setText(selectedCardDTO.getCardName());
-            cardNumberText.setText(selectedCardDTO.getCardNumber());
-        }
+        cardNameText.setText("");
+        cardNumberText.setText("");
         cardStatusText.setText("");
         cardTypeText.setText("");
         cardCreditText.setText("");

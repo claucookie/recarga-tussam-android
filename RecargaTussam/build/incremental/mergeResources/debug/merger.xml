@@ -144,6 +144,21 @@
                 qualifiers="xhdpi"
                 type="drawable" />
             <file
+                name="ic_action_refresh"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/ic_action_refresh.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="ic_action_remove"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/ic_action_remove.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="ic_action_save"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/ic_action_save.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
                 name="ic_launcher"
                 path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/ic_launcher.png"
                 qualifiers="xhdpi"
@@ -314,6 +329,11 @@
                 qualifiers=""
                 type="menu" />
             <file
+                name="menu_save_delete"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/menu/menu_save_delete.xml"
+                qualifiers=""
+                type="menu" />
+            <file
                 path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values/colors.xml"
                 qualifiers="" >
                 <color name="common_background" >#00579b
@@ -326,7 +346,7 @@
                 qualifiers="" >
                 <string
                     name="com.crashlytics.android.build_id"
-                    translatable="false" >a11dea65-8042-469a-ae0c-c8f4b432ab6a
+                    translatable="false" >254b503e-1aa6-4143-ad36-a5f28fc84fa6
                 </string>
             </file>
             <file
@@ -544,26 +564,6 @@
                 <string name="app_name" >Tussam Card
                 </string>
             </file>
-            <file
-                name="menu_save_delete"
-                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/menu/menu_save_delete.xml"
-                qualifiers=""
-                type="menu" />
-            <file
-                name="ic_action_save"
-                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/ic_action_save.png"
-                qualifiers="xhdpi"
-                type="drawable" />
-            <file
-                name="ic_action_remove"
-                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/ic_action_remove.png"
-                qualifiers="xhdpi"
-                type="drawable" />
-            <file
-                name="ic_action_refresh"
-                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/ic_action_refresh.png"
-                qualifiers="xhdpi"
-                type="drawable" />
         </source>
         <source path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/build/res/rs/debug" />
         <source path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/build/res/generated/debug" />

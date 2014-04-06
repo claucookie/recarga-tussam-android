@@ -87,8 +87,8 @@ class Build
     commit_count = `git rev-list HEAD --count`.strip
     file = File.new(manifest_path)
     doc = REXML::Document.new(file)
-    doc.root.attributes['android:versionName'] = version
-    doc.root.attributes['android:versionCode'] = commit_count
+    doc.root.attributes['android:versionName'] = 1.1
+    doc.root.attributes['android:versionCode'] = 6
     File.open(file, 'w') do |data|
       data << doc
     end
