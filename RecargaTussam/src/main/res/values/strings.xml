@@ -12,6 +12,7 @@
         no es correcta.</string>
     <string name="card_name_hint">Dale un nombre!</string>
     <string name="card_number_hint">0123 4567 8901</string>
+    <string name="wrong_card_number_error">El número de tarjeta no es válido</string>
 
 
 </resources>

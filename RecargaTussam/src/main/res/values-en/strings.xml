@@ -12,5 +12,6 @@
         Updated info for your card can be queried in the morning. However, we are not responsible if at sometime data is not properly updated.</string>
     <string name="card_name_hint">Give it a name!</string>
     <string name="card_number_hint">0123 4567 8901</string>
+    <string name="wrong_card_number_error">This card number is not valid</string>
 
 </resources>

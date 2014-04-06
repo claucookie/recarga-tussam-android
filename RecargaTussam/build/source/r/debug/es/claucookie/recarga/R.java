@@ -92,30 +92,31 @@ containing a value of this type.
         public static final int tussam_progressbar_indeterminate_holo8=0x7f02003a;
     }
     public static final class id {
-        public static final int add_card=0x7f090015;
-        public static final int card_actions=0x7f09000c;
+        public static final int add_card=0x7f090016;
+        public static final int card_actions=0x7f09000d;
         public static final int card_credit_text=0x7f090006;
-        public static final int card_edit_actions=0x7f09000f;
+        public static final int card_edit_actions=0x7f090010;
         public static final int card_edit_name_text=0x7f090009;
         public static final int card_edit_number_text=0x7f09000a;
         public static final int card_name_text=0x7f090004;
-        public static final int card_new_actions=0x7f090012;
+        public static final int card_new_actions=0x7f090013;
         public static final int card_number_text=0x7f090005;
         public static final int card_status_text=0x7f090007;
         public static final int card_type_text=0x7f090003;
         public static final int cards_data=0x7f090002;
         public static final int cards_edit_data=0x7f090008;
         public static final int cards_spinner=0x7f090000;
-        public static final int create_card=0x7f090016;
-        public static final int discard_card=0x7f090017;
-        public static final int discard_card_image=0x7f090010;
-        public static final int done_card_image=0x7f090013;
-        public static final int edit_card_image=0x7f09000d;
+        public static final int create_card=0x7f090017;
+        public static final int discard_card=0x7f090018;
+        public static final int discard_card_image=0x7f090011;
+        public static final int done_card_image=0x7f090014;
+        public static final int edit_card_image=0x7f09000e;
         public static final int progressBar=0x7f090001;
-        public static final int refresh_card_image=0x7f09000e;
-        public static final int remove_card_image=0x7f090014;
-        public static final int save_card=0x7f090018;
-        public static final int save_card_image=0x7f090011;
+        public static final int progress_view=0x7f09000c;
+        public static final int refresh_card_image=0x7f09000f;
+        public static final int remove_card_image=0x7f090015;
+        public static final int save_card=0x7f090019;
+        public static final int save_card_image=0x7f090012;
         public static final int tussam_info=0x7f09000b;
     }
     public static final class layout {
@@ -142,6 +143,7 @@ containing a value of this type.
         public static final int loading_text=0x7f06000a;
         public static final int parse_error=0x7f06000b;
         public static final int tussam_info=0x7f06000c;
+        public static final int wrong_card_number_error=0x7f06000d;
     }
     public static final class style {
         public static final int ActionBar_Solid_Tussam=0x7f070000;

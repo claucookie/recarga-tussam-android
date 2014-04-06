@@ -16,5 +16,6 @@
     <string name="parse_error">Something wrong happened on Tussam server =(</string>
     <string name="tussam_info">This app consumes a public service provided by Tussam\'s web. That service is updated during the night, when buses get home and send cards info to the server.
         Updated info for your card can be queried in the morning. However, we are not responsible if at sometime data is not properly updated.</string>
+    <string name="wrong_card_number_error">This card number is not valid</string>
 
 </resources>

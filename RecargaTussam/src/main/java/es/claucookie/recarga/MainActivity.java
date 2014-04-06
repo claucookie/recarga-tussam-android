@@ -53,7 +53,6 @@ public class MainActivity extends Activity {
      */
     public static final String TAG = "VolleyPatterns";
 
-
     @ViewById
     Spinner cardsSpinner;
     @ViewById
@@ -94,6 +93,8 @@ public class MainActivity extends Activity {
     LinearLayout cardNewActions;
     @ViewById
     LinearLayout tussamInfo;
+    @ViewById
+    LinearLayout progressView;
 
     @InstanceState
     TussamCardsDTO tussamCardsDTO = new TussamCardsDTO();
@@ -104,9 +105,7 @@ public class MainActivity extends Activity {
     @InstanceState
     boolean isDetailView = false, isAddView = false, isEditView = false;
 
-
     private ArrayAdapter<String> spinnerAdapter;
-
 
     /**
      * Global request queue for Volley
@@ -118,6 +117,23 @@ public class MainActivity extends Activity {
         initSpinner();
         loadSavedCards();
         loadFirstView();
+    }
+
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Crashlytics.start(this);
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (isAddView || isEditView) {
+            showDetailView();
+        } else {
+            finish();
+        }
     }
 
     private void loadFirstView() {
@@ -144,9 +160,8 @@ public class MainActivity extends Activity {
                 if (tussamCardsDTO != null && tussamCardsDTO.getCards() != null
                         && tussamCardsDTO.getCards().size() > 0) {
                     selectedCardDTO = tussamCardsDTO.getCards().get(position);
-                    if (selectedCardDTO != null) {
-                        requestCardInfo(selectedCardDTO.getCardNumber());
-                    }
+                    requestCardInfo();
+
                 }
             }
 
@@ -167,14 +182,12 @@ public class MainActivity extends Activity {
             }
         }
         spinnerAdapter.notifyDataSetChanged();
+        if (selectedCardDTO != null) {
+            int newCardIndex = tussamCardsDTO.getCards().indexOf(selectedCardDTO);
+            cardsSpinner.setSelection(newCardIndex);
+        }
     }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        Crashlytics.start(this);
-
-    }
 
     @Click(R.id.discard_card_image)
     void deleteCardClicked() {
@@ -182,6 +195,7 @@ public class MainActivity extends Activity {
         if (selectedCardDTO != null) {
             PreferencesHelper.getInstance().deleteCards(this);
             tussamCardsDTO.getCards().remove(selectedCardDTO);
+            selectedCardDTO = null;
             PreferencesHelper.getInstance().saveCards(this, tussamCardsDTO);
             loadSavedCards();
             loadFirstView();
@@ -231,42 +245,56 @@ public class MainActivity extends Activity {
             loadSavedCards();
             showDetailView();
             reloadData();
+            requestCardInfo();
         }
     }
 
     @Click(R.id.remove_card_image)
     void cancelClicked() {
-        showDetailView();
+        if (tussamCardsDTO.getCards().size() > 0) {
+            showDetailView();
+        }
     }
 
     @Click(R.id.refresh_card_image)
     void refreshClicked() {
         if (selectedCardDTO != null) {
-            requestCardInfo(selectedCardDTO.getCardNumber());
+            requestCardInfo();
         }
     }
 
-    private void requestCardInfo(String cardNumber) {
-        hideData();
-        if (cardNumber != null) {
-            cardNumber = trim(cardNumber, 0, cardNumber.length());
-            StringRequest req = new StringRequest(URL + cardNumber, new Response.Listener<String>() {
-                @Override
-                public void onResponse(String response) {
-                    parseHtml(response);
-                    reloadData();
-                    showDetailView();
-                }
-            }, new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    Toast.makeText(MainActivity.this, getString(R.string.parse_error), Toast.LENGTH_LONG).show();
-                    showDetailView();
-                }
-            });
+    private void requestCardInfo() {
+        if (selectedCardDTO != null) {
+            hideData();
+            if (selectedCardDTO.getCardNumber() != null) {
+                progressView.setVisibility(View.VISIBLE);
+                String cardNumber = trim(selectedCardDTO.getCardNumber(), 0, selectedCardDTO.getCardNumber().length());
+                StringRequest req = new StringRequest(URL + cardNumber, new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        parseHtml(response);
+                        reloadData();
+                        showDetailView();
+                    }
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        reloadData();
+                        if (error.networkResponse != null &&
+                                error.networkResponse.statusCode == 500 &&
+                                selectedCardDTO != null &&
+                                selectedCardDTO.getCardCredit() == null) {
+                            
+                            cardTypeText.setText(getString(R.string.wrong_card_number_error));
+                        }
+                        Toast.makeText(MainActivity.this, getString(R.string.parse_error), Toast.LENGTH_LONG).show();
+                        showDetailView();
+                    }
+                });
 
-            // add the request object to the queue to be executed
-            addToRequestQueue(req);
+                // add the request object to the queue to be executed
+                addToRequestQueue(req);
+            }
         }
     }
 
@@ -341,13 +369,13 @@ public class MainActivity extends Activity {
 
     private void reloadData() {
         if (selectedCardDTO != null) {
-            cardNameText.setText(selectedCardDTO.getCardName());
-            cardEditNameText.setText(selectedCardDTO.getCardName());
-            cardNumberText.setText(selectedCardDTO.getCardNumber());
-            cardEditNumberText.setText(selectedCardDTO.getCardNumber());
-            cardStatusText.setText(selectedCardDTO.getCardStatus());
-            cardTypeText.setText(selectedCardDTO.getCardType());
-            cardCreditText.setText(selectedCardDTO.getCardCredit());
+            cardNameText.setText(selectedCardDTO.getCardName() != null ? selectedCardDTO.getCardName() : "");
+            cardEditNameText.setText(selectedCardDTO.getCardName() != null ? selectedCardDTO.getCardName() : "");
+            cardNumberText.setText(selectedCardDTO.getCardNumber() != null ? selectedCardDTO.getCardNumber() : "");
+            cardEditNumberText.setText(selectedCardDTO.getCardNumber() != null ? selectedCardDTO.getCardNumber() : "");
+            cardStatusText.setText(selectedCardDTO.getCardStatus() != null ? selectedCardDTO.getCardStatus() : "");
+            cardTypeText.setText(selectedCardDTO.getCardType() != null ? selectedCardDTO.getCardType() : "");
+            cardCreditText.setText(selectedCardDTO.getCardCredit() != null ? selectedCardDTO.getCardCredit() : "");
         }
     }
 
@@ -360,6 +388,7 @@ public class MainActivity extends Activity {
     }
 
     private void showDetailView() {
+        progressView.setVisibility(View.GONE);
         isDetailView = true;
         isEditView = false;
         isAddView = false;

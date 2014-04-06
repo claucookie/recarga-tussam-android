@@ -147,7 +147,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="3dp"
-            android:background="@color/card_detail_text_color"/>
+            android:background="@color/card_detail_text_color" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -156,12 +156,25 @@
             android:padding="10dp">
 
             <LinearLayout
+                android:id="@+id/progress_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="left">
+                <ProgressBar
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/card_actions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right"
                 android:visibility="gone"
                 tools:visibility="visible">
+
 
                 <ImageView
                     android:id="@+id/edit_card_image"

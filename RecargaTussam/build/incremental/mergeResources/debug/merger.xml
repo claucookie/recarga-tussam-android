@@ -376,7 +376,7 @@
                 qualifiers="" >
                 <string
                     name="com.crashlytics.android.build_id"
-                    translatable="false" >97ecc881-83be-4977-b1bd-0986ccc9c4bc
+                    translatable="false" >bb5cad7f-f954-4de8-8d5f-5b8615237aea
                 </string>
             </file>
             <file
@@ -395,6 +395,8 @@
         no es correcta.
                 </string>
                 <string name="loading_text" >Cargando...
+                </string>
+                <string name="wrong_card_number_error" >El número de tarjeta no es válido
                 </string>
                 <string name="card_status" >Caducidad
                 </string>
@@ -635,6 +637,8 @@ Roboto-Light
                 <string name="parse_error" >Something wrong happened on Tussam server =(
                 </string>
                 <string name="card_number" >Card number
+                </string>
+                <string name="wrong_card_number_error" >This card number is not valid
                 </string>
                 <string name="tussam_info" >This app consumes a public service provided by Tussam\'s web. That service is updated during the night, when buses get home and send cards info to the server.
         Updated info for your card can be queried in the morning. However, we are not responsible if at sometime data is not properly updated.

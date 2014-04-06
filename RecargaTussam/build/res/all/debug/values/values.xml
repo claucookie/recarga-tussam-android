@@ -44,7 +44,7 @@
     <!-- From: file:/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values/com_crashlytics_export_strings.xml -->
     <eat-comment />
 
-    <string name="com.crashlytics.android.build_id" translatable="false">97ecc881-83be-4977-b1bd-0986ccc9c4bc</string>
+    <string name="com.crashlytics.android.build_id" translatable="false">bb5cad7f-f954-4de8-8d5f-5b8615237aea</string>
     <!-- From: file:/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/build/exploded-aar/com.mobivery.android/library/1.0.4-SNAPSHOT/res/values/values.xml -->
     <eat-comment />
 
@@ -58,6 +58,7 @@
     <string name="tussam_info">Esta aplicación utiliza un servicio público de la web de Tussam. Dicho servicio acualiza los datos de las tarjetas al final del día cuando los autobuses llegan a la central y envían los datos al servidor.
         La información actualizada correctamente puede verse por la mañana. Sin embarno, no nos responsabilizamos si alguna vez esta información
         no es correcta.</string>
+    <string name="wrong_card_number_error">El número de tarjeta no es válido</string>
     <!-- From: file:/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values/styles_tussam.xml -->
     <eat-comment />
 
