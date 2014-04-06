@@ -17,7 +17,8 @@
      limitations under the License.
 -->
 
-<resources>
+<resources
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <style name="Theme.Tussam" parent="@android:style/Theme.Holo">
         <item name="android:actionBarItemBackground">@drawable/selectable_background_tussam</item>
@@ -25,13 +26,16 @@
         <item name="android:dropDownListViewStyle">@style/DropDownListView.Tussam</item>
         <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Tussam</item>
         <item name="android:actionDropDownStyle">@style/DropDownNav.Tussam</item>
-        <item name="android:actionBarStyle">@style/ActionBar.Solid.Tussam</item>
         <item name="android:actionModeBackground">@drawable/cab_background_top_tussam</item>
         <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_tussam</item>
         <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Tussam</item>
         <item name="android:progressBarStyle">@style/ProgressBar.Tussam</item>
         <!--<item name="android:spinnerDropDownItemStyle">@style/Spinner.Tussam</item>-->
+        <!-- Actionbar settings -->
         <item name="android:windowBackground">@color/common_background</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Transparent.Tussam</item>
+        <item name="android:actionMenuTextColor">@color/color_palette_1</item>
+
     </style>
 
     <style name="ActionBar.Solid.Tussam" parent="@android:style/Widget.Holo.ActionBar.Solid">
@@ -42,13 +46,18 @@
     </style>
 
     <style name="ActionBar.Transparent.Tussam" parent="@android:style/Widget.Holo.ActionBar">
-        <item name="android:background">@drawable/ab_transparent_tussam</item>
+        <item name="android:background">@null</item>
         <item name="android:progressBarStyle">@style/ProgressBar.Tussam</item>
+        <item name="android:titleTextStyle">@style/ActionBar.TitleTextStyle</item>
+        <item name="fontName">Roboto-Light</item>
+    </style>
+
+    <style name="ActionBar.TitleTextStyle" parent="android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/color_palette_1</item>
     </style>
 
     <style name="Spinner.Tussam" parent="@android:style/Widget.Holo.Spinner">
-        <item name="android:background">@color/common_background</item>
-        <item name="android:padding">10dp</item>
+        <item name="android:padding">0dp</item>
     </style>
 
     <style name="PopupMenu.Tussam" parent="@android:style/Widget.Holo.ListPopupWindow">
@@ -67,6 +76,7 @@
         <item name="android:background">@drawable/spinner_background_ab_tussam</item>
         <item name="android:popupBackground">@drawable/menu_dropdown_panel_tussam</item>
         <item name="android:dropDownSelector">@drawable/selectable_background_tussam</item>
+        <item name="android:textColor">@color/card_detail_text_color</item>
     </style>
     
     <style name="ActionButton.CloseMode.Tussam" parent="@android:style/Widget.Holo.ActionButton.CloseMode">
@@ -87,7 +97,18 @@
     </style>
 
     <style name="CommonText.Tussam" parent="android:Widget.TextView">
-        <item name="android:textColor">@color/common_text_color</item>
+        <item name="android:textColor">@color/color_palette_2</item>
+        <item name="fontName">Roboto-Light</item>
+    </style>
+
+
+    <style name="CardText.Tussam" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/card_detail_text_color</item>
+    </style>
+
+    <style name="CardActions.Tussam" parent="android:Widget.ImageButton">
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:background">@null</item>
     </style>
 
 </resources>

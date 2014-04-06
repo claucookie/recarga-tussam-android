@@ -1,5 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-
-</selector>
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/card_detail_background_color1"/>
+    <stroke android:width="0dip" android:color="@color/card_detail_background_color1" />
+    <corners android:topLeftRadius="@dimen/card_detail_radius"  android:topRightRadius="@dimen/card_detail_radius"  android:bottomLeftRadius="0dip"  android:bottomRightRadius="0dip"/>
+    <padding android:left="0dip" android:top="0dip" android:right="0dip" android:bottom="0dip" />
+</shape>

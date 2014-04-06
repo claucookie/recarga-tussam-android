@@ -4,16 +4,14 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.view.Menu;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -28,6 +26,7 @@ import com.mobivery.android.widgets.ExLabel;
 import com.mobivery.android.widgets.ExText;
 
 import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.InstanceState;
 import org.androidannotations.annotations.OptionsItem;
@@ -45,7 +44,7 @@ import es.claucookie.recarga.model.dto.TussamCardDTO;
 import es.claucookie.recarga.model.dto.TussamCardsDTO;
 
 @OptionsMenu(R.menu.menu_add_edit)
-@EActivity(R.layout.activity_main)
+@EActivity(R.layout.activity_main2)
 public class MainActivity extends Activity {
     public static final String URL = "http://recargas.tussam.es/TPW/Common/cardStatus.do?swNumber=";
 
@@ -54,18 +53,21 @@ public class MainActivity extends Activity {
      */
     public static final String TAG = "VolleyPatterns";
 
-    @ViewById
-    TextView cardNumberText;
-    @ViewById
-    TextView cardStatusText;
-    @ViewById
-    TextView cardTypeText;
-    @ViewById
-    TextView cardCreditText;
+
     @ViewById
     Spinner cardsSpinner;
     @ViewById
+    ExLabel cardTypeText;
+    @ViewById
     ExLabel cardNameText;
+    @ViewById
+    ExLabel cardNumberText;
+    @ViewById
+    ExLabel cardStatusText;
+    @ViewById
+    ExLabel cardCreditText;
+    @ViewById
+    RelativeLayout cardsData;
     @ViewById
     ExText cardEditNameText;
     @ViewById
@@ -73,7 +75,23 @@ public class MainActivity extends Activity {
     @ViewById
     RelativeLayout cardsEditData;
     @ViewById
-    RelativeLayout cardsData;
+    ImageView editCardImage;
+    @ViewById
+    ImageView refreshCardImage;
+    @ViewById
+    LinearLayout cardActions;
+    @ViewById
+    ImageView discardCardImage;
+    @ViewById
+    ImageView saveCardImage;
+    @ViewById
+    LinearLayout cardEditActions;
+    @ViewById
+    ImageView doneCardImage;
+    @ViewById
+    ImageView removeCardImage;
+    @ViewById
+    LinearLayout cardNewActions;
     @ViewById
     LinearLayout tussamInfo;
 
@@ -85,6 +103,7 @@ public class MainActivity extends Activity {
 
     @InstanceState
     boolean isDetailView = false, isAddView = false, isEditView = false;
+
 
     private ArrayAdapter<String> spinnerAdapter;
 
@@ -98,10 +117,10 @@ public class MainActivity extends Activity {
     void initViews() {
         initSpinner();
         loadSavedCards();
-        loadDetailView();
+        loadFirstView();
     }
 
-    private void loadDetailView() {
+    private void loadFirstView() {
         if (tussamCardsDTO != null
                 && tussamCardsDTO.getCards() != null
                 && tussamCardsDTO.getCards().size() > 0) {
@@ -136,14 +155,6 @@ public class MainActivity extends Activity {
 
             }
         });
-        cardsSpinner.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                // Delete item
-
-                return false;
-            }
-        });
     }
 
     private void loadSavedCards() {
@@ -165,37 +176,31 @@ public class MainActivity extends Activity {
 
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        if (isDetailView) {
-            menu.clear();
-            getMenuInflater().inflate(R.menu.menu_add_edit, menu);
-        } else if (isEditView) {
-            menu.clear();
-            getMenuInflater().inflate(R.menu.menu_save_delete, menu);
-        } else if (isAddView) {
-            menu.clear();
-            getMenuInflater().inflate(R.menu.menu_done, menu);
+    @Click(R.id.discard_card_image)
+    void deleteCardClicked() {
+
+        if (selectedCardDTO != null) {
+            PreferencesHelper.getInstance().deleteCards(this);
+            tussamCardsDTO.getCards().remove(selectedCardDTO);
+            PreferencesHelper.getInstance().saveCards(this, tussamCardsDTO);
+            loadSavedCards();
+            loadFirstView();
         }
-        return super.onCreateOptionsMenu(menu);
     }
 
-
-    @OptionsItem(R.id.edit_card)
+    @Click(R.id.edit_card_image)
     void editCardClicked() {
 
         showEditView();
-        invalidateOptionsMenu();
     }
 
     @OptionsItem(R.id.add_card)
     void addCardClicked() {
 
         showAddView();
-        invalidateOptionsMenu();
     }
 
-    @OptionsItem(R.id.create_card)
+    @Click(R.id.done_card_image)
     void createCardClicked() {
 
         String newCardNumber = cardEditNumberText.getText() != null ? cardEditNumberText.getText().toString().replace(" ", "") : "";
@@ -213,7 +218,7 @@ public class MainActivity extends Activity {
     }
 
 
-    @OptionsItem(R.id.save_card)
+    @Click(R.id.save_card_image)
     void saveCardClicked() {
         String newCardNumber = cardEditNumberText.getText() != null ? cardEditNumberText.getText().toString().replace(" ", "") : "";
         String newCardName = cardEditNameText.getText() != null ? cardEditNameText.getText().toString() : "";
@@ -229,12 +234,12 @@ public class MainActivity extends Activity {
         }
     }
 
-    @OptionsItem(R.id.discard_card)
+    @Click(R.id.remove_card_image)
     void cancelClicked() {
         showDetailView();
     }
 
-    @OptionsItem(R.id.refresh_card)
+    @Click(R.id.refresh_card_image)
     void refreshClicked() {
         if (selectedCardDTO != null) {
             requestCardInfo(selectedCardDTO.getCardNumber());
@@ -256,7 +261,7 @@ public class MainActivity extends Activity {
                 @Override
                 public void onErrorResponse(VolleyError error) {
                     Toast.makeText(MainActivity.this, getString(R.string.parse_error), Toast.LENGTH_LONG).show();
-                    clearData();
+                    showDetailView();
                 }
             });
 
@@ -361,7 +366,9 @@ public class MainActivity extends Activity {
         cardsSpinner.setVisibility(View.VISIBLE);
         cardsData.setVisibility(View.VISIBLE);
         cardsEditData.setVisibility(View.GONE);
-        invalidateOptionsMenu();
+        cardActions.setVisibility(View.VISIBLE);
+        cardEditActions.setVisibility(View.GONE);
+        cardNewActions.setVisibility(View.GONE);
         // remove soft keyboard
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(cardNumberText.getWindowToken(), 0);
@@ -376,7 +383,9 @@ public class MainActivity extends Activity {
         cardsSpinner.setVisibility(View.GONE);
         cardsData.setVisibility(View.GONE);
         cardsEditData.setVisibility(View.VISIBLE);
-        invalidateOptionsMenu();
+        cardActions.setVisibility(View.GONE);
+        cardEditActions.setVisibility(View.GONE);
+        cardNewActions.setVisibility(View.VISIBLE);
     }
 
     private void showEditView() {
@@ -390,7 +399,9 @@ public class MainActivity extends Activity {
         cardsSpinner.setVisibility(View.VISIBLE);
         cardsData.setVisibility(View.GONE);
         cardsEditData.setVisibility(View.VISIBLE);
-        invalidateOptionsMenu();
+        cardActions.setVisibility(View.GONE);
+        cardEditActions.setVisibility(View.VISIBLE);
+        cardNewActions.setVisibility(View.GONE);
     }
 
     /**

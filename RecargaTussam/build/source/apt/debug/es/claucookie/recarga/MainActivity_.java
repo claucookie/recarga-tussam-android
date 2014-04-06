@@ -13,11 +13,12 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
-import android.widget.TextView;
 import com.mobivery.android.widgets.ExLabel;
 import com.mobivery.android.widgets.ExText;
 import es.claucookie.recarga.R.id;
@@ -39,7 +40,7 @@ public final class MainActivity_
         init_(savedInstanceState);
         super.onCreate(savedInstanceState);
         OnViewChangedNotifier.replaceNotifier(previousNotifier);
-        setContentView(layout.activity_main);
+        setContentView(layout.activity_main2);
     }
 
     private void init_(Bundle savedInstanceState) {
@@ -79,17 +80,116 @@ public final class MainActivity_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
+        cardStatusText = ((ExLabel) hasViews.findViewById(id.card_status_text));
+        doneCardImage = ((ImageView) hasViews.findViewById(id.done_card_image));
         tussamInfo = ((LinearLayout) hasViews.findViewById(id.tussam_info));
-        cardNumberText = ((TextView) hasViews.findViewById(id.card_number_text));
-        cardsData = ((RelativeLayout) hasViews.findViewById(id.cards_data));
-        cardsSpinner = ((Spinner) hasViews.findViewById(id.cards_spinner));
-        cardEditNameText = ((ExText) hasViews.findViewById(id.card_edit_name_text));
-        cardCreditText = ((TextView) hasViews.findViewById(id.card_credit_text));
-        cardTypeText = ((TextView) hasViews.findViewById(id.card_type_text));
-        cardEditNumberText = ((ExText) hasViews.findViewById(id.card_edit_number_text));
-        cardNameText = ((ExLabel) hasViews.findViewById(id.card_name_text));
+        cardTypeText = ((ExLabel) hasViews.findViewById(id.card_type_text));
+        removeCardImage = ((ImageView) hasViews.findViewById(id.remove_card_image));
         cardsEditData = ((RelativeLayout) hasViews.findViewById(id.cards_edit_data));
-        cardStatusText = ((TextView) hasViews.findViewById(id.card_status_text));
+        cardsData = ((RelativeLayout) hasViews.findViewById(id.cards_data));
+        cardNewActions = ((LinearLayout) hasViews.findViewById(id.card_new_actions));
+        cardEditActions = ((LinearLayout) hasViews.findViewById(id.card_edit_actions));
+        cardEditNameText = ((ExText) hasViews.findViewById(id.card_edit_name_text));
+        cardNumberText = ((ExLabel) hasViews.findViewById(id.card_number_text));
+        editCardImage = ((ImageView) hasViews.findViewById(id.edit_card_image));
+        saveCardImage = ((ImageView) hasViews.findViewById(id.save_card_image));
+        cardCreditText = ((ExLabel) hasViews.findViewById(id.card_credit_text));
+        cardsSpinner = ((Spinner) hasViews.findViewById(id.cards_spinner));
+        cardActions = ((LinearLayout) hasViews.findViewById(id.card_actions));
+        cardEditNumberText = ((ExText) hasViews.findViewById(id.card_edit_number_text));
+        discardCardImage = ((ImageView) hasViews.findViewById(id.discard_card_image));
+        cardNameText = ((ExLabel) hasViews.findViewById(id.card_name_text));
+        refreshCardImage = ((ImageView) hasViews.findViewById(id.refresh_card_image));
+        {
+            View view = hasViews.findViewById(id.discard_card_image);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        MainActivity_.this.deleteCardClicked();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = hasViews.findViewById(id.remove_card_image);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        MainActivity_.this.cancelClicked();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = hasViews.findViewById(id.save_card_image);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        MainActivity_.this.saveCardClicked();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = hasViews.findViewById(id.done_card_image);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        MainActivity_.this.createCardClicked();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = hasViews.findViewById(id.refresh_card_image);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        MainActivity_.this.refreshClicked();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = hasViews.findViewById(id.edit_card_image);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        MainActivity_.this.editCardClicked();
+                    }
+
+                }
+                );
+            }
+        }
         initViews();
     }
 
@@ -111,48 +211,28 @@ public final class MainActivity_
             addCardClicked();
             return true;
         }
-        if (itemId_ == id.discard_card) {
-            cancelClicked();
-            return true;
-        }
-        if (itemId_ == id.save_card) {
-            saveCardClicked();
-            return true;
-        }
-        if (itemId_ == id.create_card) {
-            createCardClicked();
-            return true;
-        }
-        if (itemId_ == id.refresh_card) {
-            refreshClicked();
-            return true;
-        }
-        if (itemId_ == id.edit_card) {
-            editCardClicked();
-            return true;
-        }
         return false;
     }
 
     @Override
     public void onSaveInstanceState(Bundle bundle) {
         super.onSaveInstanceState(bundle);
+        bundle.putBoolean("isDetailView", isDetailView);
+        bundle.putBoolean("isAddView", isAddView);
         bundle.putBoolean("isEditView", isEditView);
         bundle.putParcelable("selectedCardDTO", selectedCardDTO);
-        bundle.putBoolean("isDetailView", isDetailView);
         bundle.putParcelable("tussamCardsDTO", tussamCardsDTO);
-        bundle.putBoolean("isAddView", isAddView);
     }
 
     private void restoreSavedInstanceState_(Bundle savedInstanceState) {
         if (savedInstanceState == null) {
             return ;
         }
+        isDetailView = savedInstanceState.getBoolean("isDetailView");
+        isAddView = savedInstanceState.getBoolean("isAddView");
         isEditView = savedInstanceState.getBoolean("isEditView");
         selectedCardDTO = savedInstanceState.getParcelable("selectedCardDTO");
-        isDetailView = savedInstanceState.getBoolean("isDetailView");
         tussamCardsDTO = savedInstanceState.getParcelable("tussamCardsDTO");
-        isAddView = savedInstanceState.getBoolean("isAddView");
     }
 
     public static class IntentBuilder_ {

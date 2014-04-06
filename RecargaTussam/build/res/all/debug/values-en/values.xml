@@ -6,7 +6,9 @@
 
     <string name="app_name">Tussam Card</string>
     <string name="card_credit">Credit</string>
+    <string name="card_name_hint">Give it a name!</string>
     <string name="card_number">Card number</string>
+    <string name="card_number_hint">0123 4567 8901</string>
     <string name="card_status">Expiration</string>
     <string name="card_type">Credit type</string>
     <string name="hello_world">Hello world!</string>
