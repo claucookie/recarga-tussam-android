@@ -243,24 +243,26 @@ public class MainActivity extends Activity {
 
     private void requestCardInfo(String cardNumber) {
         hideData();
-        cardNumber = trim(cardNumber, 0, cardNumber.length());
-        StringRequest req = new StringRequest(URL + cardNumber, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                parseHtml(response);
-                reloadData();
-                showDetailView();
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Toast.makeText(MainActivity.this, getString(R.string.parse_error), Toast.LENGTH_LONG).show();
-                clearData();
-            }
-        });
+        if (cardNumber != null) {
+            cardNumber = trim(cardNumber, 0, cardNumber.length());
+            StringRequest req = new StringRequest(URL + cardNumber, new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                    parseHtml(response);
+                    reloadData();
+                    showDetailView();
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Toast.makeText(MainActivity.this, getString(R.string.parse_error), Toast.LENGTH_LONG).show();
+                    clearData();
+                }
+            });
 
-        // add the request object to the queue to be executed
-        addToRequestQueue(req);
+            // add the request object to the queue to be executed
+            addToRequestQueue(req);
+        }
     }
 
     private void hideData() {

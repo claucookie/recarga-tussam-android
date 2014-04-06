@@ -11,13 +11,13 @@
             <file
                 path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/build/exploded-aar/com.mobivery.android/library/1.0.4-SNAPSHOT/res/values/values.xml"
                 qualifiers="" >
-                <declare-styleable name="ExButton" >
-                    <attr name="fontName" />
-                </declare-styleable>
-
                 <attr
                     name="fontName"
                     format="string" />
+
+                <declare-styleable name="ExButton" >
+                    <attr name="fontName" />
+                </declare-styleable>
 
                 <string name="com.mobivery.android.name" >example
                 </string>
@@ -346,7 +346,7 @@
                 qualifiers="" >
                 <string
                     name="com.crashlytics.android.build_id"
-                    translatable="false" >254b503e-1aa6-4143-ad36-a5f28fc84fa6
+                    translatable="false" >d45b5c1e-b45c-4f5b-8750-aa218d30ea8a
                 </string>
             </file>
             <file
@@ -354,11 +354,11 @@
                 qualifiers="" >
                 <string name="card_name_hint" >Nombre tarjeta
                 </string>
+                <string name="loading_text" >Cargando...
+                </string>
                 <string name="tussam_info" >Esta aplicación utiliza un servicio público de la web de Tussam. Dicho servicio acualiza los datos de las tarjetas al final del día cuando los autobuses llegan a la central y envían los datos al servidor.
         La información actualizada correctamente puede verse por la mañana. Sin embarno, no nos responsabilizamos si alguna vez esta información
         no es correcta.
-                </string>
-                <string name="loading_text" >Cargando...
                 </string>
                 <string name="card_status" >Caducidad
                 </string>
@@ -380,23 +380,6 @@
             <file
                 path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values/styles_tussam.xml"
                 qualifiers="" >
-
-                <style
-                    name="ActionBar.Solid.Tussam"
-                    parent="@android:style/Widget.Holo.ActionBar.Solid" >
-                    <item name="android:background">
-@drawable/ab_solid_tussam
-                    </item>
-                    <item name="android:backgroundStacked">
-@drawable/ab_stacked_solid_tussam
-                    </item>
-                    <item name="android:backgroundSplit">
-@drawable/ab_bottom_solid_tussam
-                    </item>
-                    <item name="android:progressBarStyle">
-@style/ProgressBar.Tussam
-                    </item>
-                </style>
 
                 <style
                     name="Theme.Tussam"
@@ -438,13 +421,30 @@
                 </style>
 
                 <style
-                    name="Theme.Tussam.Widget"
-                    parent="@android:style/Theme.Holo" >
-                    <item name="android:popupMenuStyle">
-@style/PopupMenu.Tussam
+                    name="ActionBar.Solid.Tussam"
+                    parent="@android:style/Widget.Holo.ActionBar.Solid" >
+                    <item name="android:background">
+@drawable/ab_solid_tussam
                     </item>
-                    <item name="android:dropDownListViewStyle">
-@style/DropDownListView.Tussam
+                    <item name="android:backgroundStacked">
+@drawable/ab_stacked_solid_tussam
+                    </item>
+                    <item name="android:backgroundSplit">
+@drawable/ab_bottom_solid_tussam
+                    </item>
+                    <item name="android:progressBarStyle">
+@style/ProgressBar.Tussam
+                    </item>
+                </style>
+
+                <style
+                    name="ActionBar.Transparent.Tussam"
+                    parent="@android:style/Widget.Holo.ActionBar" >
+                    <item name="android:background">
+@drawable/ab_transparent_tussam
+                    </item>
+                    <item name="android:progressBarStyle">
+@style/ProgressBar.Tussam
                     </item>
                 </style>
 
@@ -457,13 +457,13 @@
                 </style>
 
                 <style
-                    name="ActionBar.Transparent.Tussam"
-                    parent="@android:style/Widget.Holo.ActionBar" >
-                    <item name="android:background">
-@drawable/ab_transparent_tussam
+                    name="Theme.Tussam.Widget"
+                    parent="@android:style/Theme.Holo" >
+                    <item name="android:popupMenuStyle">
+@style/PopupMenu.Tussam
                     </item>
-                    <item name="android:progressBarStyle">
-@style/ProgressBar.Tussam
+                    <item name="android:dropDownListViewStyle">
+@style/DropDownListView.Tussam
                     </item>
                 </style>
 
@@ -506,14 +506,6 @@
                 </style>
 
                 <style
-                    name="ActionButton.CloseMode.Tussam"
-                    parent="@android:style/Widget.Holo.ActionButton.CloseMode" >
-                    <item name="android:background">
-@drawable/btn_cab_done_tussam
-                    </item>
-                </style>
-
-                <style
                     name="Spinner.Tussam"
                     parent="@android:style/Widget.Holo.Spinner" >
                     <item name="android:background">
@@ -521,6 +513,14 @@
                     </item>
                     <item name="android:padding">
 10dp
+                    </item>
+                </style>
+
+                <style
+                    name="ActionButton.CloseMode.Tussam"
+                    parent="@android:style/Widget.Holo.ActionButton.CloseMode" >
+                    <item name="android:background">
+@drawable/btn_cab_done_tussam
                     </item>
                 </style>
 
@@ -550,18 +550,18 @@
                 </string>
                 <string name="card_credit" >Credit
                 </string>
-                <string name="card_status" >Expiration
-                </string>
                 <string name="loading_text" >Loading...
+                </string>
+                <string name="card_status" >Expiration
                 </string>
                 <string name="parse_error" >Something wrong happened on Tussam server =(
                 </string>
                 <string name="card_number" >Card number
                 </string>
+                <string name="app_name" >Tussam Card
+                </string>
                 <string name="tussam_info" >This app consumes a public service provided by Tussam\'s web. That service is updated during the night, when buses get home and send cards info to the server.
         Updated info for your card can be queried in the morning. However, we are not responsible if at sometime data is not properly updated.
-                </string>
-                <string name="app_name" >Tussam Card
                 </string>
             </file>
         </source>
