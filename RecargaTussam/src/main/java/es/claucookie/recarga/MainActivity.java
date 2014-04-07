@@ -188,7 +188,7 @@ public class MainActivity extends Activity {
             }
         }
         spinnerAdapter.notifyDataSetChanged();
-        if (selectedCardDTO != null) {
+        if (selectedCardDTO != null && tussamCardsDTO != null && tussamCardsDTO.getCards() != null) {
             int newCardIndex = tussamCardsDTO.getCards().indexOf(selectedCardDTO);
             cardsSpinner.setSelection(newCardIndex);
         }
