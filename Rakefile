@@ -88,7 +88,7 @@ class Build
     file = File.new(manifest_path)
     doc = REXML::Document.new(file)
     doc.root.attributes['android:versionName'] = 1.2
-    doc.root.attributes['android:versionCode'] = 7
+    doc.root.attributes['android:versionCode'] = 8
     File.open(file, 'w') do |data|
       data << doc
     end
