@@ -132,7 +132,9 @@ public class MainActivity extends Activity {
     @Override
     public void onBackPressed() {
         if (isAddView || isEditView) {
-            if (tussamCardsDTO.getCards().size() > 0) {
+            if (tussamCardsDTO != null &&
+                    tussamCardsDTO.getCards() != null &&
+                    tussamCardsDTO.getCards().size() > 0) {
                 showDetailView();
             } else {
                 showAddView();
@@ -240,24 +242,28 @@ public class MainActivity extends Activity {
 
     @Click(R.id.save_card_image)
     void saveCardClicked() {
-        String newCardNumber = cardEditNumberText.getText() != null ? cardEditNumberText.getText().toString().replace(" ", "") : "";
-        String newCardName = cardEditNameText.getText() != null ? cardEditNameText.getText().toString() : "";
-        newCardNumber = newCardNumber.replaceFirst("^0+(?!$)", "");
-        if (!newCardNumber.equals("")) {
-            selectedCardDTO.setCardName(newCardName);
-            selectedCardDTO.setCardNumber(newCardNumber);
-            tussamCardsDTO.getCards().set(cardsSpinner.getSelectedItemPosition(), selectedCardDTO);
-            PreferencesHelper.getInstance().saveCards(this, tussamCardsDTO);
-            loadSavedCards();
-            showDetailView();
-            reloadData();
-            requestCardInfo();
+        if (cardEditNumberText != null && cardEditNameText != null) {
+            String newCardNumber = cardEditNumberText.getText() != null ? cardEditNumberText.getText().toString().replace(" ", "") : "";
+            String newCardName = cardEditNameText.getText() != null ? cardEditNameText.getText().toString() : "";
+            newCardNumber = newCardNumber.replaceFirst("^0+(?!$)", "");
+            if (selectedCardDTO != null && !newCardNumber.equals("")) {
+                selectedCardDTO.setCardName(newCardName);
+                selectedCardDTO.setCardNumber(newCardNumber);
+                tussamCardsDTO.getCards().set(cardsSpinner.getSelectedItemPosition(), selectedCardDTO);
+                PreferencesHelper.getInstance().saveCards(this, tussamCardsDTO);
+                loadSavedCards();
+                showDetailView();
+                reloadData();
+                requestCardInfo();
+            }
         }
     }
 
     @Click(R.id.remove_card_image)
     void cancelClicked() {
-        if (tussamCardsDTO.getCards().size() > 0) {
+        if (tussamCardsDTO != null &&
+                tussamCardsDTO.getCards() != null &&
+                tussamCardsDTO.getCards().size() > 0) {
             showDetailView();
         }
     }

@@ -11,13 +11,13 @@
             <file
                 path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/build/exploded-aar/com.mobivery.android/library/1.0.4-SNAPSHOT/res/values/values.xml"
                 qualifiers="" >
-                <declare-styleable name="ExButton" >
-                    <attr name="fontName" />
-                </declare-styleable>
-
                 <attr
                     name="fontName"
                     format="string" />
+
+                <declare-styleable name="ExButton" >
+                    <attr name="fontName" />
+                </declare-styleable>
 
                 <string name="com.mobivery.android.name" >example
                 </string>
@@ -364,9 +364,9 @@
                 </color>
                 <color name="card_detail_background_color1" >@color/color_palette_1
                 </color>
-                <color name="common_text_color" >#ffffff
-                </color>
                 <color name="color_palette_1" >#cc073c
+                </color>
+                <color name="common_text_color" >#ffffff
                 </color>
                 <color name="color_palette_2" >#00579b
                 </color>
@@ -376,7 +376,7 @@
                 qualifiers="" >
                 <string
                     name="com.crashlytics.android.build_id"
-                    translatable="false" >bb9f2b0f-547e-40e1-94ec-502537983b85
+                    translatable="false" >32f10a26-2d3e-4b93-891b-5604f26f612d
                 </string>
             </file>
             <file
@@ -592,14 +592,6 @@ Roboto-Light
                 </style>
 
                 <style
-                    name="PopupMenu.Tussam"
-                    parent="@android:style/Widget.Holo.ListPopupWindow" >
-                    <item name="android:popupBackground">
-@drawable/menu_dropdown_panel_tussam
-                    </item>
-                </style>
-
-                <style
                     name="ActionBar.Transparent.Tussam"
                     parent="@android:style/Widget.Holo.ActionBar" >
                     <item name="android:background">
@@ -613,6 +605,14 @@ Roboto-Light
                     </item>
                     <item name="fontName">
 Roboto-Light
+                    </item>
+                </style>
+
+                <style
+                    name="PopupMenu.Tussam"
+                    parent="@android:style/Widget.Holo.ListPopupWindow" >
+                    <item name="android:popupBackground">
+@drawable/menu_dropdown_panel_tussam
                     </item>
                 </style>
 
