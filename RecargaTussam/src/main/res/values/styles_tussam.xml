@@ -111,7 +111,7 @@
     </style>
 
     <style name="CardActions.Tussam" parent="android:Widget.ImageButton">
-        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
         <item name="android:background">@null</item>
     </style>
 

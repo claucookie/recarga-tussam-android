@@ -39,6 +39,8 @@ import org.jsoup.select.Elements;
 
 import java.util.ArrayList;
 
+import es.claucookie.recarga.helpers.AlertsHelper;
+import es.claucookie.recarga.helpers.GeneralHelper;
 import es.claucookie.recarga.helpers.PreferencesHelper;
 import es.claucookie.recarga.model.dto.TussamCardDTO;
 import es.claucookie.recarga.model.dto.TussamCardsDTO;
@@ -46,7 +48,9 @@ import es.claucookie.recarga.model.dto.TussamCardsDTO;
 @OptionsMenu(R.menu.menu_add_edit)
 @EActivity(R.layout.activity_main2)
 public class MainActivity extends Activity {
-    public static final String URL = "http://recargas.tussam.es/TPW/Common/cardStatus.do?swNumber=";
+    public static final String STATUS_URL = "http://recargas.tussam.es/TPW/Common/cardStatus.do?swNumber=";
+    public static final String CREDIT_URL = "https://recargas.tussam.es/TPW/Common/viewProductSelection.do?idNewCard=";
+    public static final String VALIDATE_URL = "https://recargas.tussam.es/TPW/Common/validateHWSNumberAjax.do?idNewCard=";
 
     /**
      * Log or request TAG
@@ -77,6 +81,8 @@ public class MainActivity extends Activity {
     ImageView editCardImage;
     @ViewById
     ImageView refreshCardImage;
+    @ViewById
+    ImageView rechargeCardImage;
     @ViewById
     LinearLayout cardActions;
     @ViewById
@@ -275,13 +281,21 @@ public class MainActivity extends Activity {
         }
     }
 
+    @Click(R.id.recharge_card_image)
+    void rechardCardClicked() {
+        if (selectedCardDTO != null) {
+            String externalUrl = CREDIT_URL+selectedCardDTO.getCardNumber();
+            GeneralHelper.launchExternalUrlWeb(this, externalUrl, getString(R.string.recharge_card_text), getString(R.string.alert_yes), getString(R.string.alert_no));
+        }
+    }
+
     private void requestCardInfo() {
         if (selectedCardDTO != null) {
             hideData();
             if (selectedCardDTO.getCardNumber() != null) {
                 progressView.setVisibility(View.VISIBLE);
                 String cardNumber = trim(selectedCardDTO.getCardNumber(), 0, selectedCardDTO.getCardNumber().length());
-                StringRequest req = new StringRequest(URL + cardNumber, new Response.Listener<String>() {
+                StringRequest req = new StringRequest(STATUS_URL + cardNumber, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         parseHtml(response);

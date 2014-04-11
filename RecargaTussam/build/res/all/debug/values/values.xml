@@ -35,17 +35,19 @@
     <eat-comment />
 
     <string name="add_card_help_text">Añade una tarjeta de tussam y consula su saldo! =) Introduce el número de 12 cifras que hay en el dorso y dale un nombre para identificarla.</string>
+    <string name="alert_no">no</string>
+    <string name="alert_yes">si</string>
     <string name="app_name">Consulta Tarjeta Tussam</string>
     <string name="card_credit">Saldo</string>
     <string name="card_name_hint">Dale un nombre!</string>
     <string name="card_number">Nº</string>
-    <string name="card_number_hint">0123 4567 8901</string>
+    <string name="card_number_hint">#### #### ####</string>
     <string name="card_status">Caducidad</string>
     <string name="card_type">Recarga</string>
     <!-- From: file:/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values/com_crashlytics_export_strings.xml -->
     <eat-comment />
 
-    <string name="com.crashlytics.android.build_id" translatable="false">32f10a26-2d3e-4b93-891b-5604f26f612d</string>
+    <string name="com.crashlytics.android.build_id" translatable="false">475c4b36-25f6-4789-acec-1f65cfd859c6</string>
     <!-- From: file:/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/build/exploded-aar/com.mobivery.android/library/1.0.4-SNAPSHOT/res/values/values.xml -->
     <eat-comment />
 
@@ -56,6 +58,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="loading_text">Cargando...</string>
     <string name="parse_error">Ha ocurrido un error en el servidor de Tussam =(</string>
+    <string name="recharge_card_text">¿Desea recargar la tarjeta? Esto le llevará fuera a la web de Tussam directamente para que pueda introducir sus datos para la recarga</string>
     <string name="tussam_info">Esta aplicación no es oficial, pero utiliza un servicio público de la web de Tussam. Dicho servicio actualiza los datos de las tarjetas al final del día cuando los autobuses llegan a la central y envían los datos al servidor.
         La información actualizada correctamente puede verse por la mañana. Sin embarno, no nos responsabilizamos si alguna vez esta información
         no es correcta.</string>
@@ -90,7 +93,7 @@
     </style>
 
     <style name="CardActions.Tussam" parent="android:Widget.ImageButton">
-        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
         <item name="android:background">@null</item>
     </style>
 

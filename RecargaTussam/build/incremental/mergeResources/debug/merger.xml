@@ -144,6 +144,11 @@
                 qualifiers="xhdpi"
                 type="drawable" />
             <file
+                name="ic_action_add_credit"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/ic_action_add_credit.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
                 name="ic_action_discard"
                 path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/ic_action_discard.png"
                 qualifiers="xhdpi"
@@ -151,6 +156,16 @@
             <file
                 name="ic_action_edit"
                 path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/ic_action_edit.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="ic_action_important"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/ic_action_important.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="ic_action_important_"
+                path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/drawable-xhdpi/ic_action_important_.png"
                 qualifiers="xhdpi"
                 type="drawable" />
             <file
@@ -376,7 +391,7 @@
                 qualifiers="" >
                 <string
                     name="com.crashlytics.android.build_id"
-                    translatable="false" >32f10a26-2d3e-4b93-891b-5604f26f612d
+                    translatable="false" >475c4b36-25f6-4789-acec-1f65cfd859c6
                 </string>
             </file>
             <file
@@ -388,19 +403,25 @@
             <file
                 path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/src/main/res/values/strings.xml"
                 qualifiers="" >
+                <string name="loading_text" >Cargando...
+                </string>
                 <string name="tussam_info" >Esta aplicación no es oficial, pero utiliza un servicio público de la web de Tussam. Dicho servicio actualiza los datos de las tarjetas al final del día cuando los autobuses llegan a la central y envían los datos al servidor.
         La información actualizada correctamente puede verse por la mañana. Sin embarno, no nos responsabilizamos si alguna vez esta información
         no es correcta.
                 </string>
-                <string name="loading_text" >Cargando...
-                </string>
                 <string name="wrong_card_number_error" >El número de tarjeta no es válido
+                </string>
+                <string name="recharge_card_text" >¿Desea recargar la tarjeta? Esto le llevará fuera a la web de Tussam directamente para que pueda introducir sus datos para la recarga
                 </string>
                 <string name="add_card_help_text" >Añade una tarjeta de tussam y consula su saldo! =) Introduce el número de 12 cifras que hay en el dorso y dale un nombre para identificarla.
                 </string>
-                <string name="card_number_hint" >0123 4567 8901
+                <string name="alert_no" >no
+                </string>
+                <string name="card_number_hint" >#### #### ####
                 </string>
                 <string name="card_type" >Recarga
+                </string>
+                <string name="alert_yes" >si
                 </string>
                 <string name="card_name_hint" >Dale un nombre!
                 </string>
@@ -583,11 +604,19 @@ Roboto-Light
                 <style
                     name="CardActions.Tussam"
                     parent="android:Widget.ImageButton" >
-                    <item name="android:layout_marginRight">
-5dp
+                    <item name="android:layout_marginLeft">
+10dp
                     </item>
                     <item name="android:background">
 @null
+                    </item>
+                </style>
+
+                <style
+                    name="PopupMenu.Tussam"
+                    parent="@android:style/Widget.Holo.ListPopupWindow" >
+                    <item name="android:popupBackground">
+@drawable/menu_dropdown_panel_tussam
                     </item>
                 </style>
 
@@ -605,14 +634,6 @@ Roboto-Light
                     </item>
                     <item name="fontName">
 Roboto-Light
-                    </item>
-                </style>
-
-                <style
-                    name="PopupMenu.Tussam"
-                    parent="@android:style/Widget.Holo.ListPopupWindow" >
-                    <item name="android:popupBackground">
-@drawable/menu_dropdown_panel_tussam
                     </item>
                 </style>
 
@@ -639,22 +660,28 @@ Roboto-Light
                 </string>
                 <string name="card_type" >Credit type
                 </string>
+                <string name="alert_yes" >yes
+                </string>
                 <string name="card_credit" >Credit
+                </string>
+                <string name="alert_no" >no
                 </string>
                 <string name="add_card_help_text" >Add your tussam card to loop-up what\'s your credit! =) Turn back your card and introduce the 12-digit number found there, then type a name to help you identify your cards.
                 </string>
                 <string name="wrong_card_number_error" >This card number is not valid
                 </string>
+                <string name="app_name" >Consult Tussam Credit
+                </string>
                 <string name="tussam_info" >This app is not official, but it consumes a public service provided by Tussam\'s web. That service is updated during the night, when buses get home and send cards info to the server.
         Updated info for your card can be queried in the morning. However, we are not responsible if at sometime data is not properly updated.
                 </string>
-                <string name="app_name" >Consult Tussam Credit
+                <string name="card_number_hint" >#### #### ####
                 </string>
-                <string name="card_number_hint" >0123 4567 8901
-                </string>
-                <string name="card_name_hint" >Give it a name!
+                <string name="recharge_card_text" >¿Do you want to recharge this card? You will be taken to Tussam website where you can type your card data and recharge it.
                 </string>
                 <string name="card_status" >Expiration
+                </string>
+                <string name="card_name_hint" >Give it a name!
                 </string>
                 <string name="loading_text" >Loading...
                 </string>
