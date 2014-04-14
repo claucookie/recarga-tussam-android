@@ -199,7 +199,10 @@ public class MainActivity extends Activity {
         if (tussamCardsDTO != null && tussamCardsDTO.getCards() != null) {
             for (TussamCardDTO card : tussamCardsDTO.getCards()) {
                 spinnerAdapter.add(card.getCardName());
-                if (card.getIsCardFavorite()) {
+                if (selectedCardDTO != null
+                        && selectedCardDTO.isEmpty()
+                        && card.getIsCardFavorite() != null
+                        && card.getIsCardFavorite()) {
                     selectedCardDTO = card;
                 }
             }
@@ -248,6 +251,7 @@ public class MainActivity extends Activity {
             newCard.setCardName(newCardName);
             newCard.setCardNumber(newCardNumber);
             saveNewCard(newCard);
+            selectedCardDTO = newCard;
             loadSavedCards();
             showDetailView();
             reloadData();
@@ -433,7 +437,6 @@ public class MainActivity extends Activity {
 
     private void reloadData() {
         if (selectedCardDTO != null) {
-
             cardNameText.setText(selectedCardDTO.getCardName() != null ? selectedCardDTO.getCardName() : "");
             cardEditNameText.setText(selectedCardDTO.getCardName() != null ? selectedCardDTO.getCardName() : "");
             cardNumberText.setText(selectedCardDTO.getCardNumber() != null ? selectedCardDTO.getCardNumber() : "");
