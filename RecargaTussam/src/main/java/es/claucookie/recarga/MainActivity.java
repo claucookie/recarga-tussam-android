@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -26,6 +28,8 @@ import com.mobivery.android.widgets.ExLabel;
 import com.mobivery.android.widgets.ExText;
 
 import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Background;
+import org.androidannotations.annotations.CheckedChange;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.InstanceState;
@@ -103,6 +107,8 @@ public class MainActivity extends Activity {
     LinearLayout progressView;
     @ViewById
     LinearLayout newCardHelpView;
+    @ViewById
+    CheckBox favoriteCardCb;
 
     @InstanceState
     TussamCardsDTO tussamCardsDTO = new TussamCardsDTO();
@@ -193,6 +199,9 @@ public class MainActivity extends Activity {
         if (tussamCardsDTO != null && tussamCardsDTO.getCards() != null) {
             for (TussamCardDTO card : tussamCardsDTO.getCards()) {
                 spinnerAdapter.add(card.getCardName());
+                if (card.getIsCardFavorite()) {
+                    selectedCardDTO = card;
+                }
             }
         }
         spinnerAdapter.notifyDataSetChanged();
@@ -289,9 +298,31 @@ public class MainActivity extends Activity {
         }
     }
 
+    @Click
+    void favoriteCardCbClicked() {
+        toggleFavoriteCardIndicator(favoriteCardCb.isChecked());
+    }
+
+    @Background
+    void toggleFavoriteCardIndicator(boolean isChecked) {
+        if (selectedCardDTO != null && tussamCardsDTO != null && tussamCardsDTO.getCards() != null) {
+            selectedCardDTO.setIsCardFavorite(isChecked);
+            int cardsSize = tussamCardsDTO.getCards().size();
+            for( int i=0; i<cardsSize; i++) {
+                tussamCardsDTO.getCards().get(i).setIsCardFavorite(false);
+                if (isChecked && selectedCardDTO == tussamCardsDTO.getCards().get(i)) {
+                    tussamCardsDTO.getCards().get(i).setIsCardFavorite(true);
+                }
+            }
+            PreferencesHelper.getInstance().saveCards(this, tussamCardsDTO);
+        }
+    }
+
+
     private void requestCardInfo() {
         if (selectedCardDTO != null) {
             hideData();
+            preloadData();
             if (selectedCardDTO.getCardNumber() != null) {
                 progressView.setVisibility(View.VISIBLE);
                 String cardNumber = trim(selectedCardDTO.getCardNumber(), 0, selectedCardDTO.getCardNumber().length());
@@ -393,8 +424,16 @@ public class MainActivity extends Activity {
 
     }
 
+    private void preloadData() {
+        // Load data stored in preferences like favorite card flag
+        if (selectedCardDTO != null) {
+            favoriteCardCb.setChecked(selectedCardDTO.getIsCardFavorite() != null ? selectedCardDTO.getIsCardFavorite() : false);
+        }
+    }
+
     private void reloadData() {
         if (selectedCardDTO != null) {
+
             cardNameText.setText(selectedCardDTO.getCardName() != null ? selectedCardDTO.getCardName() : "");
             cardEditNameText.setText(selectedCardDTO.getCardName() != null ? selectedCardDTO.getCardName() : "");
             cardNumberText.setText(selectedCardDTO.getCardNumber() != null ? selectedCardDTO.getCardNumber() : "");
@@ -414,6 +453,7 @@ public class MainActivity extends Activity {
     }
 
     private void showDetailView() {
+        favoriteCardCb.setVisibility(View.VISIBLE);
         newCardHelpView.setVisibility(View.GONE);
         progressView.setVisibility(View.GONE);
         isDetailView = true;
@@ -431,6 +471,7 @@ public class MainActivity extends Activity {
     }
 
     private void showAddView() {
+        favoriteCardCb.setVisibility(View.GONE);
         newCardHelpView.setVisibility(View.VISIBLE);
         cancelPendingRequests(TAG);
         progressView.setVisibility(View.GONE);
@@ -448,6 +489,7 @@ public class MainActivity extends Activity {
     }
 
     private void showEditView() {
+        favoriteCardCb.setVisibility(View.VISIBLE);
         newCardHelpView.setVisibility(View.GONE);
         cancelPendingRequests(TAG);
         isDetailView = false;

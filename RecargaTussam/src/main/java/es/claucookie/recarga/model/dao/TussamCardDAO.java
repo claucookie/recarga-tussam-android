@@ -22,6 +22,7 @@ public final class TussamCardDAO{
 	private static final String CONSTANT_CARDTYPE="cardType";
 	private static final String CONSTANT_CARDSTATUS="cardStatus";
 	private static final String CONSTANT_CARDCREDIT="cardCredit";
+	private static final String CONSTANT_ISCARDFAVORITE="isCardFavorite";
 	
 	private static TussamCardDAO instance=new TussamCardDAO();
 
@@ -62,6 +63,15 @@ public final class TussamCardDAO{
 		if(value.has(CONSTANT_CARDCREDIT) && !value.get(CONSTANT_CARDCREDIT).toString().equals("null")) {
 			returnValue.setCardCredit(value.get(CONSTANT_CARDCREDIT).toString());
 		}
+		if(value.has(CONSTANT_ISCARDFAVORITE) && !value.get(CONSTANT_ISCARDFAVORITE).toString().equals("null")) {
+			if(value.get(CONSTANT_ISCARDFAVORITE).getClass()==String.class){
+				returnValue.setIsCardFavorite(Boolean.parseBoolean((String)value.get(CONSTANT_ISCARDFAVORITE)));
+			}
+			else{
+				returnValue.setIsCardFavorite((Boolean)value.get(CONSTANT_ISCARDFAVORITE));
+			}
+		}	
+				
 		
 		
 		
@@ -89,6 +99,9 @@ public final class TussamCardDAO{
 		}
 		if(object.getCardCredit()!=null){
 			returnValue.put(CONSTANT_CARDCREDIT, (object.getCardCredit() == null)? JSONObject.NULL : object.getCardCredit());
+		}
+		if(object.getIsCardFavorite()!=null){
+			returnValue.put(CONSTANT_ISCARDFAVORITE, (object.getIsCardFavorite() == null)? JSONObject.NULL : object.getIsCardFavorite());
 		}
 
 		return returnValue;

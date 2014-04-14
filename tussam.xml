@@ -16,8 +16,9 @@
         	<field name="cardName" type="string" description="name"/>
         	<field name="cardNumber" type="string" description="number"/>
 			<field name="cardType" type="string" description="type"/>
-			<field name="cardStatus" type="string" description="type"/>
-			<field name="cardCredit" type="string" description="type"/>			
+			<field name="cardStatus" type="string" description="status"/>
+			<field name="cardCredit" type="string" description="credit"/>	
+			<field name="isCardFavorite" type="boolean" description="is favorite?" />		
         </type>
 	</types>
 </protocol>

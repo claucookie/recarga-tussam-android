@@ -66,6 +66,16 @@ android {
         }
     }
 
+    productFlavors {
+        production {
+            packageName "es.claucookie.recarga"
+        }
+
+        staging {
+            packageName "es.claucookie.recargadev"
+        }
+    }
+
 }
 
 // Parametrized signing code for CI and Builder Dash
@@ -102,6 +112,7 @@ android.applicationVariants.all { variant ->
     '-processorpath', configurations.apt.getAsPath(),
     '-processor', 'org.androidannotations.AndroidAnnotationProcessor',
     '-AandroidManifestFile=' + variant.processResources.manifestFile,
+    '-AresourcePackageName=es.claucookie.recarga',
     '-s', aptOutput
     ]
 

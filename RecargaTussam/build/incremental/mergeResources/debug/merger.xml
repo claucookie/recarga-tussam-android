@@ -11,13 +11,13 @@
             <file
                 path="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/build/exploded-aar/com.mobivery.android/library/1.0.4-SNAPSHOT/res/values/values.xml"
                 qualifiers="" >
-                <attr
-                    name="fontName"
-                    format="string" />
-
                 <declare-styleable name="ExButton" >
                     <attr name="fontName" />
                 </declare-styleable>
+
+                <attr
+                    name="fontName"
+                    format="string" />
 
                 <string name="com.mobivery.android.name" >example
                 </string>
@@ -379,9 +379,9 @@
                 </color>
                 <color name="card_detail_background_color1" >@color/color_palette_1
                 </color>
-                <color name="color_palette_1" >#cc073c
-                </color>
                 <color name="common_text_color" >#ffffff
+                </color>
+                <color name="color_palette_1" >#cc073c
                 </color>
                 <color name="color_palette_2" >#00579b
                 </color>
@@ -391,7 +391,7 @@
                 qualifiers="" >
                 <string
                     name="com.crashlytics.android.build_id"
-                    translatable="false" >475c4b36-25f6-4789-acec-1f65cfd859c6
+                    translatable="false" >a725c3c6-2173-4511-9579-df28e82fb429
                 </string>
             </file>
             <file
@@ -613,14 +613,6 @@ Roboto-Light
                 </style>
 
                 <style
-                    name="PopupMenu.Tussam"
-                    parent="@android:style/Widget.Holo.ListPopupWindow" >
-                    <item name="android:popupBackground">
-@drawable/menu_dropdown_panel_tussam
-                    </item>
-                </style>
-
-                <style
                     name="ActionBar.Transparent.Tussam"
                     parent="@android:style/Widget.Holo.ActionBar" >
                     <item name="android:background">
@@ -634,6 +626,14 @@ Roboto-Light
                     </item>
                     <item name="fontName">
 Roboto-Light
+                    </item>
+                </style>
+
+                <style
+                    name="PopupMenu.Tussam"
+                    parent="@android:style/Widget.Holo.ListPopupWindow" >
+                    <item name="android:popupBackground">
+@drawable/menu_dropdown_panel_tussam
                     </item>
                 </style>
 
@@ -679,11 +679,11 @@ Roboto-Light
                 </string>
                 <string name="recharge_card_text" >¿Do you want to recharge this card? You will be taken to Tussam website where you can type your card data and recharge it.
                 </string>
+                <string name="loading_text" >Loading...
+                </string>
                 <string name="card_status" >Expiration
                 </string>
                 <string name="card_name_hint" >Give it a name!
-                </string>
-                <string name="loading_text" >Loading...
                 </string>
                 <string name="parse_error" >Something wrong happened on Tussam server =(
                 </string>

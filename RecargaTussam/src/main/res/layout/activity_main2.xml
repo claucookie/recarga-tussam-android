@@ -44,7 +44,15 @@
                 android:id="@+id/cards_spinner"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft="-5dp"
-                android:layout_alignParentTop="true" />
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/favorite_card_cb"/>
+
+            <CheckBox
+                android:id="@+id/favorite_card_cb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:button="@drawable/card_favorite_selector"/>
 
             <RelativeLayout
                 android:id="@+id/cards_data"

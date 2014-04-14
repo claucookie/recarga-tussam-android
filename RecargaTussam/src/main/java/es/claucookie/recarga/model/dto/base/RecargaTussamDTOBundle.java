@@ -106,6 +106,8 @@ public class RecargaTussamDTOBundle {
 		private String cardStatus; 
 		// Field name on service:cardCredit
 		private String cardCredit; 
+		// Field name on service:isCardFavorite
+		private Boolean isCardFavorite; 
 		
 		// Setters y Getters
 		
@@ -189,6 +191,22 @@ public class RecargaTussamDTOBundle {
 		public String getCardCredit(){
 			return cardCredit;
 		}
+		/**
+		 * Setter de la propiedad isCardFavorite , 
+		 * Field name on service:isCardFavorite
+		 * @param isCardFavorite valor a establecer en el set
+		 */
+		public void setIsCardFavorite(Boolean isCardFavorite){
+			this.isCardFavorite=isCardFavorite;
+		}
+		/**
+		 * Getter de la propiedad isCardFavorite , 
+		 * Field name on service:isCardFavorite
+		 * @returns Valor de la propiedad isCardFavorite
+		 */
+		public Boolean getIsCardFavorite(){
+			return isCardFavorite;
+		}
 		
 		@Override
 		public int describeContents() {
@@ -232,6 +250,7 @@ public class RecargaTussamDTOBundle {
 			else{
 			    dest.writeByte((byte)0);
 			}
+			dest.writeByte((byte)((isCardFavorite != null && isCardFavorite)? 1:0));
 
 		}
 		
@@ -252,6 +271,8 @@ public class RecargaTussamDTOBundle {
 	
 	        if(in.readByte()==1){
 			cardCredit = in.readString();}
+	
+			isCardFavorite = in.readByte() == 1;
 		}
 		
 		public static final Parcelable.Creator<BaseTussamCardDTO> CREATOR =
