@@ -24,6 +24,7 @@ import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.crashlytics.android.Crashlytics;
+import com.mobivery.android.helpers.TagFormat;
 import com.mobivery.android.widgets.ExLabel;
 import com.mobivery.android.widgets.ExText;
 
@@ -41,7 +42,9 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 import es.claucookie.recarga.helpers.AlertsHelper;
 import es.claucookie.recarga.helpers.GeneralHelper;
@@ -55,6 +58,9 @@ public class MainActivity extends Activity {
     public static final String STATUS_URL = "http://recargas.tussam.es/TPW/Common/cardStatus.do?swNumber=";
     public static final String CREDIT_URL = "https://recargas.tussam.es/TPW/Common/viewProductSelection.do?idNewCard=";
     public static final String VALIDATE_URL = "https://recargas.tussam.es/TPW/Common/validateHWSNumberAjax.do?idNewCard=";
+    public static final long ONE_MINUTE = 60*1000; // Millisecs
+    public static final long ONE_HOUR = ONE_MINUTE * 60;
+    public static final long ONE_DAY = ONE_HOUR * 24;
 
     /**
      * Log or request TAG
@@ -109,6 +115,8 @@ public class MainActivity extends Activity {
     LinearLayout newCardHelpView;
     @ViewById
     CheckBox favoriteCardCb;
+    @ViewById
+    ExLabel cardLastUpdateText;
 
     @InstanceState
     TussamCardsDTO tussamCardsDTO = new TussamCardsDTO();
@@ -149,7 +157,11 @@ public class MainActivity extends Activity {
                     tussamCardsDTO.getCards().size() > 0) {
                 showDetailView();
             } else {
-                showAddView();
+                if (tussamCardsDTO != null && tussamCardsDTO.getCards() != null && tussamCardsDTO.getCards().size() > 0) {
+                    showAddView();
+                }else {
+                    finish();
+                }
             }
         } else {
             finish();
@@ -207,11 +219,12 @@ public class MainActivity extends Activity {
                 }
             }
         }
-        spinnerAdapter.notifyDataSetChanged();
+
         if (selectedCardDTO != null && tussamCardsDTO != null && tussamCardsDTO.getCards() != null) {
             int newCardIndex = tussamCardsDTO.getCards().indexOf(selectedCardDTO);
             cardsSpinner.setSelection(newCardIndex);
         }
+        spinnerAdapter.notifyDataSetChanged();
     }
 
 
@@ -295,7 +308,7 @@ public class MainActivity extends Activity {
     }
 
     @Click(R.id.recharge_card_image)
-    void rechardCardClicked() {
+    void rechargeCardClicked() {
         if (selectedCardDTO != null) {
             String externalUrl = CREDIT_URL+selectedCardDTO.getCardNumber();
             GeneralHelper.launchExternalUrlWeb(this, externalUrl, getString(R.string.recharge_card_text), getString(R.string.alert_yes), getString(R.string.alert_no));
@@ -341,14 +354,19 @@ public class MainActivity extends Activity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         reloadData();
+                        String errorString = getString(R.string.parse_error);
                         if (error.networkResponse != null &&
                                 error.networkResponse.statusCode == 500 &&
                                 selectedCardDTO != null &&
                                 selectedCardDTO.getCardCredit() == null) {
 
+                            // Server error
                             cardTypeText.setText(getString(R.string.wrong_card_number_error));
+                        } else {
+                            // Network error
+                            errorString = getString(R.string.network_error);
                         }
-                        Toast.makeText(MainActivity.this, getString(R.string.parse_error), Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this, errorString, Toast.LENGTH_LONG).show();
                         showDetailView();
                     }
                 });
@@ -405,18 +423,33 @@ public class MainActivity extends Activity {
             Elements cardInfo = mainDiv.select("span");
             // CardStatus
             if (cardInfo.size() > 1 && cardInfo.get(1) != null) {
-                selectedCardDTO.setCardStatus(cardInfo.get(1).text());
+                String cardStatus = cardInfo.get(1).text().replaceFirst("^ *", "");
+                selectedCardDTO.setCardStatus(cardStatus);
             } else errorFound = true;
 
             // CardType
             if (cardInfo.size() > 2 && cardInfo.get(2) != null) {
-                selectedCardDTO.setCardType(cardInfo.get(2).text());
+                String cardType = cardInfo.get(2).text().replaceFirst("^ *", "");
+                selectedCardDTO.setCardType(cardType);
             } else errorFound = true;
 
             // CardCredit
             if (cardInfo.size() > 3 && cardInfo.get(3) != null) {
                 selectedCardDTO.setCardCredit(cardInfo.get(3).text());
             } else errorFound = true;
+
+            // Last update date
+            selectedCardDTO.setLastDate((new Date()).getTime());
+
+            // Save retrieved card
+            if (cardsSpinner != null &&
+                    tussamCardsDTO != null &&
+                    tussamCardsDTO.getCards() != null &&
+                    tussamCardsDTO.getCards().size() > cardsSpinner.getSelectedItemPosition()) {
+
+                tussamCardsDTO.getCards().set(cardsSpinner.getSelectedItemPosition(), selectedCardDTO);
+                PreferencesHelper.getInstance().saveCards(this, tussamCardsDTO);
+            }
 
         } else {
             errorFound = true;
@@ -433,6 +466,7 @@ public class MainActivity extends Activity {
         if (selectedCardDTO != null) {
             favoriteCardCb.setChecked(selectedCardDTO.getIsCardFavorite() != null ? selectedCardDTO.getIsCardFavorite() : false);
         }
+        reloadData();
     }
 
     private void reloadData() {
@@ -444,6 +478,40 @@ public class MainActivity extends Activity {
             cardStatusText.setText(selectedCardDTO.getCardStatus() != null ? selectedCardDTO.getCardStatus() : "");
             cardTypeText.setText(selectedCardDTO.getCardType() != null ? selectedCardDTO.getCardType() : "");
             cardCreditText.setText(selectedCardDTO.getCardCredit() != null ? selectedCardDTO.getCardCredit() : "");
+            if (selectedCardDTO.getLastDate() != null) {
+                Date nowDate = new Date();
+                long nowDateDifferenceLong =  nowDate.getTime() - selectedCardDTO.getLastDate() ;
+                String dateString = "";
+
+                if (nowDateDifferenceLong < ONE_MINUTE){
+                    // Less than 1 minute (now)
+                    dateString = getString(R.string.updated_now);
+
+                } else if ( nowDateDifferenceLong >= ONE_MINUTE && nowDateDifferenceLong < ONE_HOUR){
+                    // More than 1 minute ( X minutes ago)
+                    dateString = TagFormat.from(getString(R.string.updated_minutes_ago))
+                            .with("minutes", String.valueOf(nowDateDifferenceLong/ONE_MINUTE))
+                            .format();
+
+                } else if ( nowDateDifferenceLong >= ONE_HOUR && nowDateDifferenceLong < ONE_DAY) {
+                    // More than 1 hour (X hours ago)
+                    dateString = TagFormat.from(getString(R.string.updated_hours_ago))
+                            .with("hours", String.valueOf(nowDateDifferenceLong/ONE_HOUR))
+                            .format();
+
+                } else {
+                    // More than 1 day (Date)
+                    dateString = new SimpleDateFormat(getString(R.string.updated_date_format)).format(new Date(selectedCardDTO.getLastDate()));
+
+                }
+
+                cardLastUpdateText.setText(TagFormat.from(getString(R.string.last_date_update))
+                        .with("date", dateString)
+                        .format());
+
+            } else {
+                cardLastUpdateText.setText("");
+            }
         }
     }
 

@@ -17,5 +17,11 @@
     <string name="recharge_card_text">¿Do you want to recharge this card? You will be taken to Tussam website where you can type your card data and recharge it.</string>
     <string name="alert_yes">yes</string>
     <string name="alert_no">no</string>
+    <string name="last_date_update">Last request:\n{date}</string>
+    <string name="updated_now">Now</string>
+    <string name="updated_minutes_ago">{minutes} min ago</string>
+    <string name="updated_hours_ago">{hour} h ago</string>
+    <string name="updated_date_format">"EEE, MMM d, yyyy"</string>
+    <string name="network_error">Request could not be done. \nPlease, make sure you enabled your network connection</string>
 
 </resources>

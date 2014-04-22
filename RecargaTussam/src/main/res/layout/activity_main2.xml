@@ -72,7 +72,8 @@
                     style="@style/CardText.Tussam"
                     android:layout_marginLeft="5dp"
                     android:maxLines="2"
-                    android:padding="5dp" />
+                    android:padding="5dp"
+                    android:textAllCaps="true"/>
 
                 <View
                     android:layout_width="match_parent"
@@ -193,12 +194,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="left">
+                android:gravity="left"
+                android:layout_marginRight="5dp">
                 <ProgressBar
                     style="?android:attr/progressBarStyleLarge"
                     android:layout_width="30dp"
                     android:layout_height="30dp" />
             </LinearLayout>
+
+            <com.mobivery.android.widgets.ExLabel
+                android:id="@+id/card_last_update_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                tools:text="Última actualización:\n15/04/2014"
+                android:layout_toRightOf="@+id/progress_view"
+                style="@style/CardText.Tussam"
+                app:fontName="Roboto-Light"
+                android:textSize="12sp"/>
 
             <LinearLayout
                 android:id="@+id/card_actions"

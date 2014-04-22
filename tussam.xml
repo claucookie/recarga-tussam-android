@@ -18,7 +18,8 @@
 			<field name="cardType" type="string" description="type"/>
 			<field name="cardStatus" type="string" description="status"/>
 			<field name="cardCredit" type="string" description="credit"/>	
-			<field name="isCardFavorite" type="boolean" description="is favorite?" />		
+			<field name="isCardFavorite" type="boolean" description="is favorite?" />
+            <field name="lastDate" type="long" description="When did it last successfully request?"/>
         </type>
 	</types>
 </protocol>

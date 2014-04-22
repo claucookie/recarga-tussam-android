@@ -108,6 +108,8 @@ public class RecargaTussamDTOBundle {
 		private String cardCredit; 
 		// Field name on service:isCardFavorite
 		private Boolean isCardFavorite; 
+		// Field name on service:lastDate
+		private Long lastDate; 
 		
 		// Setters y Getters
 		
@@ -207,6 +209,22 @@ public class RecargaTussamDTOBundle {
 		public Boolean getIsCardFavorite(){
 			return isCardFavorite;
 		}
+		/**
+		 * Setter de la propiedad lastDate , 
+		 * Field name on service:lastDate
+		 * @param lastDate valor a establecer en el set
+		 */
+		public void setLastDate(Long lastDate){
+			this.lastDate=lastDate;
+		}
+		/**
+		 * Getter de la propiedad lastDate , 
+		 * Field name on service:lastDate
+		 * @returns Valor de la propiedad lastDate
+		 */
+		public Long getLastDate(){
+			return lastDate;
+		}
 		
 		@Override
 		public int describeContents() {
@@ -251,6 +269,13 @@ public class RecargaTussamDTOBundle {
 			    dest.writeByte((byte)0);
 			}
 			dest.writeByte((byte)((isCardFavorite != null && isCardFavorite)? 1:0));
+			if(lastDate!=null){
+                dest.writeByte((byte)1);
+			    dest.writeLong(lastDate);
+			}
+			else{
+			    dest.writeByte((byte)0);
+			}
 
 		}
 		
@@ -273,6 +298,9 @@ public class RecargaTussamDTOBundle {
 			cardCredit = in.readString();}
 	
 			isCardFavorite = in.readByte() == 1;
+	
+	        if(in.readByte()==1){
+			lastDate = in.readLong();}
 		}
 		
 		public static final Parcelable.Creator<BaseTussamCardDTO> CREATOR =

@@ -23,6 +23,7 @@ public final class TussamCardDAO{
 	private static final String CONSTANT_CARDSTATUS="cardStatus";
 	private static final String CONSTANT_CARDCREDIT="cardCredit";
 	private static final String CONSTANT_ISCARDFAVORITE="isCardFavorite";
+	private static final String CONSTANT_LASTDATE="lastDate";
 	
 	private static TussamCardDAO instance=new TussamCardDAO();
 
@@ -72,6 +73,10 @@ public final class TussamCardDAO{
 			}
 		}	
 				
+		if(value.has(CONSTANT_LASTDATE) && !value.get(CONSTANT_LASTDATE).toString().equals("null")) {
+			returnValue.setLastDate(Long.parseLong(String.valueOf(value.get(CONSTANT_LASTDATE))));
+		}
+		
 		
 		
 		
@@ -102,6 +107,9 @@ public final class TussamCardDAO{
 		}
 		if(object.getIsCardFavorite()!=null){
 			returnValue.put(CONSTANT_ISCARDFAVORITE, (object.getIsCardFavorite() == null)? JSONObject.NULL : object.getIsCardFavorite());
+		}
+		if(object.getLastDate()!=null){
+			returnValue.put(CONSTANT_LASTDATE, (object.getLastDate() == null)? JSONObject.NULL : object.getLastDate());
 		}
 
 		return returnValue;
