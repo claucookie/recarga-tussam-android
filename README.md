@@ -1,13 +1,11 @@
 RecargaTussam
 =============
 
-_Mobivery_
-
 Enlaces de Interés
 ------------------
 
-* [Localizables](https://docs.mmip.es) *RELLENAR EL LINK*
-* [Service definitions](https://github.com/mobivery/service-definitions/blob/master/RecargaTussam.xml)
+* [Localizables](https://docs.mmip.es/) *RELLENAR EL LINK*
+* [Service definitions](https://bitbucket.org/mobivery/service-definitions/blob/master/RecargaTussam.xml)
 
 Variables de entorno
 --------------------
@@ -18,9 +16,7 @@ Variables de entorno
 Generación de versiones
 -----------------------
 
-Se recomienda [Builder Dash](https://github.com/mobivery/builderdash) para la generación correcta de versiones firmadas. Bastaría ejecutar `dash touchdown` para generar la versión de release.
-
-También se pueden generar versiones mediante el Rakefile, con los comandos `rake build:nightly` y `rake build:release`, con resultados similares. Esta forma de generación pasará pronto a estar deprecada, pero se mantiene por retrocompatibilidad de momento.
+Se pueden generar versiones mediante el Rakefile, con los comandos `rake build:nightly` y `rake build:release`, con resultados similares.
 
 Certificados
 ------------

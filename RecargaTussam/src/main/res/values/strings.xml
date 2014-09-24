@@ -1,28 +1,6 @@
 <resources>
-    <string name="app_name">Consulta Tarjeta Tussam</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="loading_text">Cargando...</string>
-    <string name="parse_error">Ha ocurrido un error en el servidor de Tussam =(</string>
-    <string name="card_number">Nº</string>
-    <string name="card_status">Caducidad</string>
-    <string name="card_type">Recarga</string>
-    <string name="card_credit">Saldo</string>
-    <string name="tussam_info">Esta aplicación no es oficial, pero utiliza un servicio público de la web de Tussam. Dicho servicio actualiza los datos de las tarjetas al final del día cuando los autobuses llegan a la central y envían los datos al servidor.
-        La información actualizada correctamente puede verse por la mañana. Sin embargo, no nos responsabilizamos si alguna vez esta información
-        no es correcta.</string>
-    <string name="card_name_hint">Dale un nombre!</string>
-    <string name="card_number_hint">#### #### ####</string>
-    <string name="wrong_card_number_error">El número de tarjeta no es válido</string>
-    <string name="add_card_help_text">Añade una tarjeta de tussam y consula su saldo! =) Introduce el número de 12 cifras que hay en el dorso y dale un nombre para identificarla.</string>
-    <string name="recharge_card_text">¿Desea recargar la tarjeta? Esto le llevará fuera a la web de Tussam directamente para que pueda introducir sus datos para la recarga</string>
-    <string name="alert_yes">si</string>
-    <string name="alert_no">no</string>
-    <string name="last_date_update">Última consulta:\n{date}</string>
-    <string name="updated_now">Ahora</string>
-    <string name="updated_minutes_ago">Hace {minutes} min</string>
-    <string name="updated_hours_ago">Hace {hour} h</string>
-    <string name="updated_date_format">"EEE, d ' de ' MMM, yyyy"</string>
-    <string name="network_error">Petición no realizada. \nPor favor, asegúrate de tener activada la conexión a internet.</string>
 
+	<string name="app_name">RecargaTussam</string>
+	<string name="hello_world">Hello world!</string>
 
 </resources>

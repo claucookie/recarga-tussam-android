@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="@color/card_detail_background_color2"/>
-    <stroke android:width="0dip" android:color="@color/card_detail_background_color2" />
-    <corners android:topLeftRadius="0dip"  android:topRightRadius="0dip"  android:bottomLeftRadius="@dimen/card_detail_radius"  android:bottomRightRadius="@dimen/card_detail_radius"/>
-    <padding android:left="0dip" android:top="0dip" android:right="0dip" android:bottom="0dip" />
-</shape>
