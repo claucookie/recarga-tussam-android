@@ -34,15 +34,234 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adf1f0e6-e11a-45e9-a1a2-b35b80c70d54" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/RecargaTussam6.apk" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakefile" afterPath="$PROJECT_DIR$/Rakefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/model/dto/base/RecargaTussamDTOBundle.java" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/model/dto/base/RecargaTussamDTOBundle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/model/dao/TussamCardDAO.java" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/model/dao/TussamCardDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/res/layout/activity_main2.xml" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/layout/activity_main2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/res/values-en/strings.xml" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/values-en/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tussam.xml" afterPath="$PROJECT_DIR$/tussam.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/assets/debug/fonts/Roboto-Black.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/assets/debug/fonts/Roboto-BlackItalic.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/assets/debug/fonts/Roboto-Bold.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/assets/debug/fonts/Roboto-BoldItalic.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/assets/debug/fonts/Roboto-Italic.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/assets/debug/fonts/Roboto-Light.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/assets/debug/fonts/Roboto-LightItalic.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/assets/debug/fonts/Roboto-Medium.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/assets/debug/fonts/Roboto-MediumItalic.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/assets/debug/fonts/Roboto-Regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/assets/debug/fonts/Roboto-Thin.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/assets/debug/fonts/Roboto-ThinItalic.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/AuthFailureError.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/Cache$Entry.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/Cache.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/CacheDispatcher$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/CacheDispatcher.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/DefaultRetryPolicy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/ExecutorDelivery$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/ExecutorDelivery$ResponseDeliveryRunnable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/ExecutorDelivery.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/Network.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/NetworkDispatcher.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/NetworkError.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/NetworkResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/NoConnectionError.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/ParseError.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/Request$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/Request$Method.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/Request$Priority.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/Request.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/RequestQueue$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/RequestQueue$RequestFilter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/RequestQueue.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/Response$ErrorListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/Response$Listener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/Response.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/ResponseDelivery.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/RetryPolicy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/ServerError.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/TimeoutError.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/VolleyError.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/VolleyLog$MarkerLog$Marker.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/VolleyLog$MarkerLog.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/VolleyLog.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/AndroidAuthenticator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/Authenticator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/BasicNetwork.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/ByteArrayPool$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/ByteArrayPool.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/ClearCacheRequest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/DiskBasedCache$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/DiskBasedCache$CacheHeader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/DiskBasedCache$CountingInputStream.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/DiskBasedCache.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/HttpClientStack$HttpPatch.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/HttpClientStack.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/HttpHeaderParser.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/HttpStack.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/HurlStack$UrlRewriter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/HurlStack.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/ImageLoader$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/ImageLoader$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/ImageLoader$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/ImageLoader$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/ImageLoader$BatchedImageRequest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/ImageLoader$ImageCache.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/ImageLoader$ImageContainer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/ImageLoader$ImageListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/ImageLoader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/ImageRequest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/JsonArrayRequest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/JsonObjectRequest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/JsonRequest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/NetworkImageView$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/NetworkImageView$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/NetworkImageView.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/NoCache.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/PoolingByteArrayOutputStream.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/RequestFuture.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/StringRequest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/Volley.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/android/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/android/R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/android/R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/android/R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/android/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/logic/ServiceException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/logic/ServiceExceptionListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/logic/TaskListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/utils/BaseLogic.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/utils/CacheInterface.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/utils/CustomSSLSocketFactory$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/utils/CustomSSLSocketFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/utils/DataTransferObjectJSONMarshallingInterface.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/utils/FilterInterface.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/utils/HttpClientHelper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/utils/LimitedAgeMemoryCache.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/utils/LimitedAgeUnlimitedDiskCache.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/utils/LruCache.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/utils/LruMemoryCache.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/utils/NoCache.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/utils/ResponseInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/utils/ServiceGeneratorDTOMarshal.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/utils/UnlimitedDiskCache.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/utils/UnlimitedMemoryCache.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/utils/UnlimitedWeakMemoryCache.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/App.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/BuildConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/MainActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/MainActivity$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/MainActivity$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/MainActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/MainActivity_$IntentBuilder_.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/MainActivity_.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/R$color.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/R$menu.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/helpers/ApplicationController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/helpers/PreferencesHelper$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/helpers/PreferencesHelper$FavoritesLogicHolder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/helpers/PreferencesHelper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/helpers/SharedPrefsHelper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/helpers/SharedPrefsHelper_$SharedPrefsHelperEditor_.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/helpers/SharedPrefsHelper_.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/logic/RecargaTussamHelper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/model/dao/TussamCardDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/model/dao/TussamCardsDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/model/dto/TussamCardDTO$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/model/dto/TussamCardDTO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/model/dto/TussamCardsDTO$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/model/dto/TussamCardsDTO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/model/dto/base/RecargaTussamDTOBundle$BaseTussamCardDTO$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/model/dto/base/RecargaTussamDTOBundle$BaseTussamCardDTO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/model/dto/base/RecargaTussamDTOBundle$BaseTussamCardsDTO$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/model/dto/base/RecargaTussamDTOBundle$BaseTussamCardsDTO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/model/dto/base/RecargaTussamDTOBundle.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/dex/debug/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/exploded-aar/com.mobivery.android/library/1.0.4-SNAPSHOT/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/exploded-aar/com.mobivery.android/library/1.0.4-SNAPSHOT/R.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/exploded-aar/com.mobivery.android/library/1.0.4-SNAPSHOT/classes.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/exploded-aar/com.mobivery.android/library/1.0.4-SNAPSHOT/res/layout/main.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/exploded-aar/com.mobivery.android/library/1.0.4-SNAPSHOT/res/values/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/incremental/aidl/debug/dependency.store" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/incremental/mergeAssets/debug/merger.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/incremental/mergeResources/debug/merger.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/libs/RecargaTussam-debug.ap_" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/manifests/debug/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/pre-dexed/debug/androidannotations-api-3.0.1-b376f2cd1bb1960f6931da953f23e61b966e1505.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/pre-dexed/debug/classes-c1cc685152c2f417747e0118468ae74b1ae7371c.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/pre-dexed/debug/crashlytics-1.1.11-34a87a65bda724772114d3179c6fc22a315c2dfa.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/pre-dexed/debug/jsoup-1.7.3-3c5bfeaad4f8de1690227e900f111728a0cb306f.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/pre-dexed/debug/universal-image-loader-1.9.1-75f79eb6b3c3beb370452e2cbfdc85e9c745821e.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/ab_bottom_solid_tussam.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/ab_solid_tussam.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/ab_stacked_solid_tussam.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/ab_texture_tile_tussam.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/ab_transparent_tussam.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/btn_cab_done_default_tussam.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/btn_cab_done_focused_tussam.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/btn_cab_done_pressed_tussam.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/cab_background_bottom_tussam.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/cab_background_top_tussam.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/ic_action_accept.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/ic_action_edit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/ic_action_new.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/ic_action_refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/ic_action_remove.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/ic_action_save.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/list_focused_tussam.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/list_pressed_tussam.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/menu_dropdown_panel_tussam.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/progress_bg_tussam.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/progress_primary_tussam.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/progress_secondary_tussam.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/spinner_ab_default_tussam.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/spinner_ab_disabled_tussam.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/spinner_ab_focused_tussam.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/spinner_ab_pressed_tussam.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tab_selected_focused_tussam.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tab_selected_pressed_tussam.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tab_selected_tussam.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tab_unselected_focused_tussam.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tab_unselected_pressed_tussam.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tab_unselected_tussam.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tussam_ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tussam_progress_bg_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tussam_progress_primary_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tussam_progress_secondary_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tussam_progressbar_indeterminate_holo1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tussam_progressbar_indeterminate_holo2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tussam_progressbar_indeterminate_holo3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tussam_progressbar_indeterminate_holo4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tussam_progressbar_indeterminate_holo5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tussam_progressbar_indeterminate_holo6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tussam_progressbar_indeterminate_holo7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tussam_progressbar_indeterminate_holo8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable/ab_background_textured_tussam.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable/btn_cab_done_tussam.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable/progress_horizontal_tussam.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable/selectable_background_tussam.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable/spinner_background_ab_tussam.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable/tab_indicator_ab_tussam.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable/tussam_logo_shape.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable/tussam_progress_horizontal_holo_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable/tussam_progress_indeterminate_horizontal_holo_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/layout/activity_main.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/layout/main.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/menu/menu_add_edit.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/menu/menu_done.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/menu/menu_save_delete.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/values-en/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/values/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/symbols/debug/R.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/RecargaTussam.iml" afterPath="$PROJECT_DIR$/RecargaTussam/RecargaTussam.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/build.gradle" afterPath="$PROJECT_DIR$/RecargaTussam/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recarga-tussam-android.iml" afterPath="$PROJECT_DIR$/recarga-tussam-android.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="recarga-tussam-android.iws" />
@@ -174,8 +393,8 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <breakpoint_rules converted="true" />
     <ui_properties converted="true" />
+    <breakpoint_rules converted="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -185,14 +404,14 @@
     <leaf>
       <file leaf-file-name="activity_main2.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/layout/activity_main2.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.666667" vertical-offset="864" max-vertical-offset="4980">
+            <state vertical-scroll-proportion="0.0" vertical-offset="864" max-vertical-offset="4980">
               <caret line="75" column="45" selection-start-line="75" selection-start-column="45" selection-end-line="75" selection-end-column="45" />
               <folding />
             </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
           </provider>
         </entry>
       </file>
@@ -201,6 +420,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="1471" max-vertical-offset="1845">
               <caret line="108" column="17" selection-start-line="108" selection-start-column="17" selection-end-line="108" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.44226044" vertical-offset="0" max-vertical-offset="407">
+              <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -229,36 +458,30 @@
       <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RecargaTussam/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1499" max-vertical-offset="1980">
-              <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1980">
+              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ServiceGeneratorDTOMarshal.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/java/com/mobivery/utils/ServiceGeneratorDTOMarshal.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="1395">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8686567" vertical-offset="3099" max-vertical-offset="9555">
+            <state vertical-scroll-proportion="-11.64" vertical-offset="3099" max-vertical-offset="9465">
               <caret line="226" column="46" selection-start-line="226" selection-start-column="46" selection-end-line="226" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#10413#10451#0" expanded="true" />
-                <element signature="e#10453#10482#0" expanded="true" />
-                <element signature="e#10484#10512#0" expanded="true" />
-                <element signature="e#11803#12093#0" expanded="true" />
-                <element signature="e#12074#12075#0" expanded="true" />
-                <element signature="e#12095#13111#0" expanded="true" />
-                <element signature="e#12308#12339#0" expanded="true" />
-                <element signature="e#12705#12748#0" expanded="true" />
-                <element signature="e#12871#12904#0" expanded="true" />
-                <element signature="e#13092#13093#0" expanded="true" />
-                <element signature="e#16293#16324#0" expanded="true" />
-                <element signature="e#17929#17960#0" expanded="true" />
-                <element signature="e#18172#18211#0" expanded="true" />
-                <element signature="e#18550#18587#0" expanded="true" />
-                <element signature="e#18845#18884#0" expanded="true" />
-                <element signature="e#19013#19049#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -267,7 +490,7 @@
       <file leaf-file-name="tussam.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tussam.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+            <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="465">
               <caret line="21" column="101" selection-start-line="21" selection-start-column="101" selection-end-line="21" selection-end-column="101" />
               <folding />
             </state>
@@ -452,6 +675,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
+                <option name="name" value="compileProductionDebugSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
                 <option name="name" value="compileProductionDebugTestAidl" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -465,6 +692,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
                 <option name="name" value="compileProductionDebugTestRenderscript" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
+                <option name="name" value="compileProductionDebugTestSources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
@@ -484,6 +715,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
+                <option name="name" value="compileProductionReleaseSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
                 <option name="name" value="compileStagingDebugAidl" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -497,6 +732,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
                 <option name="name" value="compileStagingDebugRenderscript" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
+                <option name="name" value="compileStagingDebugSources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
@@ -516,6 +755,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
+                <option name="name" value="compileStagingDebugTestSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
                 <option name="name" value="compileStagingReleaseAidl" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -529,6 +772,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
                 <option name="name" value="compileStagingReleaseRenderscript" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
+                <option name="name" value="compileStagingReleaseSources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Installs and runs instrumentation tests for all flavors on connected devices." />
@@ -631,18 +878,22 @@
                 <option name="name" value="crashlyticsUploadDeobsStagingRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Uploads an APK to Crashlytics for distribution." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
                 <option name="name" value="crashlyticsUploadDistributionProductionDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Uploads an APK to Crashlytics for distribution." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
                 <option name="name" value="crashlyticsUploadDistributionProductionRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Uploads an APK to Crashlytics for distribution." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
                 <option name="name" value="crashlyticsUploadDistributionStagingDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Uploads an APK to Crashlytics for distribution." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
                 <option name="name" value="crashlyticsUploadDistributionStagingRelease" />
               </ExternalTaskPojo>
@@ -698,6 +949,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
+                <option name="name" value="generateProductionDebugAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
                 <option name="name" value="generateProductionDebugBuildConfig" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -711,6 +966,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
                 <option name="name" value="generateProductionDebugSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
+                <option name="name" value="generateProductionDebugTestAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
@@ -730,6 +989,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
+                <option name="name" value="generateProductionReleaseAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
                 <option name="name" value="generateProductionReleaseBuildConfig" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -743,6 +1006,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
                 <option name="name" value="generateProductionReleaseSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
+                <option name="name" value="generateStagingDebugAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
@@ -762,6 +1029,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
+                <option name="name" value="generateStagingDebugTestAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
                 <option name="name" value="generateStagingDebugTestBuildConfig" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -775,6 +1046,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
                 <option name="name" value="generateStagingDebugTestSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
+                <option name="name" value="generateStagingReleaseAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
@@ -972,6 +1247,11 @@
                 <option name="name" value="preStagingReleaseBuild" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support:support-v4:20.0.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
+                <option name="name" value="prepareComAndroidSupportSupportV42000Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Prepare com.mobivery.android:library:1.0.4-SNAPSHOT" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
                 <option name="name" value="prepareComMobiveryAndroidLibrary104SNAPSHOTLibrary" />
@@ -1120,6 +1400,14 @@
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
                 <option name="name" value="validateReleaseSigning" />
               </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
+                <option name="name" value="zipalignProductionDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
+                <option name="name" value="zipalignStagingDebug" />
+              </ExternalTaskPojo>
             </list>
           </value>
         </entry>
@@ -1127,7 +1415,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4186653316000" />
+        <entry key="$PROJECT_DIR$" value="4234764319000" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -1149,71 +1437,83 @@
                       <ExternalModuleBuildClasspathPojo>
                         <option name="entries">
                           <list>
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle/0.9.2/7e8b21a0f966c95958d87bef86d9744b6de356e4/gradle-0.9.2-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle/0.9.2/8fd16e4a0954825b3d4336a18fa95091fb93d1ff/gradle-0.9.2.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.crashlytics.tools.gradle/crashlytics-gradle/1.8.1/4bb7a10a249f0dca9641be8b54d8e6787b5bc8b2/crashlytics-gradle-1.8.1.jar" />
+                            <option value="$PROJECT_DIR$/../../sdks/adt-bundle-mac-x86_64/sdk/extras/android/m2repository/com/android/support/support-v4/20.0.0/support-v4-20.0.0-sources.jar" />
+                            <option value="$PROJECT_DIR$/../../sdks/adt-bundle-mac-x86_64/sdk/extras/android/m2repository/com/android/support/support-v4/20.0.0/support-v4-20.0.0.aar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.androidannotations/androidannotations-api/3.0.1/1269c617598b66261036cf8ddbf480483042d551/androidannotations-api-3.0.1-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.androidannotations/androidannotations-api/3.0.1/beb7e0a75c753383e7ef68c0e1639999db301c33/androidannotations-api-3.0.1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mobivery.android/library/1.0.4-SNAPSHOT/172c9d1ab9359d6d6086a5e7f67cb6517be6de7f/library-1.0.4-SNAPSHOT.aar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.nostra13.universalimageloader/universal-image-loader/1.9.1/1ce2f8424107863c234921fc7ccb8f56971bd97a/universal-image-loader-1.9.1-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.nostra13.universalimageloader/universal-image-loader/1.9.1/296dfb44fbf31397c0306e60cb62e06ca40df07f/universal-image-loader-1.9.1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.crashlytics.android/crashlytics/1.1.13/e821eafa1bf489a26bdb71f95078c26785b37a1/crashlytics-1.1.13.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jsoup/jsoup/1.7.3/b783d347815471821faaa7ae7a4f0d2fec30966e/jsoup-1.7.3-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jsoup/jsoup/1.7.3/92568d7167ce1bf9eb1fd815b022d5a2c113547a/jsoup-1.7.3.jar" />
+                            <option value="$PROJECT_DIR$/../../sdks/adt-bundle-mac-x86_64/sdk/extras/android/m2repository/com/android/support/support-annotations/20.0.0/support-annotations-20.0.0-sources.jar" />
+                            <option value="$PROJECT_DIR$/../../sdks/adt-bundle-mac-x86_64/sdk/extras/android/m2repository/com/android/support/support-annotations/20.0.0/support-annotations-20.0.0.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle/0.13.1/4e00baeda4ff4a595cd56d9f0f64b802429302e9/gradle-0.13.1-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle/0.13.1/629eebffd224396c1a11029424a0495a32f9414/gradle-0.13.1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.crashlytics.tools.gradle/crashlytics-gradle/1.12.0/2f880f128b405098aacd1f28fb97ff7709ae1cc8/crashlytics-gradle-1.12.0.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.proguard/proguard-gradle/4.11/1d80d5ed2daa1a3a2b6e7a45b40fd36ffed78f2b/proguard-gradle-4.11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.proguard/proguard-gradle/4.11/da875d4b67a8be6c770b11d894434843714ac69d/proguard-gradle-4.11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder/0.13.1/82f27fcd3ba33cd34f39f40691d94d55dc7061ff/builder-0.13.1-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder/0.13.1/1df56be0144a76e2b0e5f84edf13ac698d1342/builder-0.13.1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint/23.1.1/36b80bc8703b21953de5b7e43316c1953461ab47/lint-23.1.1-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint/23.1.1/2059790f2d3058fd8bf8e320e07bd855467111eb/lint-23.1.1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.proguard/proguard-base/4.11/d0b8cbe4419385f72f3d31b39888edfcb10210df/proguard-base-4.11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.proguard/proguard-base/4.11/76730af417bb42da22b16e49f49e67863382b9bd/proguard-base-4.11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/manifest-merger/23.1.1/2d9e39f8fa55375e825a2df9fca77b11be9290b0/manifest-merger-23.1.1-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/manifest-merger/23.1.1/8fb6d62385362619ff3549d224b005ae775cc6cc/manifest-merger-23.1.1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdk-common/23.1.1/2f9b542f0a52d29c5219b21a275d09ff29a0c080/sdk-common-23.1.1-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdk-common/23.1.1/851fda82bc7389c68b7b2eb2ce8eaba1e36ab1fb/sdk-common-23.1.1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/common/23.1.1/e036532d4017d6b9f33bd5607d3eefa9226883ae/common-23.1.1-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/common/23.1.1/1cc712f43d7b3258b4b65cff4be04757c3f8a485/common-23.1.1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-test-api/0.13.1/f532cdbf86d9747d0c2ec9948e7e0458c368040d/builder-test-api-0.13.1-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-test-api/0.13.1/ac41c0a5911e8371688d1a2f6b3aef0dde12736/builder-test-api-0.13.1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdklib/23.1.1/afeb823093166250a61c6e0c7b42e47ca39441cd/sdklib-23.1.1-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdklib/23.1.1/90d930e5eefd5b1901024660c07d24c00e9ad51f/sdklib-23.1.1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-model/0.13.1/c52832ea4bd10ab70e922c97d62907ab4daa304f/builder-model-0.13.1-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-model/0.13.1/717a302afee33d539fc21df00fa184fdb8d5b38d/builder-model-0.13.1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup/javawriter/2.5.0/1b2a0925ff06220c0261b6fd468183cd9e9a9a47/javawriter-2.5.0-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup/javawriter/2.5.0/81241ff7078ef14f42ea2a8995fa09c096256e6b/javawriter-2.5.0.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.ddms/ddmlib/23.1.1/6d864c9f922fb067c6bd498f53e71ddfec8d13ea/ddmlib-23.1.1-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.ddms/ddmlib/23.1.1/5457c49aacf930abaf47ca11389cfd8d379727ed/ddmlib-23.1.1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk15on/1.48/8cff777fce5ef53cc35fa569faa8d12faaf34a78/bcpkix-jdk15on-1.48-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk15on/1.48/28b7614b908a47844bb27e3c94b45b6893656265/bcpkix-jdk15on-1.48.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint-checks/23.1.1/aae1e1b5286b946e133210e94a16f87d2a038107/lint-checks-23.1.1-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint-checks/23.1.1/820bef68c37e2e99b4e7150438f78cfdef7190b9/lint-checks-23.1.1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jdt.core.compiler/ecj/4.2.2/fb9dc21349d06dd00b395af5c42f299df828f9da/ecj-4.2.2-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jdt.core.compiler/ecj/4.2.2/d9fd79499c664bccaf24dbe04be417de6c6af64a/ecj-4.2.2.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/15.0/36b6a585c0f0c63bd85fb04db0dcb7b217298956/guava-15.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/15.0/ed727a8d9f247e2050281cb083f1c77b09dcb5cd/guava-15.0.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/common/22.7.2/8a4e122efdb1ec1b2d44b1ba21a59a7c1efed679/common-22.7.2-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/common/22.7.2/b5b41bb3cfad59132f84068e6857c152d90cb0d5/common-22.7.2.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-model/0.9.2/48aa56bb1b78654d43573f7606e840b54c728a46/builder-model-0.9.2-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-model/0.9.2/43bc5a42968a1e5076abc75445dcf06f9c7b1c7a/builder-model-0.9.2.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/dvlib/23.1.1/1e489f59b01e341e74e7fd674186b1c6835eea26/dvlib-23.1.1-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/dvlib/23.1.1/3c53bacba9024b6a28396bb0066af840d1d915d0/dvlib-23.1.1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.layoutlib/layoutlib-api/23.1.1/f207e8902522c75c0d1aa802ae9bee1b28382bdb/layoutlib-api-23.1.1-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.layoutlib/layoutlib-api/23.1.1/e5f4e095c5a1665e171d06e62d8add0fa187ae55/layoutlib-api-23.1.1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.1.1/42f6189003f355107f53b937770092517de69710/httpclient-4.1.1-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.1.1/3d1d918f32709e33ba7ddb2c4e8d1c543ebe713e/httpclient-4.1.1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.1/3ac83213baeab2b21fde6c0bf47ed68ea3e6a8da/httpmime-4.1-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.1/9ba2dcdf94ce35c8a8e9bff242db0618ca932e92/httpmime-4.1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.8.1/3caea4421428752206c7a94c3e3097f0c47f1bb8/commons-compress-1.8.1-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.8.1/a698750c16740fd5b3871425f4cb3bbaa87f529d/commons-compress-1.8.1.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.kxml/kxml2/2.3.0/309cd2cff7260e465792fda3dcbb063b730d8050/kxml2-2.3.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.kxml/kxml2/2.3.0/ccbc77a5fd907ef863c29f3596c6f54ffa4e9442/kxml2-2.3.0.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.layoutlib/layoutlib-api/22.7.2/c2d271f9724bd26383cd7e31428b67dd9b27c622/layoutlib-api-22.7.2-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.layoutlib/layoutlib-api/22.7.2/87f73d2a6733c3caa0f3a91f6c9351603c744f17/layoutlib-api-22.7.2.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk15on/1.48/3824866f059053c43b118eb5a067ea1800d8c913/bcprov-jdk15on-1.48-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk15on/1.48/960dea7c9181ba0b17e8bab0c06a43f0a5f04e65/bcprov-jdk15on-1.48.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint-api/23.1.1/acd4a1812d90da35a5812ea33920802216326af7/lint-api-23.1.1-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint-api/23.1.1/db847c3f038b8063d3c08da7008728ebbb003f5c/lint-api-23.1.1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-analysis/4.0/4a33d6206d6d442446a8edbd2b0798ecfaebc229/asm-analysis-4.0-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-analysis/4.0/1c45d52b6f6c638db13cf3ac12adeb56b254cdd7/asm-analysis-4.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.1/1fdf61e5ba87e0e4676c22677e0b2fe3a05c2fd8/httpcore-4.1-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.1/33fc26c02f8043ab0ede19eadc8c9885386b255c/httpcore-4.1.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.1.1/f3f156cbff0e0fb0d64bfce31a352cce4a33bc19/commons-logging-1.1.1-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.1.1/5043bfebc3db072ed80fbd362e7caf00e885d8ae/commons-logging-1.1.1.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.4/5310da9f90e843883309e9e0bf5950faa79882a0/commons-codec-1.4-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.4/4216af16d38465bbab0f3dff8efa14204f7a399a/commons-codec-1.4.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.1.1/42f6189003f355107f53b937770092517de69710/httpclient-4.1.1-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.1.1/3d1d918f32709e33ba7ddb2c4e8d1c543ebe713e/httpclient-4.1.1.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.1/3ac83213baeab2b21fde6c0bf47ed68ea3e6a8da/httpmime-4.1-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.1/9ba2dcdf94ce35c8a8e9bff242db0618ca932e92/httpmime-4.1.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/dvlib/22.7.2/4f8382de166737821a1381e6a81969229147686/dvlib-22.7.2-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/dvlib/22.7.2/a530af84f9c948f72c4fe68b79865f511242f106/dvlib-22.7.2.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.0/913e9963c558d36bdfdc19bab739a282999d08eb/commons-compress-1.0-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.0/995ae384a0b1e2c66269e6bc5198db8561fb45a2/commons-compress-1.0.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdklib/22.7.2/3795207c67b08c52ad4a4b3636bf6609d6a44423/sdklib-22.7.2-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdklib/22.7.2/ed1a91f6d6743bad6b9bc45e51cd2ab7a71401/sdklib-22.7.2.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdk-common/22.7.2/404b71270aef87a8002f28cf3a7bf4696e97e948/sdk-common-22.7.2-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdk-common/22.7.2/a445ae3c862d34796e6ed357d3d7b2e2b1f6416f/sdk-common-22.7.2.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/manifest-merger/22.7.2/44e648c954873280295bd43b9c9cf9d796227be9/manifest-merger-22.7.2-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/manifest-merger/22.7.2/ce1639afae82278d1b21eadc5d26243b73a14598/manifest-merger-22.7.2.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.ddms/ddmlib/22.7.2/e8e58740e00094e36c978337a5b50aa35d821bba/ddmlib-22.7.2-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.ddms/ddmlib/22.7.2/3094c5a6d36ff7d0595a3489fca90b935219d414/ddmlib-22.7.2.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup/javawriter/2.2.1/9476a897088c64437ddba17bedbbdb2272499d63/javawriter-2.2.1-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup/javawriter/2.2.1/d6dac1da0b24ab9ea9a6b5d49c2586d85f17e597/javawriter-2.2.1.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-test-api/0.9.2/ae45519899d49a8ff356ba60527d4ab131e9724c/builder-test-api-0.9.2-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-test-api/0.9.2/33769dabb66560282d2cc9f4a64f8dd24a489e89/builder-test-api-0.9.2.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk15on/1.48/3824866f059053c43b118eb5a067ea1800d8c913/bcprov-jdk15on-1.48-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk15on/1.48/960dea7c9181ba0b17e8bab0c06a43f0a5f04e65/bcprov-jdk15on-1.48.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk15on/1.48/8cff777fce5ef53cc35fa569faa8d12faaf34a78/bcpkix-jdk15on-1.48-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk15on/1.48/28b7614b908a47844bb27e3c94b45b6893656265/bcpkix-jdk15on-1.48.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder/0.9.2/81ad90ef689377af0ddc803bef3c7bb8906b2cc5/builder-0.9.2-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder/0.9.2/3bb1c716cdfbd42981ab035870b782440ce5f871/builder-0.9.2.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/4.0/4a33d6206d6d442446a8edbd2b0798ecfaebc229/asm-4.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/4.0/659add6efc75a4715d738e73f07505246edf4d66/asm-4.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.external.lombok/lombok-ast/0.2.2/47ebe619db7def288aad08bd65d26eea6d67f8ee/lombok-ast-0.2.2-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.external.lombok/lombok-ast/0.2.2/57e560b535ceaa14fb6f15422d74594acd6c5b64/lombok-ast-0.2.2.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-tree/4.0/4a33d6206d6d442446a8edbd2b0798ecfaebc229/asm-tree-4.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-tree/4.0/67bd266cd17adcee486b76952ece4cc85fe248b8/asm-tree-4.0.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint-api/22.7.2/2704027a8b42603489ea587e99ad49833bf78262/lint-api-22.7.2-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint-api/22.7.2/78c89a1700a23acb694f3d32f3e4644b039d8de6/lint-api-22.7.2.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-analysis/4.0/4a33d6206d6d442446a8edbd2b0798ecfaebc229/asm-analysis-4.0-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-analysis/4.0/1c45d52b6f6c638db13cf3ac12adeb56b254cdd7/asm-analysis-4.0.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint-checks/22.7.2/373253298e5300e1f84005bdc2e757de55403376/lint-checks-22.7.2-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint-checks/22.7.2/772c8857d60a09c270c5cac82370e2371bc40ffe/lint-checks-22.7.2.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jdt.core.compiler/ecj/4.2.2/fb9dc21349d06dd00b395af5c42f299df828f9da/ecj-4.2.2-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jdt.core.compiler/ecj/4.2.2/d9fd79499c664bccaf24dbe04be417de6c6af64a/ecj-4.2.2.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint/22.7.2/5e0d65df7686f816b1b45100478ee8ab6306ce7a/lint-22.7.2-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint/22.7.2/698562b3dc41a727284f726ec49695ef5c89ec40/lint-22.7.2.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.proguard/proguard-base/4.10/2e69a382547b042b3d2d03440687fb1e2ac06af2/proguard-base-4.10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.proguard/proguard-base/4.10/46e891272ae0338af3f5de5e14d8d2641edefc2c/proguard-base-4.10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.proguard/proguard-gradle/4.10/9ed4b7b34d522f36aa61b5142576fa5e8cc733b8/proguard-gradle-4.10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.proguard/proguard-gradle/4.10/edad1b6af1c08c54a58fb39da9fa48e03bc6678d/proguard-gradle-4.10.jar" />
                           </list>
                         </option>
                         <option name="path" value="$PROJECT_DIR$/RecargaTussam" />
@@ -1225,86 +1525,96 @@
               <option name="name" value="RecargaTussam" />
               <option name="projectBuildClasspath">
                 <list>
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/announce" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/antlr" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/base-services" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/base-services-groovy" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/build-comparison" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/build-init" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/cli" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/code-quality" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/core" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/core-impl" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/cpp" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/diagnostics" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/ear" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/ide" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/internal-integ-testing" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/internal-testing" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/ivy" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/jacoco" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/javascript" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/jetty" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/language-base" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/language-jvm" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/launcher" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/maven" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/messaging" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/native" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/open-api" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/osgi" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/plugins" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/publish" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/reporting" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/resources" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/scala" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/signing" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/sonar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/tooling-api" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/ui" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/src/wrapper" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/ant-1.9.2.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/ant-launcher-1.9.2.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/gradle-base-services-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/gradle-base-services-groovy-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/gradle-cli-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/gradle-core-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/gradle-docs-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/gradle-launcher-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/gradle-messaging-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/gradle-native-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/gradle-open-api-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/gradle-resources-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/gradle-tooling-api-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/gradle-ui-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/gradle-wrapper-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/groovy-all-1.8.6.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/ivy-2.2.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/plugins/ant-antlr-1.9.2.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/plugins/gradle-announce-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/plugins/gradle-antlr-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/plugins/gradle-build-comparison-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/plugins/gradle-build-init-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/plugins/gradle-code-quality-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/plugins/gradle-core-impl-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/plugins/gradle-cpp-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/plugins/gradle-diagnostics-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/plugins/gradle-ear-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/plugins/gradle-ide-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/plugins/gradle-ivy-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/plugins/gradle-jacoco-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/plugins/gradle-javascript-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/plugins/gradle-jetty-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/plugins/gradle-language-base-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/plugins/gradle-language-jvm-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/plugins/gradle-maven-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/plugins/gradle-osgi-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/plugins/gradle-plugins-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/plugins/gradle-publish-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/plugins/gradle-reporting-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/plugins/gradle-scala-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/plugins/gradle-signing-1.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.11-all/7qd8qq8te5j4f5q9aaei3gh3lj/gradle-1.11/lib/plugins/gradle-sonar-1.11.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/announce" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/antlr" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/base-services" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/base-services-groovy" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/build-comparison" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/build-init" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/cli" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/code-quality" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/core" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/core-impl" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/cpp" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/diagnostics" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/ear" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/ide" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/internal-integ-testing" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/internal-testing" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/ivy" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/jacoco" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/javascript" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/jetty" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/language-base" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/language-jvm" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/launcher" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/maven" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/messaging" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/model-core" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/model-groovy" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/native" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/open-api" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/osgi" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/plugin-development" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/plugin-use" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/plugins" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/publish" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/reporting" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/resources" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/resources-http" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/scala" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/signing" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/sonar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/tooling-api" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/ui" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/src/wrapper" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/ant-1.9.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/ant-launcher-1.9.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/gradle-base-services-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/gradle-base-services-groovy-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/gradle-cli-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/gradle-core-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/gradle-docs-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/gradle-launcher-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/gradle-messaging-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/gradle-model-core-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/gradle-model-groovy-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/gradle-native-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/gradle-open-api-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/gradle-resources-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/gradle-tooling-api-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/gradle-ui-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/gradle-wrapper-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/groovy-all-2.3.6.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/plugins/ant-antlr-1.9.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/plugins/gradle-announce-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/plugins/gradle-antlr-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/plugins/gradle-build-comparison-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/plugins/gradle-build-init-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/plugins/gradle-code-quality-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/plugins/gradle-core-impl-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/plugins/gradle-cpp-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/plugins/gradle-diagnostics-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/plugins/gradle-ear-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/plugins/gradle-ide-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/plugins/gradle-ivy-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/plugins/gradle-jacoco-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/plugins/gradle-javascript-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/plugins/gradle-jetty-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/plugins/gradle-language-base-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/plugins/gradle-language-jvm-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/plugins/gradle-maven-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/plugins/gradle-osgi-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/plugins/gradle-plugin-development-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/plugins/gradle-plugin-use-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/plugins/gradle-plugins-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/plugins/gradle-publish-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/plugins/gradle-reporting-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/plugins/gradle-resources-http-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/plugins/gradle-scala-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/plugins/gradle-signing-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/plugins/gradle-sonar-2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.1-all/6n6ckv1svbjkm5ebj9is3php05/gradle-2.1/lib/plugins/ivy-2.2.0.jar" />
                   <option value="$PROJECT_DIR$/buildSrc/src/main/java" />
                   <option value="$PROJECT_DIR$/buildSrc/src/main/groovy" />
                 </list>
@@ -1338,7 +1648,6 @@
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/helpers/GeneralHelper.java" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable/card_favorite_selector.xml" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/RecargaTussam/build.gradle" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/model/dto/base/RecargaTussamDTOBundle.java" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/model/dto/TussamCardDTO.java" />
         <option value="$PROJECT_DIR$/tussam.xml" />
@@ -1346,13 +1655,13 @@
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/layout/activity_main2.xml" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java" />
+        <option value="$PROJECT_DIR$/RecargaTussam/build.gradle" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="60" />
     <option name="y" value="22" />
-    <option name="width" value="1220" />
+    <option name="width" value="1228" />
     <option name="height" value="778" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -1369,7 +1678,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -1380,212 +1689,7 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recarga-tussam-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recarga-tussam-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recarga-tussam-android" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recarga-tussam-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recarga-tussam-android" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecargaTussam" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recarga-tussam-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recarga-tussam-android" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecargaTussam" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recarga-tussam-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recarga-tussam-android" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecargaTussam" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recarga-tussam-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recarga-tussam-android" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecargaTussam" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recarga-tussam-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recarga-tussam-android" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecargaTussam" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recarga" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recarga-tussam-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recarga-tussam-android" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecargaTussam" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recarga" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="helpers" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recarga-tussam-android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recarga-tussam-android" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecargaTussam" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="GoToClass.includeLibraries" value="false" />
@@ -1660,19 +1764,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -1741,6 +1832,7 @@
       <setting name="serverPort" value="" />
       <setting name="vmArgs" value="" />
       <setting name="warPath" value="" />
+      <setting name="sync" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -1814,23 +1906,22 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="60" y="22" width="1220" height="778" extended-state="6" />
+    <frame x="0" y="22" width="1228" height="778" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32767403" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32930514" sideWeight="0.625" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32719547" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17317487" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32326284" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1762226" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32326284" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39274925" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39274925" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -1839,6 +1930,8 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.27544427" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32326284" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32767403" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1881,13 +1974,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/menu/menu_save_delete.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/values/styles_tussam.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="1470">
@@ -1897,14 +1983,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
           <caret line="10" column="50" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/values/strings.xml">
@@ -1928,22 +2014,6 @@
           <caret line="136" column="60" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#10413#10451#0" expanded="true" />
-            <element signature="e#10453#10482#0" expanded="true" />
-            <element signature="e#10484#10512#0" expanded="true" />
-            <element signature="e#11803#12093#0" expanded="true" />
-            <element signature="e#12074#12075#0" expanded="true" />
-            <element signature="e#12095#13111#0" expanded="true" />
-            <element signature="e#12308#12339#0" expanded="true" />
-            <element signature="e#12705#12748#0" expanded="true" />
-            <element signature="e#12871#12904#0" expanded="true" />
-            <element signature="e#13092#13093#0" expanded="true" />
-            <element signature="e#16293#16324#0" expanded="true" />
-            <element signature="e#17929#17960#0" expanded="true" />
-            <element signature="e#18172#18211#0" expanded="true" />
-            <element signature="e#18550#18587#0" expanded="true" />
-            <element signature="e#18845#18884#0" expanded="true" />
-            <element signature="e#19013#19049#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1972,23 +2042,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../sdks/adt-bundle-mac-x86_64/sdk/platforms/android-19/data/res/layout/simple_spinner_dropdown_item.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.43063584" vertical-offset="149" max-vertical-offset="495">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../sdks/adt-bundle-mac-x86_64/sdk/platforms/android-19/data/res/layout/simple_spinner_item.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../sdks/adt-bundle-mac-x86_64/sdk/platforms/android-19/data/res/layout/simple_spinner_item.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.3468208" vertical-offset="120" max-vertical-offset="495">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-xhdpi/icon.png">
@@ -2076,7 +2146,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
           <caret line="3" column="41" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2091,7 +2160,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
           <caret line="6" column="39" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2153,14 +2221,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.48701298" vertical-offset="0" max-vertical-offset="2580">
           <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Rakefile">
@@ -2188,7 +2256,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
           <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2196,15 +2263,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="24" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2212,7 +2270,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="406" max-vertical-offset="1050">
           <caret line="50" column="39" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2220,14 +2277,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1946" max-vertical-offset="3705">
           <caret line="90" column="24" selection-start-line="90" selection-start-column="24" selection-end-line="90" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RecargaTussam/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1499" max-vertical-offset="1980">
-          <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2270,39 +2319,47 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/layout/activity_main2.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.666667" vertical-offset="864" max-vertical-offset="4980">
+        <state vertical-scroll-proportion="0.0" vertical-offset="864" max-vertical-offset="4980">
           <caret line="75" column="45" selection-start-line="75" selection-start-column="45" selection-end-line="75" selection-end-column="45" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8686567" vertical-offset="3099" max-vertical-offset="9555">
+        <state vertical-scroll-proportion="-11.64" vertical-offset="3099" max-vertical-offset="9465">
           <caret line="226" column="46" selection-start-line="226" selection-start-column="46" selection-end-line="226" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#10413#10451#0" expanded="true" />
-            <element signature="e#10453#10482#0" expanded="true" />
-            <element signature="e#10484#10512#0" expanded="true" />
-            <element signature="e#11803#12093#0" expanded="true" />
-            <element signature="e#12074#12075#0" expanded="true" />
-            <element signature="e#12095#13111#0" expanded="true" />
-            <element signature="e#12308#12339#0" expanded="true" />
-            <element signature="e#12705#12748#0" expanded="true" />
-            <element signature="e#12871#12904#0" expanded="true" />
-            <element signature="e#13092#13093#0" expanded="true" />
-            <element signature="e#16293#16324#0" expanded="true" />
-            <element signature="e#17929#17960#0" expanded="true" />
-            <element signature="e#18172#18211#0" expanded="true" />
-            <element signature="e#18550#18587#0" expanded="true" />
-            <element signature="e#18845#18884#0" expanded="true" />
-            <element signature="e#19013#19049#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/java/com/mobivery/utils/ServiceGeneratorDTOMarshal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1395">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RecargaTussam/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1980">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44226044" vertical-offset="0" max-vertical-offset="407">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>

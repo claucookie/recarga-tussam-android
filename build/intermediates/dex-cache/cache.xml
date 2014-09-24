@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/build/intermediates/pre-dexed/staging/debug/classes-7a0884019c5dfc149023b4b786b7801d35643b5b.jar"
+        jar="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="8694693636ab36910c8100ce527c258ff3ebece0"/>
+    <item
+        dex="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/build/intermediates/pre-dexed/staging/debug/universal-image-loader-1.9.1-75f79eb6b3c3beb370452e2cbfdc85e9c745821e.jar"
+        jar="/Users/claucookie/.gradle/caches/modules-2/files-2.1/com.nostra13.universalimageloader/universal-image-loader/1.9.1/296dfb44fbf31397c0306e60cb62e06ca40df07f/universal-image-loader-1.9.1.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="296dfb44fbf31397c0306e60cb62e06ca40df07f"/>
+    <item
+        dex="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/build/intermediates/pre-dexed/staging/debug/classes-ce1778488a930eeca2075e260e8125dda14aada2.jar"
+        jar="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/build/intermediates/exploded-aar/com.mobivery.android/library/1.0.4-SNAPSHOT/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="570c5a67f826ea637517dcd6f66b84e28a763146"/>
+    <item
+        dex="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/build/intermediates/pre-dexed/staging/debug/internal_impl-20.0.0-4dc35362b4b7429569cb5527fd22bc6f5516e349.jar"
+        jar="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/libs/internal_impl-20.0.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d"/>
+    <item
+        dex="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/build/intermediates/pre-dexed/staging/debug/support-annotations-20.0.0-3188a740a2154581df68147af894799ed2ae2dac.jar"
+        jar="/Users/claucookie/Documents/Desarrollo/sdks/adt-bundle-mac-x86_64/sdk/extras/android/m2repository/com/android/support/support-annotations/20.0.0/support-annotations-20.0.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa"/>
+    <item
+        dex="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/build/intermediates/pre-dexed/staging/debug/jsoup-1.7.3-3c5bfeaad4f8de1690227e900f111728a0cb306f.jar"
+        jar="/Users/claucookie/.gradle/caches/modules-2/files-2.1/org.jsoup/jsoup/1.7.3/92568d7167ce1bf9eb1fd815b022d5a2c113547a/jsoup-1.7.3.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="92568d7167ce1bf9eb1fd815b022d5a2c113547a"/>
+    <item
+        dex="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/build/intermediates/pre-dexed/staging/debug/androidannotations-api-3.0.1-b376f2cd1bb1960f6931da953f23e61b966e1505.jar"
+        jar="/Users/claucookie/.gradle/caches/modules-2/files-2.1/org.androidannotations/androidannotations-api/3.0.1/beb7e0a75c753383e7ef68c0e1639999db301c33/androidannotations-api-3.0.1.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="beb7e0a75c753383e7ef68c0e1639999db301c33"/>
+    <item
+        dex="/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/RecargaTussam/build/intermediates/pre-dexed/staging/debug/crashlytics-1.1.13-343673a4ca8e4cea31e728acba1939da5ac730ff.jar"
+        jar="/Users/claucookie/.gradle/caches/modules-2/files-2.1/com.crashlytics.android/crashlytics/1.1.13/e821eafa1bf489a26bdb71f95078c26785b37a1/crashlytics-1.1.13.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="0e821eafa1bf489a26bdb71f95078c26785b37a1"/>
+
+</pre-dex-items>
