@@ -2,6 +2,7 @@
 .gradle/*
 /local.properties
 */build/
+*/build
 
 # built application files
 *.apk
