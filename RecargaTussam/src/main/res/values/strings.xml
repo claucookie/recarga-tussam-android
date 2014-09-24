@@ -8,7 +8,7 @@
     <string name="card_type">Recarga</string>
     <string name="card_credit">Saldo</string>
     <string name="tussam_info">Esta aplicación no es oficial, pero utiliza un servicio público de la web de Tussam. Dicho servicio actualiza los datos de las tarjetas al final del día cuando los autobuses llegan a la central y envían los datos al servidor.
-        La información actualizada correctamente puede verse por la mañana. Sin embarno, no nos responsabilizamos si alguna vez esta información
+        La información actualizada correctamente puede verse por la mañana. Sin embargo, no nos responsabilizamos si alguna vez esta información
         no es correcta.</string>
     <string name="card_name_hint">Dale un nombre!</string>
     <string name="card_number_hint">#### #### ####</string>
