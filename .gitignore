@@ -1,5 +1,5 @@
 # gradle shit
-.gradle
+.gradle/*
 /local.properties
 */build/
 
@@ -32,7 +32,7 @@ aa-gen/
 aa-test/
 
 # IntelliJ IDEA
-.idea/
+.idea/*
 */.idea/
 *.iml
 */gen-gen-external-apklibs/
