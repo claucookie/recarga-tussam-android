@@ -6,11 +6,18 @@
 
 	<application android:icon='@drawable/tussam_ic_launcher' android:label='@string/app_name' android:logo='@drawable/tussam_ic_launcher' android:name='.App' android:theme='@style/Theme.Tussam'>
 		<activity android:label='@string/app_name' android:name='MainActivity_' android:screenOrientation='portrait'>
-			<intent-filter>
+			<!--<intent-filter>
 				<action android:name='android.intent.action.MAIN'/>
 				<category android:name='android.intent.category.LAUNCHER'/>
-			</intent-filter>
+			</intent-filter>-->
 		</activity>
+        <activity android:label='@string/app_name' android:name='.activities.CardsGalleryActivity_' android:screenOrientation='portrait'>
+            <intent-filter>
+                <action android:name='android.intent.action.MAIN'/>
+                <category android:name='android.intent.category.LAUNCHER'/>
+            </intent-filter>
+        </activity>
+        <activity android:label='@string/app_name' android:name='.activities.AddCardActivity_' android:screenOrientation='portrait'/>
 		<meta-data android:name='com.crashlytics.ApiKey' android:value='b2ec1eaae77c91b5cf4ec2cd6144edd73b23e413'/>
 	</application>
 
