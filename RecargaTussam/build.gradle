@@ -6,15 +6,20 @@ buildscript {
 
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.13.+'
+        classpath 'com.android.tools.build:gradle:0.13.0'
+        classpath 'com.jakewharton.sdkmanager:gradle-plugin:0.9.+'
         classpath 'com.crashlytics.tools.gradle:crashlytics-gradle:1.+'
-
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
     }
 }
 
 // Gradle plugins here
-apply plugin: 'android'
 apply plugin: 'crashlytics'
+apply plugin: 'android-sdk-manager'
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+
 
 // Maven dependencies repositories in here
 repositories {
@@ -25,12 +30,16 @@ repositories {
 }
 
 // Needed by AA
-configurations {
-    apt
+apt {
+    arguments {
+        resourcePackageName android.productFlavors.production.applicationId
+        androidManifestFile variant.processResources.manifestFile
+    }
+
 }
 
 // Dependencies versions (the ones that usually change)
-ext.androidAnnotationsVersion = '3.0.1'
+ext.androidAnnotationsVersion = '3.1'
 ext.mobiveryLibAndroidVersion = '1.0.4-SNAPSHOT'
 ext.universalImageLoaderVersion = '1.9.1'
 
@@ -68,11 +77,11 @@ android {
 
     productFlavors {
         production {
-            packageName "es.claucookie.recarga"
+            applicationId "es.claucookie.recarga"
         }
 
         staging {
-            packageName "es.claucookie.recargadev"
+            applicationId "es.claucookie.recargadev"
         }
     }
 
@@ -90,37 +99,4 @@ if (project.hasProperty('keyAlias')) {
 }
 if (project.hasProperty('keyAliasPassword')) {
     android.signingConfigs.release.keyPassword = keyAliasPassword
-}
-
-// AndroidAnnotations processing (generation)
-def getSourceSetName(variant) {
-    return new File(variant.dirName).getName();
-}
-
-android.applicationVariants.all { variant ->
-    def aptOutputDir = project.file("build/source/apt")
-    def aptOutput = new File(aptOutputDir, variant.dirName)
-    println "****************************"
-    println "variant: ${variant.name}"
-    println "manifest:  ${variant.processResources.manifestFile}"
-    println "aptOutput:  ${aptOutput}"
-    println "****************************"
-
-    android.sourceSets[getSourceSetName(variant)].java.srcDirs += aptOutput.getPath()
-
-    variant.javaCompile.options.compilerArgs += [
-    '-processorpath', configurations.apt.getAsPath(),
-    '-processor', 'org.androidannotations.AndroidAnnotationProcessor',
-    '-AandroidManifestFile=' + variant.processResources.manifestFile,
-    '-AresourcePackageName=es.claucookie.recarga',
-    '-s', aptOutput
-    ]
-
-    variant.javaCompile.source = variant.javaCompile.source.filter { p ->
-    return !p.getPath().startsWith(aptOutputDir.getPath())
-}
-
-variant.javaCompile.doFirst {
-        aptOutput.mkdirs()
-    }
 }
