@@ -1,7 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
-    
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.mobivery.android.widgets.ExLabel
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tussam_info"
+        android:layout_alignTop="@+id/info_button"
+        style="@style/CommonText.Tussam"/>
+
+
+    <com.mobivery.android.widgets.ExButton
+        android:id="@+id/info_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="i"
+        style="@style/CircleButton.Tussam"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"/>
+
+    <com.mobivery.android.widgets.ExButton
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="+"
+        style="@style/CircleButton.Tussam"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
+
+
 
 </RelativeLayout>

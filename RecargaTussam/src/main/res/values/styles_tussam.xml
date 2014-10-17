@@ -99,6 +99,7 @@
     <style name="CommonText.Tussam" parent="android:Widget.TextView">
         <item name="android:textColor">@color/color_palette_2</item>
         <item name="fontName">Roboto-Light</item>
+        <item name="android:textSize">@dimen/font_size_normal</item>
     </style>
 
     <style name="HelpText.Tussam" parent="android:Widget.TextView">
@@ -114,5 +115,11 @@
         <item name="android:layout_marginLeft">10dp</item>
         <item name="android:background">@null</item>
     </style>
+
+    <style name="CircleButton.Tussam" parent="android:Widget.ImageButton">
+        <item name="android:background">@drawable/circle_button_selector</item>
+        <item name="android:textSize">@dimen/font_size_huge</item>
+    </style>
+
 
 </resources>
