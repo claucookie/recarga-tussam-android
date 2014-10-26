@@ -13,7 +13,7 @@ buildscript {
 }
 
 // Gradle plugins here
-apply plugin: 'android'
+apply plugin: 'com.android.application'
 apply plugin: 'crashlytics'
 
 // Maven dependencies repositories in here
@@ -30,30 +30,30 @@ configurations {
 }
 
 // Dependencies versions (the ones that usually change)
-ext.androidAnnotationsVersion = '3.0.1'
+ext.androidAnnotationsVersion = '3.1'
 ext.mobiveryLibAndroidVersion = '1.0.4-SNAPSHOT'
 ext.universalImageLoaderVersion = '1.9.1'
 
 // Insert your dependencies in here
 dependencies {
-    compile 'com.android.support:support-v4:+'
+    compile "com.android.support:appcompat-v7:21.0.+"
+    compile 'com.android.support:support-v13:+'
     apt "org.androidannotations:androidannotations:${androidAnnotationsVersion}"
     compile "org.androidannotations:androidannotations-api:${androidAnnotationsVersion}"
     compile "com.mobivery.android:library:${mobiveryLibAndroidVersion}@aar"
     compile "com.nostra13.universalimageloader:universal-image-loader:${universalImageLoaderVersion}"
     compile 'com.crashlytics.android:crashlytics:1.+'
     compile 'org.jsoup:jsoup:1.7.3'
-
 }
 
 // Android compilation information
 android {
-    compileSdkVersion 19
-    buildToolsVersion '19.1.0'
+    compileSdkVersion 21
+    buildToolsVersion '21.0.2'
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 19
+        targetSdkVersion 21
     }
 
     signingConfigs {
