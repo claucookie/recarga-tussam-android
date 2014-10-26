@@ -299,13 +299,22 @@
 
     </LinearLayout>
 
+    <Button
+        android:id="@+id/add_card"
+        style="@style/CircleButton.Tussam"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="+"
+        android:textColor="@color/common_text_color"
+        android:elevation="5dp"/>
 
     <LinearLayout
         android:id="@+id/tussam_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
 
         <View
             android:layout_width="match_parent"

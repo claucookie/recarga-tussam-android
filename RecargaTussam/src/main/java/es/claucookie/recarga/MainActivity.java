@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -113,6 +114,8 @@ public class MainActivity extends ActionBarActivity {
     CheckBox favoriteCardCb;
     @ViewById
     ExLabel cardLastUpdateText;
+    @ViewById
+    Button addCard;
 
     @InstanceState
     TussamCardsDTO tussamCardsDTO = new TussamCardsDTO();
@@ -251,7 +254,7 @@ public class MainActivity extends ActionBarActivity {
         showEditView();
     }
 
-    //@OptionsItem(R.id.add_card)
+    @Click
     void addCardClicked() {
 
         showAddView();
@@ -500,7 +503,7 @@ public class MainActivity extends ActionBarActivity {
                 } else if (nowDateDifferenceLong >= ONE_HOUR && nowDateDifferenceLong < ONE_DAY) {
                     // More than 1 hour (X hours ago)
                     dateString = TagFormat.from(getString(R.string.updated_hours_ago))
-                            .with("hours", String.valueOf(nowDateDifferenceLong / ONE_HOUR))
+                            .with("hour", String.valueOf(nowDateDifferenceLong / ONE_HOUR))
                             .format();
 
                 } else {

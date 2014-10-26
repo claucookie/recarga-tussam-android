@@ -93,4 +93,13 @@
         <item name="android:background">@null</item>
     </style>
 
+    <style name="CircleButton.Tussam" parent="android:Widget.Button">
+        <item name="android:layout_width">@dimen/circle_button_width</item>
+        <item name="android:layout_height">@dimen/circle_button_width</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:background">@drawable/circle_button_normal</item>
+        <item name="android:textColor">@color/common_text_color</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
 </resources>
