@@ -30,7 +30,8 @@
             android:layout_alignParentTop="true"
             android:textSize="@dimen/font_size_huge"
             android:layout_toRightOf="@+id/minicard"
-            android:layout_marginRight="50dp"/>
+            android:layout_marginRight="50dp"
+            tools:text="Clo"/>
 
         <RelativeLayout
             android:id="@+id/cards_data"
@@ -41,6 +42,46 @@
             tools:visibility="visible">
 
             <com.mobivery.android.widgets.ExLabel
+                android:id="@+id/card_number_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/card_number_hint"
+                android:textSize="@dimen/font_size_big"
+                style="@style/CardText.Tussam"
+                android:layout_marginLeft="35dp"/>
+
+
+            <com.mobivery.android.widgets.ExLabel
+                android:id="@+id/card_type_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="@string/card_type"
+                android:layout_below="@+id/card_number_text"
+                android:gravity="left"
+                style="@style/CardText.Tussam"
+                android:maxLines="2"
+                android:padding="5dp"
+                android:layout_marginLeft="35dp"
+                android:textSize="@dimen/font_size_normal"/>
+
+
+            <com.mobivery.android.widgets.ExLabel
+                android:id="@+id/card_status_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="@string/card_status"
+                android:layout_below="@+id/card_type_text"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:ellipsize="end"
+                style="@style/CardText.Tussam"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="35dp"
+                android:textSize="@dimen/font_size_big"/>
+
+
+            <com.mobivery.android.widgets.ExLabel
                 android:id="@+id/card_name_text"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
@@ -49,44 +90,8 @@
                 android:gravity="left|center_vertical"
                 android:layout_below="@id/card_type_text"
                 android:textSize="17sp"
-                style="@style/CardText.Tussam" />
-
-            <com.mobivery.android.widgets.ExLabel
-                android:id="@+id/card_number_text"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:hint="@string/card_number_hint"
-                android:layout_below="@+id/card_name_text"
-                android:layout_toLeftOf="@+id/card_credit_text"
-                android:gravity="left|center_vertical"
-                android:textSize="17sp"
-                style="@style/CardText.Tussam" />
-
-            <com.mobivery.android.widgets.ExLabel
-                android:id="@+id/card_status_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:text="@string/card_status"
-                android:layout_below="@+id/card_number_text"
-                android:gravity="center_vertical"
-                android:maxLines="2"
-                android:ellipsize="end"
-                android:layout_toLeftOf="@+id/card_credit_text"
                 style="@style/CardText.Tussam"
-                app:fontName="Roboto-Bold"
-                android:layout_marginTop="5dp" />
-
-            <com.mobivery.android.widgets.ExLabel
-                android:id="@+id/card_type_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:text="@string/card_type"
-                android:gravity="left"
-                style="@style/CardText.Tussam"
-                android:maxLines="2"
-                android:padding="5dp"/>
-
-
+                android:visibility="gone"/>
 
 
             <com.mobivery.android.widgets.ExLabel
@@ -95,10 +100,10 @@
                 android:layout_height="match_parent"
                 tools:text="@string/card_credit"
                 android:layout_alignParentRight="true"
-                android:gravity="right|center_vertical"
-                android:layout_below="@id/card_type_text"
-                android:textSize="26sp"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/font_size_huge"
                 style="@style/CardText.Tussam"
+                android:layout_marginRight="10dp"
                 android:layout_alignBottom="@id/card_status_text" />
 
 
