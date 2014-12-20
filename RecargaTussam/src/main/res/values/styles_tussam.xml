@@ -91,17 +91,17 @@
         <item name="android:maxHeight">16dip</item>
     </style>
 
-    <style name="CommonText.Tussam" parent="Widget.AppCompat.AutoCompleteTextView">
+    <style name="CommonText.Tussam" parent="android:Widget.TextView">
         <item name="android:textColor">@color/color_palette_2</item>
         <item name="fontName">Roboto-Light</item>
     </style>
 
-    <style name="HelpText.Tussam" parent="Widget.AppCompat.AutoCompleteTextView">
+    <style name="HelpText.Tussam" parent="android:Widget.TextView">
         <item name="android:textColor">@color/color_palette_1</item>
         <item name="fontName">Roboto-Light</item>
     </style>
 
-    <style name="CardText.Tussam" parent="Widget.AppCompat.AutoCompleteTextView">
+    <style name="CardText.Tussam" parent="android:Widget.TextView">
         <item name="android:textColor">@color/card_detail_text_color</item>
     </style>
 
