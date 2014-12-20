@@ -41,6 +41,7 @@ ext.universalImageLoaderVersion = '1.9.1'
 
 // Insert your dependencies in here
 dependencies {
+    compile "com.android.support:appcompat-v7:+"
     compile 'com.android.support:support-v4:+'
     apt "org.androidannotations:androidannotations:${androidAnnotationsVersion}"
     compile "org.androidannotations:androidannotations-api:${androidAnnotationsVersion}"
@@ -48,7 +49,7 @@ dependencies {
     compile "com.nostra13.universalimageloader:universal-image-loader:${universalImageLoaderVersion}"
     compile 'com.crashlytics.android:crashlytics:1.+'
     compile 'org.jsoup:jsoup:1.7.3'
-
+    compile "com.android.support:appcompat-v7:21.0.+"
 }
 
 // Android compilation information

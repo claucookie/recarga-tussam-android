@@ -3,6 +3,7 @@ package es.claucookie.recarga;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -54,7 +55,7 @@ import es.claucookie.recarga.model.dto.TussamCardsDTO;
 
 @OptionsMenu(R.menu.menu_add_edit)
 @EActivity(R.layout.activity_main2)
-public class MainActivity extends Activity {
+public class MainActivity extends ActionBarActivity {
     public static final String STATUS_URL = "http://recargas.tussam.es/TPW/Common/cardStatus.do?swNumber=";
     public static final String CREDIT_URL = "https://recargas.tussam.es/TPW/Common/viewProductSelection.do?idNewCard=";
     public static final String VALIDATE_URL = "https://recargas.tussam.es/TPW/Common/validateHWSNumberAjax.do?idNewCard=";

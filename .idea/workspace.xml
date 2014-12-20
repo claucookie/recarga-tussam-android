@@ -38,241 +38,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adf1f0e6-e11a-45e9-a1a2-b35b80c70d54" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/assets/debug/fonts/Roboto-Black.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/assets/debug/fonts/Roboto-BlackItalic.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/assets/debug/fonts/Roboto-Bold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/assets/debug/fonts/Roboto-BoldItalic.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/assets/debug/fonts/Roboto-Italic.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/assets/debug/fonts/Roboto-Light.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/assets/debug/fonts/Roboto-LightItalic.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/assets/debug/fonts/Roboto-Medium.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/assets/debug/fonts/Roboto-MediumItalic.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/assets/debug/fonts/Roboto-Regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/assets/debug/fonts/Roboto-Thin.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/assets/debug/fonts/Roboto-ThinItalic.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/AuthFailureError.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/Cache$Entry.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/Cache.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/CacheDispatcher$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/CacheDispatcher.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/DefaultRetryPolicy.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/ExecutorDelivery$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/ExecutorDelivery$ResponseDeliveryRunnable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/ExecutorDelivery.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/Network.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/NetworkDispatcher.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/NetworkError.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/NetworkResponse.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/NoConnectionError.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/ParseError.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/Request$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/Request$Method.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/Request$Priority.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/Request.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/RequestQueue$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/RequestQueue$RequestFilter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/RequestQueue.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/Response$ErrorListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/Response$Listener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/Response.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/ResponseDelivery.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/RetryPolicy.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/ServerError.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/TimeoutError.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/VolleyError.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/VolleyLog$MarkerLog$Marker.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/VolleyLog$MarkerLog.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/VolleyLog.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/AndroidAuthenticator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/Authenticator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/BasicNetwork.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/ByteArrayPool$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/ByteArrayPool.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/ClearCacheRequest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/DiskBasedCache$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/DiskBasedCache$CacheHeader.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/DiskBasedCache$CountingInputStream.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/DiskBasedCache.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/HttpClientStack$HttpPatch.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/HttpClientStack.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/HttpHeaderParser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/HttpStack.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/HurlStack$UrlRewriter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/HurlStack.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/ImageLoader$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/ImageLoader$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/ImageLoader$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/ImageLoader$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/ImageLoader$BatchedImageRequest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/ImageLoader$ImageCache.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/ImageLoader$ImageContainer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/ImageLoader$ImageListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/ImageLoader.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/ImageRequest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/JsonArrayRequest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/JsonObjectRequest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/JsonRequest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/NetworkImageView$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/NetworkImageView$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/NetworkImageView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/NoCache.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/PoolingByteArrayOutputStream.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/RequestFuture.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/StringRequest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/android/volley/toolbox/Volley.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/android/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/android/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/android/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/android/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/android/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/logic/ServiceException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/logic/ServiceExceptionListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/logic/TaskListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/utils/BaseLogic.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/utils/CacheInterface.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/utils/CustomSSLSocketFactory$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/utils/CustomSSLSocketFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/utils/DataTransferObjectJSONMarshallingInterface.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/utils/FilterInterface.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/utils/HttpClientHelper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/utils/LimitedAgeMemoryCache.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/utils/LimitedAgeUnlimitedDiskCache.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/utils/LruCache.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/utils/LruMemoryCache.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/utils/NoCache.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/utils/ResponseInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/utils/ServiceGeneratorDTOMarshal.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/utils/UnlimitedDiskCache.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/utils/UnlimitedMemoryCache.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/com/mobivery/utils/UnlimitedWeakMemoryCache.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/App.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/MainActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/MainActivity$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/MainActivity$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/MainActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/MainActivity_$IntentBuilder_.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/MainActivity_.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/R$color.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/R$menu.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/helpers/ApplicationController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/helpers/PreferencesHelper$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/helpers/PreferencesHelper$FavoritesLogicHolder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/helpers/PreferencesHelper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/helpers/SharedPrefsHelper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/helpers/SharedPrefsHelper_$SharedPrefsHelperEditor_.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/helpers/SharedPrefsHelper_.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/logic/RecargaTussamHelper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/model/dao/TussamCardDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/model/dao/TussamCardsDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/model/dto/TussamCardDTO$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/model/dto/TussamCardDTO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/model/dto/TussamCardsDTO$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/model/dto/TussamCardsDTO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/model/dto/base/RecargaTussamDTOBundle$BaseTussamCardDTO$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/model/dto/base/RecargaTussamDTOBundle$BaseTussamCardDTO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/model/dto/base/RecargaTussamDTOBundle$BaseTussamCardsDTO$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/model/dto/base/RecargaTussamDTOBundle$BaseTussamCardsDTO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/classes/debug/es/claucookie/recarga/model/dto/base/RecargaTussamDTOBundle.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/dex/debug/classes.dex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/exploded-aar/com.mobivery.android/library/1.0.4-SNAPSHOT/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/exploded-aar/com.mobivery.android/library/1.0.4-SNAPSHOT/R.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/exploded-aar/com.mobivery.android/library/1.0.4-SNAPSHOT/classes.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/exploded-aar/com.mobivery.android/library/1.0.4-SNAPSHOT/res/layout/main.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/exploded-aar/com.mobivery.android/library/1.0.4-SNAPSHOT/res/values/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/incremental/aidl/debug/dependency.store" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/incremental/mergeAssets/debug/merger.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/incremental/mergeResources/debug/merger.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/libs/RecargaTussam-debug.ap_" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/manifests/debug/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/pre-dexed/debug/androidannotations-api-3.0.1-b376f2cd1bb1960f6931da953f23e61b966e1505.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/pre-dexed/debug/classes-c1cc685152c2f417747e0118468ae74b1ae7371c.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/pre-dexed/debug/crashlytics-1.1.11-34a87a65bda724772114d3179c6fc22a315c2dfa.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/pre-dexed/debug/jsoup-1.7.3-3c5bfeaad4f8de1690227e900f111728a0cb306f.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/pre-dexed/debug/universal-image-loader-1.9.1-75f79eb6b3c3beb370452e2cbfdc85e9c745821e.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/ab_bottom_solid_tussam.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/ab_solid_tussam.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/ab_stacked_solid_tussam.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/ab_texture_tile_tussam.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/ab_transparent_tussam.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/btn_cab_done_default_tussam.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/btn_cab_done_focused_tussam.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/btn_cab_done_pressed_tussam.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/cab_background_bottom_tussam.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/cab_background_top_tussam.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/ic_action_accept.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/ic_action_edit.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/ic_action_new.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/ic_action_refresh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/ic_action_remove.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/ic_action_save.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/list_focused_tussam.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/list_pressed_tussam.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/menu_dropdown_panel_tussam.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/progress_bg_tussam.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/progress_primary_tussam.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/progress_secondary_tussam.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/spinner_ab_default_tussam.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/spinner_ab_disabled_tussam.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/spinner_ab_focused_tussam.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/spinner_ab_pressed_tussam.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tab_selected_focused_tussam.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tab_selected_pressed_tussam.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tab_selected_tussam.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tab_unselected_focused_tussam.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tab_unselected_pressed_tussam.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tab_unselected_tussam.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tussam_ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tussam_progress_bg_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tussam_progress_primary_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tussam_progress_secondary_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tussam_progressbar_indeterminate_holo1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tussam_progressbar_indeterminate_holo2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tussam_progressbar_indeterminate_holo3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tussam_progressbar_indeterminate_holo4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tussam_progressbar_indeterminate_holo5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tussam_progressbar_indeterminate_holo6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tussam_progressbar_indeterminate_holo7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable-xhdpi/tussam_progressbar_indeterminate_holo8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable/ab_background_textured_tussam.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable/btn_cab_done_tussam.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable/progress_horizontal_tussam.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable/selectable_background_tussam.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable/spinner_background_ab_tussam.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable/tab_indicator_ab_tussam.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable/tussam_logo_shape.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable/tussam_progress_horizontal_holo_dark.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/drawable/tussam_progress_indeterminate_horizontal_holo_dark.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/layout/activity_main.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/layout/main.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/menu/menu_add_edit.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/menu/menu_done.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/menu/menu_save_delete.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/values-en/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/res/all/debug/values/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/source/apt/androidannotations.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/source/apt/debug/es/claucookie/recarga/MainActivity_.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/source/apt/debug/es/claucookie/recarga/helpers/SharedPrefsHelper_.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/source/buildConfig/debug/es/claucookie/recarga/BuildConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/source/r/debug/com/mobivery/android/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/source/r/debug/es/claucookie/recarga/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/build/symbols/debug/R.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/RecargaTussam.iml" afterPath="$PROJECT_DIR$/RecargaTussam/RecargaTussam.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/build.gradle" afterPath="$PROJECT_DIR$/RecargaTussam/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recarga-tussam-android.iml" afterPath="$PROJECT_DIR$/recarga-tussam-android.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/res/values/styles_tussam.xml" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/values/styles_tussam.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="recarga-tussam-android.iws" />
@@ -416,17 +185,17 @@
       <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RecargaTussam/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1485">
-              <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="481" max-vertical-offset="1500">
+              <caret line="43" column="48" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Rakefile" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Rakefile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Rakefile">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3313433" vertical-offset="2859" max-vertical-offset="4770">
+            <state vertical-scroll-proportion="-4.269231" vertical-offset="2859" max-vertical-offset="4770">
               <caret line="198" column="72" selection-start-line="198" selection-start-column="68" selection-end-line="198" selection-end-column="72" />
               <folding />
             </state>
@@ -438,6 +207,26 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="9480">
+              <caret line="50" column="51" selection-start-line="50" selection-start-column="51" selection-end-line="50" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles_tussam.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/values/styles_tussam.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.3315508" vertical-offset="1137" max-vertical-offset="1770">
+              <caret line="109" column="52" selection-start-line="109" selection-start-column="52" selection-end-line="109" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -855,6 +644,11 @@
                 <option name="name" value="preReleaseBuild" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support:appcompat-v7:21.0.3" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
+                <option name="name" value="prepareComAndroidSupportAppcompatV72103Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Prepare com.android.support:support-v4:21.0.3" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
                 <option name="name" value="prepareComAndroidSupportSupportV42103Library" />
@@ -956,7 +750,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4242282394000" />
+        <entry key="$PROJECT_DIR$" value="4242283584000" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -1134,7 +928,6 @@
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/menu/menu_add_edit.xml" />
-        <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/values/styles_tussam.xml" />
         <option value="$PROJECT_DIR$/Rakefile" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/helpers/AlertsHelper.java" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/helpers/GeneralHelper.java" />
@@ -1146,8 +939,9 @@
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/values-en/strings.xml" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/layout/activity_main2.xml" />
-        <option value="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java" />
         <option value="$PROJECT_DIR$/RecargaTussam/build.gradle" />
+        <option value="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java" />
+        <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/values/styles_tussam.xml" />
       </list>
     </option>
   </component>
@@ -1500,7 +1294,7 @@
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17537943" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32223904" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39183056" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39183056" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -1535,13 +1329,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java</url>
-          <line>184</line>
+          <line>185</line>
           <properties />
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java</url>
-          <line>216</line>
+          <line>217</line>
           <properties />
           <option name="timeStamp" value="53" />
         </line-breakpoint>
@@ -1553,13 +1347,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tussam.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="465">
-          <caret line="21" column="101" selection-start-line="21" selection-start-column="101" selection-end-line="21" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/menu/menu_save_delete.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
@@ -1574,6 +1361,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
           <caret line="10" column="50" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1596,9 +1384,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1620" max-vertical-offset="3585">
           <caret line="136" column="60" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1813,6 +1599,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.48701298" vertical-offset="0" max-vertical-offset="2580">
           <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1901,16 +1688,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="990" max-vertical-offset="4980">
           <caret line="66" column="45" selection-start-line="66" selection-start-column="45" selection-end-line="66" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-42.6" vertical-offset="2220" max-vertical-offset="9555">
-          <caret line="219" column="13" selection-start-line="219" selection-start-column="13" selection-end-line="219" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1922,18 +1700,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RecargaTussam/build.gradle">
+    <entry file="file://$PROJECT_DIR$/Rakefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1485">
-          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+        <state vertical-scroll-proportion="-4.269231" vertical-offset="2859" max-vertical-offset="4770">
+          <caret line="198" column="72" selection-start-line="198" selection-start-column="68" selection-end-line="198" selection-end-column="72" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakefile">
+    <entry file="file://$PROJECT_DIR$/RecargaTussam/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3313433" vertical-offset="2859" max-vertical-offset="4770">
-          <caret line="198" column="72" selection-start-line="198" selection-start-column="68" selection-end-line="198" selection-end-column="72" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="481" max-vertical-offset="1500">
+          <caret line="43" column="48" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="9480">
+          <caret line="50" column="51" selection-start-line="50" selection-start-column="51" selection-end-line="50" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/values/styles_tussam.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.3315508" vertical-offset="1137" max-vertical-offset="1770">
+          <caret line="109" column="52" selection-start-line="109" selection-start-column="52" selection-end-line="109" selection-end-column="52" />
           <folding />
         </state>
       </provider>
