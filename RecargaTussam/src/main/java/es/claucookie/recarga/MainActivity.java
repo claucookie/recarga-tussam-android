@@ -53,7 +53,6 @@ import es.claucookie.recarga.helpers.PreferencesHelper;
 import es.claucookie.recarga.model.dto.TussamCardDTO;
 import es.claucookie.recarga.model.dto.TussamCardsDTO;
 
-@OptionsMenu(R.menu.menu_add_edit)
 @EActivity(R.layout.activity_main2)
 public class MainActivity extends ActionBarActivity {
     public static final String STATUS_URL = "http://recargas.tussam.es/TPW/Common/cardStatus.do?swNumber=";
@@ -248,7 +247,6 @@ public class MainActivity extends ActionBarActivity {
         showEditView();
     }
 
-    @OptionsItem(R.id.add_card)
     void addCardClicked() {
 
         showAddView();
