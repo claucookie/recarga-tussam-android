@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
@@ -111,12 +112,14 @@ public class MainActivity extends ActionBarActivity {
     LinearLayout tussamInfo;
     @ViewById
     LinearLayout progressView;
-    @ViewById
-    LinearLayout newCardHelpView;
+    //@ViewById
+    //LinearLayout newCardHelpView;
     @ViewById
     CheckBox favoriteCardCb;
     @ViewById
     ExLabel cardLastUpdateText;
+    @ViewById
+    Button addCardButton;
 
     @InstanceState
     TussamCardsDTO tussamCardsDTO = new TussamCardsDTO();
@@ -247,7 +250,8 @@ public class MainActivity extends ActionBarActivity {
         showEditView();
     }
 
-    void addCardClicked() {
+    @Click
+    void addCardButtonClicked() {
 
         showAddView();
     }
@@ -524,7 +528,7 @@ public class MainActivity extends ActionBarActivity {
 
     private void showDetailView() {
         favoriteCardCb.setVisibility(View.VISIBLE);
-        newCardHelpView.setVisibility(View.GONE);
+        //newCardHelpView.setVisibility(View.GONE);
         progressView.setVisibility(View.GONE);
         isDetailView = true;
         isEditView = false;
@@ -542,7 +546,7 @@ public class MainActivity extends ActionBarActivity {
 
     private void showAddView() {
         favoriteCardCb.setVisibility(View.GONE);
-        newCardHelpView.setVisibility(View.VISIBLE);
+        //newCardHelpView.setVisibility(View.VISIBLE);
         cancelPendingRequests(TAG);
         progressView.setVisibility(View.GONE);
         isDetailView = false;
@@ -560,7 +564,7 @@ public class MainActivity extends ActionBarActivity {
 
     private void showEditView() {
         favoriteCardCb.setVisibility(View.VISIBLE);
-        newCardHelpView.setVisibility(View.GONE);
+        //newCardHelpView.setVisibility(View.GONE);
         cancelPendingRequests(TAG);
         isDetailView = false;
         isEditView = true;
