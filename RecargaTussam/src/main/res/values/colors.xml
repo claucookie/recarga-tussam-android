@@ -3,7 +3,7 @@
     <color name="color_palette_1">#cc073c</color>
     <color name="color_palette_1_dark">#ff8a0529</color>
     <color name="color_palette_2">#00579b</color>
-    <color name="common_background">#eeeeee</color>
+    <color name="common_background">#ffffff</color>
     <color name="common_text_color">#ffffff</color>
     <color name="card_detail_text_color">#ffffff</color>
     <color name="card_detail_background_color1">@color/color_palette_1</color>

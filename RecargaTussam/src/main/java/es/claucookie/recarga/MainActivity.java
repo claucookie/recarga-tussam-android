@@ -1,6 +1,5 @@
 package es.claucookie.recarga;
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -11,7 +10,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -32,12 +30,9 @@ import com.mobivery.android.widgets.ExText;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Background;
-import org.androidannotations.annotations.CheckedChange;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.InstanceState;
-import org.androidannotations.annotations.OptionsItem;
-import org.androidannotations.annotations.OptionsMenu;
 import org.androidannotations.annotations.ViewById;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -48,7 +43,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-import es.claucookie.recarga.helpers.AlertsHelper;
 import es.claucookie.recarga.helpers.GeneralHelper;
 import es.claucookie.recarga.helpers.PreferencesHelper;
 import es.claucookie.recarga.model.dto.TussamCardDTO;
@@ -59,7 +53,7 @@ public class MainActivity extends ActionBarActivity {
     public static final String STATUS_URL = "http://recargas.tussam.es/TPW/Common/cardStatus.do?swNumber=";
     public static final String CREDIT_URL = "https://recargas.tussam.es/TPW/Common/viewProductSelection.do?idNewCard=";
     public static final String VALIDATE_URL = "https://recargas.tussam.es/TPW/Common/validateHWSNumberAjax.do?idNewCard=";
-    public static final long ONE_MINUTE = 60*1000; // Millisecs
+    public static final long ONE_MINUTE = 60 * 1000; // Millisecs
     public static final long ONE_HOUR = ONE_MINUTE * 60;
     public static final long ONE_DAY = ONE_HOUR * 24;
 
@@ -112,14 +106,14 @@ public class MainActivity extends ActionBarActivity {
     LinearLayout tussamInfo;
     @ViewById
     LinearLayout progressView;
-    //@ViewById
-    //LinearLayout newCardHelpView;
     @ViewById
     CheckBox favoriteCardCb;
     @ViewById
     ExLabel cardLastUpdateText;
     @ViewById
     Button addCardButton;
+    @ViewById
+    ImageView minicard;
 
     @InstanceState
     TussamCardsDTO tussamCardsDTO = new TussamCardsDTO();
@@ -162,7 +156,7 @@ public class MainActivity extends ActionBarActivity {
             } else {
                 if (tussamCardsDTO != null && tussamCardsDTO.getCards() != null && tussamCardsDTO.getCards().size() > 0) {
                     showAddView();
-                }else {
+                } else {
                     finish();
                 }
             }
@@ -313,7 +307,7 @@ public class MainActivity extends ActionBarActivity {
     @Click(R.id.recharge_card_image)
     void rechargeCardClicked() {
         if (selectedCardDTO != null) {
-            String externalUrl = CREDIT_URL+selectedCardDTO.getCardNumber();
+            String externalUrl = CREDIT_URL + selectedCardDTO.getCardNumber();
             GeneralHelper.launchExternalUrlWeb(this, externalUrl, getString(R.string.recharge_card_text), getString(R.string.alert_yes), getString(R.string.alert_no));
         }
     }
@@ -328,7 +322,7 @@ public class MainActivity extends ActionBarActivity {
         if (selectedCardDTO != null && tussamCardsDTO != null && tussamCardsDTO.getCards() != null) {
             selectedCardDTO.setIsCardFavorite(isChecked);
             int cardsSize = tussamCardsDTO.getCards().size();
-            for( int i=0; i<cardsSize; i++) {
+            for (int i = 0; i < cardsSize; i++) {
                 tussamCardsDTO.getCards().get(i).setIsCardFavorite(false);
                 if (isChecked && selectedCardDTO == tussamCardsDTO.getCards().get(i)) {
                     tussamCardsDTO.getCards().get(i).setIsCardFavorite(true);
@@ -384,6 +378,7 @@ public class MainActivity extends ActionBarActivity {
         cardsSpinner.setVisibility(View.VISIBLE);
         cardsData.setVisibility(View.INVISIBLE);
         cardsEditData.setVisibility(View.INVISIBLE);
+        cardCreditText.setVisibility(View.INVISIBLE);
         // remove soft keyboard
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(cardNumberText.getWindowToken(), 0);
@@ -479,27 +474,27 @@ public class MainActivity extends ActionBarActivity {
             cardNumberText.setText(selectedCardDTO.getCardNumber() != null ? selectedCardDTO.getCardNumber() : "");
             cardEditNumberText.setText(selectedCardDTO.getCardNumber() != null ? selectedCardDTO.getCardNumber() : "");
             cardStatusText.setText(selectedCardDTO.getCardStatus() != null ? selectedCardDTO.getCardStatus() : "");
-            cardTypeText.setText(selectedCardDTO.getCardType() != null ? selectedCardDTO.getCardType() : "");
+            cardTypeText.setText(selectedCardDTO.getCardType() != null ? selectedCardDTO.getCardType().substring(1, selectedCardDTO.getCardType().length()) : "");
             cardCreditText.setText(selectedCardDTO.getCardCredit() != null ? selectedCardDTO.getCardCredit() : "");
             if (selectedCardDTO.getLastDate() != null) {
                 Date nowDate = new Date();
-                long nowDateDifferenceLong =  nowDate.getTime() - selectedCardDTO.getLastDate() ;
+                long nowDateDifferenceLong = nowDate.getTime() - selectedCardDTO.getLastDate();
                 String dateString = "";
 
-                if (nowDateDifferenceLong < ONE_MINUTE){
+                if (nowDateDifferenceLong < ONE_MINUTE) {
                     // Less than 1 minute (now)
                     dateString = getString(R.string.updated_now);
 
-                } else if ( nowDateDifferenceLong >= ONE_MINUTE && nowDateDifferenceLong < ONE_HOUR){
+                } else if (nowDateDifferenceLong >= ONE_MINUTE && nowDateDifferenceLong < ONE_HOUR) {
                     // More than 1 minute ( X minutes ago)
                     dateString = TagFormat.from(getString(R.string.updated_minutes_ago))
-                            .with("minutes", String.valueOf(nowDateDifferenceLong/ONE_MINUTE))
+                            .with("minutes", String.valueOf(nowDateDifferenceLong / ONE_MINUTE))
                             .format();
 
-                } else if ( nowDateDifferenceLong >= ONE_HOUR && nowDateDifferenceLong < ONE_DAY) {
+                } else if (nowDateDifferenceLong >= ONE_HOUR && nowDateDifferenceLong < ONE_DAY) {
                     // More than 1 hour (X hours ago)
                     dateString = TagFormat.from(getString(R.string.updated_hours_ago))
-                            .with("hours", String.valueOf(nowDateDifferenceLong/ONE_HOUR))
+                            .with("hours", String.valueOf(nowDateDifferenceLong / ONE_HOUR))
                             .format();
 
                 } else {
@@ -528,7 +523,6 @@ public class MainActivity extends ActionBarActivity {
 
     private void showDetailView() {
         favoriteCardCb.setVisibility(View.VISIBLE);
-        //newCardHelpView.setVisibility(View.GONE);
         progressView.setVisibility(View.GONE);
         isDetailView = true;
         isEditView = false;
@@ -542,11 +536,12 @@ public class MainActivity extends ActionBarActivity {
         // remove soft keyboard
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(cardNumberText.getWindowToken(), 0);
+        minicard.setVisibility(View.VISIBLE);
+        cardCreditText.setVisibility(View.VISIBLE);
     }
 
     private void showAddView() {
         favoriteCardCb.setVisibility(View.GONE);
-        //newCardHelpView.setVisibility(View.VISIBLE);
         cancelPendingRequests(TAG);
         progressView.setVisibility(View.GONE);
         isDetailView = false;
@@ -560,11 +555,12 @@ public class MainActivity extends ActionBarActivity {
         cardActions.setVisibility(View.GONE);
         cardEditActions.setVisibility(View.GONE);
         cardNewActions.setVisibility(View.VISIBLE);
+        minicard.setVisibility(View.GONE);
+        cardCreditText.setVisibility(View.GONE);
     }
 
     private void showEditView() {
         favoriteCardCb.setVisibility(View.VISIBLE);
-        //newCardHelpView.setVisibility(View.GONE);
         cancelPendingRequests(TAG);
         isDetailView = false;
         isEditView = true;
@@ -573,12 +569,14 @@ public class MainActivity extends ActionBarActivity {
             cardEditNumberText.setText(selectedCardDTO.getCardNumber());
             cardEditNameText.setText(selectedCardDTO.getCardName());
         }
-        cardsSpinner.setVisibility(View.VISIBLE);
+        cardsSpinner.setVisibility(View.GONE);
         cardsData.setVisibility(View.GONE);
         cardsEditData.setVisibility(View.VISIBLE);
         cardActions.setVisibility(View.GONE);
         cardEditActions.setVisibility(View.VISIBLE);
         cardNewActions.setVisibility(View.GONE);
+        minicard.setVisibility(View.GONE);
+        cardCreditText.setVisibility(View.GONE);
     }
 
     /**

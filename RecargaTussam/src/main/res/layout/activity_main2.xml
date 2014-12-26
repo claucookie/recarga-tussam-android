@@ -25,11 +25,11 @@
             android:id="@+id/card_credit_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="@string/card_credit"
+            tools:text="14,20€"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
-            android:textSize="@dimen/font_size_super_huge"
-            style="@style/CardText.Tussam"
+            android:textSize="@dimen/font_size_huge"
+            style="@style/HighlightCardText.Tussam"
             android:layout_marginRight="16dp"/>
 
         <ImageView
@@ -49,6 +49,7 @@
             android:textSize="@dimen/font_size_huge"
             android:layout_toRightOf="@+id/minicard"
             android:layout_marginRight="70dp"
+            android:layout_marginBottom="20dp"
             tools:text="Clo"/>
 
         <RelativeLayout
@@ -64,11 +65,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/card_number_hint"
-                android:textSize="@dimen/font_size_big"
+                android:textSize="@dimen/font_size_normal"
                 style="@style/CardText.Tussam"
                 android:layout_marginTop="10dp"
-                android:layout_marginLeft="44dp"
-                android:layout_marginRight="70dp"/>
+                android:layout_marginLeft="42dp"
+                android:layout_marginRight="100dp"
+                android:textStyle="bold"/>
 
 
             <com.mobivery.android.widgets.ExLabel
@@ -81,9 +83,9 @@
                 style="@style/CardText.Tussam"
                 android:maxLines="2"
                 android:padding="5dp"
-                android:layout_marginLeft="35dp"
-                android:layout_marginRight="70dp"
-                android:textSize="@dimen/font_size_normal"/>
+                android:layout_marginLeft="36dp"
+                android:layout_marginRight="100dp"
+                android:textSize="@dimen/font_size_small"/>
 
 
             <com.mobivery.android.widgets.ExLabel
@@ -98,7 +100,7 @@
                 style="@style/CardText.Tussam"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="5dp"
-                android:layout_marginLeft="38dp"
+                android:layout_marginLeft="36dp"
                 android:textSize="@dimen/font_size_big"/>
 
 
@@ -204,8 +206,7 @@
             tools:text="Última actualización:\n15/04/2014"
             android:layout_toRightOf="@+id/progress_view"
             style="@style/CardText.Tussam"
-            app:fontName="Roboto-Light"
-            android:textSize="12sp" />
+            android:textSize="@dimen/font_size_small"/>
 
         <LinearLayout
             android:id="@+id/card_actions"
@@ -217,23 +218,17 @@
 
             <ImageView
                 android:id="@+id/recharge_card_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:src="@drawable/ic_action_add_credit"
                 style="@style/CardActions.Tussam" />
 
             <ImageView
                 android:id="@+id/edit_card_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:src="@drawable/ic_action_edit"
                 style="@style/CardActions.Tussam" />
 
 
             <ImageView
                 android:id="@+id/refresh_card_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:src="@drawable/ic_action_refresh"
                 style="@style/CardActions.Tussam" />
 
@@ -296,9 +291,10 @@
 
         <CheckBox
             android:id="@+id/favorite_card_cb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:button="@drawable/card_favorite_selector" />
+            android:layout_width="@dimen/icons_size"
+            android:layout_height="@dimen/icons_size"
+            android:button="@drawable/card_favorite_selector"
+            android:padding="2dp"/>
 
     </LinearLayout>
 
@@ -307,6 +303,7 @@
         style="@style/CircleButton.Tussam"
         android:text="+"
         android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentBottom="true"
+        android:elevation="20dp"/>
 
 </RelativeLayout>

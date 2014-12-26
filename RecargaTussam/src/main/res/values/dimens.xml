@@ -4,10 +4,12 @@
     <dimen name="card_detail_radius">10dp</dimen>
     <dimen name="circle_button_width">56dp</dimen>
 
-    <dimen name="font_size_super_huge">24sp</dimen>
+    <dimen name="font_size_super_huge">28sp</dimen>
     <dimen name="font_size_huge">22sp</dimen>
     <dimen name="font_size_big">18sp</dimen>
     <dimen name="font_size_normal">14sp</dimen>
     <dimen name="font_size_small">12sp</dimen>
+
+    <dimen name="icons_size">32dp</dimen>
 
 </resources>
