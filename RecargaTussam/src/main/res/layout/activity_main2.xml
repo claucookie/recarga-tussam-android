@@ -3,11 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:paddingTop="30dp"
     android:paddingBottom="20dp"
     android:paddingRight="10dp"
-    android:paddingLeft="10dp">
+    android:paddingLeft="10dp"
+    android:background="@color/common_background">
 
     <RelativeLayout
         android:layout_marginTop="30dp"
@@ -187,15 +188,31 @@
 
         <LinearLayout
             android:id="@+id/progress_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/icons_size"
+            android:layout_height="@dimen/icons_size"
             android:orientation="horizontal"
             android:gravity="left"
             android:layout_marginRight="5dp">
 
             <ProgressBar
-                android:layout_width="30dp"
-                android:layout_height="30dp" />
+                android:layout_width="@dimen/icons_size"
+                android:layout_height="@dimen/icons_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/time_view"
+            android:layout_width="@dimen/icons_size"
+            android:layout_height="@dimen/icons_size"
+            android:orientation="horizontal"
+            android:gravity="left"
+            android:layout_marginRight="5dp">
+
+            <ImageView
+                android:src="@drawable/ic_action_time"
+                android:layout_width="@dimen/icons_size"
+                android:layout_height="@dimen/icons_size"/>
+
         </LinearLayout>
 
         <com.mobivery.android.widgets.ExLabel
@@ -204,7 +221,7 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             tools:text="Última actualización:\n15/04/2014"
-            android:layout_toRightOf="@+id/progress_view"
+            android:layout_toRightOf="@+id/time_view"
             style="@style/CardText.Tussam"
             android:textSize="@dimen/font_size_small"/>
 
@@ -244,15 +261,11 @@
 
             <ImageView
                 android:id="@+id/discard_card_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:src="@drawable/ic_action_discard"
                 style="@style/CardActions.Tussam" />
 
             <ImageView
                 android:id="@+id/save_card_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:src="@drawable/ic_action_save"
                 style="@style/CardActions.Tussam" />
 
@@ -269,15 +282,11 @@
 
             <ImageView
                 android:id="@+id/remove_card_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:src="@drawable/ic_action_remove"
                 style="@style/CardActions.Tussam" />
 
             <ImageView
                 android:id="@+id/done_card_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:src="@drawable/ic_action_accept"
                 style="@style/CardActions.Tussam" />
 
@@ -291,10 +300,10 @@
 
         <CheckBox
             android:id="@+id/favorite_card_cb"
-            android:layout_width="@dimen/icons_size"
-            android:layout_height="@dimen/icons_size"
-            android:button="@drawable/card_favorite_selector"
-            android:padding="2dp"/>
+            android:layout_width="@dimen/icons_small_size"
+            android:layout_height="@dimen/icons_small_size"
+            android:layout_marginLeft="4dp"
+            android:button="@drawable/card_favorite_selector"/>
 
     </LinearLayout>
 
@@ -302,8 +311,8 @@
         android:id="@+id/add_card_button"
         style="@style/CircleButton.Tussam"
         android:text="+"
+        android:textSize="@dimen/font_size_huge"
         android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:elevation="20dp"/>
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>

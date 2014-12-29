@@ -25,8 +25,8 @@
     <shared>
       <config>
         <devices>
-          <device id="Nexus 4" />
           <device id="Nexus S" />
+          <device id="Nexus 4" />
         </devices>
       </config>
     </shared>
@@ -48,14 +48,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adf1f0e6-e11a-45e9-a1a2-b35b80c70d54" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-xhdpi/ic_action_add_credit.png" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-xhdpi/ic_action_add_credit.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-xhdpi/ic_action_edit.png" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-xhdpi/ic_action_edit.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-xhdpi/ic_action_accept.png" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-xhdpi/ic_action_accept.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-xhdpi/ic_action_discard.png" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-xhdpi/ic_action_discard.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-hdpi/ic_action_important.png" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-hdpi/ic_action_important.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-xhdpi/ic_action_important.png" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-xhdpi/ic_action_important.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-hdpi/ic_action_important_.png" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-hdpi/ic_action_important_.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-xhdpi/ic_action_important_.png" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-xhdpi/ic_action_important_.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-xhdpi/ic_action_refresh.png" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-xhdpi/ic_action_refresh.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-xhdpi/ic_action_remove.png" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-xhdpi/ic_action_remove.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-xhdpi/ic_action_save.png" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-xhdpi/ic_action_save.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/res/layout/activity_main2.xml" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/layout/activity_main2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/values/colors.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/values/dimens.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/res/values/styles_tussam.xml" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/values/styles_tussam.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -201,8 +203,18 @@
       <file leaf-file-name="styles_tussam.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/values/styles_tussam.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="1710">
-              <caret line="86" column="40" selection-start-line="86" selection-start-column="40" selection-end-line="86" selection-end-column="40" />
+            <state vertical-scroll-proportion="-4.269231" vertical-offset="1014" max-vertical-offset="1635">
+              <caret line="75" column="17" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="circle_button_favorite.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/drawable/circle_button_favorite.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+              <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -211,8 +223,8 @@
       <file leaf-file-name="dimens.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/values/dimens.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
-              <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+              <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -222,7 +234,7 @@
         <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/values/colors.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
-              <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+              <caret line="5" column="20" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -234,23 +246,32 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9025974" vertical-offset="1252" max-vertical-offset="4710">
-              <caret line="102" column="45" selection-start-line="102" selection-start-column="45" selection-end-line="102" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.24350649" vertical-offset="0" max-vertical-offset="4845">
+              <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
               <folding>
-                <element signature="e#1184#1207#0" expanded="true" />
-                <element signature="e#1921#1944#0" expanded="true" />
-                <element signature="e#2653#2679#0" expanded="true" />
-                <element signature="e#2713#2738#0" expanded="true" />
-                <element signature="e#3210#3229#0" expanded="true" />
-                <element signature="e#3585#3609#0" expanded="true" />
-                <element signature="e#3847#3868#0" expanded="true" />
-                <element signature="e#4282#4304#0" expanded="true" />
-                <element signature="e#4534#4558#0" expanded="true" />
-                <element signature="e#5778#5802#0" expanded="true" />
-                <element signature="e#6520#6546#0" expanded="true" />
-                <element signature="e#8205#8229#0" expanded="true" />
-                <element signature="e#11098#11117#0" expanded="true" />
-                <element signature="e#11152#11171#0" expanded="true" />
+                <element signature="e#1234#1257#0" expanded="true" />
+                <element signature="e#1971#1994#0" expanded="true" />
+                <element signature="e#2703#2729#0" expanded="true" />
+                <element signature="e#2763#2788#0" expanded="true" />
+                <element signature="e#3260#3279#0" expanded="true" />
+                <element signature="e#3635#3659#0" expanded="true" />
+                <element signature="e#3897#3918#0" expanded="true" />
+                <element signature="e#4332#4354#0" expanded="true" />
+                <element signature="e#4584#4608#0" expanded="true" />
+                <element signature="e#5828#5852#0" expanded="true" />
+                <element signature="e#6570#6596#0" expanded="true" />
+                <element signature="e#7492#7511#0" expanded="true" />
+                <element signature="e#7546#7565#0" expanded="true" />
+                <element signature="e#7755#7774#0" expanded="true" />
+                <element signature="e#7813#7832#0" expanded="true" />
+                <element signature="e#7957#7976#0" expanded="true" />
+                <element signature="e#8011#8030#0" expanded="true" />
+                <element signature="e#8273#8292#0" expanded="true" />
+                <element signature="e#8331#8350#0" expanded="true" />
+                <element signature="e#8805#8829#0" expanded="true" />
+                <element signature="e#11278#11303#0" expanded="true" />
+                <element signature="e#11338#11363#0" expanded="true" />
+                <element signature="e#11641#11664#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -259,20 +280,38 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.576923" vertical-offset="5409" max-vertical-offset="9480">
-              <caret line="380" column="51" selection-start-line="380" selection-start-column="51" selection-end-line="380" selection-end-column="51" />
+            <state vertical-scroll-proportion="-9.461538" vertical-offset="8694" max-vertical-offset="9870">
+              <caret line="596" column="40" selection-start-line="596" selection-start-column="40" selection-end-line="596" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#10264#10302#0" expanded="true" />
+                <element signature="e#10304#10333#0" expanded="true" />
+                <element signature="e#10335#10363#0" expanded="true" />
+                <element signature="e#10427#10428#0" expanded="true" />
+                <element signature="e#10498#10499#0" expanded="true" />
+                <element signature="e#11714#12004#0" expanded="true" />
+                <element signature="e#11985#11986#0" expanded="true" />
+                <element signature="e#12006#13022#0" expanded="true" />
+                <element signature="e#12219#12250#0" expanded="true" />
+                <element signature="e#12616#12659#0" expanded="true" />
+                <element signature="e#12782#12815#0" expanded="true" />
+                <element signature="e#13003#13004#0" expanded="true" />
+                <element signature="e#16312#16343#0" expanded="true" />
+                <element signature="e#18000#18031#0" expanded="true" />
+                <element signature="e#18243#18282#0" expanded="true" />
+                <element signature="e#18622#18659#0" expanded="true" />
+                <element signature="e#18919#18958#0" expanded="true" />
+                <element signature="e#19087#19123#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="card_favorite_selector.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/drawable/card_favorite_selector.xml">
+      <file leaf-file-name="ArrayAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../sdks/adt-bundle-mac-x86_64/sdk/sources/android-21/android/widget/ArrayAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
-              <caret line="3" column="61" selection-start-line="3" selection-start-column="61" selection-end-line="3" selection-end-column="61" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7260">
+              <caret line="405" column="16" selection-start-line="405" selection-start-column="16" selection-end-line="405" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -970,7 +1009,6 @@
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/menu/menu_done.xml" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable/card_detail_upper_half_shape.xml" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable/card_detail_lower_half_shape.xml" />
-        <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/menu/menu_add_edit.xml" />
         <option value="$PROJECT_DIR$/Rakefile" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/helpers/AlertsHelper.java" />
@@ -987,10 +1025,11 @@
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable/circle_button_selector.xml" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable/circle_button_favorite.xml" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/drawable/circle_button_normal.xml" />
-        <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/values/dimens.xml" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java" />
+        <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/values/dimens.xml" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/values/styles_tussam.xml" />
+        <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/res/layout/activity_main2.xml" />
       </list>
     </option>
@@ -1091,9 +1130,9 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="EC233DFD92CE" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="03d12eba006afe18" />
     <property name="DEBUGGABLE_DEVICE" value="huawei-huawei_y300_0100-EC233DFD92CE" />
-    <property name="DEBUGGABLE_PROCESS" value="es.claucookie.recargadev" />
+    <property name="DEBUGGABLE_PROCESS" value="es.claucookie.recarga.debug" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="FullScreen" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
@@ -1309,7 +1348,8 @@
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3271344" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32930514" sideWeight="0.625" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32829046" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32980332" sideWeight="0.625" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32719547" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1326,7 +1366,6 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2747253" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32223904" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1350,38 +1389,48 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java</url>
-          <line>181</line>
-          <properties />
-          <option name="timeStamp" value="52" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java</url>
-          <line>213</line>
-          <properties />
-          <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java</url>
-          <line>188</line>
+          <line>192</line>
           <properties />
           <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java</url>
+          <line>185</line>
+          <properties />
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java</url>
+          <line>225</line>
+          <properties />
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java</url>
+          <line>219</line>
+          <properties />
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java</url>
+          <line>228</line>
+          <properties />
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java</url>
+          <line>224</line>
+          <properties />
+          <option name="timeStamp" value="59" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="55" />
+      <option name="time" value="60" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="525">
-          <caret line="19" column="47" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/helpers/ApplicationController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.08042896" vertical-offset="75" max-vertical-offset="1440">
@@ -1434,13 +1483,6 @@
       </provider>
       <provider selected="true" editor-type-id="ninepatcheditor">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/drawable/tussam_progress_indeterminate_horizontal_holo_dark.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/drawable/tussam_logo_shape.xml">
@@ -1543,16 +1585,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1005">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48701298" vertical-offset="0" max-vertical-offset="2580">
-          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -1665,14 +1697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/drawable/circle_button_favorite.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/drawable/circle_button_normal.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
@@ -1691,14 +1715,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/values/dimens.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
-          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-xhdpi/ic_action_refresh.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1709,10 +1725,53 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/values/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/drawable/circle_button_favorite.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/drawable/card_favorite_selector.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+        <state vertical-scroll-proportion="0.12465374" vertical-offset="0" max-vertical-offset="361">
           <caret line="3" column="61" selection-start-line="3" selection-start-column="61" selection-end-line="3" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/drawable/tussam_progress_indeterminate_horizontal_holo_dark.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.4598338" vertical-offset="166" max-vertical-offset="540">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../sdks/adt-bundle-mac-x86_64/sdk/sources/android-21/android/widget/ArrayAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7260">
+          <caret line="405" column="16" selection-start-line="405" selection-start-column="16" selection-end-line="405" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.237013" vertical-offset="300" max-vertical-offset="2580">
+          <caret line="107" column="27" selection-start-line="107" selection-start-column="27" selection-end-line="107" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -1720,26 +1779,44 @@
     <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
-          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/values/styles_tussam.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.269231" vertical-offset="1014" max-vertical-offset="1635">
+          <caret line="75" column="17" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.576923" vertical-offset="5409" max-vertical-offset="9480">
-          <caret line="380" column="51" selection-start-line="380" selection-start-column="51" selection-end-line="380" selection-end-column="51" />
+        <state vertical-scroll-proportion="-9.461538" vertical-offset="8694" max-vertical-offset="9870">
+          <caret line="596" column="40" selection-start-line="596" selection-start-column="40" selection-end-line="596" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#10264#10302#0" expanded="true" />
+            <element signature="e#10304#10333#0" expanded="true" />
+            <element signature="e#10335#10363#0" expanded="true" />
+            <element signature="e#10427#10428#0" expanded="true" />
+            <element signature="e#10498#10499#0" expanded="true" />
+            <element signature="e#11714#12004#0" expanded="true" />
+            <element signature="e#11985#11986#0" expanded="true" />
+            <element signature="e#12006#13022#0" expanded="true" />
+            <element signature="e#12219#12250#0" expanded="true" />
+            <element signature="e#12616#12659#0" expanded="true" />
+            <element signature="e#12782#12815#0" expanded="true" />
+            <element signature="e#13003#13004#0" expanded="true" />
+            <element signature="e#16312#16343#0" expanded="true" />
+            <element signature="e#18000#18031#0" expanded="true" />
+            <element signature="e#18243#18282#0" expanded="true" />
+            <element signature="e#18622#18659#0" expanded="true" />
+            <element signature="e#18919#18958#0" expanded="true" />
+            <element signature="e#19087#19123#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/values/styles_tussam.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="1710">
-          <caret line="86" column="40" selection-start-line="86" selection-start-column="40" selection-end-line="86" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1748,23 +1825,32 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9025974" vertical-offset="1252" max-vertical-offset="4710">
-          <caret line="102" column="45" selection-start-line="102" selection-start-column="45" selection-end-line="102" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.24350649" vertical-offset="0" max-vertical-offset="4845">
+          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
           <folding>
-            <element signature="e#1184#1207#0" expanded="true" />
-            <element signature="e#1921#1944#0" expanded="true" />
-            <element signature="e#2653#2679#0" expanded="true" />
-            <element signature="e#2713#2738#0" expanded="true" />
-            <element signature="e#3210#3229#0" expanded="true" />
-            <element signature="e#3585#3609#0" expanded="true" />
-            <element signature="e#3847#3868#0" expanded="true" />
-            <element signature="e#4282#4304#0" expanded="true" />
-            <element signature="e#4534#4558#0" expanded="true" />
-            <element signature="e#5778#5802#0" expanded="true" />
-            <element signature="e#6520#6546#0" expanded="true" />
-            <element signature="e#8205#8229#0" expanded="true" />
-            <element signature="e#11098#11117#0" expanded="true" />
-            <element signature="e#11152#11171#0" expanded="true" />
+            <element signature="e#1234#1257#0" expanded="true" />
+            <element signature="e#1971#1994#0" expanded="true" />
+            <element signature="e#2703#2729#0" expanded="true" />
+            <element signature="e#2763#2788#0" expanded="true" />
+            <element signature="e#3260#3279#0" expanded="true" />
+            <element signature="e#3635#3659#0" expanded="true" />
+            <element signature="e#3897#3918#0" expanded="true" />
+            <element signature="e#4332#4354#0" expanded="true" />
+            <element signature="e#4584#4608#0" expanded="true" />
+            <element signature="e#5828#5852#0" expanded="true" />
+            <element signature="e#6570#6596#0" expanded="true" />
+            <element signature="e#7492#7511#0" expanded="true" />
+            <element signature="e#7546#7565#0" expanded="true" />
+            <element signature="e#7755#7774#0" expanded="true" />
+            <element signature="e#7813#7832#0" expanded="true" />
+            <element signature="e#7957#7976#0" expanded="true" />
+            <element signature="e#8011#8030#0" expanded="true" />
+            <element signature="e#8273#8292#0" expanded="true" />
+            <element signature="e#8331#8350#0" expanded="true" />
+            <element signature="e#8805#8829#0" expanded="true" />
+            <element signature="e#11278#11303#0" expanded="true" />
+            <element signature="e#11338#11363#0" expanded="true" />
+            <element signature="e#11641#11664#0" expanded="true" />
           </folding>
         </state>
       </provider>

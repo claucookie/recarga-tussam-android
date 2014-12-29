@@ -7,8 +7,9 @@
         <item name="android:actionModeBackground">@drawable/cab_background_top_tussam</item>
         <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_tussam</item>
         <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Tussam</item>
-        <item name="android:progressBarStyle">@style/ProgressBar.Tussam</item>
         <item name="android:spinnerDropDownItemStyle">@style/Spinner.Tussam</item>
+        <item name="android:spinnerItemStyle">@style/SpinnerItem.Tussam</item>
+        <item name="android:editTextColor">@color/common_text_color</item>
 
         <!-- Lollipop properties -->
         <!-- colorPrimary is used for the default action bar background -->
@@ -27,7 +28,6 @@
 
     </style>
 
-
     <style name="ActionBar.TitleTextStyle" parent="RtlOverlay.Widget.AppCompat.ActionBar.TitleItem">
         <item name="android:textColor">@color/color_palette_1</item>
     </style>
@@ -38,6 +38,11 @@
         <item name="android:textColor">@color/common_text_color</item>
     </style>
 
+    <style name="SpinnerItem.Tussam" parent="Widget.AppCompat.DropDownItem.Spinner">
+        <item name="android:textColor">@color/common_text_color</item>
+        <item name="android:textSize">@dimen/font_size_huge</item>
+    </style>
+
 
     <style name="ActionBarTabStyle.Tussam" parent="Widget.AppCompat.ActionBar.TabView">
         <item name="android:background">@drawable/tab_indicator_ab_tussam</item>
@@ -46,16 +51,6 @@
 
     <style name="ActionButton.CloseMode.Tussam" parent="Widget.AppCompat.ActionButton.CloseMode">
         <item name="android:background">@drawable/btn_cab_done_tussam</item>
-    </style>
-
-
-    <style name="ProgressBar.Tussam" parent="Widget.AppCompat.ProgressBar.Horizontal">
-        <item name="android:progressDrawable">@drawable/tussam_progress_horizontal_holo_dark</item>
-        <item name="android:indeterminateDrawable">
-            @drawable/tussam_progress_indeterminate_horizontal_holo_dark
-        </item>
-        <item name="android:minHeight">16dip</item>
-        <item name="android:maxHeight">16dip</item>
     </style>
 
     <style name="CommonText.Tussam" parent="android:Widget.TextView">

@@ -114,6 +114,8 @@ public class MainActivity extends ActionBarActivity {
     Button addCardButton;
     @ViewById
     ImageView minicard;
+    @ViewById
+    LinearLayout timeView;
 
     @InstanceState
     TussamCardsDTO tussamCardsDTO = new TussamCardsDTO();
@@ -133,6 +135,7 @@ public class MainActivity extends ActionBarActivity {
 
     @AfterViews
     void initViews() {
+        hideData();
         initSpinner();
         loadSavedCards();
         loadFirstView();
@@ -183,6 +186,7 @@ public class MainActivity extends ActionBarActivity {
         spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
         cardsSpinner.setAdapter(spinnerAdapter);
+
         cardsSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -199,6 +203,7 @@ public class MainActivity extends ActionBarActivity {
 
             }
         });
+
     }
 
     private void loadSavedCards() {
@@ -339,6 +344,7 @@ public class MainActivity extends ActionBarActivity {
             preloadData();
             if (selectedCardDTO.getCardNumber() != null) {
                 progressView.setVisibility(View.VISIBLE);
+                timeView.setVisibility(View.INVISIBLE);
                 String cardNumber = trim(selectedCardDTO.getCardNumber(), 0, selectedCardDTO.getCardNumber().length());
                 StringRequest req = new StringRequest(STATUS_URL + cardNumber, new Response.Listener<String>() {
                     @Override
@@ -379,6 +385,7 @@ public class MainActivity extends ActionBarActivity {
         cardsData.setVisibility(View.INVISIBLE);
         cardsEditData.setVisibility(View.INVISIBLE);
         cardCreditText.setVisibility(View.INVISIBLE);
+        cardNumberText.setVisibility(View.INVISIBLE);
         // remove soft keyboard
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(cardNumberText.getWindowToken(), 0);
@@ -524,6 +531,7 @@ public class MainActivity extends ActionBarActivity {
     private void showDetailView() {
         favoriteCardCb.setVisibility(View.VISIBLE);
         progressView.setVisibility(View.GONE);
+        timeView.setVisibility(View.VISIBLE);
         isDetailView = true;
         isEditView = false;
         isAddView = false;
@@ -533,17 +541,21 @@ public class MainActivity extends ActionBarActivity {
         cardActions.setVisibility(View.VISIBLE);
         cardEditActions.setVisibility(View.GONE);
         cardNewActions.setVisibility(View.GONE);
+        addCardButton.setVisibility(View.VISIBLE);
         // remove soft keyboard
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(cardNumberText.getWindowToken(), 0);
         minicard.setVisibility(View.VISIBLE);
         cardCreditText.setVisibility(View.VISIBLE);
+        cardLastUpdateText.setVisibility(View.VISIBLE);
+        cardNumberText.setVisibility(View.VISIBLE);
     }
 
     private void showAddView() {
         favoriteCardCb.setVisibility(View.GONE);
         cancelPendingRequests(TAG);
         progressView.setVisibility(View.GONE);
+        timeView.setVisibility(View.GONE);
         isDetailView = false;
         isEditView = false;
         isAddView = true;
@@ -557,6 +569,9 @@ public class MainActivity extends ActionBarActivity {
         cardNewActions.setVisibility(View.VISIBLE);
         minicard.setVisibility(View.GONE);
         cardCreditText.setVisibility(View.GONE);
+        addCardButton.setVisibility(View.GONE);
+        cardLastUpdateText.setVisibility(View.INVISIBLE);
+        cardNumberText.setVisibility(View.GONE);
     }
 
     private void showEditView() {
@@ -577,6 +592,9 @@ public class MainActivity extends ActionBarActivity {
         cardNewActions.setVisibility(View.GONE);
         minicard.setVisibility(View.GONE);
         cardCreditText.setVisibility(View.GONE);
+        addCardButton.setVisibility(View.GONE);
+        cardLastUpdateText.setVisibility(View.INVISIBLE);
+        timeView.setVisibility(View.GONE);
     }
 
     /**

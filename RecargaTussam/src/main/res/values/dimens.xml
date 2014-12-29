@@ -11,5 +11,6 @@
     <dimen name="font_size_small">12sp</dimen>
 
     <dimen name="icons_size">32dp</dimen>
+    <dimen name="icons_small_size">28dp</dimen>
 
 </resources>
