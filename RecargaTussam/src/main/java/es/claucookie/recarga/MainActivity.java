@@ -39,6 +39,8 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -186,7 +188,6 @@ public class MainActivity extends ActionBarActivity {
         spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
         cardsSpinner.setAdapter(spinnerAdapter);
-
         cardsSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -203,6 +204,7 @@ public class MainActivity extends ActionBarActivity {
 
             }
         });
+
 
     }
 
@@ -478,11 +480,12 @@ public class MainActivity extends ActionBarActivity {
         if (selectedCardDTO != null) {
             cardNameText.setText(selectedCardDTO.getCardName() != null ? selectedCardDTO.getCardName() : "");
             cardEditNameText.setText(selectedCardDTO.getCardName() != null ? selectedCardDTO.getCardName() : "");
-            cardNumberText.setText(selectedCardDTO.getCardNumber() != null ? selectedCardDTO.getCardNumber() : "");
             cardEditNumberText.setText(selectedCardDTO.getCardNumber() != null ? selectedCardDTO.getCardNumber() : "");
             cardStatusText.setText(selectedCardDTO.getCardStatus() != null ? selectedCardDTO.getCardStatus() : "");
             cardTypeText.setText(selectedCardDTO.getCardType() != null ? selectedCardDTO.getCardType().substring(1, selectedCardDTO.getCardType().length()) : "");
             cardCreditText.setText(selectedCardDTO.getCardCredit() != null ? selectedCardDTO.getCardCredit() : "");
+            cardNumberText.setText(getFormattedNumber(selectedCardDTO.getCardNumber() != null ? selectedCardDTO.getCardNumber() : ""));
+
             if (selectedCardDTO.getLastDate() != null) {
                 Date nowDate = new Date();
                 long nowDateDifferenceLong = nowDate.getTime() - selectedCardDTO.getLastDate();
@@ -518,6 +521,20 @@ public class MainActivity extends ActionBarActivity {
                 cardLastUpdateText.setText("");
             }
         }
+    }
+
+    private String getFormattedNumber(String number) {
+        if (!number.isEmpty()) {
+            // format number #### #### ####
+            DecimalFormat fmt = new DecimalFormat();
+            DecimalFormatSymbols fmts = new DecimalFormatSymbols();
+            fmts.setGroupingSeparator(' ');
+            fmt.setGroupingSize(4);
+            fmt.setGroupingUsed(true);
+            fmt.setDecimalFormatSymbols(fmts);
+            number = fmt.format(Long.valueOf(number));
+        }
+        return number;
     }
 
     private void clearData() {

@@ -51,6 +51,7 @@
             android:layout_toRightOf="@+id/minicard"
             android:layout_marginRight="70dp"
             android:layout_marginBottom="20dp"
+            android:spinnerMode="dialog"
             tools:text="Clo"/>
 
         <RelativeLayout
@@ -70,8 +71,7 @@
                 style="@style/CardText.Tussam"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="42dp"
-                android:layout_marginRight="100dp"
-                android:textStyle="bold"/>
+                android:layout_marginRight="100dp"/>
 
 
             <com.mobivery.android.widgets.ExLabel
@@ -152,7 +152,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 tools:text="#### #### ####"
-                android:maxLength="15"
+                android:maxLength="14"
                 android:layout_below="@id/card_edit_name_text"
                 android:gravity="center_vertical"
                 android:textSize="17sp"
@@ -223,7 +223,8 @@
             tools:text="Última actualización:\n15/04/2014"
             android:layout_toRightOf="@+id/time_view"
             style="@style/CardText.Tussam"
-            android:textSize="@dimen/font_size_small"/>
+            android:textSize="@dimen/font_size_small"
+            android:layout_marginLeft="5dp"/>
 
         <LinearLayout
             android:id="@+id/card_actions"

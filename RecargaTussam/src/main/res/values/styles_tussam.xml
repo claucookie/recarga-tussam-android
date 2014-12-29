@@ -7,7 +7,6 @@
         <item name="android:actionModeBackground">@drawable/cab_background_top_tussam</item>
         <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_tussam</item>
         <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Tussam</item>
-        <item name="android:spinnerDropDownItemStyle">@style/Spinner.Tussam</item>
         <item name="android:spinnerItemStyle">@style/SpinnerItem.Tussam</item>
         <item name="android:editTextColor">@color/common_text_color</item>
 
@@ -26,16 +25,6 @@
         <item name="colorControlActivated">@color/color_accent</item>
 
 
-    </style>
-
-    <style name="ActionBar.TitleTextStyle" parent="RtlOverlay.Widget.AppCompat.ActionBar.TitleItem">
-        <item name="android:textColor">@color/color_palette_1</item>
-    </style>
-
-    <style name="Spinner.Tussam" parent="Widget.AppCompat.Spinner">
-        <item name="android:padding">10dp</item>
-        <item name="android:background">@color/color_palette_1_dark</item>
-        <item name="android:textColor">@color/common_text_color</item>
     </style>
 
     <style name="SpinnerItem.Tussam" parent="Widget.AppCompat.DropDownItem.Spinner">
