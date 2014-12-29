@@ -74,6 +74,21 @@ android {
 
         debug {
             applicationIdSuffix ".debug"
+            versionNameSuffix "-dev"
+        }
+    }
+
+    productFlavors {
+        recargaTussam {
+            applicationId "es.claucookie.recarga"
+            versionName "2.0"
+            versionCode 7
+        }
+        recargaAucorsa {
+
+            applicationId "es.claucookie.recargaaucorsa"
+            versionName "1.0"
+            versionCode 1
         }
     }
 
