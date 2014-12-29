@@ -49,8 +49,6 @@
   <component name="ChangeListManager">
     <list default="true" id="adf1f0e6-e11a-45e9-a1a2-b35b80c70d54" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/res/layout/activity_main2.xml" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/layout/activity_main2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/res/values/styles_tussam.xml" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/res/values/styles_tussam.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="recarga-tussam-android.iws" />
@@ -240,28 +238,28 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28656715" vertical-offset="7179" max-vertical-offset="10125">
-              <caret line="485" column="115" selection-start-line="485" selection-start-column="115" selection-end-line="485" selection-end-column="115" />
+            <state vertical-scroll-proportion="0.041551247" vertical-offset="2220" max-vertical-offset="10545">
+              <caret line="149" column="69" selection-start-line="149" selection-start-column="69" selection-end-line="149" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#10335#10373#0" expanded="true" />
-                <element signature="e#10375#10404#0" expanded="true" />
-                <element signature="e#10406#10434#0" expanded="true" />
-                <element signature="e#10498#10499#0" expanded="true" />
-                <element signature="e#10569#10570#0" expanded="true" />
-                <element signature="e#11785#12075#0" expanded="true" />
-                <element signature="e#12056#12057#0" expanded="true" />
-                <element signature="e#12077#13093#0" expanded="true" />
-                <element signature="e#12290#12321#0" expanded="true" />
-                <element signature="e#12687#12730#0" expanded="true" />
-                <element signature="e#12853#12886#0" expanded="true" />
-                <element signature="e#13074#13075#0" expanded="true" />
-                <element signature="e#16383#16414#0" expanded="true" />
-                <element signature="e#18092#18123#0" expanded="true" />
-                <element signature="e#18335#18374#0" expanded="true" />
-                <element signature="e#18714#18751#0" expanded="true" />
-                <element signature="e#19011#19050#0" expanded="true" />
-                <element signature="e#19179#19215#0" expanded="true" />
+                <element signature="e#11373#11411#0" expanded="true" />
+                <element signature="e#11413#11442#0" expanded="true" />
+                <element signature="e#11444#11472#0" expanded="true" />
+                <element signature="e#11536#11537#0" expanded="true" />
+                <element signature="e#11607#11608#0" expanded="true" />
+                <element signature="e#12823#13113#0" expanded="true" />
+                <element signature="e#13094#13095#0" expanded="true" />
+                <element signature="e#13115#14131#0" expanded="true" />
+                <element signature="e#13328#13359#0" expanded="true" />
+                <element signature="e#13725#13768#0" expanded="true" />
+                <element signature="e#13891#13924#0" expanded="true" />
+                <element signature="e#14112#14113#0" expanded="true" />
+                <element signature="e#17421#17452#0" expanded="true" />
+                <element signature="e#19150#19181#0" expanded="true" />
+                <element signature="e#19393#19432#0" expanded="true" />
+                <element signature="e#19772#19809#0" expanded="true" />
+                <element signature="e#20069#20108#0" expanded="true" />
+                <element signature="e#20237#20273#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1476,13 +1474,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java</url>
-          <line>193</line>
+          <line>221</line>
           <properties />
           <option name="timeStamp" value="54" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java</url>
-          <line>204</line>
+          <line>232</line>
           <properties />
           <option name="timeStamp" value="60" />
         </line-breakpoint>
@@ -1490,15 +1488,10 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="62" />
+      <option name="time" value="71" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/res/drawable-xhdpi/icon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../sdks/adt-bundle-mac-x86_64/sdk/platforms/android-19/data/res/values-sw600dp/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.96514744" vertical-offset="0" max-vertical-offset="510">
@@ -1864,30 +1857,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../sdks/adt-bundle-mac-x86_64/sdk/sources/android-21/android/widget/TextView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3315508" vertical-offset="50291" max-vertical-offset="137160">
+          <caret line="3601" column="22" selection-start-line="3601" selection-start-column="22" selection-end-line="3601" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28656715" vertical-offset="7179" max-vertical-offset="10125">
-          <caret line="485" column="115" selection-start-line="485" selection-start-column="115" selection-end-line="485" selection-end-column="115" />
+        <state vertical-scroll-proportion="0.041551247" vertical-offset="2220" max-vertical-offset="10545">
+          <caret line="149" column="69" selection-start-line="149" selection-start-column="69" selection-end-line="149" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#10335#10373#0" expanded="true" />
-            <element signature="e#10375#10404#0" expanded="true" />
-            <element signature="e#10406#10434#0" expanded="true" />
-            <element signature="e#10498#10499#0" expanded="true" />
-            <element signature="e#10569#10570#0" expanded="true" />
-            <element signature="e#11785#12075#0" expanded="true" />
-            <element signature="e#12056#12057#0" expanded="true" />
-            <element signature="e#12077#13093#0" expanded="true" />
-            <element signature="e#12290#12321#0" expanded="true" />
-            <element signature="e#12687#12730#0" expanded="true" />
-            <element signature="e#12853#12886#0" expanded="true" />
-            <element signature="e#13074#13075#0" expanded="true" />
-            <element signature="e#16383#16414#0" expanded="true" />
-            <element signature="e#18092#18123#0" expanded="true" />
-            <element signature="e#18335#18374#0" expanded="true" />
-            <element signature="e#18714#18751#0" expanded="true" />
-            <element signature="e#19011#19050#0" expanded="true" />
-            <element signature="e#19179#19215#0" expanded="true" />
+            <element signature="e#11373#11411#0" expanded="true" />
+            <element signature="e#11413#11442#0" expanded="true" />
+            <element signature="e#11444#11472#0" expanded="true" />
+            <element signature="e#11536#11537#0" expanded="true" />
+            <element signature="e#11607#11608#0" expanded="true" />
+            <element signature="e#12823#13113#0" expanded="true" />
+            <element signature="e#13094#13095#0" expanded="true" />
+            <element signature="e#13115#14131#0" expanded="true" />
+            <element signature="e#13328#13359#0" expanded="true" />
+            <element signature="e#13725#13768#0" expanded="true" />
+            <element signature="e#13891#13924#0" expanded="true" />
+            <element signature="e#14112#14113#0" expanded="true" />
+            <element signature="e#17421#17452#0" expanded="true" />
+            <element signature="e#19150#19181#0" expanded="true" />
+            <element signature="e#19393#19432#0" expanded="true" />
+            <element signature="e#19772#19809#0" expanded="true" />
+            <element signature="e#20069#20108#0" expanded="true" />
+            <element signature="e#20237#20273#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -3,7 +3,9 @@ package es.claucookie.recarga;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
@@ -139,8 +141,34 @@ public class MainActivity extends ActionBarActivity {
     void initViews() {
         hideData();
         initSpinner();
+        initEditText();
         loadSavedCards();
         loadFirstView();
+    }
+
+    private void initEditText() {
+        cardEditNumberText.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                String strTrimmed = cardEditNumberText.getText().toString().replace(" ", "");
+                cardEditNumberText.removeTextChangedListener(this);
+                String formattedString = getFormattedNumber(strTrimmed);
+                cardEditNumberText.setText(formattedString);
+                cardEditNumberText.setSelection(formattedString.length());
+                cardEditNumberText.addTextChangedListener(this);
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count,
+                                          int after) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
     }
 
 
@@ -480,7 +508,7 @@ public class MainActivity extends ActionBarActivity {
         if (selectedCardDTO != null) {
             cardNameText.setText(selectedCardDTO.getCardName() != null ? selectedCardDTO.getCardName() : "");
             cardEditNameText.setText(selectedCardDTO.getCardName() != null ? selectedCardDTO.getCardName() : "");
-            cardEditNumberText.setText(selectedCardDTO.getCardNumber() != null ? selectedCardDTO.getCardNumber() : "");
+            cardEditNumberText.setText(getFormattedNumber(selectedCardDTO.getCardNumber() != null ? selectedCardDTO.getCardNumber() : ""));
             cardStatusText.setText(selectedCardDTO.getCardStatus() != null ? selectedCardDTO.getCardStatus() : "");
             cardTypeText.setText(selectedCardDTO.getCardType() != null ? selectedCardDTO.getCardType().substring(1, selectedCardDTO.getCardType().length()) : "");
             cardCreditText.setText(selectedCardDTO.getCardCredit() != null ? selectedCardDTO.getCardCredit() : "");
@@ -598,7 +626,7 @@ public class MainActivity extends ActionBarActivity {
         isEditView = true;
         isAddView = false;
         if (selectedCardDTO != null) {
-            cardEditNumberText.setText(selectedCardDTO.getCardNumber());
+            cardEditNumberText.setText(getFormattedNumber(selectedCardDTO.getCardNumber()));
             cardEditNameText.setText(selectedCardDTO.getCardName());
         }
         cardsSpinner.setVisibility(View.GONE);
