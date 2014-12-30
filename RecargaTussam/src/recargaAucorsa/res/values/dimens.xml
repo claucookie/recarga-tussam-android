@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="card_status_left_margin">42dp</dimen>
+    <integer name="card_number_length">10</integer>
+</resources>

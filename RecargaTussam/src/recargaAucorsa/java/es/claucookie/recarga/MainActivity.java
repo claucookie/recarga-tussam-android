@@ -4,9 +4,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.text.Editable;
 import android.text.TextUtils;
-import android.text.TextWatcher;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
@@ -19,14 +17,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
-import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.crashlytics.android.Crashlytics;
 import com.mobivery.android.helpers.TagFormat;
@@ -46,8 +40,6 @@ import org.jsoup.nodes.Element;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
-import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -61,7 +53,6 @@ import es.claucookie.recarga.model.dto.TussamCardsDTO;
 public class MainActivity extends ActionBarActivity {
     public static final String STATUS_URL = "http://recargas.aucorsa.es/checkcard.php?nCard=";
     public static final String CREDIT_URL = "http://recargas.aucorsa.es/checkcard.php?nCard=";
-    public static final String VALIDATE_URL = "https://recargas.tussam.es/TPW/Common/validateHWSNumberAjax.do?idNewCard=";
     public static final long ONE_MINUTE = 60 * 1000; // Millisecs
     public static final long ONE_HOUR = ONE_MINUTE * 60;
     public static final long ONE_DAY = ONE_HOUR * 24;
@@ -201,7 +192,6 @@ public class MainActivity extends ActionBarActivity {
                         && aucorsaCardsDTO.getCards().size() > 0) {
                     selectedCardDTO = aucorsaCardsDTO.getCards().get(position);
                     requestCardInfo();
-
                 }
             }
 
@@ -287,7 +277,6 @@ public class MainActivity extends ActionBarActivity {
         if (cardEditNumberText != null && cardEditNameText != null) {
             String newCardNumber = cardEditNumberText.getText() != null ? cardEditNumberText.getText().toString().replace(" ", "") : "";
             String newCardName = cardEditNameText.getText() != null ? cardEditNameText.getText().toString() : "";
-            //newCardNumber = newCardNumber.replaceFirst("^0+(?!$)", "");
             if (selectedCardDTO != null && !newCardNumber.equals("")) {
                 selectedCardDTO.setCardName(newCardName);
                 selectedCardDTO.setCardNumber(newCardNumber);
@@ -356,37 +345,6 @@ public class MainActivity extends ActionBarActivity {
                 timeView.setVisibility(View.INVISIBLE);
                 String cardNumber = trim(selectedCardDTO.getCardNumber(), 0, selectedCardDTO.getCardNumber().length());
                 parseHtml(cardNumber);
-                /*
-                StringRequest req = new StringRequest(STATUS_URL + cardNumber, new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        parseHtml(response);
-                    }
-                }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        reloadData();
-                        String errorString = getString(R.string.parse_error);
-                        if (error.networkResponse != null &&
-                                error.networkResponse.statusCode == 500 &&
-                                selectedCardDTO != null &&
-                                selectedCardDTO.getCardCredit() == null) {
-
-                            // Server error
-                            cardTypeText.setText(getString(R.string.wrong_card_number_error));
-                        } else {
-                            // Network error
-                            errorString = getString(R.string.network_error);
-                        }
-                        Toast.makeText(MainActivity.this, errorString, Toast.LENGTH_LONG).show();
-                        showDetailView();
-                    }
-                });
-
-
-                // add the request object to the queue to be executed
-                addToRequestQueue(req);
-                */
             }
         }
 
@@ -431,24 +389,30 @@ public class MainActivity extends ActionBarActivity {
     @Background
     public void parseHtml(String response) {
 
-        boolean errorFound = false;
         if (selectedCardDTO == null) {
             selectedCardDTO = new TussamCardDTO();
         }
         try {
-            Document document = Jsoup.connect(STATUS_URL+response)
+            Document document = Jsoup.connect(STATUS_URL + response)
                     .userAgent(getEncStr("TW96aWxsYS81LjAgKGNvbXBhdGlibGU7IEdvb2dsZWJvdC8yLjE7ICtodHRwOi8vd3d3Lmdvb2dsZS5jb20vYm90Lmh0bWwp"))
                     .get();
 
             Element mainDiv = document.getElementById("global");
             if (mainDiv != null) {
-                //Element cardDiv = mainDiv.getElementsByClass("card").get(0);
                 if (!mainDiv.select("span.spanSaldo").isEmpty()) {
                     String credit = mainDiv.select("span.spanSaldo").text();
                     selectedCardDTO.setCardCredit(credit);
                     selectedCardDTO.setLastDate((new Date()).getTime());
+                    selectedCardDTO.setCardType(mainDiv.select("p#titleName").text());
+                    String tripsLeft = TagFormat.from(getString(R.string.trips_left))
+                            .with("trip", getNumberOfTrips())
+                            .format();
+                    selectedCardDTO.setCardStatus(tripsLeft);
                 } else {
                     selectedCardDTO.setCardType(mainDiv.select("span#spanMsg").text());
+                    selectedCardDTO.setCardCredit("");
+                    selectedCardDTO.setLastDate((new Date()).getTime());
+                    selectedCardDTO.setCardStatus(getString(R.string.register_text));
                 }
             }
         } catch (IOException e) {
@@ -470,6 +434,21 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
+    private String getNumberOfTrips() {
+
+        Float price = Float.valueOf(getString(R.string.precio_normal));
+        if (selectedCardDTO.getCardType().toLowerCase().contains("estudiante")) {
+            price = Float.valueOf(getString(R.string.precio_estudiante));
+        } else if (selectedCardDTO.getCardType().toLowerCase().contains("numerosa")) {
+            price = Float.valueOf(getString(R.string.precio_familia_numerosa));
+        } else if (selectedCardDTO.getCardType().toLowerCase().contains("feria")) {
+            price = Float.valueOf(getString(R.string.precio_feria));
+        }
+        Float numberOfTrips = Float.valueOf(selectedCardDTO.getCardCredit().replace(" €", "")) / price;
+
+        return String.format("%d", numberOfTrips.intValue());
+    }
+
     @UiThread
     public void preloadData() {
         // Load data stored in preferences like favorite card flag
@@ -486,7 +465,7 @@ public class MainActivity extends ActionBarActivity {
             cardEditNameText.setText(selectedCardDTO.getCardName() != null ? selectedCardDTO.getCardName() : "");
             cardEditNumberText.setText(getFormattedNumber(selectedCardDTO.getCardNumber() != null ? selectedCardDTO.getCardNumber() : ""));
             cardStatusText.setText(selectedCardDTO.getCardStatus() != null ? selectedCardDTO.getCardStatus() : "");
-            cardTypeText.setText(selectedCardDTO.getCardType() != null && selectedCardDTO.getCardType().length() > 0 ? selectedCardDTO.getCardType().substring(1, selectedCardDTO.getCardType().length()) : "");
+            cardTypeText.setText(selectedCardDTO.getCardType() != null ? selectedCardDTO.getCardType() : "");
             cardCreditText.setText(selectedCardDTO.getCardCredit() != null ? selectedCardDTO.getCardCredit() : "");
             cardNumberText.setText(getFormattedNumber(selectedCardDTO.getCardNumber() != null ? selectedCardDTO.getCardNumber() : ""));
 
@@ -565,7 +544,6 @@ public class MainActivity extends ActionBarActivity {
 
     private void showAddView() {
         favoriteCardCb.setVisibility(View.GONE);
-        cancelPendingRequests(TAG);
         progressView.setVisibility(View.GONE);
         timeView.setVisibility(View.GONE);
         isDetailView = false;
@@ -588,7 +566,6 @@ public class MainActivity extends ActionBarActivity {
 
     private void showEditView() {
         favoriteCardCb.setVisibility(View.VISIBLE);
-        cancelPendingRequests(TAG);
         isDetailView = false;
         isEditView = true;
         isAddView = false;
@@ -610,59 +587,6 @@ public class MainActivity extends ActionBarActivity {
     }
 
     /**
-     * @return The Volley Request queue, the queue will be created if it is null
-     */
-    public RequestQueue getRequestQueue() {
-        // lazy initialize the request queue, the queue instance will be
-        // created when it is accessed for the first time
-        if (mRequestQueue == null) {
-            mRequestQueue = Volley.newRequestQueue(getApplicationContext());
-        }
-
-        return mRequestQueue;
-    }
-
-    /**
-     * Adds the specified request to the global queue, if tag is specified
-     * then it is used else Default TAG is used.
-     *
-     * @param req
-     * @param tag
-     */
-    public <T> void addToRequestQueue(Request<T> req, String tag) {
-        // set the default tag if tag is empty
-        req.setTag(TextUtils.isEmpty(tag) ? TAG : tag);
-
-        VolleyLog.d("Adding request to queue: %s", req.getUrl());
-
-        getRequestQueue().add(req);
-    }
-
-    /**
-     * Adds the specified request to the global queue using the Default TAG.
-     *
-     * @param req
-     */
-    public <T> void addToRequestQueue(Request<T> req) {
-        // set the default tag if tag is empty
-        req.setTag(TAG);
-
-        getRequestQueue().add(req);
-    }
-
-    /**
-     * Cancels all pending requests by the specified TAG, it is important
-     * to specify a TAG so that the pending/ongoing requests can be cancelled.
-     *
-     * @param tag
-     */
-    public void cancelPendingRequests(Object tag) {
-        if (mRequestQueue != null) {
-            mRequestQueue.cancelAll(tag);
-        }
-    }
-
-    /**
      * Other
      */
 
@@ -677,60 +601,4 @@ public class MainActivity extends ActionBarActivity {
         return text;
     }
 
-    private class GetCard extends AsyncTask<String, Void, Void> {
-        private String tarjeta = null;
-        private String saldo = null;
-        private boolean error = false;
-        private boolean registrar = false;
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-        }
-
-        @Override
-        protected Void doInBackground(String... params) {
-            tarjeta = params[0];
-            String url = getEncStr(STATUS_URL);
-            Log.d(TAG, url);
-            /*
-            try {
-                tarjeta = params[0];
-
-                Document document = Jsoup.connect(getEncStr(STATUS_URL)+tarjeta)
-                        .userAgent(getEncStr(getString(R.string.url_ua)))
-                        .get();
-                if(document.select("span.spanSaldo").isEmpty()) {
-                    error = true;
-                    if(!document.select("span#spanMsg").isEmpty())
-                        errorTXT = document.select("span#spanMsg").text();
-                    if(!document.select("div.divFormRegistration").isEmpty()) {
-                        registrar = true;
-                    }
-                } else {
-                    saldo = document.select("span.spanSaldo").text();
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            */
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(Void result) {
-            if (!error) {
-                if (saldo != null) {
-                    //Intent intent = new Intent(getApplicationContext(), InfoActivity.class);
-                    //intent.putExtra("SALDO", saldo);
-                    //intent.putExtra("NUMTARJETA", tarjeta);
-                    //startActivity(intent);
-                } else {
-                    //showMessage(getString(R.string.error), getString(R.string.error_saldo));
-                }
-            } else {
-
-            }
-        }
-    }
 }

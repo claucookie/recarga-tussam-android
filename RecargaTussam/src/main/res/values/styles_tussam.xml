@@ -58,6 +58,12 @@
         <item name="fontName">Roboto-Light</item>
     </style>
 
+    <style name="CardBoldText.Tussam" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/card_detail_text_color</item>
+        <item name="android:textColorHint">@color/card_detail_text_color</item>
+        <item name="fontName">Roboto-Bold</item>
+    </style>
+
     <style name="HighlightCardText.Tussam" parent="android:Widget.TextView">
         <item name="android:textColor">@color/card_detail_text_color</item>
     </style>

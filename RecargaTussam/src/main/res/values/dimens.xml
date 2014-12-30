@@ -13,4 +13,7 @@
     <dimen name="icons_size">32dp</dimen>
     <dimen name="icons_small_size">28dp</dimen>
 
+    <dimen name="card_status_left_margin">36dp</dimen>
+    <integer name="card_number_length">14</integer>
+
 </resources>
