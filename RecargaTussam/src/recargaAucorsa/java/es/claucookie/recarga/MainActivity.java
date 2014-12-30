@@ -255,7 +255,6 @@ public class MainActivity extends ActionBarActivity {
 
     @Click(R.id.done_card_image)
     void createCardClicked() {
-
         String newCardNumber = cardEditNumberText.getText() != null ? cardEditNumberText.getText().toString().replace(" ", "") : "";
         String newCardName = cardEditNameText.getText() != null ? cardEditNameText.getText().toString() : "";
         if (!newCardNumber.equals("")) {

@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/RecargaTussam" />
+            <option value="$PROJECT_DIR$/bonobuswear" />
           </set>
         </option>
       </GradleProjectSettings>
