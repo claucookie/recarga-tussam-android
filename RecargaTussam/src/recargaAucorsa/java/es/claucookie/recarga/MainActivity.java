@@ -258,7 +258,6 @@ public class MainActivity extends ActionBarActivity {
 
         String newCardNumber = cardEditNumberText.getText() != null ? cardEditNumberText.getText().toString().replace(" ", "") : "";
         String newCardName = cardEditNameText.getText() != null ? cardEditNameText.getText().toString() : "";
-        newCardNumber = newCardNumber.replaceFirst("^0+(?!$)", "");
         if (!newCardNumber.equals("")) {
             TussamCardDTO newCard = new TussamCardDTO();
             newCard.setCardName(newCardName);

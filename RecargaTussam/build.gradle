@@ -82,7 +82,7 @@ android {
         recargaTussam {
             applicationId "es.claucookie.recarga"
             versionName "2.0"
-            versionCode 7
+            versionCode 12
         }
         recargaAucorsa {
             applicationId "es.claucookie.recargaaucorsa"
