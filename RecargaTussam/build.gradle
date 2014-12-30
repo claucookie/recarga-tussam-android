@@ -85,7 +85,6 @@ android {
             versionCode 7
         }
         recargaAucorsa {
-
             applicationId "es.claucookie.recargaaucorsa"
             versionName "1.0"
             versionCode 1
