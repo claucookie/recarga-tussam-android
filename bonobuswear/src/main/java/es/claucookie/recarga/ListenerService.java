@@ -13,13 +13,17 @@ public class ListenerService extends WearableListenerService {
     @Override
     public void onMessageReceived(MessageEvent messageEvent) {
 
-        if (messageEvent.getPath().equals("/message_path")) {
-            final String message = new String(messageEvent.getData());
-            Log.v("myTag", "Message path received on watch is: " + messageEvent.getPath());
-            Log.v("myTag", "Message received on watch is: " + message);
-        } else if (messageEvent.getPath().equals("/received_data")) {
-            Log.v("myTag", "Message path received on watch is: " + messageEvent.getPath());
-            Log.v("myTag", "Message received on watch is: " + new String(messageEvent.getData()));
+        if (messageEvent.getPath().equals(Consts.GET_FAVORITE_CARD_INFO_MESSAGE)) {
+            if (BuildConfig.DEBUG) {
+                Log.v("myTag", "Message path received on watch is: " + messageEvent.getPath());
+                Log.v("myTag", "Message received on watch is: " + new String(messageEvent.getData()));
+            }
+            Log.v("myTag", new String(messageEvent.getData()));
+        } else if (messageEvent.getPath().equals(Consts.GET_FAVORITE_CARD_INFO_ERROR)) {
+            if (BuildConfig.DEBUG) {
+                Log.v("myTag", "Message path received on watch is: " + messageEvent.getPath());
+                Log.v("myTag", "Message received on watch is: " + new String(messageEvent.getData()));
+            }
         }
         else {
             super.onMessageReceived(messageEvent);

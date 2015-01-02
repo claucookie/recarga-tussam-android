@@ -54,9 +54,9 @@ public class MainActivity extends Activity implements
     // Send a message when the data layer connection is successful.
     @Override
     public void onConnected(Bundle connectionHint) {
-        String message = "Hello handheld\n Via the data layer";
-        //Requires a new thread to avoid blocking the UI
-        new SendToDataLayerThread("/message_path", message).start();
+        String message = "Connected to handheld !!!";
+        // Send Message to Handheld to request Card info
+        new SendToDataLayerThread(Consts.GET_FAVORITE_CARD_INFO_MESSAGE, message).start();
     }
 
     // Disconnect from the data layer when the Activity stops
@@ -90,11 +90,15 @@ public class MainActivity extends Activity implements
             for (Node node : nodes.getNodes()) {
                 MessageApi.SendMessageResult result = Wearable.MessageApi.sendMessage(googleClient, node.getId(), path, message.getBytes()).await();
                 if (result.getStatus().isSuccess()) {
-                    Log.v("myTag", "Message: {" + message + "} sent to: " + node.getDisplayName());
+                    if (BuildConfig.DEBUG) {
+                        Log.v("myTag", "Message: {" + message + "} sent to: " + node.getDisplayName());
+                    }
                 }
                 else {
                     // Log an error
-                    Log.v("myTag", "ERROR: failed to send Message");
+                    if (BuildConfig.DEBUG) {
+                        Log.v("myTag", "ERROR: failed to send Message");
+                    }
                 }
             }
         }
