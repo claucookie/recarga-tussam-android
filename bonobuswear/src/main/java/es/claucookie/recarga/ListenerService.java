@@ -17,6 +17,9 @@ public class ListenerService extends WearableListenerService {
             final String message = new String(messageEvent.getData());
             Log.v("myTag", "Message path received on watch is: " + messageEvent.getPath());
             Log.v("myTag", "Message received on watch is: " + message);
+        } else if (messageEvent.getPath().equals("/received_data")) {
+            Log.v("myTag", "Message path received on watch is: " + messageEvent.getPath());
+            Log.v("myTag", "Message received on watch is: " + new String(messageEvent.getData()));
         }
         else {
             super.onMessageReceived(messageEvent);
