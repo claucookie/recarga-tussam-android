@@ -1,7 +1,12 @@
 package es.claucookie.recarga;
 
 import android.app.Activity;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.wearable.view.WatchViewStub;
 import android.util.Log;
 import android.widget.TextView;
@@ -28,9 +33,15 @@ public class MainActivity extends Activity implements
         stub.setOnLayoutInflatedListener(new WatchViewStub.OnLayoutInflatedListener() {
             @Override
             public void onLayoutInflated(WatchViewStub stub) {
-                mTextView = (TextView) stub.findViewById(R.id.text);
+                mTextView = (TextView) stub.findViewById(R.id.text_view);
             }
         });
+
+        // Register the local broadcast receiver, defined in step 3.
+        IntentFilter messageFilter = new IntentFilter(Intent.ACTION_SEND);
+        MessageReceiver messageReceiver = new MessageReceiver();
+        LocalBroadcastManager.getInstance(this).registerReceiver(messageReceiver, messageFilter);
+
 
         // Build a new GoogleApiClient
         googleClient = new GoogleApiClient.Builder(this)
@@ -103,4 +114,20 @@ public class MainActivity extends Activity implements
             }
         }
     }
+
+    /**
+     * Broadcast receivers
+     */
+
+    public class MessageReceiver extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (intent != null && intent.hasExtra(Consts.CARD_DATA)) {
+                String message = intent.getStringExtra(Consts.CARD_DATA);
+                // Display message in UI
+                mTextView.setText(message);
+            }
+        }
+    }
+
 }
