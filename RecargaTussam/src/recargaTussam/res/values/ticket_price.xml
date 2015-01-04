@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="precio_normal" translatable="false">0.71</string>
+    <string name="precio_familia_numerosa" translatable="false">0.64</string>
+    <string name="precio_estudiante" translatable="false">0.58</string>
+    <string name="precio_feria" translatable="false">1.36</string>
+</resources>

@@ -18,6 +18,7 @@ import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.android.volley.Network;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -54,9 +55,6 @@ import es.claucookie.recarga.model.dto.TussamCardsDTO;
 
 @EActivity(R.layout.activity_main2)
 public class MainActivity extends ActionBarActivity {
-    public static final String STATUS_URL = "http://recargas.tussam.es/TPW/Common/cardStatus.do?swNumber=";
-    public static final String CREDIT_URL = "https://recargas.tussam.es/TPW/Common/viewProductSelection.do?idNewCard=";
-    public static final String VALIDATE_URL = "https://recargas.tussam.es/TPW/Common/validateHWSNumberAjax.do?idNewCard=";
     public static final long ONE_MINUTE = 60 * 1000; // Millisecs
     public static final long ONE_HOUR = ONE_MINUTE * 60;
     public static final long ONE_DAY = ONE_HOUR * 24;
@@ -342,7 +340,7 @@ public class MainActivity extends ActionBarActivity {
     @Click(R.id.recharge_card_image)
     void rechargeCardClicked() {
         if (selectedCardDTO != null) {
-            String externalUrl = CREDIT_URL + selectedCardDTO.getCardNumber();
+            String externalUrl = NetworkConsts.CREDIT_URL + selectedCardDTO.getCardNumber();
             GeneralHelper.launchExternalUrlWeb(this, externalUrl, getString(R.string.recharge_card_text), getString(R.string.alert_yes), getString(R.string.alert_no));
         }
     }
@@ -375,8 +373,8 @@ public class MainActivity extends ActionBarActivity {
             if (selectedCardDTO.getCardNumber() != null) {
                 progressView.setVisibility(View.VISIBLE);
                 timeView.setVisibility(View.INVISIBLE);
-                String cardNumber = trim(selectedCardDTO.getCardNumber(), 0, selectedCardDTO.getCardNumber().length());
-                StringRequest req = new StringRequest(STATUS_URL + cardNumber, new Response.Listener<String>() {
+                String cardNumber = GeneralHelper.trim(selectedCardDTO.getCardNumber(), 0, selectedCardDTO.getCardNumber().length());
+                StringRequest req = new StringRequest(NetworkConsts.STATUS_URL + cardNumber, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         parseHtml(response);
@@ -432,18 +430,6 @@ public class MainActivity extends ActionBarActivity {
             tussamCardsDTO.getCards().add(card);
         }
         PreferencesHelper.getInstance().saveCards(this, tussamCardsDTO);
-    }
-
-    public String trim(CharSequence s, int start, int end) {
-        while (start < end && Character.isWhitespace(s.charAt(start))) {
-            start++;
-        }
-
-        while (end > start && Character.isWhitespace(s.charAt(end - 1))) {
-            end--;
-        }
-
-        return s.subSequence(start, end).toString();
     }
 
     private void parseHtml(String response) {
