@@ -18,6 +18,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
 
+import com.android.volley.Network;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.VolleyLog;
@@ -57,8 +58,6 @@ import es.claucookie.recarga.model.dto.TussamCardsDTO;
 
 @EActivity(R.layout.activity_main2)
 public class MainActivity extends ActionBarActivity  {
-    public static final String STATUS_URL = "http://recargas.aucorsa.es/checkcard.php?nCard=";
-    public static final String CREDIT_URL = "http://recargas.aucorsa.es/checkcard.php?nCard=";
     public static final long ONE_MINUTE = 60 * 1000; // Millisecs
     public static final long ONE_HOUR = ONE_MINUTE * 60;
     public static final long ONE_DAY = ONE_HOUR * 24;
@@ -312,7 +311,7 @@ public class MainActivity extends ActionBarActivity  {
     @Click(R.id.recharge_card_image)
     void rechargeCardClicked() {
         if (selectedCardDTO != null) {
-            String externalUrl = CREDIT_URL + selectedCardDTO.getCardNumber();
+            String externalUrl = NetworkConsts.CREDIT_URL + selectedCardDTO.getCardNumber();
             GeneralHelper.launchExternalUrlWeb(this, externalUrl, getString(R.string.recharge_card_text), getString(R.string.alert_yes), getString(R.string.alert_no));
         }
     }
@@ -396,8 +395,8 @@ public class MainActivity extends ActionBarActivity  {
             selectedCardDTO = new TussamCardDTO();
         }
         try {
-            Document document = Jsoup.connect(STATUS_URL + response)
-                    .userAgent(getEncStr("TW96aWxsYS81LjAgKGNvbXBhdGlibGU7IEdvb2dsZWJvdC8yLjE7ICtodHRwOi8vd3d3Lmdvb2dsZS5jb20vYm90Lmh0bWwp"))
+            Document document = Jsoup.connect(NetworkConsts.STATUS_URL + response)
+                    .userAgent(GeneralHelper.getEncStr("TW96aWxsYS81LjAgKGNvbXBhdGlibGU7IEdvb2dsZWJvdC8yLjE7ICtodHRwOi8vd3d3Lmdvb2dsZS5jb20vYm90Lmh0bWwp"))
                     .get();
 
             Element mainDiv = document.getElementById("global");
@@ -408,7 +407,7 @@ public class MainActivity extends ActionBarActivity  {
                     selectedCardDTO.setLastDate((new Date()).getTime());
                     selectedCardDTO.setCardType(mainDiv.select("p#titleName").text());
                     String tripsLeft = TagFormat.from(getString(R.string.trips_left))
-                            .with("trip", getNumberOfTrips())
+                            .with("trip", GeneralHelper.getNumberOfTrips(this, selectedCardDTO))
                             .format();
                     selectedCardDTO.setCardStatus(tripsLeft);
                 } else {
@@ -435,21 +434,6 @@ public class MainActivity extends ActionBarActivity  {
         reloadData();
         showDetailView();
 
-    }
-
-    private String getNumberOfTrips() {
-
-        Float price = Float.valueOf(getString(R.string.precio_normal));
-        if (selectedCardDTO.getCardType().toLowerCase().contains("estudiante")) {
-            price = Float.valueOf(getString(R.string.precio_estudiante));
-        } else if (selectedCardDTO.getCardType().toLowerCase().contains("numerosa")) {
-            price = Float.valueOf(getString(R.string.precio_familia_numerosa));
-        } else if (selectedCardDTO.getCardType().toLowerCase().contains("feria")) {
-            price = Float.valueOf(getString(R.string.precio_feria));
-        }
-        Float numberOfTrips = Float.valueOf(selectedCardDTO.getCardCredit().replace(" €", "")) / price;
-
-        return String.format("%d", numberOfTrips.intValue());
     }
 
     @UiThread
@@ -589,20 +573,7 @@ public class MainActivity extends ActionBarActivity  {
         timeView.setVisibility(View.GONE);
     }
 
-    /**
-     * Other
-     */
 
-    public static String getEncStr(String base64) {
-        String text = null;
-        byte[] data = Base64.decode(base64, Base64.DEFAULT);
-        try {
-            text = new String(data, "UTF-8");
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
-        return text;
-    }
 
 
 }

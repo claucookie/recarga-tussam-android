@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.wearable.view.WatchViewStub;
 import android.util.Log;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -19,11 +21,7 @@ import com.google.android.gms.wearable.Node;
 import com.google.android.gms.wearable.NodeApi;
 import com.google.android.gms.wearable.Wearable;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import es.claucookie.recarga.helpers.ParseHelper;
-import es.claucookie.recarga.model.dao.TussamCardDAO;
 import es.claucookie.recarga.model.dto.TussamCardDTO;
 
 public class MainActivity extends Activity implements
@@ -34,8 +32,11 @@ public class MainActivity extends Activity implements
     private TextView cardCredit;
     private TextView cardTrips;
     private TextView cardUpdate;
+    private ProgressBar loadingView;
+    private LinearLayout cardInfoView;
     GoogleApiClient googleClient;
     TussamCardDTO favoriteCard;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +58,25 @@ public class MainActivity extends Activity implements
                 .build();
     }
 
+    private void setupViews() {
+        showLoadingView();
+    }
+
+    private void showInfoView() {
+        loadingView.setVisibility(View.GONE);
+        cardInfoView.setVisibility(View.VISIBLE);
+    }
+
+    private void showInfoAndLoadingView() {
+        loadingView.setVisibility(View.VISIBLE);
+        cardInfoView.setVisibility(View.VISIBLE);
+    }
+
+    private void showLoadingView() {
+        loadingView.setVisibility(View.VISIBLE);
+        cardInfoView.setVisibility(View.GONE);
+    }
+
     private void initView() {
         final WatchViewStub stub = (WatchViewStub) findViewById(R.id.watch_view_stub);
         stub.setOnLayoutInflatedListener(new WatchViewStub.OnLayoutInflatedListener() {
@@ -66,6 +86,9 @@ public class MainActivity extends Activity implements
                 cardCredit = (TextView) stub.findViewById(R.id.card_credit);
                 cardTrips = (TextView) stub.findViewById(R.id.card_trips);
                 cardUpdate = (TextView) stub.findViewById(R.id.card_update);
+                loadingView = (ProgressBar) stub.findViewById(R.id.loading_view);
+                cardInfoView = (LinearLayout) stub.findViewById(R.id.card_info);
+                setupViews();
             }
         });
     }
@@ -110,10 +133,12 @@ public class MainActivity extends Activity implements
 
     // Placeholders for required connection callbacks
     @Override
-    public void onConnectionSuspended(int cause) { }
+    public void onConnectionSuspended(int cause) {
+    }
 
     @Override
-    public void onConnectionFailed(ConnectionResult connectionResult) { }
+    public void onConnectionFailed(ConnectionResult connectionResult) {
+    }
 
     class SendToDataLayerThread extends Thread {
         String path;
@@ -133,8 +158,7 @@ public class MainActivity extends Activity implements
                     if (BuildConfig.DEBUG) {
                         Log.v("myTag", "Message: {" + message + "} sent to: " + node.getDisplayName());
                     }
-                }
-                else {
+                } else {
                     // Log an error
                     if (BuildConfig.DEBUG) {
                         Log.v("myTag", "ERROR: failed to send Message");
@@ -156,6 +180,16 @@ public class MainActivity extends Activity implements
                 // Display message in UI
                 favoriteCard = ParseHelper.parseData(cardDataString);
                 loadData();
+
+                if (intent.hasExtra(Consts.CARD_DATA_REQUEST_FINISHED)) {
+                    if (!intent.getBooleanExtra(Consts.CARD_DATA_REQUEST_FINISHED, false)) {
+                        showInfoAndLoadingView();
+                    } else {
+                        showInfoView();
+                    }
+                } else {
+                    showInfoView();
+                }
             }
         }
     }

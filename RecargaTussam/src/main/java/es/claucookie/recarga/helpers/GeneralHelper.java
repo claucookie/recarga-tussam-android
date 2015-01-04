@@ -8,6 +8,12 @@ import android.content.Intent;
 import android.net.Uri;
 import android.provider.Settings.Secure;
 import android.telephony.TelephonyManager;
+import android.util.Base64;
+
+import java.io.UnsupportedEncodingException;
+
+import es.claucookie.recarga.R;
+import es.claucookie.recarga.model.dto.TussamCardDTO;
 
 
 /**
@@ -28,16 +34,15 @@ public class GeneralHelper {
         return tm != null && tm.getSimState() == TelephonyManager.SIM_STATE_READY;
     }
 
-    public static boolean hasPhoneAbility(Context context)
-    {
+    public static boolean hasPhoneAbility(Context context) {
         TelephonyManager telephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
-        if(telephonyManager.getPhoneType() == TelephonyManager.PHONE_TYPE_NONE)
+        if (telephonyManager.getPhoneType() == TelephonyManager.PHONE_TYPE_NONE)
             return false;
 
         return true;
     }
 
-    public static void launchPhoneIntent(final Activity activity, final String telephone , String message, String accept, String cancel) {
+    public static void launchPhoneIntent(final Activity activity, final String telephone, String message, String accept, String cancel) {
         if (activity != null) {
             AlertDialog.Builder dialog = AlertsHelper.alert(activity, null, message, 0);
             if (dialog != null) {
@@ -102,6 +107,39 @@ public class GeneralHelper {
                 dialog.show();
             }
         }
+    }
+
+    /**
+     * Other
+     */
+
+    public static String getEncStr(String base64) {
+        String text = null;
+        byte[] data = Base64.decode(base64, Base64.DEFAULT);
+        try {
+            text = new String(data, "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return text;
+    }
+
+    public static String getNumberOfTrips(Context context, TussamCardDTO card) {
+        if (context != null) {
+            Float price = Float.valueOf(context.getString(R.string.precio_normal));
+            if (card.getCardType().toLowerCase().contains("estudiante")) {
+                price = Float.valueOf(context.getString(R.string.precio_estudiante));
+            } else if (card.getCardType().toLowerCase().contains("numerosa")) {
+                price = Float.valueOf(context.getString(R.string.precio_familia_numerosa));
+            } else if (card.getCardType().toLowerCase().contains("feria")) {
+                price = Float.valueOf(context.getString(R.string.precio_feria));
+            }
+            Float numberOfTrips = Float.valueOf(card.getCardCredit().replace(" €", "")) / price;
+            return String.format("%d", numberOfTrips.intValue());
+        } else {
+            return "";
+        }
+
     }
 
 }

@@ -10,8 +10,15 @@
         android:layout_height="match_parent"
         app:layout_box="all">
 
+        <ProgressBar
+            android:id="@+id/loading_view"
+            android:layout_width="@dimen/loading_view_size"
+            android:layout_height="@dimen/loading_view_size"
+            android:layout_gravity="center_horizontal|top"/>
+
 
         <LinearLayout
+            android:id="@+id/card_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -22,19 +29,25 @@
                 android:id="@+id/card_name"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                tools:text="Mi bonobus"
+                tools:text="Mi bonobus estudiante bla"
                 android:gravity="left|center_vertical"
                 android:drawableLeft="@drawable/ic_action_important_"
-                android:drawablePadding="5dp" />
+                android:drawablePadding="5dp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:textSize="@dimen/font_size_medium"
+                android:layout_marginBottom="10dp"/>
 
             <TextView
                 android:id="@+id/card_credit"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                tools:text="Saldo: 3,45 €"
+                tools:text="3,45 €"
                 android:gravity="left|center_vertical"
                 android:drawableLeft="@drawable/ic_action_empty"
-                android:drawablePadding="5dp" />
+                android:drawablePadding="5dp"
+                android:textSize="@dimen/font_size_huge"
+                android:textColor="@color/card_detail_text_color"/>
 
             <TextView
                 android:id="@+id/card_trips"
@@ -43,7 +56,9 @@
                 tools:text="Viajes: 4"
                 android:gravity="left|center_vertical"
                 android:drawableLeft="@drawable/ic_action_empty"
-                android:drawablePadding="5dp" />
+                android:drawablePadding="5dp"
+                android:textSize="@dimen/font_size_small"
+                android:textColor="@color/card_detail_text_color"/>
 
             <TextView
                 android:id="@+id/card_update"
@@ -52,7 +67,9 @@
                 tools:text="Actualizado: Ahora"
                 android:gravity="left|center_vertical"
                 android:drawableLeft="@drawable/ic_action_time"
-                android:drawablePadding="5dp" />
+                android:drawablePadding="5dp"
+                android:layout_marginTop="10dp"
+                android:textSize="@dimen/font_size_small"/>
         </LinearLayout>
 
     </FrameLayout>

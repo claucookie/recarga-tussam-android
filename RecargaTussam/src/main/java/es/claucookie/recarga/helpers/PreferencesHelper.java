@@ -9,6 +9,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import es.claucookie.recarga.model.dao.TussamCardsDAO;
+import es.claucookie.recarga.model.dto.TussamCardDTO;
 import es.claucookie.recarga.model.dto.TussamCardsDTO;
 
 /**
@@ -42,6 +43,25 @@ public class PreferencesHelper {
     }
 
     public void saveCards(Context context, TussamCardsDTO cards) {
+        try {
+            preferences(context).put(CARDS, TussamCardsDAO.getInstance().serialize(cards).toString());
+        } catch (JSONException je) {
+
+        }
+    }
+
+    public void saveCard(Context context, TussamCardDTO card) {
+        TussamCardsDTO cards = getCards(context);
+        for (TussamCardDTO currentCard : cards.getCards()) {
+            if (currentCard.getCardNumber().equals(card.getCardNumber())) {
+                currentCard.setCardCredit(card.getCardCredit());
+                currentCard.setCardStatus(card.getCardStatus());
+                currentCard.setCardName(card.getCardName());
+                currentCard.setCardType(card.getCardType());
+                currentCard.setIsCardFavorite(card.getIsCardFavorite());
+                currentCard.setLastDate(card.getLastDate());
+            }
+        }
         try {
             preferences(context).put(CARDS, TussamCardsDAO.getInstance().serialize(cards).toString());
         } catch (JSONException je) {

@@ -8,6 +8,7 @@ import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 import es.claucookie.recarga.R;
 import es.claucookie.recarga.model.dao.TussamCardDAO;
@@ -47,11 +48,11 @@ public class ParseHelper {
 
             } else if (nowDateDifferenceLong >= ONE_MINUTE && nowDateDifferenceLong < ONE_HOUR) {
                 // More than 1 minute ( X minutes ago)
-                dateString = context.getString(R.string.updated_minutes_ago);
+                dateString = String.format(Locale.US, "%d %s", nowDateDifferenceLong / ONE_MINUTE, context.getString(R.string.updated_minutes_ago)) ;
 
             } else if (nowDateDifferenceLong >= ONE_HOUR && nowDateDifferenceLong < ONE_DAY) {
                 // More than 1 hour (X hours ago)
-                dateString = context.getString(R.string.updated_hours_ago);
+                dateString = String.format(Locale.US, "%d %s", nowDateDifferenceLong / ONE_DAY, context.getString(R.string.updated_hours_ago)) ;
 
             } else {
                 // More than 1 day (Date)

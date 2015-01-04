@@ -6,11 +6,19 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.wearable.MessageEvent;
 import com.google.android.gms.wearable.Wearable;
 import com.google.android.gms.wearable.WearableListenerService;
+import com.mobivery.android.helpers.TagFormat;
 
+import org.androidannotations.annotations.sharedpreferences.Pref;
 import org.json.JSONException;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 
+import java.io.IOException;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
+import es.claucookie.recarga.helpers.GeneralHelper;
 import es.claucookie.recarga.helpers.PreferencesHelper;
 import es.claucookie.recarga.model.dao.TussamCardDAO;
 import es.claucookie.recarga.model.dto.TussamCardDTO;
@@ -23,6 +31,7 @@ public class ListenerService extends WearableListenerService {
 
 
     String wearableId = "";
+    TussamCardDTO favoriteCardDTO;
 
     @Override
     public void onMessageReceived(MessageEvent messageEvent) {
@@ -32,18 +41,53 @@ public class ListenerService extends WearableListenerService {
         if (messageEvent.getPath().equals(Consts.GET_FAVORITE_CARD_INFO_MESSAGE)) {
             final String message = new String(messageEvent.getData());
             if (BuildConfig.DEBUG) {
-                Log.v("myTag", "Message path received on hanheld is: " + messageEvent.getPath());
-                Log.v("myTag", "Message received on handheld is: " + message);
+                Log.v("ListenerService", "Message path received on hanheld is: " + messageEvent.getPath());
+                Log.v("ListenerService", "Message received on handheld is: " + message);
             }
             getFavoriteCard();
+            requestUpdatedCardInfo();
         } else {
             super.onMessageReceived(messageEvent);
         }
     }
 
+    private void requestUpdatedCardInfo() {
+
+        if (favoriteCardDTO != null) {
+            try {
+                Document document = Jsoup.connect(NetworkConsts.STATUS_URL + favoriteCardDTO.getCardNumber())
+                        .userAgent(GeneralHelper.getEncStr("TW96aWxsYS81LjAgKGNvbXBhdGlibGU7IEdvb2dsZWJvdC8yLjE7ICtodHRwOi8vd3d3Lmdvb2dsZS5jb20vYm90Lmh0bWwp"))
+                        .get();
+
+                Element mainDiv = document.getElementById("global");
+                if (mainDiv != null) {
+                    if (!mainDiv.select("span.spanSaldo").isEmpty()) {
+                        String credit = mainDiv.select("span.spanSaldo").text();
+                        favoriteCardDTO.setCardCredit(credit);
+                        favoriteCardDTO.setLastDate((new Date()).getTime());
+                        favoriteCardDTO.setCardType(mainDiv.select("p#titleName").text());
+                        String tripsLeft = TagFormat.from(getString(R.string.trips_left))
+                                .with("trip", GeneralHelper.getNumberOfTrips(getApplicationContext(), favoriteCardDTO))
+                                .format();
+                        favoriteCardDTO.setCardStatus(tripsLeft);
+                    } else {
+                        favoriteCardDTO.setCardType(mainDiv.select("span#spanMsg").text());
+                        favoriteCardDTO.setCardCredit("");
+                        favoriteCardDTO.setLastDate((new Date()).getTime());
+                        favoriteCardDTO.setCardStatus(getString(R.string.register_text));
+                    }
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            PreferencesHelper.getInstance().saveCard(getApplicationContext(), favoriteCardDTO);
+            sendCardUpdated(favoriteCardDTO);
+        }
+    }
+
+
     private void getFavoriteCard() {
         TussamCardsDTO aucorsaCardsDTO = PreferencesHelper.getInstance().getCards(this);
-        TussamCardDTO favoriteCardDTO = null;
         if (aucorsaCardsDTO != null && aucorsaCardsDTO.getCards() != null) {
             for (TussamCardDTO card : aucorsaCardsDTO.getCards()) {
                 if (card.getIsCardFavorite() != null
@@ -76,6 +120,20 @@ public class ListenerService extends WearableListenerService {
         client.blockingConnect(100, TimeUnit.MILLISECONDS);
         try {
             Wearable.MessageApi.sendMessage(client, wearableId, Consts.GET_FAVORITE_CARD_INFO_MESSAGE, TussamCardDAO.getInstance().serialize(favoriteCard).toString().getBytes());
+        } catch (JSONException e) {
+            e.printStackTrace();
+            sendError("Error parsing card");
+        }
+        client.disconnect();
+    }
+
+    private void sendCardUpdated(TussamCardDTO favoriteCard) {
+        GoogleApiClient client = new GoogleApiClient.Builder(getApplicationContext())
+                .addApi(Wearable.API)
+                .build();
+        client.blockingConnect(100, TimeUnit.MILLISECONDS);
+        try {
+            Wearable.MessageApi.sendMessage(client, wearableId, Consts.GET_FAVORITE_CARD_INFO_UPDATED_MESSAGE, TussamCardDAO.getInstance().serialize(favoriteCard).toString().getBytes());
         } catch (JSONException e) {
             e.printStackTrace();
             sendError("Error parsing card");
