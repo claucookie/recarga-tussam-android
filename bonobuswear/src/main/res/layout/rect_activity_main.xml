@@ -1,20 +1,59 @@
-<android.support.wearable.view.BoxInsetLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.wearable.view.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
-    android:layout_width="match_parent">
+    android:layout_width="match_parent"
+    android:background="@color/common_background">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_box="all">
 
-        <TextView
-            android:id="@+id/text_view"
-            android:gravity="center"
-            android:layout_height="match_parent"
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:text="@string/hello_square"
-            android:textColor="@color/white" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/card_name"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                tools:text="Mi bonobus"
+                android:gravity="left|center_vertical"
+                android:drawableLeft="@drawable/ic_action_important_"
+                android:drawablePadding="5dp" />
+
+            <TextView
+                android:id="@+id/card_credit"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                tools:text="Saldo: 3,45 €"
+                android:gravity="left|center_vertical"
+                android:drawableLeft="@drawable/ic_action_empty"
+                android:drawablePadding="5dp" />
+
+            <TextView
+                android:id="@+id/card_trips"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                tools:text="Viajes: 4"
+                android:gravity="left|center_vertical"
+                android:drawableLeft="@drawable/ic_action_empty"
+                android:drawablePadding="5dp" />
+
+            <TextView
+                android:id="@+id/card_update"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                tools:text="Actualizado: Ahora"
+                android:gravity="left|center_vertical"
+                android:drawableLeft="@drawable/ic_action_time"
+                android:drawablePadding="5dp" />
+        </LinearLayout>
+
     </FrameLayout>
 </android.support.wearable.view.BoxInsetLayout>

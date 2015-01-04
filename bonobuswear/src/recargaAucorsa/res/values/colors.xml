@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_palette_1">#537117</color>
+    <color name="color_palette_1_dark">#26350C</color>
+    <color name="color_palette_2">#26350C</color>
+    <color name="common_background">@color/color_palette_1</color>
+    <color name="common_text_color">#ffffff</color>
+    <color name="card_detail_text_color">#ffffff</color>
+    <color name="card_detail_background_color1">@color/color_palette_1</color>
+    <color name="card_detail_background_color2">@color/color_palette_2</color>
+    <!-- Lollipop palette colors -->
+    <color name="color_primary">@color/color_palette_1</color>
+    <color name="color_primary_dark">@color/color_palette_1_dark</color>
+    <color name="color_accent">@android:color/white</color>
+</resources>

@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.wearable.view.WatchViewStub;
 import android.util.Log;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -18,24 +19,29 @@ import com.google.android.gms.wearable.Node;
 import com.google.android.gms.wearable.NodeApi;
 import com.google.android.gms.wearable.Wearable;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import es.claucookie.recarga.helpers.ParseHelper;
+import es.claucookie.recarga.model.dao.TussamCardDAO;
+import es.claucookie.recarga.model.dto.TussamCardDTO;
+
 public class MainActivity extends Activity implements
         GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener {
 
-    private TextView mTextView;
+    private TextView cardName;
+    private TextView cardCredit;
+    private TextView cardTrips;
+    private TextView cardUpdate;
     GoogleApiClient googleClient;
+    TussamCardDTO favoriteCard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final WatchViewStub stub = (WatchViewStub) findViewById(R.id.watch_view_stub);
-        stub.setOnLayoutInflatedListener(new WatchViewStub.OnLayoutInflatedListener() {
-            @Override
-            public void onLayoutInflated(WatchViewStub stub) {
-                mTextView = (TextView) stub.findViewById(R.id.text_view);
-            }
-        });
+        initView();
 
         // Register the local broadcast receiver, defined in step 3.
         IntentFilter messageFilter = new IntentFilter(Intent.ACTION_SEND);
@@ -49,6 +55,29 @@ public class MainActivity extends Activity implements
                 .addConnectionCallbacks(this)
                 .addOnConnectionFailedListener(this)
                 .build();
+    }
+
+    private void initView() {
+        final WatchViewStub stub = (WatchViewStub) findViewById(R.id.watch_view_stub);
+        stub.setOnLayoutInflatedListener(new WatchViewStub.OnLayoutInflatedListener() {
+            @Override
+            public void onLayoutInflated(WatchViewStub stub) {
+                cardName = (TextView) stub.findViewById(R.id.card_name);
+                cardCredit = (TextView) stub.findViewById(R.id.card_credit);
+                cardTrips = (TextView) stub.findViewById(R.id.card_trips);
+                cardUpdate = (TextView) stub.findViewById(R.id.card_update);
+            }
+        });
+    }
+
+    private void loadData() {
+
+        if (favoriteCard != null) {
+            cardName.setText(favoriteCard.getCardName());
+            cardCredit.setText(favoriteCard.getCardCredit());
+            cardTrips.setText(favoriteCard.getCardStatus());
+            cardUpdate.setText(ParseHelper.parseDate(this, favoriteCard.getLastDate()));
+        }
     }
 
     // Connect to the data layer when the Activity starts
@@ -123,9 +152,10 @@ public class MainActivity extends Activity implements
         @Override
         public void onReceive(Context context, Intent intent) {
             if (intent != null && intent.hasExtra(Consts.CARD_DATA)) {
-                String message = intent.getStringExtra(Consts.CARD_DATA);
+                String cardDataString = intent.getStringExtra(Consts.CARD_DATA);
                 // Display message in UI
-                mTextView.setText(message);
+                favoriteCard = ParseHelper.parseData(cardDataString);
+                loadData();
             }
         }
     }

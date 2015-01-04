@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Bonobús Tussam Wear</string>
+    <string name="updated_now">Ahora</string>
+    <string name="updated_minutes_ago"> min</string>
+    <string name="updated_hours_ago"> h</string>
+    <string name="updated_date_format">"EEE, d ' de ' MMM, yyyy"</string>
+
+
+</resources>
