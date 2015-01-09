@@ -140,6 +140,13 @@ public class ListenerService extends WearableListenerService {
         }
         if (favoriteCardDTO != null) {
             sendCard(favoriteCardDTO);
+        } else if (aucorsaCardsDTO != null &&
+                aucorsaCardsDTO.getCards() != null &&
+                aucorsaCardsDTO.getCards().size() > 0){
+            // If user didnt set a card as favourite, set the first one and load info.
+            favoriteCardDTO = aucorsaCardsDTO.getCards().get(0);
+            favoriteCardDTO.setIsCardFavorite(true);
+            sendCard(favoriteCardDTO);
         } else {
             sendError("Card not found");
         }
