@@ -48,8 +48,9 @@
     </style>
 
     <style name="HelpText.Tussam" parent="android:Widget.TextView">
-        <item name="android:textColor">@color/color_palette_1</item>
+        <item name="android:textColor">@color/color_palette_1_dark</item>
         <item name="fontName">Roboto-Light</item>
+        <item name="android:textSize">@dimen/font_size_normal</item>
     </style>
 
     <style name="CardText.Tussam" parent="android:Widget.TextView">

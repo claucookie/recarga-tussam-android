@@ -27,5 +27,6 @@
     <string name="register_text">Register the card.</string>
     <string name="no_card">Cards not found</string>
     <string name="no_card_detail">Add your bus card from handheld.</string>
+    <string name="remaining_trips_note">Remaining trips are estimated.</string>
 
 </resources>

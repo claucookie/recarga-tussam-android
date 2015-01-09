@@ -25,5 +25,6 @@
     <string name="network_error">Petición no realizada. \nPor favor, asegúrate de tener activada la conexión a internet.</string>
     <string name="no_card">Ningún bonobús</string>
     <string name="no_card_detail">Añade tu bonobús desde el móvil</string>
+    <string name="remaining_trips_note"> </string>
 
 </resources>

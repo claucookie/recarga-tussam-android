@@ -25,5 +25,6 @@
     <string name="network_error">Request could not be done. \nPlease, make sure you enabled your network connection</string>
     <string name="no_card">Cards not found</string>
     <string name="no_card_detail">Add your bus card from handheld.</string>
+    <string name="remaining_trips_note"> </string>
 
 </resources>

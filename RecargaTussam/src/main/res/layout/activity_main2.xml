@@ -316,4 +316,14 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"/>
 
+    <com.mobivery.android.widgets.ExLabel
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/circle_button_width"
+        android:gravity="bottom"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/add_card_button"
+        android:text="@string/remaining_trips_note"
+        style="@style/HelpText.Tussam"/>
+
 </RelativeLayout>

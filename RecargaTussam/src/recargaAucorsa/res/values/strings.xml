@@ -27,5 +27,6 @@
     <string name="register_text">Registra la tarjeta.</string>
     <string name="no_card">Ningún bonobús</string>
     <string name="no_card_detail">Añade tu bonobús desde el móvil</string>
+    <string name="remaining_trips_note">Los viajes restantes son una estimación.</string>
 
 </resources>
