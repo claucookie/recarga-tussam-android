@@ -23,6 +23,7 @@
     <string name="updated_hours_ago">Hace {hour} h</string>
     <string name="updated_date_format">"EEE, d ' de ' MMM, yyyy"</string>
     <string name="network_error">Petición no realizada. \nPor favor, asegúrate de tener activada la conexión a internet.</string>
-
+    <string name="no_card">Ningún bonobús</string>
+    <string name="no_card_detail">Añade tu bonobús desde el móvil</string>
 
 </resources>

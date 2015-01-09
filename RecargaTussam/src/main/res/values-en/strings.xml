@@ -23,5 +23,7 @@
     <string name="updated_hours_ago">{hour} h ago</string>
     <string name="updated_date_format">"EEE, MMM d, yyyy"</string>
     <string name="network_error">Request could not be done. \nPlease, make sure you enabled your network connection</string>
+    <string name="no_card">Cards not found</string>
+    <string name="no_card_detail">Add your bus card from handheld.</string>
 
 </resources>

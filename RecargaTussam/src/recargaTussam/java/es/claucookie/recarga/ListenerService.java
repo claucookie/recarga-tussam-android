@@ -148,7 +148,7 @@ public class ListenerService extends WearableListenerService {
             favoriteCardDTO.setIsCardFavorite(true);
             sendCard(favoriteCardDTO);
         } else {
-            sendError("Card not found");
+            sendNoCardsMessage();
         }
     }
 
@@ -174,6 +174,29 @@ public class ListenerService extends WearableListenerService {
             sendError("Error parsing card");
         }
         client.disconnect();
+    }
+
+    private void sendNoCardsMessage() {
+        TussamCardDTO errorCard = new TussamCardDTO();
+        errorCard.setCardName(getString(R.string.no_card));
+        errorCard.setCardStatus(getString(R.string.no_card_detail));
+        errorCard.setIsCardFavorite(true);
+        errorCard.setCardType("");
+        errorCard.setCardNumber("");
+        errorCard.setLastDate((new Date()).getTime());
+
+        GoogleApiClient client = new GoogleApiClient.Builder(getApplicationContext())
+                .addApi(Wearable.API)
+                .build();
+        client.connect();
+        try {
+            Wearable.MessageApi.sendMessage(client, wearableId, Consts.GET_FAVORITE_CARD_INFO_UPDATED_MESSAGE, TussamCardDAO.getInstance().serialize(errorCard).toString().getBytes());
+        } catch (JSONException e) {
+            e.printStackTrace();
+            sendError("Error parsing card");
+        }
+        client.disconnect();
+
     }
 
     private void sendCardUpdated(TussamCardDTO favoriteCard) {
