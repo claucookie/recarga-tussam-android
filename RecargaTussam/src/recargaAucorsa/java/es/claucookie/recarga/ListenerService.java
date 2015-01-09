@@ -16,6 +16,7 @@ import org.jsoup.nodes.Element;
 
 import java.io.IOException;
 import java.util.Date;
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 import es.claucookie.recarga.helpers.GeneralHelper;
@@ -55,8 +56,7 @@ public class ListenerService extends WearableListenerService {
 
         if (favoriteCardDTO != null) {
             try {
-                Document document = Jsoup.connect(NetworkConsts.STATUS_URL + favoriteCardDTO.getCardNumber())
-                        .userAgent(GeneralHelper.getEncStr("TW96aWxsYS81LjAgKGNvbXBhdGlibGU7IEdvb2dsZWJvdC8yLjE7ICtodHRwOi8vd3d3Lmdvb2dsZS5jb20vYm90Lmh0bWwp"))
+                Document document = Jsoup.connect(String.format(Locale.US, NetworkConsts.STATUS_URL, favoriteCardDTO.getCardNumber()))
                         .get();
 
                 Element mainDiv = document.getElementById("global");

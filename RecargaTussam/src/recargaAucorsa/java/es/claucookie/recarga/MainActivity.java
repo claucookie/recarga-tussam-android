@@ -50,6 +50,7 @@ import java.io.UnsupportedEncodingException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Locale;
 
 import es.claucookie.recarga.helpers.GeneralHelper;
 import es.claucookie.recarga.helpers.PreferencesHelper;
@@ -389,14 +390,13 @@ public class MainActivity extends ActionBarActivity  {
     }
 
     @Background
-    public void parseHtml(String response) {
+    public void parseHtml(String cardNumber) {
 
         if (selectedCardDTO == null) {
             selectedCardDTO = new TussamCardDTO();
         }
         try {
-            Document document = Jsoup.connect(NetworkConsts.STATUS_URL + response)
-                    .userAgent(GeneralHelper.getEncStr("TW96aWxsYS81LjAgKGNvbXBhdGlibGU7IEdvb2dsZWJvdC8yLjE7ICtodHRwOi8vd3d3Lmdvb2dsZS5jb20vYm90Lmh0bWwp"))
+            Document document = Jsoup.connect(String.format(Locale.US, NetworkConsts.STATUS_URL, cardNumber))
                     .get();
 
             Element mainDiv = document.getElementById("global");
