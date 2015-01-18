@@ -38,7 +38,7 @@ public class ParseHelper {
 
     public static String parseDate(Context context, Long date) {
         String dateString = "";
-        if (context != null) {
+        if (context != null && date != null) {
             Date nowDate = new Date();
             long nowDateDifferenceLong = nowDate.getTime() - date;
 
