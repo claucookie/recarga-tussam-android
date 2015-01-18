@@ -156,7 +156,7 @@ public class ListenerService extends WearableListenerService {
         GoogleApiClient client = new GoogleApiClient.Builder(getApplicationContext())
                 .addApi(Wearable.API)
                 .build();
-        client.blockingConnect(100, TimeUnit.MILLISECONDS);
+        client.connect();
         Wearable.MessageApi.sendMessage(client, wearableId, Consts.GET_FAVORITE_CARD_INFO_ERROR, errorMessage.getBytes());
         client.disconnect();
 
@@ -166,7 +166,7 @@ public class ListenerService extends WearableListenerService {
         GoogleApiClient client = new GoogleApiClient.Builder(getApplicationContext())
                 .addApi(Wearable.API)
                 .build();
-        client.blockingConnect(100, TimeUnit.MILLISECONDS);
+        client.connect();
         try {
             Wearable.MessageApi.sendMessage(client, wearableId, Consts.GET_FAVORITE_CARD_INFO_MESSAGE, TussamCardDAO.getInstance().serialize(favoriteCard).toString().getBytes());
         } catch (JSONException e) {
@@ -203,7 +203,7 @@ public class ListenerService extends WearableListenerService {
         GoogleApiClient client = new GoogleApiClient.Builder(getApplicationContext())
                 .addApi(Wearable.API)
                 .build();
-        client.blockingConnect(100, TimeUnit.MILLISECONDS);
+        client.connect();
         try {
             Wearable.MessageApi.sendMessage(client, wearableId, Consts.GET_FAVORITE_CARD_INFO_UPDATED_MESSAGE, TussamCardDAO.getInstance().serialize(favoriteCard).toString().getBytes());
         } catch (JSONException e) {
