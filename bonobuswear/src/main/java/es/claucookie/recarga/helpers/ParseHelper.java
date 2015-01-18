@@ -52,7 +52,7 @@ public class ParseHelper {
 
             } else if (nowDateDifferenceLong >= ONE_HOUR && nowDateDifferenceLong < ONE_DAY) {
                 // More than 1 hour (X hours ago)
-                dateString = String.format(Locale.US, "%d %s", nowDateDifferenceLong / ONE_DAY, context.getString(R.string.updated_hours_ago)) ;
+                dateString = String.format(Locale.US, "%d %s", nowDateDifferenceLong / ONE_HOUR, context.getString(R.string.updated_hours_ago)) ;
 
             } else {
                 // More than 1 day (Date)
