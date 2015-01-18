@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="color_palette_1">#cc073c</color>
-    <color name="color_palette_1_dark">#ff8a0529</color>
+    <color name="color_palette_1">#ffed0846</color>
+    <color name="color_palette_1_dark">#ff7b0425</color>
     <color name="color_palette_2">#00579b</color>
     <color name="common_background">@color/color_palette_1</color>
     <color name="common_text_color">#ffffff</color>
