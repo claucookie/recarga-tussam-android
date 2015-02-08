@@ -62,8 +62,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adf1f0e6-e11a-45e9-a1a2-b35b80c70d54" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/App.java" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/App.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/recargaTussam/java/es/claucookie/recarga/MainActivity.java" afterPath="$PROJECT_DIR$/RecargaTussam/src/recargaTussam/java/es/claucookie/recarga/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/RecargaTussam.iml" afterPath="$PROJECT_DIR$/RecargaTussam/RecargaTussam.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/build.gradle" afterPath="$PROJECT_DIR$/RecargaTussam/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bonobuswear/build.gradle" afterPath="$PROJECT_DIR$/bonobuswear/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bonobuswear/src/recargaAucorsa/res/values/strings.xml" afterPath="$PROJECT_DIR$/bonobuswear/src/recargaAucorsa/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bonobuswear/src/recargaAucorsa/res/values-en/strings.xml" afterPath="$PROJECT_DIR$/bonobuswear/src/recargaAucorsa/res/values-en/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bonobuswear/src/recargaTussam/res/values/strings.xml" afterPath="$PROJECT_DIR$/bonobuswear/src/recargaTussam/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bonobuswear/src/recargaTussam/res/values-en/strings.xml" afterPath="$PROJECT_DIR$/bonobuswear/src/recargaTussam/res/values-en/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="recarga-tussam-android.iws" />
@@ -195,8 +202,8 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <breakpoint_rules converted="true" />
     <ui_properties converted="true" />
+    <breakpoint_rules converted="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -204,56 +211,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bonobuswear/src/main/java/es/claucookie/recarga/MainActivity.java">
+      <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bonobuswear/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.115385" vertical-offset="2339" max-vertical-offset="2850">
-              <caret line="198" column="69" selection-start-line="198" selection-start-column="43" selection-end-line="198" selection-end-column="69" />
-              <folding>
-                <element signature="e#5468#6347#0" expanded="true" />
-                <element signature="e#6320#6321#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ListenerService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bonobuswear/src/main/java/es/claucookie/recarga/ListenerService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="855">
-              <caret line="28" column="74" selection-start-line="28" selection-start-column="74" selection-end-line="28" selection-end-column="74" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="960">
+              <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListenerService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RecargaTussam/src/recargaTussam/java/es/claucookie/recarga/ListenerService.java">
+      <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/RecargaTussam/src/recargaTussam/java/es/claucookie/recarga/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2353" max-vertical-offset="3645">
-              <caret line="181" column="9" selection-start-line="181" selection-start-column="9" selection-end-line="181" selection-end-column="9" />
-              <folding>
-                <element signature="e#2621#2831#0" expanded="true" />
-                <element signature="e#2812#2813#0" expanded="true" />
-                <element signature="e#2833#3108#0" expanded="true" />
-                <element signature="e#3089#3090#0" expanded="true" />
-                <element signature="e#7195#7222#0" expanded="true" />
-                <element signature="e#7257#7291#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
-              <caret line="7" column="68" selection-start-line="7" selection-start-column="68" selection-end-line="7" selection-end-column="68" />
-              <folding>
-                <element signature="e#233#251#0" expanded="true" />
-                <element signature="e#438#477#0" expanded="true" />
-                <element signature="e#731#749#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="1.4480197" vertical-offset="1335" max-vertical-offset="9540">
+              <caret line="180" column="13" selection-start-line="180" selection-start-column="13" selection-end-line="180" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -261,18 +234,8 @@
       <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RecargaTussam/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="1710">
-              <caret line="56" column="24" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bonobuswear/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7122302" vertical-offset="543" max-vertical-offset="960">
-              <caret line="56" column="66" selection-start-line="56" selection-start-column="66" selection-end-line="56" selection-end-column="66" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1740">
+              <caret line="86" column="26" selection-start-line="86" selection-start-column="26" selection-end-line="86" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -1480,86 +1443,6 @@
                 <option name="name" value="connectedCheck" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
-                <option name="name" value="crashlyticsCleanupResourcesAfterUploadRecargaAucorsaDebug" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
-                <option name="name" value="crashlyticsCleanupResourcesAfterUploadRecargaAucorsaRelease" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
-                <option name="name" value="crashlyticsCleanupResourcesAfterUploadRecargaTussamDebug" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
-                <option name="name" value="crashlyticsCleanupResourcesAfterUploadRecargaTussamRelease" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
-                <option name="name" value="crashlyticsCleanupResourcesRecargaAucorsaDebug" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
-                <option name="name" value="crashlyticsCleanupResourcesRecargaAucorsaRelease" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
-                <option name="name" value="crashlyticsCleanupResourcesRecargaTussamDebug" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
-                <option name="name" value="crashlyticsCleanupResourcesRecargaTussamRelease" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
-                <option name="name" value="crashlyticsGenerateResourcesRecargaAucorsaDebug" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
-                <option name="name" value="crashlyticsGenerateResourcesRecargaAucorsaRelease" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
-                <option name="name" value="crashlyticsGenerateResourcesRecargaTussamDebug" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
-                <option name="name" value="crashlyticsGenerateResourcesRecargaTussamRelease" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
-                <option name="name" value="crashlyticsStoreDeobsRecargaAucorsaDebug" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
-                <option name="name" value="crashlyticsStoreDeobsRecargaAucorsaRelease" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
-                <option name="name" value="crashlyticsStoreDeobsRecargaTussamDebug" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
-                <option name="name" value="crashlyticsStoreDeobsRecargaTussamRelease" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
-                <option name="name" value="crashlyticsUploadDeobsRecargaAucorsaDebug" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
-                <option name="name" value="crashlyticsUploadDeobsRecargaAucorsaRelease" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
-                <option name="name" value="crashlyticsUploadDeobsRecargaTussamDebug" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
-                <option name="name" value="crashlyticsUploadDeobsRecargaTussamRelease" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="description" value="Uploads an APK to Crashlytics for distribution." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
                 <option name="name" value="crashlyticsUploadDistributionRecargaAucorsaDebug" />
@@ -1578,22 +1461,6 @@
                 <option name="description" value="Uploads an APK to Crashlytics for distribution." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
                 <option name="name" value="crashlyticsUploadDistributionRecargaTussamRelease" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
-                <option name="name" value="crashlyticsUploadStoredDeobsRecargaAucorsaDebug" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
-                <option name="name" value="crashlyticsUploadStoredDeobsRecargaAucorsaRelease" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
-                <option name="name" value="crashlyticsUploadStoredDeobsRecargaTussamDebug" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
-                <option name="name" value="crashlyticsUploadStoredDeobsRecargaTussamRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Installs and runs instrumentation tests using all Device Providers." />
@@ -1628,6 +1495,22 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
                 <option name="name" value="dexRecargaTussamRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
+                <option name="name" value="fabricGenerateResourcesRecargaAucorsaDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
+                <option name="name" value="fabricGenerateResourcesRecargaAucorsaRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
+                <option name="name" value="fabricGenerateResourcesRecargaTussamDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
+                <option name="name" value="fabricGenerateResourcesRecargaTussamRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
@@ -1939,6 +1822,21 @@
                 <option name="name" value="prepareComAndroidSupportSupportV42103Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.crashlytics.sdk.android:answers:1.1.1" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
+                <option name="name" value="prepareComCrashlyticsSdkAndroidAnswers111Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.crashlytics.sdk.android:beta:1.1.1" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
+                <option name="name" value="prepareComCrashlyticsSdkAndroidBeta111Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.crashlytics.sdk.android:crashlytics:2.2.1" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
+                <option name="name" value="prepareComCrashlyticsSdkAndroidCrashlytics221Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Prepare com.google.android.gms:play-services-base:6.5.87" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
                 <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBase6587Library" />
@@ -1952,6 +1850,11 @@
                 <option name="description" value="Prepare com.mobivery.android:library:1.0.4-SNAPSHOT" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
                 <option name="name" value="prepareComMobiveryAndroidLibrary104SNAPSHOTLibrary" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare io.fabric.sdk.android:fabric:1.1.1" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
+                <option name="name" value="prepareIoFabricSdkAndroidFabric111Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/RecargaTussam" />
@@ -2874,7 +2777,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="5675191959000" />
+        <entry key="$PROJECT_DIR$" value="5678414292000" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -2901,17 +2804,20 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.androidannotations/androidannotations-api/3.0.1/1269c617598b66261036cf8ddbf480483042d551/androidannotations-api-3.0.1-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.androidannotations/androidannotations-api/3.0.1/beb7e0a75c753383e7ef68c0e1639999db301c33/androidannotations-api-3.0.1.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mobivery.android/library/1.0.4-SNAPSHOT/172c9d1ab9359d6d6086a5e7f67cb6517be6de7f/library-1.0.4-SNAPSHOT.aar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.crashlytics.android/crashlytics/1.1.13/e821eafa1bf489a26bdb71f95078c26785b37a1/crashlytics-1.1.13.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jsoup/jsoup/1.7.3/b783d347815471821faaa7ae7a4f0d2fec30966e/jsoup-1.7.3-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jsoup/jsoup/1.7.3/92568d7167ce1bf9eb1fd815b022d5a2c113547a/jsoup-1.7.3.jar" />
                             <option value="$PROJECT_DIR$/../../sdks/adt-bundle-mac-x86_64/sdk/extras/google/m2repository/com/google/android/gms/play-services-wearable/6.5.87/play-services-wearable-6.5.87.aar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.crashlytics.sdk.android/crashlytics/2.2.1/3b60214eecc432d6e0cc186a6594d7e12145beb0/crashlytics-2.2.1.aar" />
                             <option value="$PROJECT_DIR$/../../sdks/adt-bundle-mac-x86_64/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar" />
                             <option value="$PROJECT_DIR$/../../sdks/adt-bundle-mac-x86_64/sdk/extras/google/m2repository/com/google/android/gms/play-services-base/6.5.87/play-services-base-6.5.87.aar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.crashlytics.sdk.android/answers/1.1.1/efc6f4d0c191f6693a5477336f081a64ee52ff8e/answers-1.1.1.aar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.fabric.sdk.android/fabric/1.1.1/81ea1b6f9c75aaba22eaf99b1d141f893f95a48c/fabric-1.1.1.aar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.crashlytics.sdk.android/beta/1.1.1/935f2e335aaea17df29fb1b001cdf3568faab332/beta-1.1.1.aar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/1.0.0/gradle-1.0.0-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/1.0.0/gradle-1.0.0.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.crashlytics.tools.gradle/crashlytics-gradle/1.14.7/8027cda72993b8845ab477f4c538505d3fa08a75/crashlytics-gradle-1.14.7.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.neenbedankt.gradle.plugins/android-apt/1.4/8cc08fdd043c3f61e4631f4abc982c3d17dd264c/android-apt-1.4-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.neenbedankt.gradle.plugins/android-apt/1.4/2ee9dad8e86284f7518ae3818c4d269556567e92/android-apt-1.4.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.fabric.tools/gradle/1.15.1/dbd2f33c4ab7333682ed229e9fb39d77e71a1e37/gradle-1.15.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint/24.0.0/lint-24.0.0-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint/24.0.0/lint-24.0.0.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder/1.0.0/builder-1.0.0-sources.jar" />
@@ -3200,13 +3106,8 @@
         <option value="$PROJECT_DIR$/RecargaTussam/src/recargaAucorsa/res/values/dimens.xml" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/recargaTussam/res/values/drawable.xml" />
         <option value="$PROJECT_DIR$/RecargaTussam/build/intermediates/manifests/full/recargaAucorsa/debug/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/bonobuswear/build.gradle" />
         <option value="$PROJECT_DIR$/bonobuswear/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/bonobuswear/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/bonobuswear/src/recargaTussam/res/values-en/strings.xml" />
-        <option value="$PROJECT_DIR$/bonobuswear/src/recargaTussam/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/bonobuswear/src/recargaAucorsa/res/values-en/strings.xml" />
-        <option value="$PROJECT_DIR$/bonobuswear/src/recargaAucorsa/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/bonobuswear/src/main/java/es/claucookie/recarga/Consts.java" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/Consts.java" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/helpers/PreferencesHelper.java" />
@@ -3215,7 +3116,6 @@
         <option value="$PROJECT_DIR$/bonobuswear/src/recargaAucorsa/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/recargaTussam/java/es/claucookie/recarga/NetworkConsts.java" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/helpers/GeneralHelper.java" />
-        <option value="$PROJECT_DIR$/RecargaTussam/src/recargaTussam/java/es/claucookie/recarga/MainActivity.java" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/recargaAucorsa/java/es/claucookie/recarga/MainActivity.java" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/recargaAucorsa/java/es/claucookie/recarga/NetworkConsts.java" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/recargaAucorsa/java/es/claucookie/recarga/ListenerService.java" />
@@ -3233,7 +3133,13 @@
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/recargaTussam/java/es/claucookie/recarga/ListenerService.java" />
         <option value="$PROJECT_DIR$/bonobuswear/src/main/java/es/claucookie/recarga/ListenerService.java" />
+        <option value="$PROJECT_DIR$/bonobuswear/src/recargaTussam/res/values-en/strings.xml" />
+        <option value="$PROJECT_DIR$/bonobuswear/src/recargaTussam/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/bonobuswear/src/recargaAucorsa/res/values-en/strings.xml" />
+        <option value="$PROJECT_DIR$/bonobuswear/src/recargaAucorsa/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/RecargaTussam/build.gradle" />
+        <option value="$PROJECT_DIR$/bonobuswear/build.gradle" />
+        <option value="$PROJECT_DIR$/RecargaTussam/src/recargaTussam/java/es/claucookie/recarga/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -3268,6 +3174,9 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -3568,9 +3477,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3839,7 +3745,7 @@
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27655986" sideWeight="0.34157303" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32223904" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3267776" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3267776" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -3849,8 +3755,8 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27655986" sideWeight="0.65842694" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32223904" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3271028" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32829046" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -3869,11 +3775,11 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2747253" sideWeight="0.23134328" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32223904" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39183056" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2747253" sideWeight="0.76865673" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32223904" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -4003,35 +3909,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bonobuswear/src/recargaTussam/res/values-en/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.8" vertical-offset="0" max-vertical-offset="255">
-          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bonobuswear/src/recargaTussam/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.8" vertical-offset="0" max-vertical-offset="255">
-          <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bonobuswear/src/recargaAucorsa/res/values-en/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.8" vertical-offset="0" max-vertical-offset="255">
-          <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bonobuswear/src/recargaAucorsa/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.8" vertical-offset="0" max-vertical-offset="255">
-          <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/model/dto/base/RecargaTussamDTOBundle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.171123" vertical-offset="1031" max-vertical-offset="4065">
@@ -4072,14 +3949,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/recargaTussam/java/es/claucookie/recarga/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1005" max-vertical-offset="10335">
-          <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -4170,14 +4039,6 @@
       </provider>
       <provider editor-type-id="android-designer">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bonobuswear/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
-          <caret line="23" column="46" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/Consts.java">
@@ -4275,30 +4136,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="746" max-vertical-offset="1260">
           <caret line="68" column="9" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
-          <caret line="7" column="68" selection-start-line="7" selection-start-column="68" selection-end-line="7" selection-end-column="68" />
-          <folding>
-            <element signature="e#233#251#0" expanded="true" />
-            <element signature="e#438#477#0" expanded="true" />
-            <element signature="e#731#749#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bonobuswear/src/main/java/es/claucookie/recarga/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.115385" vertical-offset="2339" max-vertical-offset="2850">
-          <caret line="198" column="69" selection-start-line="198" selection-start-column="43" selection-end-line="198" selection-end-column="69" />
-          <folding>
-            <element signature="e#5468#6347#0" expanded="true" />
-            <element signature="e#6320#6321#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4314,14 +4151,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2353" max-vertical-offset="3645">
           <caret line="181" column="9" selection-start-line="181" selection-start-column="9" selection-end-line="181" selection-end-column="9" />
-          <folding>
-            <element signature="e#2621#2831#0" expanded="true" />
-            <element signature="e#2812#2813#0" expanded="true" />
-            <element signature="e#2833#3108#0" expanded="true" />
-            <element signature="e#3089#3090#0" expanded="true" />
-            <element signature="e#7195#7222#0" expanded="true" />
-            <element signature="e#7257#7291#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -4333,18 +4163,84 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bonobuswear/src/main/java/es/claucookie/recarga/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2970" max-vertical-offset="3270">
+          <caret line="198" column="69" selection-start-line="198" selection-start-column="43" selection-end-line="198" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.4" vertical-offset="0" max-vertical-offset="480">
+          <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bonobuswear/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="93" max-vertical-offset="585">
+          <caret line="23" column="40" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="43" />
+          <folding>
+            <element signature="e#503#542#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bonobuswear/src/recargaTussam/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.8" vertical-offset="0" max-vertical-offset="255">
+          <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bonobuswear/src/recargaTussam/res/values-en/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.8" vertical-offset="0" max-vertical-offset="255">
+          <caret line="3" column="41" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bonobuswear/src/recargaAucorsa/res/values-en/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.8" vertical-offset="0" max-vertical-offset="255">
+          <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bonobuswear/src/recargaAucorsa/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34438777" vertical-offset="0" max-vertical-offset="392">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/RecargaTussam/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="1710">
-          <caret line="56" column="24" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1740">
+          <caret line="86" column="26" selection-start-line="86" selection-start-column="26" selection-end-line="86" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bonobuswear/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7122302" vertical-offset="543" max-vertical-offset="960">
-          <caret line="56" column="66" selection-start-line="56" selection-start-column="66" selection-end-line="56" selection-end-column="66" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="960">
+          <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/recargaTussam/java/es/claucookie/recarga/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4480197" vertical-offset="1335" max-vertical-offset="9540">
+          <caret line="180" column="13" selection-start-line="180" selection-start-column="13" selection-end-line="180" selection-end-column="13" />
           <folding />
         </state>
       </provider>
