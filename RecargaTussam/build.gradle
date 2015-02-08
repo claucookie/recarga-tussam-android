@@ -6,7 +6,7 @@ buildscript {
 
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.0.0'
+        classpath 'com.android.tools.build:gradle:1.0.1'
         // the latest version of the android-apt plugin
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
         classpath 'io.fabric.tools:gradle:1.+'
@@ -48,10 +48,13 @@ dependencies {
     compile 'org.jsoup:jsoup:1.7.3'
     compile "com.android.support:appcompat-v7:21.0.+"
     compile 'com.google.android.gms:play-services-wearable:6.5.87'
-    wearApp project(':bonobuswear')
+    //wearApp project(path: ':bonobuswear', configuration: ':recargatussamRelease')
+    //wearApp project(path: ':bonobuswear', configuration: 'recargatussam')
+    //wearApp project(':bonobuswear')
     compile('com.crashlytics.sdk.android:crashlytics:2.2.1@aar') {
         transitive = true;
     }
+    wearApp files('/Users/claucookie/Desktop/wearable_app.apk')
 }
 
 // Android compilation information
@@ -81,12 +84,12 @@ android {
     }
 
     productFlavors {
-        recargaTussam {
+        recargatussam {
             applicationId "es.claucookie.recarga"
             versionName "2.1"
             versionCode 13
         }
-        recargaAucorsa {
+        recargaaucorsa {
             applicationId "es.claucookie.recargaaucorsa"
             versionName "1.0"
             versionCode 1

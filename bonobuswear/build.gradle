@@ -5,7 +5,7 @@ buildscript {
 
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.0.0'
+        classpath 'com.android.tools.build:gradle:1.0.1'
         // the latest version of the android-apt plugin
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
 
@@ -17,18 +17,21 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 21
     buildToolsVersion "21.1.2"
+    publishNonDefault true
 
     defaultConfig {
         applicationId "es.claucookie.recarga"
         minSdkVersion 20
         targetSdkVersion 21
-        versionCode 1
-        versionName "1.0"
     }
+
+    signingConfigs {
+        release
+    }
+
     buildTypes {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
 
         debug {
@@ -38,12 +41,12 @@ android {
     }
 
     productFlavors {
-        recargaTussam {
+        recargatussam {
             applicationId "es.claucookie.recarga"
             versionName "2.1"
             versionCode 13
         }
-        recargaAucorsa {
+        recargaaucorsa {
             applicationId "es.claucookie.recargaaucorsa"
             versionName "1.0"
             versionCode 1
