@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.wearable.MessageApi;
 import com.google.android.gms.wearable.Node;
 import com.google.android.gms.wearable.NodeApi;
@@ -152,18 +153,26 @@ public class MainActivity extends Activity implements
 
         public void run() {
             NodeApi.GetConnectedNodesResult nodes = Wearable.NodeApi.getConnectedNodes(googleClient).await();
-            for (Node node : nodes.getNodes()) {
-                MessageApi.SendMessageResult result = Wearable.MessageApi.sendMessage(googleClient, node.getId(), path, message.getBytes()).await();
-                if (result.getStatus().isSuccess()) {
-                    if (BuildConfig.DEBUG) {
-                        Log.v("myTag", "Message: {" + message + "} sent to: " + node.getDisplayName());
-                    }
-                } else {
-                    // Log an error
-                    if (BuildConfig.DEBUG) {
-                        Log.v("myTag", "ERROR: failed to send Message");
-                    }
-                }
+            for (final Node node : nodes.getNodes()) {
+                Wearable.MessageApi.sendMessage(
+                        googleClient, node.getId(), path, message.getBytes()).setResultCallback(
+                        new ResultCallback<MessageApi.SendMessageResult>() {
+                            @Override
+                            public void onResult(MessageApi.SendMessageResult sendMessageResult) {
+                                if (sendMessageResult.getStatus().isSuccess()) {
+                                    if (BuildConfig.DEBUG) {
+                                        Log.v("wearableActivity", "Message: {" + path + "} sent to: " + node.getDisplayName());
+                                    }
+                                } else {
+                                    // Log an error
+                                    if (BuildConfig.DEBUG) {
+                                        Log.v("wearableActivity", "ERROR: failed to send Message");
+                                    }
+                                }
+                            }
+                        }
+                );
+
             }
         }
     }
@@ -175,7 +184,13 @@ public class MainActivity extends Activity implements
     public class MessageReceiver extends BroadcastReceiver {
         @Override
         public void onReceive(Context context, Intent intent) {
+            if (BuildConfig.DEBUG) {
+                Log.v("wearableActivity", "Received intent in wearable !!!");
+            }
             if (intent != null && intent.hasExtra(Consts.CARD_DATA)) {
+                if (BuildConfig.DEBUG) {
+                    Log.v("wearableActivity", "Received Card DATA in wearable !!!");
+                }
                 String cardDataString = intent.getStringExtra(Consts.CARD_DATA);
                 // Display message in UI
                 favoriteCard = ParseHelper.parseData(cardDataString);

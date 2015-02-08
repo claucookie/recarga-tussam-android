@@ -1,21 +1,21 @@
 package es.claucookie.recarga;
 
-import android.text.TextUtils;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.wearable.MessageEvent;
 import com.google.android.gms.wearable.Wearable;
 import com.google.android.gms.wearable.WearableListenerService;
 
+import org.androidannotations.annotations.Background;
+import org.androidannotations.annotations.EService;
 import org.json.JSONException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -34,16 +34,18 @@ import es.claucookie.recarga.model.dto.TussamCardsDTO;
 /**
  * Created by claucookie on 02/01/15.
  */
+@EService
 public class ListenerService extends WearableListenerService {
 
 
     /**
      * Log or request TAG
      */
-    public static final String TAG = "VolleyPatterns";
+    public static final String TAG = "HandheldListenerService";
 
     String wearableId = "";
     TussamCardDTO favoriteCardDTO;
+    GoogleApiClient client;
 
     /**
      * Global request queue for Volley
@@ -58,8 +60,8 @@ public class ListenerService extends WearableListenerService {
         if (messageEvent.getPath().equals(Consts.GET_FAVORITE_CARD_INFO_MESSAGE)) {
             final String message = new String(messageEvent.getData());
             if (BuildConfig.DEBUG) {
-                Log.v("ListenerService", "Message path received on hanheld is: " + messageEvent.getPath());
-                Log.v("ListenerService", "Message received on handheld is: " + message);
+                Log.v(TAG, "Message path received on hanheld is: " + messageEvent.getPath());
+                Log.v(TAG, "Message received on handheld is: " + message);
             }
             getFavoriteCard();
             requestUpdatedCardInfo();
@@ -81,7 +83,8 @@ public class ListenerService extends WearableListenerService {
                 }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-
+                        // In case of error, return cached card
+                        sendCachedCard();
                     }
                 });
 
@@ -93,7 +96,6 @@ public class ListenerService extends WearableListenerService {
 
     private void parseHtml(String response) {
 
-        boolean errorFound = false;
         if (favoriteCardDTO != null) {
             Document responseDoc = Jsoup.parse(response);
             Element mainDiv = responseDoc.getElementById("cardStatus");
@@ -103,18 +105,18 @@ public class ListenerService extends WearableListenerService {
                 if (cardInfo.size() > 1 && cardInfo.get(1) != null) {
                     String cardStatus = cardInfo.get(1).text().replaceFirst("^ *", "");
                     favoriteCardDTO.setCardStatus(cardStatus);
-                } else errorFound = true;
+                }
 
                 // CardType
                 if (cardInfo.size() > 2 && cardInfo.get(2) != null) {
                     String cardType = cardInfo.get(2).text().replaceFirst("^ *", "");
                     favoriteCardDTO.setCardType(cardType);
-                } else errorFound = true;
+                }
 
                 // CardCredit
                 if (cardInfo.size() > 3 && cardInfo.get(3) != null) {
                     favoriteCardDTO.setCardCredit(cardInfo.get(3).text());
-                } else errorFound = true;
+                }
 
                 // Last update date
                 favoriteCardDTO.setLastDate((new Date()).getTime());
@@ -138,45 +140,72 @@ public class ListenerService extends WearableListenerService {
                 }
             }
         }
-        if (favoriteCardDTO != null) {
-            sendCard(favoriteCardDTO);
-        } else if (aucorsaCardsDTO != null &&
-                aucorsaCardsDTO.getCards() != null &&
-                aucorsaCardsDTO.getCards().size() > 0){
+        if (aucorsaCardsDTO != null
+                && aucorsaCardsDTO.getCards() != null
+                && aucorsaCardsDTO.getCards().size() > 0
+                && favoriteCardDTO == null) {
             // If user didnt set a card as favourite, set the first one and load info.
             favoriteCardDTO = aucorsaCardsDTO.getCards().get(0);
             favoriteCardDTO.setIsCardFavorite(true);
+        }
+    }
+
+    private void sendCachedCard() {
+        if (favoriteCardDTO != null) {
             sendCard(favoriteCardDTO);
         } else {
             sendNoCardsMessage();
         }
     }
 
-    private void sendError(String errorMessage) {
-        GoogleApiClient client = new GoogleApiClient.Builder(getApplicationContext())
-                .addApi(Wearable.API)
-                .build();
-        client.connect();
-        Wearable.MessageApi.sendMessage(client, wearableId, Consts.GET_FAVORITE_CARD_INFO_ERROR, errorMessage.getBytes());
-        client.disconnect();
+    /**
+     *
+     * Google api client methods
+     *
+     */
 
-    }
-
-    private void sendCard(TussamCardDTO favoriteCard) {
-        GoogleApiClient client = new GoogleApiClient.Builder(getApplicationContext())
-                .addApi(Wearable.API)
-                .build();
-        client.connect();
-        try {
-            Wearable.MessageApi.sendMessage(client, wearableId, Consts.GET_FAVORITE_CARD_INFO_MESSAGE, TussamCardDAO.getInstance().serialize(favoriteCard).toString().getBytes());
-        } catch (JSONException e) {
-            e.printStackTrace();
-            sendError("Error parsing card");
+    private void initGoogleApiClient() {
+        if (client == null) {
+            client = new GoogleApiClient.Builder(getApplicationContext())
+                    .addApi(Wearable.API)
+                    .build();
         }
-        client.disconnect();
     }
 
-    private void sendNoCardsMessage() {
+    private boolean connectGoogleApiClient() {
+        ConnectionResult connectionResult =
+                client.blockingConnect(30, TimeUnit.SECONDS);
+
+        if (!connectionResult.isSuccess()) {
+            Log.e(TAG, "Failed to connect to GoogleApiClient.");
+            return false;
+        }
+        return true;
+    }
+
+    @Background
+    void sendError(String errorMessage) {
+        initGoogleApiClient();
+        if (connectGoogleApiClient()) {
+            Wearable.MessageApi.sendMessage(client, wearableId, Consts.GET_FAVORITE_CARD_INFO_ERROR, errorMessage.getBytes());
+        }
+    }
+
+    @Background
+    void sendCard(TussamCardDTO favoriteCard) {
+        initGoogleApiClient();
+        if (connectGoogleApiClient()) {
+            try {
+                Wearable.MessageApi.sendMessage(client, wearableId, Consts.GET_FAVORITE_CARD_INFO_MESSAGE, TussamCardDAO.getInstance().serialize(favoriteCard).toString().getBytes());
+            } catch (JSONException e) {
+                e.printStackTrace();
+                sendError("Error parsing card");
+            }
+        }
+    }
+
+    @Background
+    void sendNoCardsMessage() {
         TussamCardDTO errorCard = new TussamCardDTO();
         errorCard.setCardName(getString(R.string.no_card));
         errorCard.setCardStatus(getString(R.string.no_card_detail));
@@ -185,32 +214,29 @@ public class ListenerService extends WearableListenerService {
         errorCard.setCardNumber("");
         errorCard.setLastDate((new Date()).getTime());
 
-        GoogleApiClient client = new GoogleApiClient.Builder(getApplicationContext())
-                .addApi(Wearable.API)
-                .build();
-        client.connect();
-        try {
-            Wearable.MessageApi.sendMessage(client, wearableId, Consts.GET_FAVORITE_CARD_INFO_UPDATED_MESSAGE, TussamCardDAO.getInstance().serialize(errorCard).toString().getBytes());
-        } catch (JSONException e) {
-            e.printStackTrace();
-            sendError("Error parsing card");
+        initGoogleApiClient();
+        if (connectGoogleApiClient()) {
+            try {
+                Wearable.MessageApi.sendMessage(client, wearableId, Consts.GET_FAVORITE_CARD_INFO_UPDATED_MESSAGE, TussamCardDAO.getInstance().serialize(errorCard).toString().getBytes());
+            } catch (JSONException e) {
+                e.printStackTrace();
+                sendError("Error parsing card");
+            }
         }
-        client.disconnect();
 
     }
 
-    private void sendCardUpdated(TussamCardDTO favoriteCard) {
-        GoogleApiClient client = new GoogleApiClient.Builder(getApplicationContext())
-                .addApi(Wearable.API)
-                .build();
-        client.connect();
-        try {
-            Wearable.MessageApi.sendMessage(client, wearableId, Consts.GET_FAVORITE_CARD_INFO_UPDATED_MESSAGE, TussamCardDAO.getInstance().serialize(favoriteCard).toString().getBytes());
-        } catch (JSONException e) {
-            e.printStackTrace();
-            sendError("Error parsing card");
+    @Background
+    void sendCardUpdated(TussamCardDTO favoriteCard) {
+        initGoogleApiClient();
+        if (connectGoogleApiClient()) {
+            try {
+                Wearable.MessageApi.sendMessage(client, wearableId, Consts.GET_FAVORITE_CARD_INFO_UPDATED_MESSAGE, TussamCardDAO.getInstance().serialize(favoriteCard).toString().getBytes());
+            } catch (JSONException e) {
+                e.printStackTrace();
+                sendError("Error parsing card");
+            }
         }
-        client.disconnect();
     }
 
     /**
@@ -227,22 +253,6 @@ public class ListenerService extends WearableListenerService {
     }
 
     /**
-     * Adds the specified request to the global queue, if tag is specified
-     * then it is used else Default TAG is used.
-     *
-     * @param req
-     * @param tag
-     */
-    public <T> void addToRequestQueue(Request<T> req, String tag) {
-        // set the default tag if tag is empty
-        req.setTag(TextUtils.isEmpty(tag) ? TAG : tag);
-
-        VolleyLog.d("Adding request to queue: %s", req.getUrl());
-
-        getRequestQueue().add(req);
-    }
-
-    /**
      * Adds the specified request to the global queue using the Default TAG.
      *
      * @param req
@@ -252,17 +262,5 @@ public class ListenerService extends WearableListenerService {
         req.setTag(TAG);
 
         getRequestQueue().add(req);
-    }
-
-    /**
-     * Cancels all pending requests by the specified TAG, it is important
-     * to specify a TAG so that the pending/ongoing requests can be cancelled.
-     *
-     * @param tag
-     */
-    public void cancelPendingRequests(Object tag) {
-        if (mRequestQueue != null) {
-            mRequestQueue.cancelAll(tag);
-        }
     }
 }
