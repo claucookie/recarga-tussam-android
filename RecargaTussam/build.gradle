@@ -37,7 +37,6 @@ apt {
 // Dependencies versions (the ones that usually change)
 ext.androidAnnotationsVersion = '3.0.1'
 ext.mobiveryLibAndroidVersion = '1.0.4-SNAPSHOT'
-ext.universalImageLoaderVersion = '1.9.1'
 
 // Insert your dependencies in here
 dependencies {
@@ -46,11 +45,10 @@ dependencies {
     apt "org.androidannotations:androidannotations:${androidAnnotationsVersion}"
     compile "org.androidannotations:androidannotations-api:${androidAnnotationsVersion}"
     compile "com.mobivery.android:library:${mobiveryLibAndroidVersion}@aar"
-    compile "com.nostra13.universalimageloader:universal-image-loader:${universalImageLoaderVersion}"
     compile 'com.crashlytics.android:crashlytics:1.+'
     compile 'org.jsoup:jsoup:1.7.3'
     compile "com.android.support:appcompat-v7:21.0.+"
-    compile 'com.google.android.gms:play-services:6.1.71'
+    compile 'com.google.android.gms:play-services-wearable:6.5.87'
     wearApp project(':bonobuswear')
 }
 
