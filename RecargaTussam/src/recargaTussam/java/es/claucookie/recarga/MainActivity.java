@@ -52,6 +52,7 @@ import es.claucookie.recarga.helpers.GeneralHelper;
 import es.claucookie.recarga.helpers.PreferencesHelper;
 import es.claucookie.recarga.model.dto.TussamCardDTO;
 import es.claucookie.recarga.model.dto.TussamCardsDTO;
+import io.fabric.sdk.android.Fabric;
 
 @EActivity(R.layout.activity_main2)
 public class MainActivity extends ActionBarActivity {
@@ -173,7 +174,7 @@ public class MainActivity extends ActionBarActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Crashlytics.start(this);
+        Fabric.with(this, new Crashlytics());
 
     }
 
