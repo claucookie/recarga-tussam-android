@@ -48,13 +48,11 @@ dependencies {
     compile 'org.jsoup:jsoup:1.7.3'
     compile "com.android.support:appcompat-v7:21.0.+"
     compile 'com.google.android.gms:play-services-wearable:6.5.87'
-    //wearApp project(path: ':bonobuswear', configuration: ':recargatussamRelease')
-    //wearApp project(path: ':bonobuswear', configuration: 'recargatussam')
-    //wearApp project(':bonobuswear')
+    wearApp project(':bonobuswear')
     compile('com.crashlytics.sdk.android:crashlytics:2.2.1@aar') {
         transitive = true;
     }
-    wearApp files('/Users/claucookie/Desktop/wearable_app.apk')
+    //wearApp files('/Users/claucookie/Desktop/wearable_app.apk')
 }
 
 // Android compilation information
