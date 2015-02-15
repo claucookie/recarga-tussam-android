@@ -26,5 +26,8 @@
     <string name="no_card">Ningún bonobús</string>
     <string name="no_card_detail">Añade tu bonobús desde el móvil</string>
     <string name="remaining_trips_note"> </string>
+    <string name="settings_title">Ajustes</string>
+    <string name="settings_inapp_title">Quita la publi</string>
+    <string name="settings_inapp_content">Por el precio de una caña Cruzcampo puedes eliminar la publi de la pantalla principal para siempre.</string>
 
 </resources>

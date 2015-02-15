@@ -24,6 +24,8 @@
 				<category android:name='android.intent.category.LAUNCHER'/>
 			</intent-filter>
 		</activity>
+        <activity android:label='@string/settings_title' android:name='.activities.SettingsActivity_' android:screenOrientation='portrait'/>
+        
 		<meta-data android:name='com.crashlytics.ApiKey' android:value='b2ec1eaae77c91b5cf4ec2cd6144edd73b23e413'/>
 	</application>
 

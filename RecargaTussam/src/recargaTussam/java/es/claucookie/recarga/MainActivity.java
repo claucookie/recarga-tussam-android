@@ -6,6 +6,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
@@ -36,6 +37,9 @@ import org.androidannotations.annotations.Background;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.InstanceState;
+import org.androidannotations.annotations.OptionsItem;
+import org.androidannotations.annotations.OptionsMenu;
+import org.androidannotations.annotations.OptionsMenuItem;
 import org.androidannotations.annotations.ViewById;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -48,12 +52,15 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
+import es.claucookie.recarga.activities.SettingsActivity;
+import es.claucookie.recarga.activities.SettingsActivity_;
 import es.claucookie.recarga.helpers.GeneralHelper;
 import es.claucookie.recarga.helpers.PreferencesHelper;
 import es.claucookie.recarga.model.dto.TussamCardDTO;
 import es.claucookie.recarga.model.dto.TussamCardsDTO;
 import io.fabric.sdk.android.Fabric;
 
+@OptionsMenu(R.menu.menu_main)
 @EActivity(R.layout.activity_main2)
 public class MainActivity extends ActionBarActivity {
     public static final long ONE_MINUTE = 60 * 1000; // Millisecs
@@ -119,6 +126,9 @@ public class MainActivity extends ActionBarActivity {
     ImageView minicard;
     @ViewById
     LinearLayout timeView;
+    
+    @OptionsMenuItem
+    MenuItem mainSettingsItem;
 
     @InstanceState
     TussamCardsDTO tussamCardsDTO = new TussamCardsDTO();
@@ -256,6 +266,13 @@ public class MainActivity extends ActionBarActivity {
             cardsSpinner.setSelection(newCardIndex);
         }
         spinnerAdapter.notifyDataSetChanged();
+    }
+    
+    @OptionsItem
+    void mainSettingsItemSelected() {
+        
+        // Show settings activity
+        SettingsActivity_.intent(this).start();
     }
 
 

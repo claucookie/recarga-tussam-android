@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+    
+    <RelativeLayout
+        android:id="@+id/inapp_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <com.mobivery.android.widgets.ExLabel
+            android:id="@+id/inapp_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_inapp_title"
+            android:layout_toLeftOf="@+id/inapp_button"
+            style="@style/Base.TextAppearance.AppCompat.Body2"/>
+
+        <com.mobivery.android.widgets.ExLabel
+            android:id="@+id/inapp_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_inapp_content"
+            android:layout_below="@+id/inapp_title"
+            android:layout_toLeftOf="@+id/inapp_button"
+            style="@style/Base.TextAppearance.AppCompat.Body1"/>
+
+        <Button
+            android:id="@+id/inapp_button"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="1,00€"
+            tools:background="@color/color_palette_2"
+            android:background="@drawable/settings_button_selector"
+            android:textColor="@color/common_text_color"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    
+    
+
+</LinearLayout>

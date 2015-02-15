@@ -26,5 +26,8 @@
     <string name="no_card">Cards not found</string>
     <string name="no_card_detail">Add your bus card from handheld.</string>
     <string name="remaining_trips_note"> </string>
+    <string name="settings_title">Settings</string>
+    <string name="settings_inapp_title">Remove Ads</string>
+    <string name="settings_inapp_content">Removing the main screen ads costs the same as a "Caña Cruzcampo", cheap huh?</string>
 
 </resources>

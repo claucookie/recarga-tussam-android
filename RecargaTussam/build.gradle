@@ -84,8 +84,8 @@ android {
     productFlavors {
         recargatussam {
             applicationId "es.claucookie.recarga"
-            versionName "2.1"
-            versionCode 13
+            versionName "2.2"
+            versionCode 14
         }
         recargaaucorsa {
             applicationId "es.claucookie.recargaaucorsa"
