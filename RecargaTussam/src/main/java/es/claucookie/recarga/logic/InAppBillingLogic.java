@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 import es.claucookie.recarga.BuildConfig;
 import es.claucookie.recarga.Consts;
+import es.claucookie.recarga.NetworkConsts;
 import es.claucookie.recarga.iabutil.IabHelper;
 import es.claucookie.recarga.iabutil.IabResult;
 import es.claucookie.recarga.iabutil.Inventory;
@@ -86,7 +87,7 @@ public class InAppBillingLogic {
     }
 
     public void setupInappBilling(Context context, final IabHelper.QueryInventoryFinishedListener gotInventoryListener) {
-        String base64EncodedPublicKey = Consts.GOOGLE_PLAY_PUBLIC_RSA_KEY;
+        String base64EncodedPublicKey = NetworkConsts.GOOGLE_PLAY_PUBLIC_RSA_KEY;
 
         // Create the helper, passing it our context and the public key to verify signatures with
         Log.d(TAG, "Creating IAB helper.");
@@ -123,7 +124,7 @@ public class InAppBillingLogic {
     }
 
     public void setupInappBilling(Context context, final IabHelper.OnIabSetupFinishedListener setupFinishedListener) {
-        String base64EncodedPublicKey = Consts.GOOGLE_PLAY_PUBLIC_RSA_KEY;
+        String base64EncodedPublicKey = NetworkConsts.GOOGLE_PLAY_PUBLIC_RSA_KEY;
 
         // Create the helper, passing it our context and the public key to verify signatures with
         Log.d(TAG, "Creating IAB helper.");
@@ -173,6 +174,7 @@ public class InAppBillingLogic {
     }
 
     private boolean verifyDeveloperPayload(Context context, Purchase p) {
+
         if (context != null) {
             String developerPayload = p.getDeveloperPayload();
 
@@ -205,11 +207,11 @@ public class InAppBillingLogic {
         verifyDeveloperPayload().
          */
         if (inAppCode != null) {
-            Purchase audioGuidePurchase = inventory.getPurchase(inAppCode);
+            Purchase itemPurchase = inventory.getPurchase(inAppCode);
 
-            // Do we have the audioGuide purchased?
-            boolean isPurchased = (audioGuidePurchase != null && verifyDeveloperPayload(context, audioGuidePurchase));
-            Log.d(TAG, "User has purchased this audioguide " + (isPurchased ? "YES" : "NO"));
+            // Do we have the item purchased?
+            boolean isPurchased = (itemPurchase != null && verifyDeveloperPayload(context, itemPurchase));
+            Log.d(TAG, "User has purchased this item " + (isPurchased ? "YES" : "NO"));
 
             return isPurchased;
         } else {
@@ -219,10 +221,10 @@ public class InAppBillingLogic {
 
     public boolean checkPurchasedItem(Context context, String inAppCode) {
         if (inAppCode != null && context != null && inventory != null) {
-            Purchase audioGuidePurchase = inventory.getPurchase(inAppCode);
+            Purchase itemPurchase = inventory.getPurchase(inAppCode);
 
-            // Do we have the audioGuide purchased?
-            boolean isPurchased = (audioGuidePurchase != null && verifyDeveloperPayload(context, audioGuidePurchase));
+            // Do we have the item purchased?
+            boolean isPurchased = (itemPurchase != null && verifyDeveloperPayload(context, itemPurchase));
             Log.d(TAG, "User has purchased this item " + (isPurchased ? "YES" : "NO"));
 
             return isPurchased;
@@ -251,7 +253,7 @@ public class InAppBillingLogic {
 
         if (purchase.getSku().equals(inAppCode)) {
             // Item purchased
-            Log.d(TAG, "AudioGuide purchased. Congratulating user.");
+            Log.d(TAG, "item purchased. Congratulating user.");
             isPurchased = true;
         }
 

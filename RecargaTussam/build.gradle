@@ -40,13 +40,13 @@ ext.mobiveryLibAndroidVersion = '1.0.4-SNAPSHOT'
 
 // Insert your dependencies in here
 dependencies {
-    compile "com.android.support:appcompat-v7:+"
+    compile 'com.android.support:appcompat-v7:+'
     compile 'com.android.support:support-v4:+'
     apt "org.androidannotations:androidannotations:${androidAnnotationsVersion}"
     compile "org.androidannotations:androidannotations-api:${androidAnnotationsVersion}"
     compile "com.mobivery.android:library:${mobiveryLibAndroidVersion}@aar"
     compile 'org.jsoup:jsoup:1.7.3'
-    compile "com.android.support:appcompat-v7:21.0.+"
+    compile 'com.android.support:appcompat-v7:21.0.+'
     compile 'com.google.android.gms:play-services-wearable:6.5.87'
     wearApp project(':bonobuswear')
     compile('com.crashlytics.sdk.android:crashlytics:2.2.1@aar') {
@@ -68,13 +68,20 @@ android {
 
     signingConfigs {
         release
+        Release {
+            keyAlias 'recargatussam'
+            keyPassword '070dcdcae5571d33ec396681c0202223'
+            storeFile file('/Users/claucookie/Documents/Desarrollo/Github/recarga-tussam-android/certs/release/recargatussam_certificate.jks')
+            storePassword '070dcdcae5571d33ec396681c0202223'
+        }
     }
 
     buildTypes {
         release {
-            signingConfig signingConfigs.release
+            // TODO: Remove debugable and suffix before upload to google play
+            debuggable true
+            signingConfig signingConfigs.Release
         }
-
         debug {
             applicationIdSuffix ".debug"
             versionNameSuffix "-dev"
@@ -94,18 +101,4 @@ android {
         }
     }
 
-}
-
-// Parametrized signing code for CI and Builder Dash
-if (project.hasProperty('keyStore')) {
-    android.signingConfigs.release.storeFile = file(keyStore)
-}
-if (project.hasProperty('keyStorePassword')) {
-    android.signingConfigs.release.storePassword = keyStorePassword
-}
-if (project.hasProperty('keyAlias')) {
-    android.signingConfigs.release.keyAlias = keyAlias
-}
-if (project.hasProperty('keyAliasPassword')) {
-    android.signingConfigs.release.keyPassword = keyAliasPassword
 }
