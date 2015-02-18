@@ -53,6 +53,9 @@ dependencies {
         transitive = true;
     }
     //wearApp files('/Users/claucookie/Desktop/wearable_app.apk')
+    compile('com.mopub.sdk.android:mopub:3.3.1@aar') {
+        transitive = true;
+    }
 }
 
 // Android compilation information

@@ -31,6 +31,7 @@ import com.crashlytics.android.Crashlytics;
 import com.mobivery.android.helpers.TagFormat;
 import com.mobivery.android.widgets.ExLabel;
 import com.mobivery.android.widgets.ExText;
+import com.mopub.mobileads.MoPubView;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Background;
@@ -51,6 +52,7 @@ import java.text.DecimalFormatSymbols;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Locale;
 
 import es.claucookie.recarga.activities.SettingsActivity;
 import es.claucookie.recarga.activities.SettingsActivity_;
@@ -126,6 +128,8 @@ public class MainActivity extends ActionBarActivity {
     ImageView minicard;
     @ViewById
     LinearLayout timeView;
+    @ViewById
+    MoPubView publiLayout;
     
     @OptionsMenuItem
     MenuItem mainSettingsItem;
@@ -141,6 +145,8 @@ public class MainActivity extends ActionBarActivity {
 
     private ArrayAdapter<String> spinnerAdapter;
 
+    private MoPubView moPubView;
+
     /**
      * Global request queue for Volley
      */
@@ -153,6 +159,7 @@ public class MainActivity extends ActionBarActivity {
         initEditText();
         loadSavedCards();
         loadFirstView();
+        initPubli();
     }
 
     private void initEditText() {
@@ -181,11 +188,24 @@ public class MainActivity extends ActionBarActivity {
     }
 
 
+
+    private void initPubli() {
+        publiLayout.setAdUnitId(NetworkConsts.MOPUB_BANNER_AD_UNIT_ID);
+        publiLayout.loadAd();
+    }
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Fabric.with(this, new Crashlytics());
 
+    }
+    
+    @Override
+    public void onDestroy() {
+        publiLayout.destroy();
+        super.onDestroy();
     }
 
     @Override
@@ -541,7 +561,7 @@ public class MainActivity extends ActionBarActivity {
 
                 } else {
                     // More than 1 day (Date)
-                    dateString = new SimpleDateFormat(getString(R.string.updated_date_format)).format(new Date(selectedCardDTO.getLastDate()));
+                    dateString = new SimpleDateFormat(getString(R.string.updated_date_format), Locale.US).format(new Date(selectedCardDTO.getLastDate()));
 
                 }
 
@@ -598,6 +618,7 @@ public class MainActivity extends ActionBarActivity {
         cardCreditText.setVisibility(View.VISIBLE);
         cardLastUpdateText.setVisibility(View.VISIBLE);
         cardNumberText.setVisibility(View.VISIBLE);
+        publiLayout.setVisibility(View.VISIBLE);
     }
 
     private void showAddView() {
@@ -621,6 +642,7 @@ public class MainActivity extends ActionBarActivity {
         addCardButton.setVisibility(View.GONE);
         cardLastUpdateText.setVisibility(View.INVISIBLE);
         cardNumberText.setVisibility(View.GONE);
+        publiLayout.setVisibility(View.GONE);
     }
 
     private void showEditView() {
@@ -644,6 +666,7 @@ public class MainActivity extends ActionBarActivity {
         addCardButton.setVisibility(View.GONE);
         cardLastUpdateText.setVisibility(View.INVISIBLE);
         timeView.setVisibility(View.GONE);
+        publiLayout.setVisibility(View.VISIBLE);
     }
 
     /**

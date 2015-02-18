@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingTop="30dp"
@@ -31,7 +30,7 @@
             android:layout_alignParentRight="true"
             android:textSize="@dimen/font_size_huge"
             style="@style/CardBoldText.Tussam"
-            android:layout_marginRight="16dp"/>
+            android:layout_marginRight="16dp" />
 
         <ImageView
             android:id="@+id/minicard"
@@ -52,7 +51,7 @@
             android:layout_marginRight="70dp"
             android:layout_marginBottom="20dp"
             android:spinnerMode="dialog"
-            tools:text="Clo"/>
+            tools:text="Clo" />
 
         <RelativeLayout
             android:id="@+id/cards_data"
@@ -71,7 +70,7 @@
                 style="@style/CardBoldText.Tussam"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="42dp"
-                android:layout_marginRight="100dp"/>
+                android:layout_marginRight="100dp" />
 
 
             <com.mobivery.android.widgets.ExLabel
@@ -86,7 +85,7 @@
                 android:padding="5dp"
                 android:layout_marginLeft="36dp"
                 android:layout_marginRight="100dp"
-                android:textSize="@dimen/font_size_small"/>
+                android:textSize="@dimen/font_size_small" />
 
 
             <com.mobivery.android.widgets.ExLabel
@@ -102,7 +101,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="5dp"
                 android:layout_marginLeft="@dimen/card_status_left_margin"
-                android:textSize="@dimen/font_size_big"/>
+                android:textSize="@dimen/font_size_big" />
 
 
             <com.mobivery.android.widgets.ExLabel
@@ -115,10 +114,7 @@
                 android:layout_below="@id/card_type_text"
                 android:textSize="17sp"
                 style="@style/CardText.Tussam"
-                android:visibility="gone"/>
-
-
-
+                android:visibility="gone" />
 
 
         </RelativeLayout>
@@ -211,7 +207,7 @@
             <ImageView
                 android:src="@drawable/ic_action_time"
                 android:layout_width="@dimen/icons_size"
-                android:layout_height="@dimen/icons_size"/>
+                android:layout_height="@dimen/icons_size" />
 
         </LinearLayout>
 
@@ -224,7 +220,7 @@
             android:layout_toRightOf="@+id/time_view"
             style="@style/CardText.Tussam"
             android:textSize="@dimen/font_size_small"
-            android:layout_marginLeft="5dp"/>
+            android:layout_marginLeft="5dp" />
 
         <LinearLayout
             android:id="@+id/card_actions"
@@ -296,7 +292,8 @@
 
     </RelativeLayout>
 
-    <LinearLayout style="@style/CircleFavoriteButton.Tussam"
+    <LinearLayout
+        style="@style/CircleFavoriteButton.Tussam"
         android:layout_alignParentRight="true">
 
         <CheckBox
@@ -304,7 +301,7 @@
             android:layout_width="@dimen/icons_small_size"
             android:layout_height="@dimen/icons_small_size"
             android:layout_marginLeft="4dp"
-            android:button="@drawable/card_favorite_selector"/>
+            android:button="@drawable/card_favorite_selector" />
 
     </LinearLayout>
 
@@ -314,7 +311,7 @@
         android:text="+"
         android:textSize="@dimen/font_size_huge"
         android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentBottom="true" />
 
 
     <com.mobivery.android.widgets.ExLabel
@@ -325,15 +322,16 @@
         android:layout_toLeftOf="@+id/add_card_button"
         android:layout_above="@+id/publi_layout"
         android:text="@string/remaining_trips_note"
-        style="@style/HelpText.Tussam"/>
+        style="@style/HelpText.Tussam" />
 
     <!-- Public space -->
-    <View
+
+    <com.mopub.mobileads.MoPubView
         android:id="@+id/publi_layout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/circle_button_width"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/add_card_button"/>
+        android:layout_toLeftOf="@+id/add_card_button" />
 
 </RelativeLayout>

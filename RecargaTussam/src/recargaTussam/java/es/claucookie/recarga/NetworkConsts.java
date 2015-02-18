@@ -13,4 +13,7 @@ public class NetworkConsts {
     public static final String REMOVE_PUB_INAPP_CODE = "es.claucookie.recarga.removeadd";
     public static final int IN_APP_PURCHASE_REQUEST_CODE = 1000001;
 
+    // TODO: Replace this test id with your personal ad unit id
+    public static final String MOPUB_BANNER_AD_UNIT_ID = "0c501ec4597c4608bba0946d4a2ee27f";
+
 }

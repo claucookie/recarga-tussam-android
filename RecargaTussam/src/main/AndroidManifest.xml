@@ -27,6 +27,19 @@
         <activity android:label='@string/settings_title' android:name='.activities.SettingsActivity_' android:screenOrientation='portrait'/>
         
 		<meta-data android:name='com.crashlytics.ApiKey' android:value='b2ec1eaae77c91b5cf4ec2cd6144edd73b23e413'/>
-	</application>
+	    <activity
+            android:name="com.mopub.mobileads.MoPubActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="com.mopub.mobileads.MraidActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="com.mopub.common.MoPubBrowser"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="com.mopub.mobileads.MraidVideoPlayerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+    </application>
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 </manifest>
