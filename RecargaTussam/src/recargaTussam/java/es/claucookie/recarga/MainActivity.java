@@ -19,7 +19,6 @@ import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.android.volley.Network;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -54,7 +53,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
 
-import es.claucookie.recarga.activities.SettingsActivity;
 import es.claucookie.recarga.activities.SettingsActivity_;
 import es.claucookie.recarga.helpers.GeneralHelper;
 import es.claucookie.recarga.helpers.PreferencesHelper;
@@ -191,7 +189,23 @@ public class MainActivity extends ActionBarActivity {
 
     private void initPubli() {
         publiLayout.setAdUnitId(NetworkConsts.MOPUB_BANNER_AD_UNIT_ID);
+        publiLayout.setTesting(false);
         publiLayout.loadAd();
+    }
+    
+    @Override
+    public void onResume() {
+        checkPubli();
+        super.onResume();
+    }
+
+    private void checkPubli() {
+        // Check if public is removed
+        if (PreferencesHelper.getInstance().inappPurchased(this)) {
+            publiLayout.setVisibility(View.INVISIBLE);
+        } else {
+            publiLayout.setVisibility(View.VISIBLE);
+        }
     }
 
 
@@ -618,7 +632,7 @@ public class MainActivity extends ActionBarActivity {
         cardCreditText.setVisibility(View.VISIBLE);
         cardLastUpdateText.setVisibility(View.VISIBLE);
         cardNumberText.setVisibility(View.VISIBLE);
-        publiLayout.setVisibility(View.VISIBLE);
+        checkPubli();
     }
 
     private void showAddView() {
@@ -642,7 +656,7 @@ public class MainActivity extends ActionBarActivity {
         addCardButton.setVisibility(View.GONE);
         cardLastUpdateText.setVisibility(View.INVISIBLE);
         cardNumberText.setVisibility(View.GONE);
-        publiLayout.setVisibility(View.GONE);
+        publiLayout.setVisibility(View.INVISIBLE);
     }
 
     private void showEditView() {
@@ -666,7 +680,7 @@ public class MainActivity extends ActionBarActivity {
         addCardButton.setVisibility(View.GONE);
         cardLastUpdateText.setVisibility(View.INVISIBLE);
         timeView.setVisibility(View.GONE);
-        publiLayout.setVisibility(View.VISIBLE);
+        publiLayout.setVisibility(View.INVISIBLE);
     }
 
     /**

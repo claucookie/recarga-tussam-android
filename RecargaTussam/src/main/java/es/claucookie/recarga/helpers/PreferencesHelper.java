@@ -20,6 +20,7 @@ public class PreferencesHelper {
     public static final String FAVORITES_PREFERENCES = "FAVORITES_PREFERENCES";
     private static final String SALT = "´gwek,v'b op'&%DFTRHFGFTv,tyjhjk`Ç'`¡u8495ubsrw";
     public static final String CARDS = "cards";
+    public static final String PUBLI_INAPP = "publi_inapp";
 
     private ObfuscatedPreferences memoryPreferences;
 
@@ -86,6 +87,25 @@ public class PreferencesHelper {
 
     public void deleteCards(Context context) {
         preferences(context).removeValue(CARDS);
+    }
+
+    public boolean inappPurchased(Context context) {
+        if (context == null) {
+            return false;
+        }
+        boolean purchased = "true".equals(preferences(context).getString(PUBLI_INAPP));
+        return purchased;
+    }
+
+    public void setInappPurchased(Context context, boolean value) {
+
+        if (context != null) {
+            if (value) {
+                preferences(context).put(PUBLI_INAPP, "true");
+            } else {
+                preferences(context).put(PUBLI_INAPP, "false");
+            }
+        }
     }
 
 

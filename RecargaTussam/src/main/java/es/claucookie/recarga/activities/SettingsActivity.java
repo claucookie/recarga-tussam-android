@@ -16,6 +16,7 @@ import java.util.ArrayList;
 
 import es.claucookie.recarga.NetworkConsts;
 import es.claucookie.recarga.R;
+import es.claucookie.recarga.helpers.PreferencesHelper;
 import es.claucookie.recarga.iabutil.IabHelper;
 import es.claucookie.recarga.iabutil.IabResult;
 import es.claucookie.recarga.iabutil.Inventory;
@@ -32,13 +33,13 @@ public class SettingsActivity extends ActionBarActivity {
 
     @ViewById
     Button inappButton;
-    
+
     private boolean publiRemovePurchased = false;
 
     @AfterViews
     void initViews() {
         initActionBar();
-        setupInappBilling();
+        checkStoredPreferences();
     }
 
     private void initActionBar() {
@@ -64,6 +65,22 @@ public class SettingsActivity extends ActionBarActivity {
     }
 
     /**
+     * Preferences 
+     */
+    private void checkStoredPreferences() {
+        publiRemovePurchased = PreferencesHelper.getInstance().inappPurchased(this);
+        updatePubliLayout();
+        if (!publiRemovePurchased) {
+            setupInappBilling();
+        }
+    }
+
+    private void updateStoredPreferences() {
+        // Save Purchase state into preferences
+        PreferencesHelper.getInstance().setInappPurchased(this, publiRemovePurchased);
+    }
+
+    /**
      * Inapp billing methods
      */
 
@@ -79,15 +96,25 @@ public class SettingsActivity extends ActionBarActivity {
     private void checkInappStatusAndShowInfo() {
         // Is remove app inapp purchased?
         publiRemovePurchased = InAppBillingLogic.getInstance().checkPurchasedItem(this, NetworkConsts.REMOVE_PUB_INAPP_CODE);
+        updatePubliLayout();
+        updateStoredPreferences();
+    }
+
+    private void updatePubliLayout() {
         if (publiRemovePurchased) {
             // show purchased view
             inappButton.setVisibility(View.GONE);
         } else {
+            updatePriceLayout();
             // show purchase view
             inappButton.setVisibility(View.VISIBLE);
-            String price = InAppBillingLogic.getInstance().getPriceForProduct(NetworkConsts.REMOVE_PUB_INAPP_CODE);
-            inappButton.setText(price);
         }
+
+    }
+
+    private void updatePriceLayout() {
+        String price = InAppBillingLogic.getInstance().getPriceForProduct(NetworkConsts.REMOVE_PUB_INAPP_CODE);
+        inappButton.setText(price);
     }
 
     private void setupInappBilling() {
@@ -95,23 +122,21 @@ public class SettingsActivity extends ActionBarActivity {
         ArrayList<String> moreSkus = new ArrayList<String>();
         moreSkus.add(NetworkConsts.REMOVE_PUB_INAPP_CODE);
         InAppBillingLogic.getInstance().setSkuDetailsList(moreSkus);
-        
+
         if (InAppBillingLogic.getInstance().getIabHelper() != null) {
             InAppBillingLogic.getInstance().queryInventory(gotInventoryListener);
         } else {
             InAppBillingLogic.getInstance().setupInappBilling(this, gotInventoryListener);
         }
+
     }
 
 
     // Listener that's called when we finish querying the items and subscriptions we own
     IabHelper.QueryInventoryFinishedListener gotInventoryListener = new IabHelper.QueryInventoryFinishedListener() {
         public void onQueryInventoryFinished(IabResult result, Inventory inventory) {
-            Log.d(TAG, "Query inventory finished.");
-
             InAppBillingLogic.getInstance().setInventory(inventory);
             checkInappStatusAndShowInfo();
-            Log.d(TAG, "Initial inventory query finished; enabling main UI.");
         }
     };
 
@@ -120,8 +145,6 @@ public class SettingsActivity extends ActionBarActivity {
 
         @Override
         public void onIabSetupFinished(IabResult result) {
-            Log.d(TAG, "Setup finished.");
-
             if (result.isSuccess()) {
                 Log.d(TAG, "Inapp setup finished and purchase flow is starting now.");
                 startPurchaseFlowDialog();
@@ -134,8 +157,6 @@ public class SettingsActivity extends ActionBarActivity {
     // Callback for when a purchase is finished
     IabHelper.OnIabPurchaseFinishedListener purchaseFinishedListener = new IabHelper.OnIabPurchaseFinishedListener() {
         public void onIabPurchaseFinished(IabResult result, Purchase purchase) {
-            Log.d(TAG, "Purchase finished: " + result + ", purchase: " + purchase);
-
             publiRemovePurchased = result.isSuccess();
             checkInappStatusAndShowInfo();
         }

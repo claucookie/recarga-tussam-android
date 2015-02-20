@@ -11,6 +11,10 @@
         <meta-data android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
+        <meta-data android:name='com.crashlytics.ApiKey' 
+            android:value='b2ec1eaae77c91b5cf4ec2cd6144edd73b23e413'/>
+
+
         <service android:name=".ListenerService_">
             <intent-filter>
                 <action android:name="com.google.android.gms.wearable.BIND_LISTENER" />
@@ -26,8 +30,7 @@
 		</activity>
         <activity android:label='@string/settings_title' android:name='.activities.SettingsActivity_' android:screenOrientation='portrait'/>
         
-		<meta-data android:name='com.crashlytics.ApiKey' android:value='b2ec1eaae77c91b5cf4ec2cd6144edd73b23e413'/>
-	    <activity
+		<activity
             android:name="com.mopub.mobileads.MoPubActivity"
             android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity
