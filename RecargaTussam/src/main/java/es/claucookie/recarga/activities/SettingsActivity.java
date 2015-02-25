@@ -93,9 +93,12 @@ public class SettingsActivity extends ActionBarActivity {
 
     }
 
-    private void checkInappStatusAndShowInfo() {
+    private void checkInappStatusAndShowInfo(boolean purchased) {
         // Is remove app inapp purchased?
-        publiRemovePurchased = InAppBillingLogic.getInstance().checkPurchasedItem(this, NetworkConsts.REMOVE_PUB_INAPP_CODE);
+        publiRemovePurchased = purchased;
+        if (!purchased) {
+            publiRemovePurchased = InAppBillingLogic.getInstance().checkPurchasedItem(this, NetworkConsts.REMOVE_PUB_INAPP_CODE);
+        }
         updatePubliLayout();
         updateStoredPreferences();
     }
@@ -136,7 +139,7 @@ public class SettingsActivity extends ActionBarActivity {
     IabHelper.QueryInventoryFinishedListener gotInventoryListener = new IabHelper.QueryInventoryFinishedListener() {
         public void onQueryInventoryFinished(IabResult result, Inventory inventory) {
             InAppBillingLogic.getInstance().setInventory(inventory);
-            checkInappStatusAndShowInfo();
+            checkInappStatusAndShowInfo(false);
         }
     };
 
@@ -158,7 +161,7 @@ public class SettingsActivity extends ActionBarActivity {
     IabHelper.OnIabPurchaseFinishedListener purchaseFinishedListener = new IabHelper.OnIabPurchaseFinishedListener() {
         public void onIabPurchaseFinished(IabResult result, Purchase purchase) {
             publiRemovePurchased = result.isSuccess();
-            checkInappStatusAndShowInfo();
+            checkInappStatusAndShowInfo(publiRemovePurchased);
         }
     };
 
