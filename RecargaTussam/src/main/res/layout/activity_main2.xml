@@ -326,8 +326,9 @@
 
     <!-- Public space -->
 
-    <com.mopub.mobileads.MoPubView
+    <LinearLayout
         android:id="@+id/publi_layout"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="@dimen/circle_button_width"
         android:layout_alignParentLeft="true"

@@ -14,6 +14,6 @@ public class NetworkConsts {
     public static final int IN_APP_PURCHASE_REQUEST_CODE = 1000001;
 
 
-    public static final String MOPUB_BANNER_AD_UNIT_ID = "0c501ec4597c4608bba0946d4a2ee27f";
+    public static final String MOPUB_BANNER_AD_UNIT_ID = "ca-app-pub-6746310439012216/9994742281";
 
 }

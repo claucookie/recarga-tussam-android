@@ -90,11 +90,7 @@ public class PreferencesHelper {
     }
 
     public boolean inappPurchased(Context context) {
-        if (context == null) {
-            return false;
-        }
-        boolean purchased = "true".equals(preferences(context).getString(PUBLI_INAPP));
-        return purchased;
+        return context != null && "true".equals(preferences(context).getString(PUBLI_INAPP));
     }
 
     public void setInappPurchased(Context context, boolean value) {

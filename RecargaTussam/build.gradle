@@ -37,6 +37,7 @@ apt {
 // Dependencies versions (the ones that usually change)
 ext.androidAnnotationsVersion = '3.0.1'
 ext.mobiveryLibAndroidVersion = '1.0.4-SNAPSHOT'
+ext.googlePlayServicesVersion = '6.5.87'
 
 // Insert your dependencies in here
 dependencies {
@@ -47,15 +48,15 @@ dependencies {
     compile "com.mobivery.android:library:${mobiveryLibAndroidVersion}@aar"
     compile 'org.jsoup:jsoup:1.7.3'
     compile 'com.android.support:appcompat-v7:21.0.+'
-    compile 'com.google.android.gms:play-services-wearable:6.5.87'
+    compile "com.google.android.gms:play-services-wearable:${googlePlayServicesVersion}"
+    compile "com.google.android.gms:play-services-ads:${googlePlayServicesVersion}"
     wearApp project(':bonobuswear')
     compile('com.crashlytics.sdk.android:crashlytics:2.2.1@aar') {
         transitive = true;
     }
     //wearApp files('/Users/claucookie/Desktop/wearable_app.apk')
-    compile('com.mopub.sdk.android:mopub:3.3.1@aar') {
-        transitive = true;
-    }
+
+
 }
 
 // Android compilation information

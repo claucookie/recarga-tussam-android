@@ -1,11 +1,17 @@
 package es.claucookie.recarga;
 
 import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.Point;
 import android.os.Bundle;
+import android.preference.PreferenceScreen;
 import android.support.v7.app.ActionBarActivity;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.DisplayMetrics;
+import android.util.TypedValue;
+import android.view.Display;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -27,10 +33,12 @@ import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.crashlytics.android.Crashlytics;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
 import com.mobivery.android.helpers.TagFormat;
 import com.mobivery.android.widgets.ExLabel;
 import com.mobivery.android.widgets.ExText;
-import com.mopub.mobileads.MoPubView;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Background;
@@ -127,7 +135,7 @@ public class MainActivity extends ActionBarActivity {
     @ViewById
     LinearLayout timeView;
     @ViewById
-    MoPubView publiLayout;
+    LinearLayout publiLayout;
     
     @OptionsMenuItem
     MenuItem mainSettingsItem;
@@ -142,8 +150,8 @@ public class MainActivity extends ActionBarActivity {
     boolean isDetailView = false, isAddView = false, isEditView = false;
 
     private ArrayAdapter<String> spinnerAdapter;
+    private AdView adView;
 
-    private MoPubView moPubView;
 
     /**
      * Global request queue for Volley
@@ -188,17 +196,31 @@ public class MainActivity extends ActionBarActivity {
 
 
     private void initPubli() {
-        publiLayout.setAdUnitId(NetworkConsts.MOPUB_BANNER_AD_UNIT_ID);
-        publiLayout.setTesting(false);
-        publiLayout.loadAd();
+
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        float width = size.x ;
+        int dpWith = (int) (width / Resources.getSystem().getDisplayMetrics().density) - 96 ; // Remove padding and add button width
+
+
+        // Crear adView.
+        adView = new AdView(this);
+        adView.setAdUnitId(NetworkConsts.MOPUB_BANNER_AD_UNIT_ID);
+        adView.setAdSize(new AdSize(dpWith, 56));
+
+        // Añadirle adView.
+        publiLayout.addView(adView);
+
+        // Iniciar una solicitud genérica.
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice("6A7C55C40A817C1CF4702124233003BA")
+                .build();
+
+        // Cargar adView con la solicitud de anuncio.
+        adView.loadAd(adRequest);
     }
     
-    @Override
-    public void onResume() {
-        checkPubli();
-        super.onResume();
-    }
-
     private void checkPubli() {
         // Check if public is removed
         if (PreferencesHelper.getInstance().inappPurchased(this)) {
@@ -208,17 +230,22 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
+    @Override
+    public void onPause() {
+        adView.pause();
+        super.onPause();
+    }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        Fabric.with(this, new Crashlytics());
-
+    public void onResume() {
+        super.onResume();
+        adView.resume();
+        checkPubli();
     }
-    
+
     @Override
     public void onDestroy() {
-        publiLayout.destroy();
+        adView.destroy();
         super.onDestroy();
     }
 
