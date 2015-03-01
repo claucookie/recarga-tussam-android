@@ -1,9 +1,13 @@
 package es.claucookie.recarga.activities;
 
 import android.app.Activity;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.SwitchCompat;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -11,6 +15,7 @@ import android.widget.Button;
 import com.android.volley.Network;
 
 import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Background;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.OnActivityResult;
@@ -19,6 +24,7 @@ import org.androidannotations.annotations.ViewById;
 
 import java.util.ArrayList;
 
+import es.claucookie.recarga.CheckCreditBroadcastReceiver;
 import es.claucookie.recarga.NetworkConsts;
 import es.claucookie.recarga.R;
 import es.claucookie.recarga.helpers.PreferencesHelper;
@@ -27,6 +33,7 @@ import es.claucookie.recarga.iabutil.IabResult;
 import es.claucookie.recarga.iabutil.Inventory;
 import es.claucookie.recarga.iabutil.Purchase;
 import es.claucookie.recarga.logic.InAppBillingLogic;
+import es.claucookie.recarga.model.dto.TussamCardsDTO;
 
 /**
  * Created by claucookie on 15/02/15.
@@ -38,6 +45,8 @@ public class SettingsActivity extends ActionBarActivity {
 
     @ViewById
     Button inappButton;
+    @ViewById
+    SwitchCompat alarmSwitch;
 
     private boolean publiRemovePurchased = false;
 
@@ -53,10 +62,26 @@ public class SettingsActivity extends ActionBarActivity {
             bar.setDisplayHomeAsUpEnabled(true);
         }
     }
+    
+    @Override
+    public void onBackPressed() {
+        checkAlarmSwitch();
+        super.onBackPressed();
+    }
 
     @OptionsItem(android.R.id.home)
     void homeSelected() {
+        checkAlarmSwitch();
         finish();
+    }
+    
+    private void checkAlarmSwitch() {
+        PreferencesHelper.getInstance().activateCreditAlarm(this, alarmSwitch.isChecked());
+        if (PreferencesHelper.getInstance().creditAlarmActivated(this)) {
+            scheduleAlarm();
+        } else {
+            cancelAlarm();
+        }
     }
 
     @Click
@@ -66,7 +91,6 @@ public class SettingsActivity extends ActionBarActivity {
         } else {
             InAppBillingLogic.getInstance().setupInappBilling(this, inappSetupFinishedListener);
         }
-
     }
 
     /**
@@ -78,11 +102,47 @@ public class SettingsActivity extends ActionBarActivity {
         if (!publiRemovePurchased) {
             setupInappBilling();
         }
+        if (PreferencesHelper.getInstance().creditAlarmActivated(this)) {
+            alarmSwitch.setChecked(true);
+        } else {
+            alarmSwitch.setChecked(false);
+        }
     }
 
     private void updateStoredPreferences() {
         // Save Purchase state into preferences
         PreferencesHelper.getInstance().setInappPurchased(this, publiRemovePurchased);
+    }
+
+    /**
+     * Alarm methods 
+     */
+
+    @Background
+    public void scheduleAlarm() {
+        TussamCardsDTO aucorsaCardsDTO = PreferencesHelper.getInstance().getCards(this);
+
+        if (aucorsaCardsDTO != null) {
+            // Construct an intent that will execute the AlarmReceiver
+            Intent intent = new Intent(getApplicationContext(), CheckCreditBroadcastReceiver.class);
+            // Create a PendingIntent to be triggered when the alarm goes off
+            final PendingIntent pIntent = PendingIntent.getBroadcast(this, CheckCreditBroadcastReceiver.REQUEST_CODE,
+                    intent, PendingIntent.FLAG_UPDATE_CURRENT);
+            // Setup periodic alarm every 5 seconds
+            long firstMillis = System.currentTimeMillis(); // first run of alarm is immediate
+            int intervalMillis = 5000; //5sec //1000 * 60 * 60 * 24; // 24 hours in miliseconds
+            AlarmManager alarm = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
+            alarm.setInexactRepeating(AlarmManager.RTC_WAKEUP, firstMillis, intervalMillis, pIntent);
+        }
+    }
+
+    @Background
+    public void cancelAlarm() {
+        Intent intent = new Intent(getApplicationContext(), CheckCreditBroadcastReceiver.class);
+        final PendingIntent pIntent = PendingIntent.getBroadcast(this, CheckCreditBroadcastReceiver.REQUEST_CODE,
+                intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        AlarmManager alarm = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
+        alarm.cancel(pIntent);
     }
 
     /**

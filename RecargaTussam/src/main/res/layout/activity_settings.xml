@@ -40,6 +40,50 @@
             android:layout_centerVertical="true"/>
     </RelativeLayout>
     
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/material_blue_grey_800"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <RelativeLayout
+        android:id="@+id/alarm_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.mobivery.android.widgets.ExLabel
+            android:id="@+id/alarm_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_inapp_title"
+            android:layout_toLeftOf="@+id/alarm_switch"
+            style="@style/Base.TextAppearance.AppCompat.Body2"/>
+
+        <com.mobivery.android.widgets.ExLabel
+            android:id="@+id/alarm_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_inapp_content"
+            android:layout_below="@+id/alarm_title"
+            android:layout_toLeftOf="@+id/alarm_switch"
+            style="@style/Base.TextAppearance.AppCompat.Body1"/>
+
+        <android.support.v7.widget.SwitchCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/alarm_switch"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:buttonTint="@color/color_palette_1"
+            android:backgroundTint="@color/color_palette_1"
+            style="@style/SwitchButton.Tussam"/>
+
+        
+    </RelativeLayout>
+
     
+
 
 </LinearLayout>

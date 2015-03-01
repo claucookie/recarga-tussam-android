@@ -22,6 +22,14 @@
             </intent-filter>
         </service>
 
+        <receiver
+            android:name=".CheckCreditBroadcastReceiver"
+            android:process=":remote" >
+        </receiver>
+
+        <service
+            android:name=".CheckCreditIntentService"
+            android:exported="false" />
 
         <activity android:label='@string/app_name' android:name='MainActivity_' android:screenOrientation='portrait'>
 			<intent-filter>

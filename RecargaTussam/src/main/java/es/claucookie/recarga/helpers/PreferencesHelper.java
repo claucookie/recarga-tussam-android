@@ -21,6 +21,7 @@ public class PreferencesHelper {
     private static final String SALT = "´gwek,v'b op'&%DFTRHFGFTv,tyjhjk`Ç'`¡u8495ubsrw";
     public static final String CARDS = "cards";
     public static final String PUBLI_INAPP = "publi_inapp";
+    public static final String CREDIT_ALARM = "credit_alarm";
 
     private ObfuscatedPreferences memoryPreferences;
 
@@ -100,6 +101,21 @@ public class PreferencesHelper {
                 preferences(context).put(PUBLI_INAPP, "true");
             } else {
                 preferences(context).put(PUBLI_INAPP, "false");
+            }
+        }
+    }
+
+    public boolean creditAlarmActivated(Context context) {
+        return context != null && "true".equals(preferences(context).getString(CREDIT_ALARM));
+    }
+
+    public void activateCreditAlarm(Context context, boolean value) {
+
+        if (context != null) {
+            if (value) {
+                preferences(context).put(CREDIT_ALARM, "true");
+            } else {
+                preferences(context).put(CREDIT_ALARM, "false");
             }
         }
     }
