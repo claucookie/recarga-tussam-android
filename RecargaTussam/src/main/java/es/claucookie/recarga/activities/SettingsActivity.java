@@ -1,14 +1,19 @@
 package es.claucookie.recarga.activities;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.android.volley.Network;
+
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.OnActivityResult;
 import org.androidannotations.annotations.OptionsItem;
 import org.androidannotations.annotations.ViewById;
 
@@ -161,9 +166,18 @@ public class SettingsActivity extends ActionBarActivity {
     IabHelper.OnIabPurchaseFinishedListener purchaseFinishedListener = new IabHelper.OnIabPurchaseFinishedListener() {
         public void onIabPurchaseFinished(IabResult result, Purchase purchase) {
             publiRemovePurchased = result.isSuccess();
+            if (result.getResponse() == IabHelper.BILLING_RESPONSE_RESULT_ITEM_ALREADY_OWNED) {
+                publiRemovePurchased = true;
+            }
             checkInappStatusAndShowInfo(publiRemovePurchased);
         }
     };
+
+    @OnActivityResult(NetworkConsts.IN_APP_PURCHASE_REQUEST_CODE)
+    void onResult(int resultCode, Intent data) {
+        publiRemovePurchased = resultCode == Activity.RESULT_OK;
+        checkInappStatusAndShowInfo(publiRemovePurchased);
+    }
 
 
 }

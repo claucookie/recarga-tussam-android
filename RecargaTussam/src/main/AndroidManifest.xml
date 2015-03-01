@@ -4,6 +4,7 @@
     <uses-permission android:name='android.permission.INTERNET'/>
     <uses-permission android:name="com.android.vending.BILLING" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 
     <application android:icon='@drawable/ic_launcher' android:label='@string/app_name' android:logo='@drawable/ic_launcher' android:name='.App' android:theme='@style/Theme.Tussam'>
@@ -34,5 +35,4 @@
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
     </application>
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 </manifest>
