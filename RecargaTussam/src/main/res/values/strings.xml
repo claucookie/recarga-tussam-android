@@ -29,5 +29,10 @@
     <string name="settings_title">Ajustes</string>
     <string name="settings_inapp_title">Quita la publi</string>
     <string name="settings_inapp_content">Por el precio de una caña Cruzcampo puedes eliminar la publi de la pantalla principal para siempre.</string>
+    <string name="settings_alarm_title">Notificaciones</string>
+    <string name="settings_alarm_content">Muéstrame una notificación cuando el saldo de mi bonobus sea inferior a: </string>
+    <string name="settins_alarm_subtitle">¿Te quedas sin saldo de repente? Activa la alarma para que te avise</string>
+    <string name="notification_credit_title">!Oye!</string>
+    <string name="notification_credit_content">Tu bonobus tiene solo %s</string>
 
 </resources>

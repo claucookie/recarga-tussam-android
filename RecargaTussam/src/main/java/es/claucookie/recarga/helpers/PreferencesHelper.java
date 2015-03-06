@@ -22,6 +22,7 @@ public class PreferencesHelper {
     public static final String CARDS = "cards";
     public static final String PUBLI_INAPP = "publi_inapp";
     public static final String CREDIT_ALARM = "credit_alarm";
+    public static final String CREDIT_VALUE = "credit_value";
 
     private ObfuscatedPreferences memoryPreferences;
 
@@ -117,6 +118,17 @@ public class PreferencesHelper {
             } else {
                 preferences(context).put(CREDIT_ALARM, "false");
             }
+        }
+    }
+
+    public String getCreditAlarmValue(Context context) {
+        return preferences(context).getString(CREDIT_VALUE);
+    }
+
+    public void setCreditAlarmValue(Context context, int value) {
+
+        if (context != null) {
+            preferences(context).put(CREDIT_VALUE, String.valueOf(value));
         }
     }
 

@@ -29,5 +29,10 @@
     <string name="settings_title">Settings</string>
     <string name="settings_inapp_title">Remove Ads</string>
     <string name="settings_inapp_content">Removing the main screen ads costs the same as a "Caña Cruzcampo", cheap huh?</string>
+    <string name="settings_alarm_title">Notifications</string>
+    <string name="settings_alarm_content">Show a notification when the credit is under: </string>
+    <string name="settins_alarm_subtitle">Your credit expires and you didn\'t see that coming? Enable the alarm to get notified</string>
+    <string name="notification_credit_title">Hey!</string>
+    <string name="notification_credit_content">Your Tussam credit is only %s</string>
 
 </resources>

@@ -1,7 +1,13 @@
 package es.claucookie.recarga;
 
 import android.app.IntentService;
+import android.app.Notification;
+import android.app.PendingIntent;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
+import android.os.Vibrator;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationManagerCompat;
 import android.util.Log;
 
 import com.android.volley.Request;
@@ -11,13 +17,13 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-import org.androidannotations.annotations.EService;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.util.Date;
+import java.util.Locale;
 
 import es.claucookie.recarga.helpers.GeneralHelper;
 import es.claucookie.recarga.helpers.PreferencesHelper;
@@ -32,6 +38,7 @@ public class CheckCreditIntentService extends IntentService {
     public static final String TAG = CheckCreditIntentService.class.getName();
 
     TussamCardDTO favoriteCardDTO;
+    float minCredit;
 
     /**
      * Global request queue for Volley
@@ -44,6 +51,9 @@ public class CheckCreditIntentService extends IntentService {
 
     @Override
     protected void onHandleIntent(Intent intent) {
+        if (intent.hasExtra(Consts.ALARM_CREDIT_EXTRA)) {
+            minCredit = intent.getIntExtra(Consts.ALARM_CREDIT_EXTRA, 0);
+        }
         getFavoriteCard();
         requestUpdatedCardInfo();
     }
@@ -92,6 +102,32 @@ public class CheckCreditIntentService extends IntentService {
         }
     }
 
+    private void showNotification() {
+        int notificationId = 001;
+        // Build intent for notification content
+        Intent viewIntent = new Intent(this, CheckCreditIntentService.class);
+        //viewIntent.putExtra(EXTRA_EVENT_ID, eventId);
+        PendingIntent viewPendingIntent =
+                PendingIntent.getActivity(this, 0, viewIntent, 0);
+
+        NotificationCompat.Builder notificationBuilder =
+                new NotificationCompat.Builder(this)
+                        .setSmallIcon(R.drawable.ic_launcher)
+                        .setLargeIcon(BitmapFactory.decodeResource(
+                                getResources(), R.drawable.notif_bg))
+                        .setContentTitle(getString(R.string.notification_credit_title))
+                        .setContentText(String.format(Locale.US, getString(R.string.notification_credit_content), favoriteCardDTO.getCardCredit()))
+                        .setContentIntent(viewPendingIntent)
+                        .setDefaults(Notification.DEFAULT_ALL);
+
+        // Get an instance of the NotificationManager service
+        NotificationManagerCompat notificationManager =
+                NotificationManagerCompat.from(this);
+
+        // Build the notification and issues it with notification manager.
+        notificationManager.notify(notificationId, notificationBuilder.build());
+    }
+
     private void parseHtml(String response) {
 
         if (favoriteCardDTO != null) {
@@ -129,8 +165,20 @@ public class CheckCreditIntentService extends IntentService {
 
     private void checkCardInfo() {
         if (favoriteCardDTO != null) {
-            Log.v(TAG, favoriteCardDTO.getCardCredit());
+            float cardCredit = Float.valueOf(favoriteCardDTO.getCardCredit().replace("€", ""));
+            if (cardCredit <= minCredit) {
+                if (BuildConfig.DEBUG) {
+                    Log.v(TAG, "Credit under minimum !!!!");
+                }
+                showNotification();
+            }
+
+            if (BuildConfig.DEBUG) {
+                Log.v(TAG, favoriteCardDTO.getCardCredit());
+            }
         }
+         
+        
     }
 
     /**

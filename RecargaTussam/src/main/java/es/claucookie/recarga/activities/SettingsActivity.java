@@ -11,20 +11,26 @@ import android.support.v7.widget.SwitchCompat;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.RelativeLayout;
 
 import com.android.volley.Network;
+import com.mobivery.android.widgets.ExText;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Background;
+import org.androidannotations.annotations.CheckedChange;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.OnActivityResult;
 import org.androidannotations.annotations.OptionsItem;
 import org.androidannotations.annotations.ViewById;
+import org.jsoup.helper.StringUtil;
 
 import java.util.ArrayList;
 
 import es.claucookie.recarga.CheckCreditBroadcastReceiver;
+import es.claucookie.recarga.Consts;
 import es.claucookie.recarga.NetworkConsts;
 import es.claucookie.recarga.R;
 import es.claucookie.recarga.helpers.PreferencesHelper;
@@ -47,6 +53,10 @@ public class SettingsActivity extends ActionBarActivity {
     Button inappButton;
     @ViewById
     SwitchCompat alarmSwitch;
+    @ViewById
+    RelativeLayout creditLayout;
+    @ViewById
+    ExText creditValueText;
 
     private boolean publiRemovePurchased = false;
 
@@ -54,6 +64,7 @@ public class SettingsActivity extends ActionBarActivity {
     void initViews() {
         initActionBar();
         checkStoredPreferences();
+        initCreditLayout();
     }
 
     private void initActionBar() {
@@ -61,6 +72,11 @@ public class SettingsActivity extends ActionBarActivity {
         if (bar != null) {
             bar.setDisplayHomeAsUpEnabled(true);
         }
+    }
+    
+    private void initCreditLayout() {
+        alarmSwitch.setHighlightColor(getResources().getColor(R.color.color_palette_2));
+        showCreditLayout(alarmSwitch.isChecked());
     }
     
     @Override
@@ -82,6 +98,12 @@ public class SettingsActivity extends ActionBarActivity {
         } else {
             cancelAlarm();
         }
+        // Save min credit value
+        String creditString = creditValueText.getText().toString();
+        int credit = Integer.valueOf(
+                !StringUtil.isBlank(creditString) ? creditString : "0"
+        );
+        PreferencesHelper.getInstance().setCreditAlarmValue(this, credit);
     }
 
     @Click
@@ -90,6 +112,19 @@ public class SettingsActivity extends ActionBarActivity {
             startPurchaseFlowDialog();
         } else {
             InAppBillingLogic.getInstance().setupInappBilling(this, inappSetupFinishedListener);
+        }
+    }
+
+    @CheckedChange(R.id.alarm_switch)
+    void alarmSwitchChanged(CompoundButton switchCompat) {
+        showCreditLayout(switchCompat.isChecked());
+    }
+
+    private void showCreditLayout(boolean checked) {
+        if (checked) {
+            creditLayout.setVisibility(View.VISIBLE);
+        } else {
+            creditLayout.setVisibility(View.GONE);
         }
     }
 
@@ -107,6 +142,7 @@ public class SettingsActivity extends ActionBarActivity {
         } else {
             alarmSwitch.setChecked(false);
         }
+        creditValueText.setText(PreferencesHelper.getInstance().getCreditAlarmValue(this));
     }
 
     private void updateStoredPreferences() {
@@ -115,7 +151,7 @@ public class SettingsActivity extends ActionBarActivity {
     }
 
     /**
-     * Alarm methods 
+     * Alarm methods
      */
 
     @Background
@@ -125,12 +161,17 @@ public class SettingsActivity extends ActionBarActivity {
         if (aucorsaCardsDTO != null) {
             // Construct an intent that will execute the AlarmReceiver
             Intent intent = new Intent(getApplicationContext(), CheckCreditBroadcastReceiver.class);
+            String creditString = creditValueText.getText().toString();
+            int credit = Integer.valueOf(
+                    !StringUtil.isBlank(creditString) ? creditString : "0"
+            );
+            intent.putExtra(Consts.ALARM_CREDIT_EXTRA, credit);
             // Create a PendingIntent to be triggered when the alarm goes off
             final PendingIntent pIntent = PendingIntent.getBroadcast(this, CheckCreditBroadcastReceiver.REQUEST_CODE,
                     intent, PendingIntent.FLAG_UPDATE_CURRENT);
             // Setup periodic alarm every 5 seconds
             long firstMillis = System.currentTimeMillis(); // first run of alarm is immediate
-            int intervalMillis = 5000; //5sec //1000 * 60 * 60 * 24; // 24 hours in miliseconds
+            int intervalMillis = 60000; //5sec //1000 * 60 * 60 * 24; // 24 hours in miliseconds
             AlarmManager alarm = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
             alarm.setInexactRepeating(AlarmManager.RTC_WAKEUP, firstMillis, intervalMillis, pIntent);
         }

@@ -4,7 +4,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:animateLayoutChanges="true">
     
     <RelativeLayout
         android:id="@+id/inapp_layout"
@@ -56,7 +57,7 @@
             android:id="@+id/alarm_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/settings_inapp_title"
+            android:text="@string/settings_alarm_title"
             android:layout_toLeftOf="@+id/alarm_switch"
             style="@style/Base.TextAppearance.AppCompat.Body2"/>
 
@@ -64,9 +65,10 @@
             android:id="@+id/alarm_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/settings_inapp_content"
+            android:text="@string/settins_alarm_subtitle"
             android:layout_below="@+id/alarm_title"
             android:layout_toLeftOf="@+id/alarm_switch"
+            android:layout_marginRight="10dp"
             style="@style/Base.TextAppearance.AppCompat.Body1"/>
 
         <android.support.v7.widget.SwitchCompat
@@ -76,12 +78,59 @@
             android:layout_gravity="center_horizontal"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:buttonTint="@color/color_palette_1"
-            android:backgroundTint="@color/color_palette_1"
-            style="@style/SwitchButton.Tussam"/>
+            android:background="@drawable/settings_button_selector"
+            android:padding="10dp"/>
 
         
     </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/credit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.mobivery.android.widgets.ExLabel
+            android:id="@+id/credit_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_alarm_content"
+            style="@style/Base.TextAppearance.AppCompat.Caption"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:layout_toLeftOf="@+id/credit_value_text"/>
+        
+        <com.mobivery.android.widgets.ExText
+            android:id="@+id/credit_value_text"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:minWidth="40dp"
+            style="@style/Base.TextAppearance.AppCompat.Caption"
+            android:padding="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/credit_currency"
+            android:inputType="number"
+            android:text="2"
+            android:maxLength="5"
+            android:gravity="right|center_vertical"/>
+
+        <com.mobivery.android.widgets.ExLabel
+            android:id="@+id/credit_currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="€"
+            style="@style/Base.TextAppearance.AppCompat.Caption"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/material_blue_grey_800"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"/>
 
     
 

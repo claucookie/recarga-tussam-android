@@ -96,11 +96,5 @@
         <item name="android:textSize">@dimen/font_size_big</item>
     </style>
 
-    <style name="SwitchButton.Tussam" parent="Widget.AppCompat.CompoundButton.Switch">
-        <item name="colorControlNormal">@color/color_palette_1</item>
-        <item name="colorControlActivated">@color/color_palette_1</item>
-        <item name="colorSwitchThumbNormal">@color/color_palette_1</item>
-</style>
-
 
 </resources>

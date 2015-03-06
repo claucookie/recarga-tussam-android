@@ -16,7 +16,9 @@ public class CheckCreditBroadcastReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         Intent i = new Intent(context, CheckCreditIntentService.class);
-        i.putExtra("foo", "bar");
+        if (intent.hasExtra(Consts.ALARM_CREDIT_EXTRA)){
+            i.putExtra(Consts.ALARM_CREDIT_EXTRA, intent.getIntExtra(Consts.ALARM_CREDIT_EXTRA, 0));
+        }
         context.startService(i);
     }
 }
