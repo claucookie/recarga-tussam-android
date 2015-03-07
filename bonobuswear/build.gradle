@@ -44,7 +44,7 @@ android {
         recargatussam {
             applicationId "es.claucookie.recarga"
             versionName "2.2"
-            versionCode 14
+            versionCode 15
         }
         recargaaucorsa {
             applicationId "es.claucookie.recargaaucorsa"

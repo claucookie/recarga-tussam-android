@@ -82,8 +82,8 @@ android {
 
     buildTypes {
         release {
-            // TODO: Remove debugable and suffix before upload to google play
-            debuggable true
+            // TODO: Remove debugable and suffix before upload to google play (usefull to test inapps usign release mode)
+            //debuggable true
             signingConfig signingConfigs.Release
         }
         debug {
@@ -96,7 +96,7 @@ android {
         recargatussam {
             applicationId "es.claucookie.recarga"
             versionName "2.2"
-            versionCode 14
+            versionCode 15
         }
         recargaaucorsa {
             applicationId "es.claucookie.recargaaucorsa"

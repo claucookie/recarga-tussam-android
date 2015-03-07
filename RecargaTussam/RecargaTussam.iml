@@ -8,11 +8,13 @@
     </facet>
     <facet type="android" name="Android">
       <configuration>
-        <option name="SELECTED_BUILD_VARIANT" value="recargatussamRelease" />
+        <option name="SELECTED_BUILD_VARIANT" value="recargatussamDebug" />
         <option name="SELECTED_TEST_ARTIFACT" value="_android_test_" />
-        <option name="ASSEMBLE_TASK_NAME" value="assembleRecargatussamRelease" />
-        <option name="COMPILE_JAVA_TASK_NAME" value="compileRecargatussamReleaseSources" />
-        <option name="SOURCE_GEN_TASK_NAME" value="generateRecargatussamReleaseSources" />
+        <option name="ASSEMBLE_TASK_NAME" value="assembleRecargatussamDebug" />
+        <option name="COMPILE_JAVA_TASK_NAME" value="compileRecargatussamDebugSources" />
+        <option name="ASSEMBLE_TEST_TASK_NAME" value="assembleRecargatussamDebugTest" />
+        <option name="SOURCE_GEN_TASK_NAME" value="generateRecargatussamDebugSources" />
+        <option name="TEST_SOURCE_GEN_TASK_NAME" value="generateRecargatussamDebugTestSources" />
         <option name="ALLOW_USER_CONFIGURATION" value="false" />
         <option name="MANIFEST_FILE_RELATIVE_PATH" value="/src/main/AndroidManifest.xml" />
         <option name="RES_FOLDER_RELATIVE_PATH" value="/src/main/res" />
@@ -22,24 +24,30 @@
     </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="false">
-    <output url="file://$MODULE_DIR$/build/intermediates/classes/recargatussam/release" />
+    <output url="file://$MODULE_DIR$/build/intermediates/classes/recargatussam/debug" />
     <output-test url="file://$MODULE_DIR$/build/intermediates/classes/test/recargaTussam/debug" />
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/r/recargatussam/release" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/recargatussam/release" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/recargatussam/release" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/rs/recargatussam/release" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/recargatussam/release" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/recargatussam/release" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/generated/recargatussam/release" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/recargatussamRelease/res" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/recargatussamRelease/resources" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/recargatussamRelease/assets" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/recargatussamRelease/aidl" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/recargatussamRelease/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/recargatussamRelease/jni" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/recargatussamRelease/rs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/r/recargatussam/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/recargatussam/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/recargatussam/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/rs/recargatussam/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/recargatussam/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/recargatussam/debug" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/generated/recargatussam/debug" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/recargatussamDebug/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/recargatussamDebug/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/recargatussamDebug/assets" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/recargatussamDebug/aidl" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/recargatussamDebug/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/recargatussamDebug/jni" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/recargatussamDebug/rs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/r/test/recargatussam/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/test/recargatussam/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/test/recargatussam/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/rs/test/recargatussam/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/test/recargatussam/debug" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/generated/test/recargatussam/debug" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/recargaTussam/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/recargaTussam/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/recargaTussam/assets" type="java-resource" />
@@ -54,13 +62,13 @@
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestRecargatussam/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestRecargatussam/jni" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestRecargatussam/rs" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/release/res" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/release/resources" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/release/assets" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/release/aidl" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/release/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/release/jni" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/release/rs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/debug/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/debug/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/debug/assets" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/debug/aidl" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/debug/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/debug/jni" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/debug/rs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/assets" type="java-resource" />
