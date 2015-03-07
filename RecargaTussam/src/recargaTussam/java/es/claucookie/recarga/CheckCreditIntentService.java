@@ -110,14 +110,19 @@ public class CheckCreditIntentService extends IntentService {
         PendingIntent viewPendingIntent =
                 PendingIntent.getActivity(this, 0, viewIntent, 0);
 
+        // Create a WearableExtender to add functionality for wearables
+        NotificationCompat.WearableExtender wearableExtender =
+                new NotificationCompat.WearableExtender()
+                        .setBackground(BitmapFactory.decodeResource(getResources(), R.drawable.notif_bg));
+
         NotificationCompat.Builder notificationBuilder =
                 new NotificationCompat.Builder(this)
-                        .setSmallIcon(R.drawable.ic_launcher)
-                        .setLargeIcon(BitmapFactory.decodeResource(
-                                getResources(), R.drawable.notif_bg))
+                        .setSmallIcon(R.drawable.ic_notif)
+                        .setColor(getResources().getColor(R.color.color_primary))
                         .setContentTitle(getString(R.string.notification_credit_title))
                         .setContentText(String.format(Locale.US, getString(R.string.notification_credit_content), favoriteCardDTO.getCardCredit()))
                         .setContentIntent(viewPendingIntent)
+                        .extend(wearableExtender)
                         .setDefaults(Notification.DEFAULT_ALL);
 
         // Get an instance of the NotificationManager service
