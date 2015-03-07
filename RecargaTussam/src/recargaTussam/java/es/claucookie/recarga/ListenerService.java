@@ -147,7 +147,10 @@ public class ListenerService extends WearableListenerService {
             // If user didnt set a card as favourite, set the first one and load info.
             favoriteCardDTO = aucorsaCardsDTO.getCards().get(0);
             favoriteCardDTO.setIsCardFavorite(true);
+        } else {
+            sendCachedCard();
         }
+            
     }
 
     private void sendCachedCard() {
