@@ -173,7 +173,6 @@ public class SettingsActivity extends ActionBarActivity {
             long firstMillis = getMillisecsUntilMidnight();
             int intervalMillis = 1000 * 60 * 60 * 24; // 24 hours in milliseconds
             AlarmManager alarm = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
-            alarm.setTime(firstMillis);
             alarm.setInexactRepeating(AlarmManager.RTC_WAKEUP, firstMillis, intervalMillis, pIntent);
         }
     }

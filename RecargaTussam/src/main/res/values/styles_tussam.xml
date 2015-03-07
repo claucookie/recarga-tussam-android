@@ -22,7 +22,13 @@
         <item name="colorAccent">@color/color_accent</item>
         <item name="colorControlNormal">@color/color_accent</item>
         <item name="colorControlHighlight">@color/color_accent</item>
-        <item name="colorControlActivated">@color/color_accent</item>
+
+        <!-- for switch compat -->
+        <item name="colorControlActivated">@color/color_palette_2</item>
+        <!-- Inactive thumb color -->
+        <item name="colorSwitchThumbNormal">@color/color_palette_1</item>
+        <!-- Inactive track color(30% transparency) -->
+        <item name="android:colorForeground">@color/color_palette_1</item>
 
 
     </style>
