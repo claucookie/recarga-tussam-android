@@ -50,11 +50,12 @@ dependencies {
     compile 'com.android.support:appcompat-v7:21.0.+'
     compile "com.google.android.gms:play-services-wearable:${googlePlayServicesVersion}"
     compile "com.google.android.gms:play-services-ads:${googlePlayServicesVersion}"
-    wearApp project(':bonobuswear')
     compile('com.crashlytics.sdk.android:crashlytics:2.2.1@aar') {
         transitive = true;
     }
-    //wearApp files('/Users/claucookie/Desktop/wearable_app.apk')
+    // Wear config Debug or packaging
+    //wearApp project(':bonobuswear')
+    wearApp files('/Users/claucookie/Desktop/wearable_app-v2.2.apk')
 
 
 }
