@@ -14,7 +14,6 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.RelativeLayout;
 
-import com.android.volley.Network;
 import com.mobivery.android.widgets.ExText;
 
 import org.androidannotations.annotations.AfterViews;
@@ -29,7 +28,6 @@ import org.jsoup.helper.StringUtil;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 
 import es.claucookie.recarga.CheckCreditBroadcastReceiver;
 import es.claucookie.recarga.Consts;
@@ -75,12 +73,12 @@ public class SettingsActivity extends ActionBarActivity {
             bar.setDisplayHomeAsUpEnabled(true);
         }
     }
-    
+
     private void initCreditLayout() {
         alarmSwitch.setHighlightColor(getResources().getColor(R.color.color_palette_2));
         showCreditLayout(alarmSwitch.isChecked());
     }
-    
+
     @Override
     public void onBackPressed() {
         checkAlarmSwitch();
@@ -92,7 +90,7 @@ public class SettingsActivity extends ActionBarActivity {
         checkAlarmSwitch();
         finish();
     }
-    
+
     private void checkAlarmSwitch() {
         PreferencesHelper.getInstance().activateCreditAlarm(this, alarmSwitch.isChecked());
         if (PreferencesHelper.getInstance().creditAlarmActivated(this)) {
@@ -131,7 +129,7 @@ public class SettingsActivity extends ActionBarActivity {
     }
 
     /**
-     * Preferences 
+     * Preferences
      */
     private void checkStoredPreferences() {
         publiRemovePurchased = PreferencesHelper.getInstance().inappPurchased(this);
@@ -175,18 +173,18 @@ public class SettingsActivity extends ActionBarActivity {
             long firstMillis = getMillisecsUntilMidnight();
             int intervalMillis = 1000 * 60 * 60 * 24; // 24 hours in milliseconds
             AlarmManager alarm = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
+            alarm.setTime(firstMillis);
             alarm.setInexactRepeating(AlarmManager.RTC_WAKEUP, firstMillis, intervalMillis, pIntent);
         }
     }
-    
+
     private long getMillisecsUntilMidnight() {
         Calendar c = Calendar.getInstance();
-        c.add(Calendar.DAY_OF_MONTH, 1);
-        c.set(Calendar.HOUR_OF_DAY, 0);
-        c.set(Calendar.MINUTE, 0);
-        c.set(Calendar.SECOND, 0);
+        c.set(Calendar.HOUR_OF_DAY, 23);
+        c.set(Calendar.MINUTE, 59);
+        c.set(Calendar.SECOND, 59);
         c.set(Calendar.MILLISECOND, 0);
-        return (c.getTimeInMillis()-System.currentTimeMillis());
+        return (c.getTimeInMillis());
     }
 
     @Background
