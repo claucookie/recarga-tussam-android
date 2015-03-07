@@ -28,6 +28,8 @@ import org.androidannotations.annotations.ViewById;
 import org.jsoup.helper.StringUtil;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 import es.claucookie.recarga.CheckCreditBroadcastReceiver;
 import es.claucookie.recarga.Consts;
@@ -169,12 +171,22 @@ public class SettingsActivity extends ActionBarActivity {
             // Create a PendingIntent to be triggered when the alarm goes off
             final PendingIntent pIntent = PendingIntent.getBroadcast(this, CheckCreditBroadcastReceiver.REQUEST_CODE,
                     intent, PendingIntent.FLAG_UPDATE_CURRENT);
-            // Setup periodic alarm every 5 seconds
-            long firstMillis = System.currentTimeMillis(); // first run of alarm is immediate
-            int intervalMillis = 60000; //5sec //1000 * 60 * 60 * 24; // 24 hours in miliseconds
+            // Setup periodic alarm every 24 hours
+            long firstMillis = getMillisecsUntilMidnight();
+            int intervalMillis = 1000 * 60 * 60 * 24; // 24 hours in milliseconds
             AlarmManager alarm = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
             alarm.setInexactRepeating(AlarmManager.RTC_WAKEUP, firstMillis, intervalMillis, pIntent);
         }
+    }
+    
+    private long getMillisecsUntilMidnight() {
+        Calendar c = Calendar.getInstance();
+        c.add(Calendar.DAY_OF_MONTH, 1);
+        c.set(Calendar.HOUR_OF_DAY, 0);
+        c.set(Calendar.MINUTE, 0);
+        c.set(Calendar.SECOND, 0);
+        c.set(Calendar.MILLISECOND, 0);
+        return (c.getTimeInMillis()-System.currentTimeMillis());
     }
 
     @Background

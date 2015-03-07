@@ -73,13 +73,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adf1f0e6-e11a-45e9-a1a2-b35b80c70d54" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RecargaTussam/src/recargaTussam/res/drawable-hdpi/ic_notif.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RecargaTussam/src/recargaTussam/res/drawable-mdpi/ic_notif.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RecargaTussam/src/recargaTussam/res/drawable-xhdpi/ic_notif.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RecargaTussam/src/recargaTussam/res/drawable-xxdpi/ic_notif.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RecargaTussam/src/recargaTussam/res/drawable-nodpi/notif_bg.jpg" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RecargaTussam/src/recargaTussam/res/drawable/notif_bg.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/recargaTussam/java/es/claucookie/recarga/CheckCreditIntentService.java" afterPath="$PROJECT_DIR$/RecargaTussam/src/recargaTussam/java/es/claucookie/recarga/CheckCreditIntentService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/activities/SettingsActivity.java" afterPath="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/activities/SettingsActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="recarga-tussam-android.iws" />
@@ -220,14 +214,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SettingsActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="SettingsActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/activities/SettingsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.076923" vertical-offset="1623" max-vertical-offset="4230">
-              <caret line="117" column="37" selection-start-line="117" selection-start-column="37" selection-end-line="117" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.5977918" vertical-offset="2276" max-vertical-offset="4410">
+              <caret line="177" column="11" selection-start-line="177" selection-start-column="11" selection-end-line="177" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#8139#8147#0" expanded="true" />
+                <element signature="e#8498#8506#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -258,7 +252,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="notif_bg.jpg" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="notif_bg.jpg" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RecargaTussam/src/recargaTussam/res/drawable-nodpi/notif_bg.jpg">
           <provider selected="true" editor-type-id="images">
             <state />
@@ -280,16 +274,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="475" max-vertical-offset="71790">
               <caret line="95" column="22" selection-start-line="95" selection-start-column="22" selection-end-line="95" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="795">
-              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -3239,9 +3223,9 @@
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/bonobuswear/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/recargaTussam/java/es/claucookie/recarga/CheckCreditBroadcastReceiver.java" />
-        <option value="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/activities/SettingsActivity.java" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/helpers/PreferencesHelper.java" />
         <option value="$PROJECT_DIR$/RecargaTussam/src/recargaTussam/java/es/claucookie/recarga/CheckCreditIntentService.java" />
+        <option value="$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/activities/SettingsActivity.java" />
       </list>
     </option>
   </component>
@@ -3853,19 +3837,19 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/activities/SettingsActivity.java</url>
-          <line>139</line>
+          <line>141</line>
           <properties />
           <option name="timeStamp" value="208" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/activities/SettingsActivity.java</url>
-          <line>144</line>
+          <line>146</line>
           <properties />
           <option name="timeStamp" value="209" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/activities/SettingsActivity.java</url>
-          <line>105</line>
+          <line>107</line>
           <properties />
           <option name="timeStamp" value="210" />
         </line-breakpoint>
@@ -3883,13 +3867,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/activities/SettingsActivity.java</url>
-          <line>102</line>
+          <line>104</line>
           <properties />
           <option name="timeStamp" value="213" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/activities/SettingsActivity.java</url>
-          <line>167</line>
+          <line>169</line>
           <properties />
           <option name="timeStamp" value="214" />
         </line-breakpoint>
@@ -3907,13 +3891,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bonobuswear/src/main/java/es/claucookie/recarga/ListenerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="855">
-          <caret line="28" column="74" selection-start-line="28" selection-start-column="74" selection-end-line="28" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="417">
@@ -4258,17 +4235,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/activities/SettingsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.076923" vertical-offset="1623" max-vertical-offset="4230">
-          <caret line="117" column="37" selection-start-line="117" selection-start-column="37" selection-end-line="117" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#8139#8147#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../sdks/adt-bundle-mac-x86_64/sdk/sources/android-21/android/app/Notification.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="475" max-vertical-offset="71790">
@@ -4309,6 +4275,25 @@
     <entry file="file://$PROJECT_DIR$/RecargaTussam/src/recargaTussam/res/drawable-nodpi/notif_bg.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../sdks/adt-bundle-mac-x86_64/sdk/sources/android-21/android/app/AlarmManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17424242" vertical-offset="710" max-vertical-offset="9540">
+          <caret line="79" column="28" selection-start-line="79" selection-start-column="28" selection-end-line="79" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RecargaTussam/src/main/java/es/claucookie/recarga/activities/SettingsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5977918" vertical-offset="2276" max-vertical-offset="4410">
+          <caret line="177" column="11" selection-start-line="177" selection-start-column="11" selection-end-line="177" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#8498#8506#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>
